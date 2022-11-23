@@ -24,7 +24,7 @@
 }
 /* Medium Layout: 1200px. */
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1370px) {
 
     .navbar-area .navbar-collapse .navbar-nav .nav-item {
         display: inline-block;
@@ -83,11 +83,11 @@
 
 /* Tablet Layout: 768px. */
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
 
     .navbar-area .navbar-collapse {
         position: absolute;
-        top: 83px;
+        top: 60px;
         background: #ffffff;
         z-index: 9;
         right: 0;
