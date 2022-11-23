@@ -1416,7 +1416,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     color: rgba(255, 255, 255, 0.8); }
   .navbar-area.white.nav-fixed {
     background-color: #282731; }
-  .navbar-area.nav-fixed {
+  .navbar-area.nav-fixed{
     position: fixed;
     left: 0;
     top: 0px;
@@ -1427,8 +1427,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     -o-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 0 100px; }
+    background-color: #FF6600;
+    padding: 0 100px;
+    
+    
+  }
+  
     .navbar-area.nav-fixed.blog-page {
       background-image: -moz-linear-gradient(0deg, #A42498 0%, #F5633A 100%);
       background-image: -webkit-linear-gradient(0deg, #A42498 0%, #F5633A 100%);
@@ -1944,6 +1948,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -ms-flex-item-align: start;
   align-self: flex-start;
   margin-bottom: 20px; }
+  
   .cgency_woo_top_rated_products ul .single-top-rated-product-item .thumb {
     margin-right: 20px;
     width: 80px;
