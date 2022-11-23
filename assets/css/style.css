@@ -1434,7 +1434,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       background-image: -webkit-linear-gradient(0deg, #A42498 0%, #F5633A 100%);
       background-image: -ms-linear-gradient(0deg, #A42498 0%, #F5633A 100%); }
     .navbar-area.nav-fixed .logo-wrapper img {
-      max-width: 160px; }
+      max-width: 100px; }
     .navbar-area.nav-fixed .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
       color: #d13a75; }
     .navbar-area.nav-fixed .navbar-collapse .navbar-nav .nav-item:hover .nav-link {
