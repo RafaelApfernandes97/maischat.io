@@ -1,0 +1,57 @@
+/*-------------------------
+    Faq Area
+-------------------------*/
+.accordion-wrapper{
+    .card{
+        border: none;
+        background-color: transparent;
+        &:last-child{
+            .card-header{
+                h5{
+                    a{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .card-header{
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            h5{
+                a{
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-weight: 600;
+                    display: block;
+                    padding: 15px 30px;
+                    background-color: #fafafa;
+                    cursor: pointer;
+                    margin-bottom: 20px;
+                    position: relative;
+                    &:after{
+                        position: absolute;
+                        right: 20px;
+                        top: 15px;
+                        @include fontawesomeIcon("\f067");
+                        font-size: 16px;
+                        color: $base-color;
+                    }
+                    &[aria-expanded="true"]{
+                        margin-bottom: 0;
+                        &:after{
+                            content: "\f068";
+                        }
+                    }
+                }
+            }
+        }
+        .card-body{
+            padding: 5px 30px 25px 30px;
+            font-size: 16px;
+            line-height: 26px; 
+            background-color: #fafafa;
+            margin-bottom: 20px;
+        }
+    }
+}

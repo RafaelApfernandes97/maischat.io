@@ -1,0 +1,78 @@
+
+/*
+--------------------------------
+	Css Indexing
+	----------------------------
+	Table of Css Content
+--------------------------------
+** @typography
+--------------------------------
+** Global style
+--------------------------------
+** Breadcumb Area
+-------------------------------- 
+** Preloader
+--------------------------------
+** Normalize
+--------------------------------
+** Navbar Area
+--------------------------------
+** Header Area
+--------------------------------
+** Sidebar Area
+--------------------------------
+** Features Area
+--------------------------------
+** Block Feature Area
+--------------------------------
+** Why Choose Us Area
+--------------------------------
+** Testimonial Area
+--------------------------------
+** Instro Video Area
+--------------------------------
+** Pricing Plan Area
+--------------------------------
+** Team Area
+--------------------------------
+** Cotnact Area
+--------------------------------
+** Faq Area
+--------------------------------
+** Logos Area
+--------------------------------
+** Footer
+--------------------------------
+
+
+--------------------------------
+** Blog Page
+--------------------------------
+** Blog Details Page
+--------------------------------
+*/
+
+@import "main/_variables";
+@import "main/_mixins";
+@import "main/_global";
+@import "main/_normalize";
+
+//=Section scss
+@import "sections/_navbar";
+@import "sections/_header";
+@import "sections/_sidebar";
+@import "sections/_features";
+@import "sections/_block_feature";
+@import "sections/_why_choose_us";
+@import "sections/_testimonial";
+@import "sections/_intro_video";
+@import "sections/_pricing_plan";
+@import "sections/_team";
+@import "sections/_contact";
+@import "sections/_faq";
+@import "sections/_logos";
+@import "sections/_footer";
+
+//=Pages scss
+@import "pages/_blog";
+@import "pages/_blog_details";

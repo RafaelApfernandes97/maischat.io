@@ -1,0 +1,259 @@
+/*--------------------
+    Blog Page
+--------------------*/
+
+.single-blog-grid{
+    .thumb{
+        margin-bottom: 25px;
+    }
+    .content{
+        .title{
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            a{
+                color: $heading-color;
+                @include transition($transition);
+                &:hover{
+                    color: $base-color;
+                }
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 26px;
+            color: $descr-color;
+        }
+        .readmore{
+            @include transition($transition);
+            &:hover{
+                color: $base-color;
+            }
+        }
+        .post-meta{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            li{
+                display: inline-block;
+                font-size: 14px;
+                line-height: 26px;
+                color: $descr-color;
+                margin: 0 15px;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    right: -20px;
+                    top: 6px;
+                    height: 16px;
+                    width: 1px;
+                    background-color: rgba($descr-color,.6);
+                    content: '';
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                    &:after{
+                        display: none;
+                    }
+                }
+                a{
+                    color: $descr-color;
+                    @include transition($transition);
+                    &:hover{
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.buxkit-blog-pagination {
+    display: block;
+    width: 100%;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            margin: 0 5px;
+            a:hover{
+                background-color: $base-color;
+                color: #fff;
+            }
+            a,span{
+                display: block;
+                width: 40px;
+                height: 40px;
+                border: 1px solid #e2e2e2;
+                line-height: 40px;
+                text-align: center;
+                font-weight: 600;
+                transition: .3s ease-in;
+                &.current{
+                    background-color: $base-color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+.single-blog-classic-post{
+    &.format-quote{
+        overflow: hidden;
+        background-color: #F3F7FF;
+        padding: 30px;
+        position: relative;
+        z-index: 0;
+        .icon{
+            font-size: 100px;
+            line-height: 100px;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            z-index: -1;
+            color: rgba(#000,.2);
+        }
+        .quote{
+            font-size: 30px;
+            line-height: 45px;
+            font-weight: 600;
+            margin-bottom: 0;
+            a{
+                color: inherit;
+            }
+        }
+    }
+    &.format-link{
+        overflow: hidden;
+        background-color: #F3F7FF;
+        padding: 30px;
+        position: relative;
+        z-index: 0;
+        .icon{
+            font-size: 100px;
+            line-height: 100px;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            z-index: -1;
+            color: rgba(#000,.2);
+        }
+        .link{
+            font-size: 30px;
+            line-height: 45px;
+            font-weight: 600;
+            margin-bottom: 0;
+            a{
+                color: inherit;
+            }
+        }
+    }
+    &.format-video{
+        .thumb{
+            position: relative;
+            z-index: 0;
+            .hover{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .video-play-btn{
+                    color: $base-color;
+                }
+            }
+        }
+    }
+    .thumb{
+        margin-bottom: 25px;
+    }
+    .content{
+        .post-meta{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            li{
+                display: inline-block;
+                font-size: 16px;
+                line-height: 26px;
+                color: $descr-color;
+                margin: 0 15px;
+                position: relative;
+                i{
+                    color: $base-color;
+                }
+                &:after{
+                    position: absolute;
+                    right: -20px;
+                    top: 6px;
+                    height: 16px;
+                    width: 1px;
+                    background-color: rgba($descr-color,.6);
+                    content: '';
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                    &:after{
+                        display: none;
+                    }
+                }
+                a{
+                    color: $descr-color;
+                    @include transition($transition);
+                    &:hover{
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+        .title{
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            &:hover{
+                a{
+                    color: $base-color;
+                }
+            }
+            a{
+                @include transition($transition);
+            }
+        }
+        p{}
+        .readmore{
+            @include transition($transition);
+            i{
+                @include transform(translateX(-50px));
+                visibility: hidden;
+                opacity: 0;
+                @include transition($transition);
+            }
+            &:hover{
+                color: $base-color;
+                i{
+                    @include transform(translateX(0px));
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

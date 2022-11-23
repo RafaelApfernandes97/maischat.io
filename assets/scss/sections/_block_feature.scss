@@ -1,0 +1,24 @@
+/*---------------------------
+    Block Feature Area
+---------------------------*/
+.block-feature-item{
+    .img-wrapper{
+       
+    }
+    .content-block-area{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        height: 100%;
+        .title{
+            font-size: 45px;
+            line-height: 56px;
+            font-weight: 700;
+        }
+        p{}
+        .boxed-btn{}
+    }
+}
+
+

@@ -1,0 +1,60 @@
+
+//== Template Main Color
+$base-color: #d13a75;
+$secondary-color: #282731;
+$bg-color:#f7f7f7;
+$white: #fff; 
+$sbg-1:#f3f7ff ;
+$sbg-2:#19206e;
+
+//== heading color
+$heading-color: #3c3954;
+$descr-color: #757575;
+
+//==gradient color
+$left :#F5633A;
+$right :#A42498;
+$danger : #dc3545;
+
+//== social media colors
+$facebook: #3b5999;
+$twitter: #55acee;
+$dribbble: #ea4c89;
+$behance: #131418;
+$google-plus: #dd4b39;
+$linkedin: #0077B5;
+$instagram: #e4405f;
+
+//== font ratio 1.5 / 1.4 
+//== h1 == 81px / 61px
+//== h2 == 54px / 44px
+//== h3 == 36px / 32px
+//== h4 == 24px / 22px
+
+
+/*-----------------
+    @Typography
+-----------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800');
+$body-font: 'Poppins', sans-serif;
+$heading-font: 'Poppins', sans-serif;
+
+//== font sizes
+$base-font-size: 16px !default;
+$font-size-h1: 61px !default;
+$font-size-h2: 45px !default;
+$font-size-h3: 32px !default;
+$font-size-h4: 22px !default;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height: 1.6 !default; 
+
+//==border-radius
+$border-radius-5: 5px !default;
+$border-radius-25: 25px !default;
+$border-radius-3: 3px !default;
+$border-radius-circle: 50% !default;
+
+//==transition
+$transition: all .3s ease-in;
+$transition-long: all .5s ease-in;

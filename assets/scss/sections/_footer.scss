@@ -1,0 +1,45 @@
+/*-------------------------
+    Footer Area
+--------------------------*/
+.footer-area{
+    padding: 100px 0 95px 0;
+    &.footer-bg{
+        background-image: url(../img/bg/footer-bg.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.about_widget{
+    .footer-logo{
+
+    }
+    .social-icon{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-top: 30px;
+        display: block;
+        li{
+            display: inline-block;
+            margin: 0 5px;
+            a{
+                display: block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.1);
+                border-radius: 50%;
+                color: $base-color;
+                &:hover{
+                    background-image: -moz-linear-gradient( -83deg, rgb(161,34,153) 0%, rgb(210,58,116) 51%, rgb(249,104,52) 99%);
+                    background-image: -webkit-linear-gradient( -83deg, rgb(161,34,153) 0%, rgb(210,58,116) 51%, rgb(249,104,52) 99%);
+                    background-image: -ms-linear-gradient( -83deg, rgb(161,34,153) 0%, rgb(210,58,116) 51%, rgb(249,104,52) 99%);
+                    color: $white;
+                }
+            }
+        }
+    }
+}
