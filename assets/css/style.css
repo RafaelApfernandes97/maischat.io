@@ -3033,3 +3033,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   border: 1px solid red;
 }
 
+.img-blog {
+  width: 150px;
+  height: 150px;
+}
