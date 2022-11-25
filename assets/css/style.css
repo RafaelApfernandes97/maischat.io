@@ -3038,6 +3038,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   height: 150px;
 }
 
-/* .card-blog {
-  padding: 20px;
-} */
+.p-blog {
+  /* max-width: 400px; */
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
