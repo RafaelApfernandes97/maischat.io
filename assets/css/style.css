@@ -1762,7 +1762,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       -o-transition: all 0.3s ease-in;
       transition: all 0.3s ease-in; }
       .about_widget .social-icon li a:hover {
-        color: #d13a75; }
+        color: #FF6600; }
 
 .footer-widget.widget_nav_menu ul li a {
   position: relative;
@@ -2542,7 +2542,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       -webkit-box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.1);
       box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.1);
       border-radius: 50%;
-      color: #d13a75; }
+      color: #FF6600; }
       .about_widget .social-icon li a:hover {
         background-image: -moz-linear-gradient(-83deg, #FDD700 0%, #FE9101 51%, #FF6600 99%);
         background-image: -webkit-linear-gradient(-83deg, #FDD700 0%, #FE9101 51%, #FF6600 99%);
@@ -3050,4 +3050,29 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .p-card-principal{
   max-width: 400px;
+}
+
+.politica__privacidade{
+  margin-top: 200px;
+
+}
+
+.politica__privacidade p {
+  font-size: 22px;
+}
+
+.politica__privacidade ul {
+  font-size: 22px;
+}
+
+.politica__privacidade li {
+  font-size: 22px;
+}
+
+.politica__privacidade a {
+  font-size: 22px;
+}
+
+.footer {
+  background-color: rgba(128, 128, 128, 0.24);
 }

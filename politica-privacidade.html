@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Chat</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- bootstrap --->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <!-- Pe icon 7 stroke -->
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="/assets/css/slick.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="maischathtml/assets/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="maischathtml/assets/css/fontawesome.min.css">
+    <!-- Pe icon 7 stroke -->
+    <link rel="stylesheet" href="maischathtml/assets/css/flaticon.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="maischathtml/assets/css/animate.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="maischathtml/assets/css/slick.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="maischathtml/assets/css/magnific-popup.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="maischathtml/assets/css/style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="maischathtml/assets/css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script>
+        function formatar(mascara, documento) {
+            var i = documento.value.length;
+            var saida = mascara.substring(0, 1);
+            var texto = mascara.substring(i)
+
+            if (texto.substring(0, 1) != saida) {
+                documento.value += texto.substring(0, 1);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <!-- preloader area start -->
+    <!-- <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="cancel-preloader">
+                <a href="#">Cancel Preloader</a>
+            </div>
+            <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div> -->
+    <!-- preloader area end -->
+
+
+    <!-- MENU NAVBAR -->
+    <nav class="navbar navbar-area navbar-expand-lg absolute">
+        <div class="logo-wrapper ">
+            <a href="index.html" class="logo ">
+
+                <img style="width:150px ;" src="assets/img/logo/maischat-branco.svg" alt="logo">
+
+            </a>
+        </div>
+        <div class="container-fluid nav-container menu">
+
+            <div class="collapse navbar-collapse" id="cgency">
+                <!-- navbar collapse start -->
+                <ul class="navbar-nav" id="primary-menu">
+                    <!-- navbar- nav -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#feature">Funcionalidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Preços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog-grid.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                </ul>
+                <!-- /.navbar-nav -->
+            </div>
+            <!-- /.navbar btn wrapper -->
+            <div class="responsive-mobile-menu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cgency"
+                    aria-controls="cgency" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!-- navbar collapse end -->
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="politica__privacidade">
+            <p><strong>Política de Privacidade</strong></p>
+            <p>A Mais Chat tecnologia Ltda. (“Mais Chat” ou “Plataforma”) nasceu para promover contatos mais
+                inteligentes
+                entre marcas e pessoas. Por meio de nossas soluções, oferecemos o próximo passo em comunicação e
+                serviços
+                digitais nos principais canais de mensagens e assistentes de voz do mundo.</p>
+            <p>A Mais Chat tem paixão por conectar pessoas com as organizações por elas escolhidas e se preocupa com a
+                privacidade e com a proteção dos dados pessoais de seus clientes, colaboradores, parceiros, fornecedores
+                e
+                todos os demais titulares de dados pessoais, e está comprometida em garantir que esses direitos sejam
+                respeitados, observando as leis aplicáveis, especialmente a Lei nº 13.709/2018 (“Lei Geral de Proteção
+                de
+                Dados Pessoais” ou “LGPD”).</p>
+            <p>Esta Política de Privacidade (“Política”) tem como objetivo informar os usuários do site da Mais Chat e
+                da
+                plataforma Mais Chat e demais titulares de dados sobre como seus dados pessoais serão tratados quando
+                acessam e utilizam o site e a plataforma Mais Chat , e quando interagem por meio dos Contatos
+                Inteligentes
+                (Chatbots) criados através do Mais Chat ou quando interagem com a Companhia em outros meios.</p>
+            <p>Caso tenha qualquer dúvida sobre o conteúdo desta Política, entre em contato diretamente com nosso
+                Encarregado, pelo e-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="1579707274795578747c663b767d74613b">[email&#160;protected]</a></p>
+            <ol>
+                <li><strong> Como coletamos seus dados pessoais?</strong></li>
+            </ol>
+            <p>Quando você acessa e utiliza nosso site ou nossa plataforma Mais Chat , ou quando interage com a Mais
+                Chat em
+                outros meios, podemos coletar seus dados pessoais de formas distintas, a exemplo das indicadas abaixo:
+            </p>
+            <ul>
+                <li>Pelo fornecimento das informações por você, quando você preenche os dados para se cadastrar na
+                    plataforma Mais Chat , para assinar nosso newsletter, para solicitar maiores informações sobre as
+                    nossas
+                    soluções, para conversar com o “Contato Inteligente Mais Chat ”, para participar de eventos
+                    promovidos
+                    pela Companhia e demais empresas do grupo ou quando você entra em contato diretamente com a
+                    Companhia
+                    por outros meios ou canais de comunicação, como telefone, e-mail ou mensagens em nossas redes
+                    sociais.
+                </li>
+                <li>Pela coleta automática de dados, como informações do tipo do seu dispositivo, número identificador
+                    único
+                    do seu dispositivo, tipo de navegador, localização geográfica aproximada, por meio de ferramentas do
+                    seu
+                    navegador e de outras tecnologias, como cookies (vide a seção 7 desta Política).</li>
+                <li>Pela recepção de seus dados pessoais de empresas de recrutamento, indicações, ou outras pessoas que
+                    compartilhem seus dados conosco para fins de permitir a sua participação em processos seletivos
+                    conduzidos pela Companhia.</li>
+                <li>Pela recepção de seus dados pessoais através de nossos parceiros, empresas do grupo, prestadores de
+                    serviços, fornecedores ou terceiros, como nos casos em que tenhamos relações negociais com o seu
+                    empregador, quando podemos receber seus dados pessoais para garantir a nossa comunicação e confirmar
+                    a
+                    sua identidade como um colaborador daquela empresa ou para seu cadastro na plataforma Mais Chat .
+                    Também
+                    recebemos seus dados pessoais das empresas com as quais você possui relacionamento comercial e que
+                    utilizam os serviços de chatbots ou outras soluções fornecidas pela Mais Chat .</li>
+            </ul>
+            <ol start="2">
+                <li><strong> Por quais razões coletamos seus dados pessoais?</strong></li>
+            </ol>
+            <p>A Mais Chat realiza o tratamento de seus dados pessoais para diversas finalidades, de acordo com o seu
+                relacionamento com a Companhia e com a forma de interação que você tem conosco.</p>
+            <p>Entre os principais propósitos para os quais coletamos, processamos ou de outros modos tratamos seus
+                dados
+                pessoais estão os seguintes:</p>
+            <ul>
+                <li><strong>Para cadastro de usuários.</strong> Trataremos os seus dados pessoais que forem necessários
+                    para
+                    realizar o seu cadastro como um usuário na plataforma Mais Chat, a fim de permitir a criação e
+                    gerenciamento da sua conta, esteja ela atrelada ao seu empregador ou diretamente a você.</li>
+                <li><strong>Para a criação e utilização da plataforma Mais Chat.</strong> Trataremos dados pessoais para
+                    permitir a funcionalidade dos recursos utilizados por você para a criação e utilização do chatbot,
+                    Contatos, Atendimento, Pagamentos, dentre outros recursos.</li>
+                <li><strong>Para cobrar pela utilização da plataforma e demais produtos/serviços</strong>. Quando você
+                    ou a
+                    sua organização adquirir um dos planos da plataforma Mais, trataremos seus dados pessoais para
+                    permitir
+                    a transação e o pagamento pelos nossos serviços.</li>
+                <li><strong>Para responder suas dúvidas, elogios, reclamações, sugestões e nos comunicarmos com
+                        você.</strong> Quando você entra em contato conosco, seja por meio de nosso site, por telefone,
+                    por
+                    e-mail, pelo Help Center, sites de relacionamento e atendimento de cliente/consumidor ou por
+                    qualquer
+                    outro meio de comunicação, trataremos seus dados pessoais para podermos nos comunicar com você,
+                    respondendo às suas dúvidas, elogios, reclamações ou sugestões, bem como a qualquer mensagem que
+                    você
+                    nos tenha enviado, inclusive para a comunicação de problemas técnicos com a utilização de nosso
+                    site, da
+                    plataforma Mais Chat ou de quaisquer outras soluções ofertadas pela Mais Chat.</li>
+                <li><strong>Para promoção das nossas atividades.</strong> Trataremos seus dados pessoais para lhe enviar
+                    nosso newsletter, convite de eventos feitos pela Companhia e/ou com empresas parceiras, além de
+                    informativos sobre nossos serviços, pesquisas, estudos, notícias, podcasts, vídeos, promoções, novas
+                    soluções ou qualquer outro conteúdo ou material que produzimos, no sentido de promover as nossas
+                    atividades.</li>
+                <li><strong>Para marketing, envio de informações sobre nossos produtos ou serviços.</strong> Caso você
+                    já
+                    tenha um relacionamento comercial ou já tenha interagido com a Companhia anteriormente, ou tenha se
+                    cadastrado para o recebimento de materiais e informativos da Mais Chat , por meio do site, de
+                    download
+                    de conteúdo ou acesso a mídia patrocinada, poderemos tratar seus dados pessoais para marketing e/ou
+                    para
+                    o envio informações sobre os produtos ou serviços fornecidos pela Mais Chat .</li>
+                <li><strong>Para contato com possíveis clientes, leads e prospectos.</strong> Caso você tenha preenchido
+                    o
+                    formulário do nosso site para contatar o nosso time Comercial, fornecido suas informações via
+                    landing
+                    pages, ou caso identificarmos que você ou sua organização possa ter interesse em nossos produtos ou
+                    serviços, trataremos seus dados pessoais para a promoção de nossas atividades e para entrar em
+                    contato
+                    com você e compartilhar informações sobre as soluções disponibilizadas pela Mais Chat .</li>
+                <li><strong>Para conduzir pesquisas de satisfação.</strong> Poderemos tratar seus dados pessoais para
+                    realizarmos pesquisas de satisfação, para identificar se os produtos ou serviços que ofertamos estão
+                    sendo recebidos positivamente e o que pode ser alterado para que a usabilidade e operabilidade sejam
+                    melhores.</li>
+                <li><strong>Para recrutar novos colaboradores.</strong> Quando você nos envia seu currículo por e-mail,
+                    redes sociais, aplicativos de mensagens instantâneas, entre outros, quando recebemos seu currículo
+                    de
+                    terceiros ou quando estamos com um processo seletivo em aberto e buscamos profissionais no mercado,
+                    trataremos seus dados pessoais para a finalidade de recrutar novos colaboradores, entrando em
+                    contato
+                    com eles e permitindo que participem de todas as etapas dos respectivos processos seletivos, como
+                    entrevistas, dinâmicas de grupos, testes práticos ou teóricos, entre outras atividades inerentes ao
+                    processo de recrutamento, para avaliação da compatibilidade do seu perfil profissional com as
+                    característica da vaga em aberto.</li>
+                <li><strong>Para analisar a utilização de nossa plataforma.</strong> Quando você acessa e navega no
+                    nosso
+                    site ou na plataforma Mais Chat , trataremos seus dados pessoais para entender aspectos relacionados
+                    à
+                    utilização do site ou da plataforma, como as páginas que foram visitadas e o tempo de duração das
+                    visitas, a forma de interação por meio do Mais Chat , as ferramentas mais utilizadas, entre outros
+                    aspectos relacionados à utilização da plataforma, com o intuito de melhorarmos o conteúdo que é
+                    fornecido aos visitantes, clientes e titulares de dados, assim como trataremos seus dados pessoais
+                    para
+                    identificar a taxa de aderência dos e-mails que enviamos e da interação com os conteúdos que
+                    publicamos,
+                    para entendermos quais materiais que produzimos que estão sendo mais bem recebidos por nossos
+                    usuários.
+                </li>
+                <li><strong>Para garantir a segurança das nossas plataformas.</strong> Trataremos os seus dados pessoais
+                    para garantir a segurança do site e da plataforma Mais Chat , avaliando padrões não usuais em
+                    relação à
+                    sua utilização, requisições volumosas de acesso inesperado, tentativas de acesso com logins e senhas
+                    inválidas, entre outras ações que podem indicar um ataque cibernético ou contra a confidencialidade,
+                    integridade ou disponibilidade de nossos sistemas.</li>
+                <li><strong>Para cumprir com obrigações legais, regulatórias ou ordens judiciais.</strong> Quando
+                    precisarmos cumprir com obrigações legais, regulatórias ou ordens judiciais, trataremos seus dados
+                    pessoais que sejam necessários para tais fins, inclusive mediante o compartilhamento desses dados
+                    com
+                    órgãos públicos e com o Poder Judiciário</li>
+                <li><strong>Para nos defender em processos judiciais, administrativos ou arbitrais.</strong> Quando for
+                    necessário, trataremos seus dados pessoais para defender nossos interesses em processos judiciais,
+                    administrativos ou arbitrais movidos por você ou por terceiros contra nós, ou movidos por nós contra
+                    você ou contra terceiros.</li>
+                <li><strong>Para avaliarmos novas aquisições.</strong> Trataremos seus dados pessoais quando for
+                    necessário
+                    no processo de avaliação de novas aquisições de produtos, serviços ou de participações societárias
+                    em
+                    outras organizações, especialmente durante o processo de diligência legal ou fiscal, durante o qual
+                    podemos ter acesso a informações sobre colaboradores das organizações que estamos avaliando como
+                    parceiros comerciais ou como potenciais aquisições de participações societárias.</li>
+                <li><strong>Para investigar eventuais denúncias.</strong> Quando você iniciar ou estiver envolvido em
+                    alguma
+                    denúncia realizada em nosso Canal de Denúncias, sobre condutas não condizentes como nossos valores
+                    empresariais ou que violem a legislação vigente, poderemos tratar seus dados pessoais para
+                    investigar as
+                    denúncias realizadas e, caso você tenha sido o denunciante e opte por revelar a sua identidade,
+                    reportar
+                    a você o desdobramento do processo relativo às denúncias.</li>
+                <li><strong>Para análise de crédito.</strong> Nos casos em que a Mais Chat venda produtos ou serviços a
+                    você, trataremos seus dados pessoais para avaliar sua habilidade de cumprimento de suas obrigações
+                    financeiras e para proteger nosso crédito.</li>
+                <li><strong>Realização de reuniões, videoconferências ou conferências telefônicas.</strong> Trataremos
+                    seus
+                    dados pessoais para a realização de reuniões, videoconferências ou conferências telefônicas,
+                    incluindo,
+                    dependendo do meio utilizado, sua imagem e voz, além de dados de identificação e de correspondência
+                    eletrônica, para envio de convites e links para acesso às reuniões.</li>
+                <li><strong>Para receber indicações de terceiros.</strong> Trataremos seus dados pessoais quando
+                    recebermos
+                    indicações de terceiros sobre o seu potencial interesse, ou o potencial interesse da sua
+                    organização, na
+                    contratação de nossos produtos ou serviços, permitindo o nosso posterior contato com você para
+                    apresentação de nossas soluções.</li>
+                <li><strong>Para realização de auditorias internas.</strong> Trataremos seus dados pessoais quando for
+                    necessário para a realização de auditorias internas de nossas plataformas e sistemas, inclusive em
+                    relação a auditorias financeiras, fiscais e contábeis, auditorias de conformidade com as leis e
+                    regulamentos aos quais estamos sujeitos, auditorias de controles financeiros e de riscos, auditorias
+                    para a reorganização, venda, cessão ou transferência de parte ou de todos os nossos ativos,
+                    auditorias
+                    exigidas por Autoridades Governamentais, ou quaisquer outras auditorias que sejam necessárias ou
+                    relevantes para o adequado desenvolvimento de nossos negócios.</li>
+            </ul>
+            <ol start="3">
+                <li><strong> Quais dados coletamos?</strong></li>
+            </ol>
+            <p>Para alcançar as finalidades indicadas acima, poderemos tratar um ou mais dos seguintes dados pessoais,
+                na
+                medida em que forem necessários para os respectivos propósitos:</p>
+            <ul>
+                <li><strong>Dados cadastrais de usuários</strong>. Quando você for um usuário do site ou da plataforma
+                    Mais
+                    Chat , trataremos dados como seu nome completo, e -mail e telefone para criação da sua conta e para
+                    receber nosso newsletter e e-mails marketing. Para o time Comercial entrar em contato com você,
+                    trataremos os dados preenchidos no formulário, como seu nome completo, e-mail, telefone e o cargo na
+                    sua
+                    empresa. Para o processamento do pagamento de um dos planos da plataforma Mais Chat , trataremos seu
+                    nome, CPF, informações da organização que você representa e informações de contato.</li>
+                <li><strong>Dados de utilização e do dispositivo.</strong> Trataremos dados relacionados à sua
+                    utilização do
+                    site e da plataforma Mais Chat , como cliques, rolagem da página, rolagem do cursor e páginas
+                    visitadas,
+                    geolocalização, data e hora de acesso, IP do seu dispositivo, navegador utilizado, tipo de
+                    dispositivo,
+                    preferência de idioma, funcionalidades utilizadas, cadastros realizados, entre outros.</li>
+                <li><strong>Dados para funcionamento do chatbot.</strong> Trataremos dados pessoais dos usuários que
+                    interagem com os Contatos Inteligentes presentes na plataforma Mais Chat , seja em nome próprio ou
+                    em
+                    nome de nossos clientes, para os quais atuamos na condição de Operador, como nome completo,
+                    localização,
+                    número de telefone, conteúdo da sua mensagem, dados pessoais dos atendentes que realizam o
+                    atendimento
+                    de forma manual, como nome completo, status e horário de trabalho; o conteúdo das mensagens
+                    pré-formatadas do chatbot e as suas respostas; dados para configuração do chatbot, como o nome do
+                    chatbot, descrição, imagem, mensagens de boas-vindas e informações de conexão, entre outros.</li>
+                <li><strong>Outras informações.</strong> Trataremos dados adicionais que eventualmente sejam
+                    voluntariamente
+                    inseridos por usuários nos currículos ou nas comunicações enviadas à Companhia por meio do
+                    “formulário
+                    de Contato Mais Chat ”, por e-mail, correspondência, ou quaisquer outros meios.</li>
+            </ul>
+            <ol start="4">
+                <li><strong> Com quem seus dados pessoais são compartilhados?</strong></li>
+            </ol>
+            <p>Poderemos compartilhar os seus dados pessoais com:</p>
+            <ul>
+                <li><strong>Empresas do nosso Grupo Econômico.</strong> Podemos compartilhar os seus dados pessoais com
+                    as
+                    demais empresas do nosso grupo econômico, no sentido de aprimorar nossos produtos ou serviços e de
+                    ganhar eficiência em nossos negócios, como no caso da utilização de sistemas únicos ou integrados
+                    entre
+                    empresas do mesmo grupo.</li>
+                <li><strong>Nossos parceiros, prestadores de serviços e fornecedores. </strong>Para a consecução de
+                    nossas
+                    atividades comerciais, mantemos relacionamento e contratamos diversos parceiros, prestadores de
+                    serviços
+                    e fornecedores, que são essenciais para os nossos negócios. Alguns desses parceiros e fornecedores
+                    podem
+                    precisar ter acesso aos dados pessoais que coletamos para exercer suas funções como prestadores de
+                    serviços de hospedagem de dados em nuvem ou de soluções para o envio de comunicações por e-mail,
+                    recrutadores externos, auditores, bancos e empresas afiliadas, casos nos quais compartilharemos seus
+                    dados pessoais com eles. Realizamos uma avaliação de todos os nossos parceiros e fornecedores,
+                    exigindo
+                    que os dados pessoais sejam tratados em conformidade com todas as leis aplicáveis e garantindo
+                    segurança
+                    à informação, de modo a minimizar eventuais riscos no compartilhamento de dados.</li>
+                <li><strong>Assessores Externos.</strong> Podemos compartilhar os seus dados pessoais com assessores
+                    externos que prestem serviços para nós, incluindo assessores financeiros, contábeis, jurídicos ou
+                    técnicos, que precisem ter acesso aos dados para realizar as atividades para as quais foram
+                    contratados.
+                </li>
+                <li><strong>Autoridades Governamentais.</strong> Podemos compartilhar os seus dados pessoais com toda e
+                    qualquer Autoridade Governamental que os solicite, inclusive com órgãos de fiscalização das
+                    atividades
+                    laborais ou de atividades financeiras, para cumprirmos com nossas obrigações legais ou regulatórias.
+                </li>
+                <li><strong>Poder Judiciário.</strong> Podemos compartilhar os seus dados pessoais com órgãos do Poder
+                    Judiciário, sempre que for necessário para cumprirmos com uma ordem judicial, com nossas obrigações
+                    legais ou regulatórias, ou para o exercício regular de nossos direitos.</li>
+                <li><strong>Autoridades Policiais.</strong> Podemos compartilhar os seus dados pessoais com autoridades
+                    policiais ou órgãos com poder de polícia, como o Ministério Público, sempre que entendermos que haja
+                    suspeita ou confirmação de qualquer ato ilícito e criminal, quando necessário para proteger nossos
+                    colaboradores, nossos direitos e nossas propriedades, mesmo quando inexistente qualquer obrigação
+                    legal
+                    ou regulatória que demande o compartilhamento.</li>
+                <li><strong>Com terceiros interessados na combinação ou aquisição de nossos negócios.</strong> Podemos
+                    compartilhar os seus dados pessoais com terceiros interessados na combinação ou aquisição de nossos
+                    negócios, com os quais estivermos tratando sobre potenciais operações de fusão, aquisição ou
+                    incorporação da Companhia, de suas unidades de negócios ou de seus ativos específicos, tanto durante
+                    a
+                    fase de diligência realizada pelos terceiros nos negócios da Companhia ou em momento posterior, com
+                    a
+                    sua transferência definitiva para a empresa ou pessoa adquirente, quando aplicável. Na hipótese de
+                    ocorrência de algum processo de insolvência ou de reorganização da Companhia, seus dados pessoais
+                    também
+                    podem ser compartilhados com terceiros que adquiram nossos negócios ou ativos.</li>
+                <li><strong>Com demais usuários do Help Center </strong>. Caso você nos envie solicitações pelo Help
+                    Center
+                    essas publicações permanecerão públicas, podendo ser acessadas por terceiros, usuários das
+                    respectivas
+                    plataformas.</li>
+                <li><strong>Com terceiros indicados por você.</strong> Podemos compartilhar seus dados pessoais com
+                    terceiros que tenham sido indicados por você, mediante a sua solicitação e com base no seu
+                    consentimento.</li>
+            </ul>
+            <ol start="5">
+                <li><strong> Quais são as bases legais que autorizam o tratamento de seus dados pessoais?</strong></li>
+            </ol>
+            <p>Todas as nossas operações de tratamento de dados pessoais são sempre realizadas com suporte em uma base
+                legal
+                prevista na legislação aplicável, de acordo com as particularidades de cada atividade de tratamento de
+                dados.</p>
+            <p>Entre as hipóteses legais que autorizam o tratamento de seus dados pessoais que são utilizadas por nós
+                para
+                permitir nossas atividades de tratamento estão as seguintes:</p>
+            <ul>
+                <li><strong>Cumprimento de obrigação legal ou regulatória.</strong> Em determinadas situações, tratamos
+                    seus
+                    dados pessoais com suporte na necessidade para cumprimento de uma obrigação legal ou regulatória,
+                    como,
+                    por exemplo, quando guardamos os registros do seu acesso ao nosso site ou às nossas aplicações, em
+                    respeito ao artigo 15 da Lei nº 12.965/2014 (“Marco Civil da Internet”).</li>
+                <li><strong>Execução de contrato.</strong> Quando você decide utilizar a plataforma Mais Chat ,
+                    estabelecemos uma relação contratual com você pautada na sua adesão aos Termos de Uso da plataforma
+                    Mais
+                    Chat , e, no caso e planos pagos, na assinatura do Contrato Mais Chat , para disponibilização das
+                    funcionalidades. Nesses casos, trataremos seus dados pessoais que forem necessários para a execução
+                    do
+                    contrato, como, por exemplo, o seu nome completo, e-mail, telefone, para vincularmos seu cadastro à
+                    plataforma.</li>
+                <li><strong>Exercício regular de direitos.</strong> Podemos tratar os seus dados pessoais quando for
+                    necessário para permitir o exercício regular de nossos direitos em contratos, ou em processos
+                    administrativos, judiciais ou arbitrais, como, por exemplo, a indicação de seus dados cadastrais em
+                    uma
+                    demanda judicial ajuizada por você contra a Companhia.</li>
+                <li><strong>Proteção da vida ou da incolumidade física.</strong> Trataremos seus dados pessoais quando
+                    for
+                    necessário para a proteção da vida ou da incolumidade física, sua ou de terceiros, como, por
+                    exemplo, ao
+                    realizar a medição de sua temperatura antes de permitir seu ingresso em uma de nossas instalações
+                    físicas, para garantir que você não apresenta sinais de infecção por doenças infectocontagiosas que
+                    possam contaminar nossos colaboradores ou terceiros.</li>
+                <li><strong>Proteção do crédito.</strong> Trataremos seus dados pessoais quando for necessário para a
+                    proteção do nosso crédito, como, por exemplo, nos casos em que for necessário verificar sua condição
+                    de
+                    arcar com o pagamento pelos produtos ou serviços ofertados pela Mais Chat .</li>
+                <li><strong>Legítimo interesse.</strong> Trataremos seus dados pessoais quando tivermos um interesse
+                    legítimo no tratamento, exceto no caso de prevalecerem seus direitos e liberdades fundamentais,
+                    como,
+                    por exemplo, quando promovemos nossas atividades por meio do envio de e-mails aos nossos clientes.
+                </li>
+                <li><strong>Garantia de prevenção à fraude e à segurança do titular.</strong> Trataremos seus dados
+                    pessoais
+                    quando for necessário para garantir prevenção à fraude e à segurança do titular, em processos de
+                    identificação e autenticação de cadastros em sistemas eletrônicos.</li>
+                <li><strong>Consentimento.</strong> Quando não tivermos outra base legal que permita o tratamento de
+                    seus
+                    dados pessoais, poderemos tratar seus dados pessoais com base no seu consentimento, livre,
+                    inequívoco e
+                    informado, que poderá ser revogado a qualquer momento, de forma gratuita e fácil.</li>
+            </ul>
+            <p>Para maiores detalhes sobre a base legal utilizada em um tratamento de dados pessoais específico
+                realizado
+                por nós, entre em contato com nosso Encarregado, pelo e-mail: <a href="/cdn-cgi/l/email-protection"
+                    class="__cf_email__" data-cfemail="432f2624222f032e222a306d202b22376d">[email&#160;protected]</a>
+            </p>
+            <p> </p>
+            <ol start="6">
+                <li><strong> Por quanto tempo seus dados são tratados</strong></li>
+            </ol>
+            <p>A Mais Chat tem o compromisso de tratar os seus dados pessoais somente pelo período que for necessário
+                para
+                alcançar as finalidades específicas de cada tratamento, com a retenção dos dados pelo menor prazo
+                possível,
+                levando em consideração todas as obrigações legais e regulatórias existentes e a necessidade de defesa
+                dos
+                interesses da Companhia em processos judiciais, administrativos ou arbitrais.</p>
+            <p>Nesse sentido, os prazos de retenção são definidos pela Companhia de acordo com as características
+                específicas de cada tratamento, incluindo as finalidades para o tratamento, as obrigações legais ou
+                regulatórias existentes, entre outros critérios relevantes para essa definição.</p>
+            <p>Para obter mais informações sobre períodos de retenção específicos, por favor entre em contato com nosso
+                Encarregado pelo e-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="acc0c9cbcdc0ecc1cdc5df82cfc4cdd882">[email&#160;protected]</a></p>
+            <ol start="7">
+                <li><strong> Cookies</strong></li>
+            </ol>
+            <p>Os cookies são arquivos, de texto ou imagem, disponibilizados em nosso site e armazenados nos
+                dispositivos
+                utilizados pelos Usuários que as acessam, para funcionamento, desempenho e otimização da navegação.</p>
+            <p>Esses cookies também podem ser utilizados para avaliar métricas de performance, permitir o funcionamento
+                correto do site e torná-lo mais seguro, fornecer melhor experiência do usuário, entender como o site
+                funciona e onde precisa ser melhorado e coletar informações sobre o comportamento do usuário. Existem
+                vários
+                tipos de cookies. Em nosso site, nós utilizamos os seguintes cookies:</p>
+            <ul>
+                <li><strong>Cookies estritamente necessários. </strong>São essenciais para o funcionamento de nosso
+                    site,
+                    para garantir a sua segurança e performance adequada, sem os quais ele não funcionaria corretamente.
+                </li>
+                <li><strong>Cookies preferenciais.</strong> Armazenam informações sobre suas preferências, como, por
+                    exemplo, o seu idioma e sua região, permitindo uma melhor experiência de navegação no site.</li>
+                <li><strong>Cookies de análise.</strong> Coletam informações sobre o seu comportamento durante a
+                    navegação
+                    em nosso site, como as páginas que são acessadas, o tempo de visita, as páginas pouco acessadas, de
+                    modo
+                    a nos permitir melhorar a qualidade do site.</li>
+            </ul>
+            <p>Um exemplo de cookies que utilizamos são os fornecidos pelo Google Analytics, que nos ajuda a compreender
+                a
+                interação dos usuários com nossa plataforma, para, então, encontrar oportunidades de evoluir nossos
+                serviços.</p>
+            <p>Caso queira gerenciar suas preferências de cookies, é possível configurar seu navegador ou dispositivo
+                para
+                removê-los. No entanto, ao realizar esta ação, você fica ciente de que alguns recursos podem não
+                funcionar
+                adequadamente e de que sua experiência com a Mais Chat pode não ser tão personalizada, comprometendo a
+                usabilidade da plataforma.</p>
+            <p>Cada navegador fornece seu próprio meio para configurar os cookies. Ao acessar os respectivos sites, você
+                estará sujeito às políticas de privacidade de outras empresas, que podem não ser condizentes ou
+                similares
+                aos termos desta Política. Para saber mais sobre como gerenciar e excluir cookies do seu navegador,
+                visite:
+            </p>
+            <ul>
+                <li>Como remover cookies no <a
+                        href="https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&amp;hl=pt-BR">Google
+                        Chrome</a></li>
+                <li>Como remover cookies no <a
+                        href="https://support.mozilla.org/pt-BR/kb/limpe-cookies-e-dados-de-sites-no-firefox">Mozilla
+                        Firefox</a></li>
+                <li>Como remover cookies no <a
+                        href="https://support.microsoft.com/pt-br/topic/como-excluir-arquivos-de-cookie-no-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc">Internet
+                        Explorer</a></li>
+                <li>Como remover cookies no <a href="https://support.apple.com/pt-br/HT201265">Safari</a></li>
+            </ul>
+            <ol start="8">
+                <li><strong> Quais são os seus direitos como titular de dados pessoais?</strong></li>
+            </ol>
+            <p>Você possui uma série de direitos em relação aos seus dados pessoais e a Mais Chat está comprometida em
+                respeitá-los integralmente, na qualidade de Agente de Tratamento. Entre os direitos disponíveis a você
+                estão
+                os seguintes:</p>
+            <ul>
+                <li><strong>Confirmação da existência do tratamento.</strong> Questionar se tratamos seus dados
+                    pessoais,
+                    confirmando a existência ou não desses tratamentos.</li>
+                <li><strong>Acesso aos dados.</strong> Solicitar uma cópia dos seus dados pessoais que são tratados por
+                    nós,
+                    por meio eletrônico, seguro e idôneo ou sob forma impressa, de acordo com sua preferência.</li>
+                <li><strong>Retificação.</strong> Solicitar a correção dos seus dados pessoais que estejam incompletos,
+                    inexatos ou desatualizados.</li>
+                <li><strong>Anonimização, bloqueio ou exclusão.</strong> Solicitar a anonimização, bloqueio ou exclusão
+                    de
+                    seus dados pessoais, nos casos em que forem tratados dados desnecessários, excessivos ou em
+                    desconformidade com a legislação.</li>
+                <li><strong>Portabilidade.</strong> Solicitar a portabilidade dos seus dados pessoais para outras
+                    plataformas de conteúdo, na forma da regulamentação expedida pela Autoridade Nacional de Proteção de
+                    Dados, observados o segredo comercial e industrial da Mais Chat, se houver.</li>
+                <li><strong>Informações sobre compartilhamento.</strong> Solicitar informações sobre as entidades
+                    públicas e
+                    privadas com as quais nós compartilhamos os seus dados pessoais.</li>
+                <li><strong>Informações sobre a possibilidade de negar seu consentimento.</strong> Receber informações
+                    sobre
+                    a possibilidade de não fornecer o seu consentimento, quando o consentimento for a base legal
+                    aplicável
+                    para o tratamento de dados pessoais, com a indicação das consequências dessa negativa.</li>
+                <li><strong>Revogação de consentimento.</strong> Revogar seu consentimento de forma fácil e gratuita,
+                    bastando comunicar sua decisão ao Encarregado da Mais Chat ou em demais formatos possíveis
+                    disponibilizados pela Companhia exclusivamente para esse fim. É importante que você saiba que a
+                    revogação do consentimento não invalida ou torna ilegítimas as atividades de tratamento de dados
+                    pessoais que tenham sido concretizadas antes da data da revogação.</li>
+                <li><strong>Oposição ao tratamento.</strong> Se opor ao tratamento, indicando suas razões para tanto,
+                    nos
+                    casos em que o consentimento não for a base legal aplicável ao tratamento dos seus dados pessoais e
+                    quando houver algum descumprimento à LGPD. A Mais Chat avaliará se a sua oposição é justificada ou
+                    não,
+                    adotando as medidas necessárias para suspender o tratamento ou informar os fundamentos pelos quais
+                    compreende que o tratamento é lícito e permitido.</li>
+                <li><strong>Reclamação.</strong> Protocolar uma reclamação em relação ao tratamento dos seus dados
+                    pessoais
+                    realizado pela Mais Chat perante a Autoridade Nacional de Proteção de Dados. No entanto, esperamos
+                    que,
+                    antes de fazer isso, você nos dê a oportunidade de responder a quaisquer dúvidas ou reclamações que
+                    você
+                    tenha diretamente. Nosso Encarregado está à disposição para esclarecer quaisquer questionamentos e
+                    ajudar você no processamento de eventuais reclamações.</li>
+                <li><strong>Exclusão de dados tratados com consentimento.</strong> Solicitar a exclusão de seus dados,
+                    nos
+                    casos em que o seu consentimento for a base legal para uma determinada atividade de tratamento,
+                    ressalvadas as possibilidades de continuarmos armazenando os dados quando for necessário para o
+                    cumprimento de uma obrigação legal ou regulatória, ou para a defesa de nossos interesses em
+                    processos
+                    judiciais, administrativos ou arbitrais.</li>
+            </ul>
+            <ol start="9">
+                <li><strong> Solicitação de Acesso ou Exclusão de Dados e forma de exercício dos direitos dos titulares
+                        de
+                        dados pessoais</strong></li>
+            </ol>
+            <p>Todos esses direitos podem ser exercidos por você a qualquer tempo, de modo gratuito, salvo se a cobrança
+                de
+                uma taxa for permitida de acordo com a legislação ou regulamentação vigente, e a Mais Chat se compromete
+                a
+                envidar seus melhores esforços para atender às suas solicitações de forma transparente e célere.</p>
+            <p><strong>Se você desejar solicitar a exclusão de dados pessoais, ou exercer qualquer outro direito como
+                    titular de dados pessoais, basta entrar em contato conosco pelo seguinte canal: <a
+                        href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="81ede4e6e0edc1ece0e8f2afe2e9e0f5">[email&#160;protected]</a></strong>.</p>
+            <p>Para garantir que os direitos estão sendo exercidos por você ou por seu representante legal devidamente
+                constituído, a Mais Chat poderá solicitar informações ou comprovações necessárias acerca da sua
+                identidade,
+                no sentido de evitar fraudes e garantir a sua privacidade, para que seus dados pessoais não sejam
+                compartilhados com quem não tenha autorização para tanto.</p>
+            <p>Atenderemos às suas solicitações dentro de um prazo razoável, em conformidade com a legislação aplicável,
+                lembrando que somente poderemos responder a algumas solicitações depois de recebermos as confirmações
+                previstas acima.</p>
+            <p>Em determinados casos, como quando a sua solicitação for particularmente complexa ou quando recebermos um
+                volume elevado de solicitações ao mesmo tempo, pode ser que a nossa resposta não seja tão célere como
+                gostaríamos que fosse. Nessas ocasiões, manteremos você sempre informado e atualizado sobre o andamento
+                da
+                sua solicitação.</p>
+            <p>Nas situações em que atuarmos como Operador de Dados Pessoais, contratados por empresas com as quais você
+                tem
+                relacionamento, é dever das respectivas empresas responder às suas solicitações de exercício dos
+                direitos
+                previstos acima. Na hipótese em que você envie a solicitação para a Mais Chat , indicaremos quem é o
+                Controlador dos seus Dados Pessoais naquela atividade de tratamento e repassaremos sua solicitação para
+                essa
+                organização. Considerando que nessas hipóteses somente realizamos atividades de tratamento a mando dos
+                respectivos Controladores, estaremos impedidos de atender suas solicitações sem a autorização expressa
+                dos
+                respectivos Controladores.</p>
+            <ol start="10">
+                <li><strong> Segurança da Informação</strong></li>
+            </ol>
+            <p>A Mais Chat adota medidas técnicas e organizacionais, pautadas nas boas práticas do mercado, para
+                proteger os
+                seus dados pessoais contra acessos não autorizados ou situações ilícitas ou acidentais de destruição,
+                perda,
+                alteração, comunicação ou qualquer outra forma de tratamento inadequado. Seus dados são armazenados em
+                um
+                ambiente operacional seguro, que não é acessível ao público.</p>
+            <p>Entre as medidas que adotamos para proteger seus dados pessoais estão: controles de acesso, monitoramento
+                de
+                acessos às redes locais e das conexões remotas via VPN, autenticação de usuários, antivírus, firewall,
+                manutenção de cópias de segurança, realização periódica de testes e varreduras nos sistemas,
+                criptografia de
+                dados em trânsito e em repouso, dentre outras.</p>
+            <p>Mantemos salvaguardas administrativas, técnicas e físicas para apoiar a proteção das informações pessoais
+                que
+                você compartilha conosco. Estas ações estão associadas ao esforço para prevenção a incidentes de
+                segurança,
+                como perda, uso indevido e acesso não autorizado, divulgação, alteração, destruição ou quaisquer
+                contra-ataques perpetrados por pessoas mal-intencionadas, que podem ser altamente sofisticados e
+                inovadores,
+                com técnicas e métodos desconhecidos até então, mesmo pelas melhores ferramentas de segurança da
+                informação.
+            </p>
+            <p>Sabemos que nenhuma transmissão pela internet é 100% segura, portanto, a segurança dos seus dados também
+                depende da adoção de medidas razoáveis por você no uso de seus dispositivos e softwares. É importante
+                que
+                você proteja dados como seu e-mail e senha utilizados para autenticação na plataforma Mais Chat . Dessa
+                forma, impedimos que outras pessoas possam acessar seus serviços.</p>
+            <p>A segurança dos seus dados também depende da adoção de medidas razoáveis por você no uso de seus
+                dispositivos
+                e softwares. Caso você identifique ou tome conhecimento de algo que possa comprometer a segurança dos
+                seus
+                dados pessoais, ou de alguma possível vulnerabilidade em nosso site ou sistemas, por favor entre em
+                contato
+                conosco.</p>
+            <ol start="11">
+                <li><strong> Websites de Terceiros</strong></li>
+            </ol>
+            <p>Nosso website pode disponibilizar links para websites de terceiros. Esses websites, por sua vez, possuem
+                suas
+                próprias políticas de privacidade, que podem não ser compatíveis com esta Política. Recomendamos que
+                você
+                consulte as respectivas políticas de privacidade desses terceiros para se informar sobre as práticas de
+                proteção de dados pessoais adotadas por eles.</p>
+            <p>A Mais Chat não se responsabiliza pela regularidade das práticas de proteção de dados dos websites de
+                terceiros, nem pelo seu conteúdo, que não é de qualquer forma validado, ratificado ou subscrito pela
+                Mais
+                Chat .</p>
+            <ol start="12">
+                <li><strong> Como entrar em contato conosco</strong></li>
+            </ol>
+            <p>Caso você tenha qualquer dúvida sobre esta Política ou sobre a forma com que seus dados pessoais são
+                tratados
+                pela Mais Chat , ou, ainda, queira contribuir com reclamações, sugestões ou comentários sobre nossas
+                práticas de tratamento de dados pessoais, não hesite em entrar em contato conosco pelo e-mail: <a
+                    href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="5f333a383e331f323e362c713c373e2b71">[email&#160;protected]</a></p>
+            <p>Temos um Encarregado pelo tratamento de dados pessoais (Data Protection Officer) devidamente nomeado, que
+                está pronto para responder a todos os seus questionamentos ou reclamações, sendo o ponto de contato para
+                a
+                sua comunicação com a Mais Chat no que tange ao tratamento de seus dados pessoais.</p>
+            <p>Nosso Encarregado pode ser contatado diretamente pelo seguinte canal:</p>
+            <p>Írio Broleis – <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="2b474e4c4a476b464a42580548434a5f">[email&#160;protected]</a></p>
+            <p> </p>
+            <ol start="13">
+                <li><strong> Dados do Agente Responsável pelo Tratamento de Dados Pessoais</strong></li>
+            </ol>
+            <p>A Mais Chat Tecnologia Ltda., sociedade Ltda., inscrita no CNPJ/ME sob o nº 45.741.564/0001-13, com sede
+                na
+                Avenida Paulista, 1.636 &#8211; Sala 1504 &#8211; Bela Vista &#8211; São Paulo / SP &#8211; CEP:
+                01.310-200,
+                é a responsável pelo tratamento dos Dados Pessoais aqui definidos, na forma da definição prevista na Lei
+                Geral de Proteção de Dados Pessoais.</p>
+            <ol start="14">
+                <li><strong> Atualizações</strong></li>
+            </ol>
+            <p>Como nosso objetivo é sempre melhorar nossos serviços, esta Política de Privacidade pode passar por
+                alterações e atualizações ao longo do tempo, para melhor refletir nossas práticas de tratamento de dados
+                pessoais e conferir maior segurança e transparência às nossas operações.</p>
+            <p>Quando alterações relevantes forem realizadas, colocaremos um comunicado na página principal de nossos
+                sites
+                para que você possa rapidamente identificar a existência de uma versão atualizada desta Política.</p>
+            <p>Para as atividades de tratamento de dados pessoais que realizamos e que eventualmente sejam pautadas no
+                seu
+                consentimento, caso as alterações a esta Política de Privacidade resultem em mudanças efetivas nas
+                nossas
+                práticas de tratamento de dados pessoais, solicitaremos novamente o seu consentimento, com base nos
+                termos
+                atualizados desta Política.</p>
+            <p>Recomendamos que você verifique periodicamente esta Política para se familiarizar com eventuais
+                alterações.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- footer area start -->
+    <footer class="footer-area mt-5">
+        <div class="container col-lg-8">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget widget about_widget">
+                        <!-- footer widget -->
+                        <a href="index.html" class="footer-logo"><img src="assets/img/logo/maischat.svg" alt=""></a>
+                        <ul class="social-icon">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                        </ul>
+                        <div class="copyright-text margin-top-30">© Copyrights 2019 Buxkit </div>
+                    </div><!-- //. footer widget -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget widget">
+                        <!-- footer widget -->
+                        <h4 class="widget-title">Useful Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div><!-- //. footer widget -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget widget">
+                        <!-- footer widget -->
+                        <h4 class="widget-title">Need Help?</h4>
+                        <ul>
+                            <li><a href="#">FAQS</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Terms</a></li>
+                        </ul>
+                    </div><!-- //. footer widget -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget widget">
+                        <!-- footer widget -->
+                        <h4 class="widget-title">Download</h4>
+                        <ul>
+                            <li><a href="#">For iOS</a></li>
+                            <li><a href="#">For Android</a></li>
+                            <li><a href="#">For Macos</a></li>
+                            <li><a href="#">For windows</a></li>
+                            <li><a href="#">For Mac tab</a></li>
+                        </ul>
+                    </div><!-- //. footer widget -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <div class="back-to-top base-color-2">
+        <i class="fas fa-rocket"></i>
+    </div>
+
+
+    <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
+    <!-- jquery -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- popper -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <!-- wow js-->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- tweenmax js-->
+    <script src="assets/js/TweenMax.js"></script>
+    <!-- mouseover parallax js-->
+    <script src="assets/js/mousemoveparallax.js"></script>
+    <!-- contact js-->
+    <script src="assets/js/contact.js"></script>
+    <!-- main -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

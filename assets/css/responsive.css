@@ -6,7 +6,7 @@
 
       .menu {
         position: relative;
-        right: 27%;
+        right: 30%;
       }
     
 }
@@ -19,7 +19,7 @@
 
       .menu {
         position: relative;
-        right: 25%;
+        right: 28%;
       }
     
 }
@@ -31,7 +31,7 @@
       }
       .menu {
         position: relative;
-        right: 22%;
+        right: 25%;
       }
     
 }
@@ -43,7 +43,7 @@
       }
       .menu {
         position: relative;
-        right: 21%;
+        right: 23%;
       }
     
 }
@@ -55,7 +55,7 @@
       }
       .menu {
         position: relative;
-        right: 21%;
+        right: 23%;
       }
     
 }
@@ -65,13 +65,20 @@
         position: relative;
         left: 180%;
       }
-    
+      .menu {
+        position: relative;
+        right: 23%;
+      }
 }
 
 @media only screen and (min-width: 1201px) and (max-width: 1400px){
     .logo {
         position: relative;
         left: 140%;
+      }
+      .menu {
+        position: relative;
+        right: 23%;
       }
     
 }
@@ -94,7 +101,7 @@
       }
       .menu {
         position: relative;
-        right: 10%;
+        right: 15%;
       }
 
 }
