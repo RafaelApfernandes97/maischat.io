@@ -3109,3 +3109,56 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .nav_topico{
   margin-top: 5px;
 }
+
+.menu-topico {
+  width: 10px;
+}
+
+.fix-topico {
+  height: 10px;
+  position: fixed;
+  bottom: 500px;
+  color: #fff;
+  border-radius: 50%;
+  z-index: 99;
+  cursor: pointer;
+  display: none; }
+  
+
+  .topico .card {
+    border: none;
+    background-color: transparent; }
+    .topico .card:last-child .card-header h5 a {
+      margin-bottom: 0; }
+    .topico .card .card-header {
+      background-color: transparent;
+      border: none;
+      padding: 0; }
+      .topico .card .card-header h5 a {
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
+        
+        background-color: #fafafa;
+        cursor: pointer;
+        margin-bottom: 20px;
+        position: relative; }
+        .topico .card .card-header h5 a:after {
+          position: absolute;
+          right: 20px;
+          top: 4px;
+          content: "";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 16px;
+          color: #d13a75; }
+        .topico .card .card-header h5 a[aria-expanded="true"] {
+          margin-bottom: 0; }
+          .topico .card .card-header h5 a[aria-expanded="true"]:after {
+            content: "\f068"; }
+    .topico .card .card-body {
+      padding: 5px 30px 25px 30px;
+      font-size: 16px;
+      line-height: 26px;
+      background-color: #fafafa;
+      margin-bottom: 20px; }
