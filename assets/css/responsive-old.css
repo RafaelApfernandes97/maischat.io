@@ -1,5 +1,4 @@
-
-@media only screen and (min-width: 1900px) and (max-width: 3700px){
+@media only screen and (min-width: 1800px) and (max-width: 2700px){
     .logo {
         position: relative;
         left: 450%;
@@ -108,7 +107,10 @@
 }
 
 
-@media only screen and (min-width: 1201px) and (max-width: 1366px){
+
+
+
+@media only screen and (min-width: 1800px) and (max-width: 2400px){
     .header-area .header-right-image {
         position: absolute;
         right: -23%;
@@ -134,6 +136,7 @@
 /* Medium Layout: 1200px. */
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    
 
     .navbar-area .navbar-collapse .navbar-nav .nav-item {
         display: inline-block;
@@ -196,26 +199,23 @@
     .logo {
         position: relative;
         left: 10%;
-        top: 10% ;
+        top: 10px;
       }
       .menu {
         position: relative;
         left: 90%;
-        bottom: 30%;
+        bottom: 30px;
       }
-
 
     .navbar-area .navbar-collapse {
         position: absolute;
-        top: 65px;
-        background: #fbfbfb;
+        top: 83px;
+        background: #ffffff;
         z-index: 9;
-        right: 730px;
+        right: 0;
         width: 250px;
         padding-left: 20px;
     }
-
-
     .navbar-area .navbar-collapse .navbar-nav .nav-item .dropdown-menu.show {
         border: 0;
     }
@@ -391,21 +391,19 @@
     .logo {
         position: relative;
         left: 10%;
-        top: 10% ;
+        top: 10px;
       }
       .menu {
         position: relative;
         left: 90%;
-        bottom: 30%;
+        bottom: 30px;
       }
-
-
     .navbar-area .navbar-collapse {
         position: absolute;
-        top: 65px;
+        top: 83px;
         background: #fbfbfb;
         z-index: 9;
-        right: 670px;
+        right: 0;
         width: 250px;
         padding-left: 20px;
     }
@@ -600,7 +598,6 @@
 /* medium tablet layout 599px */
 
 @media only screen and (max-width: 599px) {
-
     .logo {
         position: relative;
         left: 10%;
@@ -609,20 +606,8 @@
       .menu {
         position: relative;
         left: 80%;
-        bottom: 40px;
+        bottom: 30px;
       }
-
-
-
-    .navbar-area .navbar-collapse {
-        position: absolute;
-        top: 78px;
-        background: #fbfbfb;
-        z-index: 9;
-        right: 300px;
-        width: 250px;
-        padding-left: 20px;
-    }
    .navbar-area,
    .navbar-area.nav-fixed {
        padding: 20px;
@@ -651,27 +636,6 @@
 }
 
 @media only screen and (min-width:415px) and (max-width: 450px){
-    .logo {
-        position: relative;
-        left: 10%;
-        top: 10% ;
-      }
-      .menu {
-        position: relative;
-        left: 90%;
-        bottom: 30%;
-      }
-
-
-    .navbar-area .navbar-collapse {
-        position: absolute;
-        top: 65px;
-        background: #fbfbfb;
-        z-index: 9;
-        right: 670px;
-        width: 250px;
-        padding-left: 20px;
-    }
     .header-area .header-area-inner .title {
         font-size: 45px;
         line-height: 60px;
@@ -735,6 +699,16 @@
 /* mobile tablet layout 414px */
 
 @media only screen and (max-width: 414px) {
+    .logo {
+        position: relative;
+        left: 10%;
+        top: 10px;
+      }
+      .menu {
+        position: relative;
+        left: 80%;
+        bottom: 40px;
+      }
   
     .navbar-area .nav-container {
         position: relative;
