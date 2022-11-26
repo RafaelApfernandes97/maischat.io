@@ -3100,3 +3100,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .img-priv {
   border-radius: 5%;
 }
+
+.nav-topico {
+  text-decoration: none;
+   
+}
+
+.nav_topico{
+  margin-top: 5px;
+}
