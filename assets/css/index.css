@@ -6,3 +6,34 @@
 .text-nav {
     color: #24262A;
 }
+
+.coopimg {
+    background-image: url(/assets/img/eXECUTIVO_1.png);
+    width: 100%;
+    height: 100%;
+    
+}
+
+.titulo-coop {
+    text-align: center;
+}
+
+.text-titulo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.text-paragrafo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
