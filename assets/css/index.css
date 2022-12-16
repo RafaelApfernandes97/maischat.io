@@ -7,10 +7,23 @@
     color: #24262A;
 }
 
+.icon-coop {
+    position: absolute;
+    top: 30% ;
+    left: 30%; 
+}
+
+.icon-coop1 {
+    position: absolute;
+    top: 30% ;
+    left: 38%; 
+}
+
 .coopimg {
     background-image: url(/assets/img/eXECUTIVO_1.png);
     width: 100%;
     height: 100%;
+    
     
 }
 
@@ -30,6 +43,7 @@
 
 .text-paragrafo {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
     font-weight: 200;
     color: white;
     text-align: center;
