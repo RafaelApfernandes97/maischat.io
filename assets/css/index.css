@@ -18,6 +18,38 @@
     top: 30% ;
     left: 38%; 
 }
+.seta-conteudo-link {
+    color: white;
+}
+
+.seta-conteudo-link-coop {
+    color: white;
+}
+
+.seta-conteudo-link-coop:hover {
+    color: #0AC775
+}
+
+.seta-conteudo-link:hover {
+    color: #0AC775
+}
+
+
+.seta-conteudo-coop {
+    color: white;
+    font-size: 70px;
+    position: absolute;   
+    top: 500%;
+    left: 38%;
+}
+
+.seta-conteudo {
+    color: white;
+    font-size: 70px;
+    position: absolute;   
+    top: 460%;
+    left: 38%;
+}
 
 .coopimg {
     background-image: url(/assets/img/eXECUTIVO_1.png);
@@ -51,3 +83,4 @@
     top: 40%;
     left: 30%;
 }
+
