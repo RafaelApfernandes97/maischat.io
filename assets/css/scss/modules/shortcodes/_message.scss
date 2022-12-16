@@ -1,0 +1,108 @@
+/* ==========================================================================
+# Message style - begin
+========================================================================== */
+/* Unique style for both types  - begin
+========================================================================== */
+.qodef-message{
+    position: relative;
+    padding: 24px 27px;
+    margin: 0;
+    background-color: #aab2bd;
+    border: 0 solid #aab2bd;
+    @media only screen and (max-width: 480px){
+        padding: 20px 22px;
+    }
+    .qodef-message-inner{
+        position: relative;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+
+        .qodef-message-text-holder {
+            display: table-cell;
+            width: 90%;
+            vertical-align: middle;
+            height: 100%;
+            position: relative;
+        }
+
+        .qodef-message-text{
+            .qodef-message-text-inner{
+                color: #fff;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+            }
+        }
+
+        a.qodef-close{
+            font-size: 18px;
+            display: table-cell;
+            width: 10%;
+            height: 100%;
+            vertical-align: middle;
+            text-align: right;
+
+            i{
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                font-weight: 700;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 20px;
+                @include qodefTransition(color 0.15s ease-out);
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
+}
+/* Unique style for both types - end
+========================================================================== */
+
+/* Type with icon - begin
+========================================================================== */
+.qodef-message.qodef-with-icon{
+    .qodef-message-text-holder {
+        padding-right: 50px;
+    }
+    .qodef-message-icon-holder{
+        float: right;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include qodefTransform(translateY(-50%));
+        display: inline-block;
+        height: 100%;
+        .qodef-message-icon{
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+
+            .qodef-message-icon-inner{
+                display: table;
+                height: 100%;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 400;
+                >i,
+                >span{
+                    line-height: 1em;
+                    display: table-cell;
+                    height: 100%;
+                    vertical-align: middle;
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Type with icon - end
+========================================================================== 
+/* ==========================================================================
+# Message style - end
+========================================================================== */

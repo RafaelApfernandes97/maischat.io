@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Elements Holder start style
+   ========================================================================== */
+
+.qodef-elements-holder {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+
+	&.qodef-two-columns {
+
+		.qodef-elements-holder-item {
+			width: 50%;
+		}
+	}
+
+	&.qodef-two-columns {
+
+		.qodef-elements-holder-item {
+			width: 50%;
+		}
+	}
+
+	&.qodef-three-columns {
+
+		.qodef-elements-holder-item {
+			width: 33%;
+		}
+	}
+
+	&.qodef-four-columns {
+
+		.qodef-elements-holder-item {
+			width: 25%;
+		}
+	}
+
+	&.qodef-five-columns {
+
+		.qodef-elements-holder-item {
+			width: 20%;
+		}
+	}
+
+	&.qodef-six-columns {
+
+		.qodef-elements-holder-item {
+			width: 16%;
+		}
+	}
+
+	.qodef-elements-holder-item {
+
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+		background-size: cover;
+
+		&.qodef-vertical-alignment-top {
+			vertical-align: top;
+		}
+
+		&.qodef-vertical-alignment-bottom {
+			vertical-align: bottom;
+		}
+
+		&.qodef-horizontal-alignment-center {
+			text-align: center;
+		}
+
+		&.qodef-horizontal-alignment-right {
+			text-align: right;
+		}
+
+		.qodef-elements-holder-item-inner {
+			width: 100%;
+		}
+	}
+
+	&.qodef-elements-items-float {
+
+		&.qodef-three-columns {
+
+			.qodef-elements-holder-item {
+				width: 33.33333333333333%;
+			}
+		}
+
+		&.qodef-six-columns {
+
+			.qodef-elements-holder-item {
+				width: 16.66666666666667%;
+			}
+		}
+
+		.qodef-elements-holder-item {
+			float:left;
+		}
+	}
+
+	.qodef-elements-holder-item-content{
+		padding: 0 20px;
+	}
+
+}
+/* ==========================================================================
+   End of Elements Holder style
+   ========================================================================== */

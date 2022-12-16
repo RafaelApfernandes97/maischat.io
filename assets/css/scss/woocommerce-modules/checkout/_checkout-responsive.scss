@@ -1,0 +1,80 @@
+/* ==========================================================================
+   WooCommerce Checkout Page Responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-woocommerce-page .woocommerce-checkout {
+
+        .col-1,
+        .col-2 {
+            width: 100%;
+        }
+
+        .col-1 {
+            margin: 0 0 25px;
+        }
+
+        table {
+
+            td, th {
+                padding: 15px 20px;
+            }
+        }
+
+        .woocommerce-checkout-payment {
+
+            ul {
+
+                li {
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-woocommerce-page .woocommerce-checkout {
+
+        .col-1,
+        .col-2 {
+            
+            .form-row {
+                width: 100%;
+                margin: 0;
+                float: none;
+            }
+        }
+
+        table {
+
+            td, th {
+                padding: 12px 18px;
+            }
+        }
+
+        .woocommerce-checkout-payment {
+
+            ul {
+
+                li {
+                    padding: 12px 18px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-portrait) {
+
+    .qodef-woocommerce-page .woocommerce-checkout {
+        .woocommerce-checkout-payment ul li.payment_method_paypal label img {
+            display: none;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Checkout Page Responsive styles - end
+   ========================================================================== */

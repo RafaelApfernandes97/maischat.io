@@ -1,0 +1,55 @@
+/* ==========================================================================
+   WooCommerce Track Order styles - begin
+   ========================================================================== */
+
+.qodef-woocommerce-page.qodef-woocommerce-order-tracking {
+
+    .woocommerce {
+
+        > .track_order {
+            display: block;
+            margin: 0 0 40px;
+            text-align: center;
+
+            > p:not(.form-row) {
+                display: block;
+                margin: 0 0 25px;
+                font-size: 18px;
+                line-height: 34px;
+            }
+
+            .form-row-first,
+            .form-row-last {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+                float: left;
+                text-align: left;
+                @include qodefBoxSizing(border-box);
+
+                label {
+                    display: block;
+                    margin: 0 0 10px;
+                    color: $default-heading-color;
+                    font-weight: 600;
+                }
+            }
+
+            .form-row-first {
+                padding: 0 7px 0 0;
+            }
+
+            .form-row-last {
+                padding: 0 0 0 7px;
+            }
+
+            .button {
+                margin: 12px 0 0;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Track Order styles - end
+   ========================================================================== */

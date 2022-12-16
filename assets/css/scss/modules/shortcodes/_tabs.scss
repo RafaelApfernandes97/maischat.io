@@ -1,0 +1,261 @@
+/* ==========================================================================
+# Tabs style - begin
+========================================================================== */
+.qodef-tabs {
+    
+    .qodef-tabs-nav {                
+        display: block;
+        position: relative;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        vertical-align: middle;
+        @include qodefBoxSizing(border-box);
+
+        li {
+            margin: 0;
+
+            a {
+                position: relative;
+                display: block;
+                padding: 9px 24px;
+                color: #24262a;
+                font-size: 16px;
+                font-weight: 400;
+                @include qodefBoxSizing(border-box);
+                @include qodefTransition(color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out);
+
+                i,
+                span {
+                    @include qodefTransition(initial);
+                }
+
+                .qodef-icon-frame {
+                    display: inline-block;
+                    min-width: 20px;
+                    line-height: 1;
+                    vertical-align: middle;
+                }
+
+                .qodef-tab-text-after-icon {
+                    @include qodefTransition(initial);
+                    vertical-align: middle;
+                }
+            }
+            &.ui-state-active a,
+            &.ui-state-hover a {
+                color: #24262a;
+                background-color: #f6f7fb;
+            }
+        }
+    }
+
+    &.white-active-tab-skin {
+        li  {
+            &.ui-state-active a,
+            &.ui-state-hover a {
+                color: #24262a;
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    .qodef-tab-container {     
+        position: relative;
+        @include qodefBoxSizing(border-box);
+    }
+}
+
+/* Icon tabs styles
+   ========================================================================== */
+.qodef-tabs.qodef-horizontal-tab.qodef-tab-with-icon ul li a {
+
+    .qodef-tab-text-after-icon {
+        padding: 0 4px 0 0;
+    }
+}
+
+.qodef-tabs.qodef-vertical-tab.qodef-tab-with-icon ul li a {
+
+    .qodef-tab-text-after-icon {
+        padding: 0 0 0 13px;
+    }
+}
+
+.qodef-tabs.qodef-tab-with-icon ul li:hover .qodef-icon-frame  {
+    @include qodefAnimation(qodef-appear .35s forwards ease);
+}
+
+@include keyframes(qodef-appear) {
+    0% {
+        opacity: 0;
+        @include qodefTransform(translateX(25px));
+    }
+    30% {
+        opacity: .1;
+        @include qodefTransform(translateX(15px));
+    }
+    100% {
+        opacity: 1;
+        @include qodefTransform(translateX(0px));
+    }
+}
+
+/* Horizontal tabs styles
+   ========================================================================== */
+.qodef-tabs.qodef-horizontal-tab {
+    
+    .qodef-tabs-nav {
+        top: 1px;
+        z-index: 10;
+        @include qodefBorderRadius(5px 5px 0 0);
+
+
+
+        li {
+            float: left;
+
+            a {
+                text-align: center;
+                border-right: 1px solid #e6e9ee;
+                border-bottom: 1px solid #e6e9ee;
+                border-top: 1px solid #e6e9ee;
+                padding: 14px 24px;
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 4px;
+                    display: block;
+                    background-color: transparent;
+                    position:absolute;
+                    left: 0px;
+                    bottom: 0;
+                    @include qodefTransition(background-color 0.3s);
+
+                }
+            }
+            &:first-child {
+                a {
+                    @include qodefBorderRadius(5px 0 0 0 );
+                    border-left: 1px solid #e6e9ee;
+                }
+            }
+
+            &:last-child {
+                a {
+                    @include qodefBorderRadius(0 5px 0 0);
+                }
+            }
+
+            &.ui-state-active a,
+            &.ui-state-hover a {
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 4px;
+                    display: block;
+                    background-color: $first-main-color;
+                    position:absolute;
+                    left: 0px;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .qodef-tab-container {
+        padding-top: 5px;
+        visibility: hidden;
+        opacity:0;
+        @include qodefTransform(translateY(20px));
+        &.qodef-visible {
+            visibility: visible;
+            opacity:1;
+            @include qodefTransform(translateY(0));
+            @include qodefTransition(all .5s cubic-bezier(0.22, 0.61, 0.36, 1));
+        }
+    }
+}
+
+/* Vertical tabs styles
+   ========================================================================== */
+.qodef-tabs.qodef-vertical-tab {
+    
+    .qodef-tabs-nav {
+        float: left;
+        width: 32%;
+
+        li {
+            position: relative;
+            display: block;
+            width: 100%;
+            @include qodefBorderRadius(5px);
+            border: 1px solid #e6e9ee;
+            margin-bottom: 7px;
+            box-sizing: border-box;
+
+            a {
+                padding:12px 20px;
+                &:before {
+                    content: '';
+                    width: 4px;
+                    height: calc(100% + 1px);
+                    display: block;
+                    background-color: transparent;
+                    position:absolute;
+                    left: 0px;
+                    top: -1px;
+                    @include qodefTransition(background-color 0.3s);
+                }
+            }
+
+            &.ui-state-active a,
+            &.ui-state-hover a {
+                &:before {
+                    content: '';
+                    width: 4px;
+                    height: calc(100% + 1px);
+                    display: block;
+                    background-color: $first-main-color;
+                    position:absolute;
+                    left: 0px;
+                    top: -1px;
+                }
+
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }   
+    }
+
+    .qodef-tab-container {
+        float: left;
+        width: 68%;
+        padding: 0px 25px;
+        visibility: hidden;
+        opacity:0;
+        @include qodefTransform(translateX(-25px));
+        &.qodef-visible {
+            visibility: visible;
+            opacity:1;
+            @include qodefTransform(translateY(0));
+            @include qodefTransition(all .5s cubic-bezier(0.22, 0.61, 0.36, 1));
+        }
+        p {
+            margin-top: 0;
+        }
+    }
+}
+
+.qodef-tabs.qodef-vertical-tab.qodef-tab-only-icon {
+    
+    .qodef-tabs-nav li a {
+        text-align: center;
+    }
+}
+/* ==========================================================================
+# Tabs style - end
+========================================================================== */

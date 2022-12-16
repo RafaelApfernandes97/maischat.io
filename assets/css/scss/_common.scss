@@ -1,0 +1,850 @@
+@import 'variables';
+@import 'mixins';
+
+/* ==========================================================================
+   #Comments styles - start
+   ========================================================================== */
+
+.qodef-comment-holder {
+    padding: 13px 0 9px;
+    margin: 0 0 0;
+
+    .qodef-comment-number-inner {
+        padding: 0 0 13px 5px;
+        border-bottom: 1px solid #e6e9ee;
+    }
+
+    .qodef-comment-image {
+        display: block;
+        width: 83px;
+        height: 83px;
+        float: left;
+        padding-left: 5px;
+        img {
+            @include qodefBorderRadius(50%);
+        }
+    }
+
+    .qodef-comment-date {
+        font-size: 12px;
+        color: $first-main-color;
+    }
+    .qodef-comment-text {
+        padding: 0 0 0 99px;
+        min-height: 83px;
+        .qodef-text-holder {
+            margin-top: 10px;
+        }
+
+        .qodef-comment-name {
+          line-height: 24px;
+          color: #101010;
+        }
+
+        .qodef-text-holder {
+            p {
+                margin: 0;
+              font-size: 12px;
+              font-weight: 400;
+            }
+        }
+
+        .qodef-comment-info {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            color: #444;
+            letter-spacing: 0.5px;
+        }
+
+        .replay,
+        .comment-reply-link,
+        .comment-edit-link {
+            margin-left: 10px;
+            color: #444;
+            letter-spacing: 0.5px;
+            font-size: 13px;
+            font-weight: 500;
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .replay,
+        .comment-reply-link {
+            &:before {
+                content: "\f112";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+            }
+        }
+        .comment-edit-link {
+            &:before {
+                content: "\f040";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .qodef-pingback-comment {
+        .qodef-comment-text {
+            min-height: initial;
+            padding: 0;
+        }
+    }
+
+}
+
+.qodef-comment-list {
+    list-style: none;
+    position: relative;
+    z-index: 150;
+    padding: 0;
+    margin: 27px 0 0;
+
+    li {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+
+        .children {
+            margin: 31px 0 0 0;
+            padding: 0 0 0 120px;
+            li {
+                padding-top: 35px;
+                padding-bottom: 31px;
+                border-top: 1px solid #dadada;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+            .qodef-comment-info {
+                top: 35px;
+            }
+        }
+    }
+
+    > li {
+        margin: 0 0 40px;
+        padding-bottom: 45px;
+        border-bottom: 1px solid #dadada;
+    }
+}
+
+.qodef-comment-form {
+    margin-bottom: 40px;
+}
+
+.comment-respond {
+    margin: 20px 0;
+    .comment-reply-title {
+        font-size: 15px;
+        margin-bottom: 9px;
+        #cancel-comment-reply-link {
+            font-size: 15px;
+            line-height: 28px;
+            color: $first-main-color;
+            font-weight: 400;
+        }
+    }
+
+    .logged-in-as {
+        margin-bottom: 10px;
+        a {
+            color: #444;
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+        a:first-child {
+            &:before {
+                content: "\f007";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+            }
+        }
+        a:nth-child(2) {
+            margin-left: 10px;
+            &:before {
+                content: "\f011";
+                font-family: "FontAwesome";
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.qodef-contact-form,
+.qodef-sidearea-contact-form {
+    .qodef-two-columns-50-50 {
+        .qodef-column {
+            box-sizing: border-box;
+            &:first-child {
+                padding: 0 5px;
+            }
+            &:last-child {
+                padding:0 5px;
+            }
+        }
+
+    }
+    .qodef-three-columns {
+        .qodef-column {
+            box-sizing: border-box;
+            &:first-child {
+                padding-right: 5px;
+            }
+            &:nth-child(2) {
+                padding: 0 5px;
+            }
+            &:last-child {
+                padding-left: 5px;
+            }
+        }
+    }
+    .qodef-message-holder {
+        padding:  0 5px;
+    }
+    .qodef-button-holder {
+        padding:  0 5px;
+    }
+
+    .wpcf7-form-control {
+        &.wpcf7-textarea {
+            &:focus {
+                background-color: #f6f7fb;
+                color: #909090;
+            }
+        }
+    }
+    .qodef-button-holder {
+        .ajax-loader {
+            display: none;
+        }
+    }
+}
+
+.qodef-sidearea-contact-form {
+    .wpcf7-form-control {
+        &.wpcf7-text,
+        &.wpcf7-textarea {
+            background-color: #929395;
+        }
+    }
+}
+
+%input-style {
+    font-family: Rubik, sans-serif;
+    font-weight: 300;
+    width: 100%;
+    margin-bottom: 11px;
+    padding: 12px 22px;
+    border: 1px solid #e6e9ee;
+    outline: 0;
+    font-family: inherit;
+    font-size: 13px;
+    background-color: transparent;
+    color: #656d78;
+    @include qodefBorderRadius(3px);
+    @include qodefBoxSizing(border-box);
+
+    &:focus {
+        border: 1px solid #e6e9ee;
+    }
+}
+
+%label-style {
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #3a3c41;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.wpcf7-form-control {
+    &.wpcf7-text,
+    &.wpcf7-number,
+    &.wpcf7-date,
+    &.wpcf7-textarea,
+    &.wpcf7-select,
+    &.wpcf7-quiz {
+        @extend %input-style;
+    }
+}
+
+#respond textarea,
+#respond input[type='text'],
+#respond input[type='email'],
+.post-password-form input[type='password'] {
+    @extend %input-style;
+}
+
+.qodef-comment-label {
+    @extend %label-style;
+}
+
+#respond textarea {
+    padding: 18px 21px;
+    margin-bottom: 10px;
+}
+
+.post-password-form input[type='submit'],
+input.wpcf7-form-control.wpcf7-submit {
+    position: relative;
+    outline: none;
+    font-style: normal;
+    font-weight: 700;
+    font-family: inherit;
+    padding: 0 30px;
+    font-size: 13px;
+    line-height: 47px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    @include qodefTransition(color 0.15s ease-out, background-color 0.15s ease-out, border-color 0.15s ease-out);
+    @include qodefBoxSizing(border-box);
+    border: 1px solid $first-main-color;
+    color: #ffffff;
+    background-color: $first-main-color;
+    cursor: pointer;
+    @include qodefBorderRadius(3px);
+
+    &:hover {
+        color: #fff;
+        background-color: $first-main-color;
+        border-color: $first-main-color;
+    }
+}
+
+#submit_comment {
+    cursor: pointer;
+    padding: 0 63px;
+}
+
+.woocommerce-page .qodef-subscription-form,
+.qodef-subscription-form {
+    position: relative;
+    input.wpcf7-form-control {
+        &.wpcf7-submit {
+            position: absolute;
+            font-family: ElegantIcons;
+            font-size: 32px;
+            top: 0;
+            right: 0;
+            border-radius: 0;
+            height: 45px;
+            line-height: 45px;
+            padding: 0 5px;
+            margin:0;
+            background-color: $first-main-color;
+            color: #ffffff;
+            @include qodefBorderRadius(3px);
+        }
+        &.wpcf7-email {
+            @extend %input-style;
+            line-height: 15px;
+            padding: 14px 45px 14px 22px;
+            background-color: #ffffff;
+            margin: 0;
+        }
+    }
+    img.ajax-loader {
+        display: none;
+    }
+}
+
+footer .qodef-subscription-form {
+    input.wpcf7-form-control {
+        &.wpcf7-submit {
+            height: 45px;
+            line-height: 45px;
+
+        }
+    }
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Pagination styles - start
+   ========================================================================== */
+
+.qodef-pagination {
+
+    position: relative;
+    display: table-cell;
+    vertical-align: top;
+    width: 99%;
+    margin: 0;
+    padding: 0;
+    ul {
+        margin-top: 50px;
+    }
+
+	li {
+		text-align: center;
+		display: inline-block;
+
+        &.qodef-pagination-number {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            text-decoration: none;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            margin: 0 3px;
+            width: auto;
+            min-width: 30px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #ccd0d9;
+            @include qodefBorderRadius(3px);
+            @include qodefTransition(background-color .3s);
+
+            &:hover {
+                background-color: $first-main-color;
+            }
+
+            a,
+            &.active span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                text-decoration: none;
+                cursor: pointer;
+                white-space: nowrap;
+                font-size: 16px;
+                font-weight: 400;
+                color: #ffffff;
+                padding: 0 10px;
+            }
+            &.active {
+                color: #ffffff;
+                background-color: $first-main-color;
+
+            }
+            a.inactive {
+              font-weight: 400;
+            }
+
+            a:hover,
+            &.active span {
+                color: #ffffff;
+            }
+        }
+
+        &.qodef-pagination-prev,
+        &.qodef-pagination-next{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #aab2bd;
+            @include qodefBorderRadius(2px);
+            vertical-align: middle;
+        }
+
+        &.qodef-pagination-prev {
+            margin-right: 3px;
+        }
+        &.qodef-pagination-next{
+            margin-left: 3px;
+        }
+
+
+        &.qodef-pagination-last-page,
+        &.qodef-pagination-first-page,
+        .qodef-pagination-arrow {
+            color: #ffffff;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+
+        &.qodef-pagination-first-page {
+            position: absolute;
+            top: 44px;
+            left: 0;
+            float: left;
+            a {
+                color: #c8c7c7;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                &:first-child {
+                    margin-right: 11px;
+                }
+            }
+        }
+
+        &.qodef-pagination-last-page {
+            position: absolute;
+            top: 44px;
+            right: 0;
+            float: right;
+            a {
+                color: #c8c7c7;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                &:last-child {
+                    margin-left: 11px;
+                }
+            }
+        }
+
+        .qodef-pagination-text {
+            color: #aab2bd;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22px;
+            vertical-align: middle;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Pagination styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Owl Slider (Blog single, Portfolio single) - begin
+   ========================================================================== */
+.qodef-owl-slider {
+
+    .owl-nav {
+
+        .owl-prev {
+            position: absolute;
+            top: 50%;
+            @include qodefTransform(translateY(-50%));
+            left: 2%;
+        }
+
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            @include qodefTransform(translateY(-50%));
+            right: 2%;
+        }
+
+        .qodef-prev-icon,
+        .qodef-next-icon {
+            font-size: 30px;
+            line-height: 30px;
+            color: #c8c7c7;
+            vertical-align: middle;
+        }
+
+    }
+
+    .owl-dots {
+        text-align: center;
+
+        .owl-dot {
+            display: inline-block;
+        }
+
+        .owl-dot span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 3px;
+            filter: Alpha(Opacity=50);
+            opacity: 0.5;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            background: #e3e3e3;
+        }
+
+        .owl-dot.active span {
+            opacity: 1;
+        }
+
+    }
+
+}
+
+/* ==========================================================================
+   #Owl Slider (Blog single, Portfolio single) - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #404 styles - start
+   ========================================================================== */
+
+.qodef-404-page {
+    padding: 0;
+}
+
+.qodef-page-not-found {
+    margin: 80px 0;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        margin-bottom: 30px;
+    }
+}
+
+/* ==========================================================================
+   #404 styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+#qodef-back-to-top {
+    position: fixed;
+    width: 36px;
+    right: 36px;
+    bottom: 36px;
+    margin: 0;
+    z-index: 10000;
+    @include qodefTransition(opacity 0.15s ease-out, visibility 0.15s ease-out);
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+#qodef-back-to-top.off {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#qodef-back-to-top.on {
+    opacity: 1;
+    visibility: visible;
+}
+
+#qodef-back-to-top > span {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 31px;
+    background-color: $first_main_color;
+    @include qodefTransition(background-color 0.15s ease-out, color 0.15s ease-out);
+    box-sizing: border-box;
+    @include qodefBorderRadius(3px);
+}
+
+#qodef-back-to-top span span {
+    display: block;
+    line-height: inherit;
+    margin-left: -1px;
+    &:before {
+        display: inline-block;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+#qodef-back-to-top:hover > span {
+    background-color: #434955;
+    span {
+        &:before {
+            -webkit-animation-name: hvr-icon-up;
+            animation-name: hvr-icon-up;
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+    }
+}
+
+/* Icon Up */
+@-webkit-keyframes hvr-icon-up {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    25%,
+    75% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+@keyframes hvr-icon-up {
+    0%,
+    50%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    25%,
+    75% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Self Hosted Video styles - start
+   ========================================================================== */
+.qodef-self-hosted-video-holder {
+    .qodef-video-wrap {
+        .mejs-container,
+        .mejs-overlay-play {
+            height: 100% !important; /*!important because of the inline style*/
+            width: 100% !important; /*!important because of the inline style*/
+        }
+    }
+}
+
+/* ==========================================================================
+   #Self Hosted Video styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Search page styles - start
+   ========================================================================== */
+.search-results {
+    .qodef-search-article-title {
+        margin-bottom: 25px;
+    }
+}
+
+/* ==========================================================================
+   #Search page styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Single image styles - start
+   ========================================================================== */
+
+.qodef-image-hover {
+    .vc_single_image-wrapper {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.25);
+            @include qodefTransition(opacity 0.2s ease-out);
+            opacity: 0;
+        }
+        &:hover:before {
+            opacity: 1;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Single image styles - end
+   ========================================================================== */
+
+
+/* ==========================================================================
+   #Screen reader text - start
+   ========================================================================== */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: #21759b;
+        display: block;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+
+}
+
+/* ==========================================================================
+   #Screen reader text - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Browser specific styles - start
+   ========================================================================== */
+
+li, a, div, span {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+textarea,
+input:not([type=checkbox]):not([type=radio]) {
+    box-shadow: none !important;
+    -webkit-appearance: none;
+}
+
+textarea {
+    overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+/* ==========================================================================
+   #Browser specific styles - end
+   ========================================================================== */

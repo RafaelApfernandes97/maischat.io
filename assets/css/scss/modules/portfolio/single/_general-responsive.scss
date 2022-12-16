@@ -1,0 +1,58 @@
+@import 'masonry-gallery-left-responsive';
+
+@include ipad-landscape {
+    .qodef-portfolio-single-nav {
+        .qodef-portfolio-single-nav-inner {
+            width: $grid-width-ipad-landscape;
+        }
+    }
+}
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-portfolio-single-holder{
+        .qodef-portfolio-media {
+            margin-bottom:30px;
+        }
+    }
+
+    .qodef-portfolio-single-nav {
+        .qodef-portfolio-single-nav-inner {
+            width: $grid-width-ipad-portrait;
+        }
+    }
+}
+
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-portfolio-single-holder{
+        .qodef-portfolio-single-nav {
+            .qodef-nav-label{
+                display:none;
+            }
+        }
+
+        .qodef-portfolio-media {
+            margin-bottom:30px;
+        }
+
+        .qodef-portfolio-social-holder,
+        .qodef-portfolio-info-holder{
+            float:none !important;
+            text-align:left !important;
+            width:100% !important;
+            margin:0 !important;
+        }
+
+        .qodef-portfolio-social,
+        .qodef-portfolio-like{
+            float:none !important;
+            margin-top:30px !important;
+        }
+    }
+    .qodef-portfolio-single-nav {
+        .qodef-portfolio-single-nav-inner {
+            width: $grid-width-phone-landscape;
+        }
+    }
+}

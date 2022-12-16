@@ -1,0 +1,318 @@
+/* ==========================================================================
+   WooCommerce Dropdown Cart styles - begin
+   ========================================================================== */
+
+.qodef-shopping-cart-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    padding: 0;
+    margin-left: 13px;
+
+    .touch & {
+        cursor: pointer;
+    }
+
+    &.qodef-cart-info-is-disabled {
+
+        .qodef-header-cart {
+            line-height: 24px;
+
+            .qodef-cart-info {
+                display: none;
+            }
+        }
+    }
+
+    .qodef-shopping-cart-inner {
+        position: relative;
+        display: table;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .qodef-header-cart {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        color: #24262a;
+
+        .qodef-cart-icon {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 18px;
+            line-height: 1em;
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+
+        .qodef-cart-number {
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            margin: 3px 0 0;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: inherit;
+            text-align: center;
+        }
+
+        .qodef-cart-info {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            line-height: 15px;
+            vertical-align: middle;
+            padding: 0;
+            font-size: 9px;
+            font-weight: 700;
+            clear: both;
+            text-align: center;
+            background-color: $first-main-color;
+            color: #fff;
+            border-radius: 3px;
+            position: absolute;
+            top: 30%;
+            right: -10px;
+
+            .qodef-cart-info-number {
+                position: relative;
+                top: 1px;
+            }
+        }
+
+        &:hover {
+            color: $default-heading-color;
+        }
+    }
+
+    &:hover {
+
+        .qodef-shopping-cart-dropdown {
+            display: block;
+        }
+    }
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-shopping-cart-holder .qodef-header-cart {
+    color: $header-dark-color;
+
+    &:hover {
+        color: $header-dark-hover-color;
+    }
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header):not(.fixed) .qodef-shopping-cart-holder .qodef-header-cart {
+    color: $header-light-color;
+
+    &:hover {
+        color: $header-light-hover-color;
+    }
+}
+
+.qodef-shopping-cart-dropdown {
+    position: absolute;
+    top: 100%;
+    left: auto;
+    right: 0;
+    width: 290px;
+    display: none;
+    background-color: #fff;
+    border-top: 4px solid $first-main-color;
+    text-align: left;
+    z-index: 1000;
+    @include qodefBoxSizing(border-box);
+
+    ul {
+        margin: 25px;
+        padding: 0;
+
+        li {
+            @include qodefTableLayout;
+            padding: 20px 0;
+            border-bottom: 1px solid #cfd4db;
+            @include qodefBoxSizing(border-box);
+
+            &.qodef-empty-cart {
+                border: 0;
+                color: #3a3c41;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .qodef-item-image-holder {
+        position: relative;
+        display: table-cell;
+        height: 100%;
+        width: 84px;
+        vertical-align: top;
+
+        img {
+            display: block;
+        }
+    }
+
+    .qodef-item-info-holder {
+        @include qodefTableCellLayout;
+        vertical-align: top;
+        padding-left: 13px;
+        text-align: left;
+
+        .qodef-product-title {
+            display: block;
+            margin: 0;
+            padding: 0 27px 0 0;
+            color: #101010;
+            @include qodefBoxSizing(border-box);
+        }
+
+        .remove {
+            position: absolute;
+            top: 0;
+            right: 3px;
+            width: 27px;
+            height: 27px;
+            color: $default-heading-color;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+
+            span {
+                display: block;
+                line-height: inherit;
+
+                &:before {
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .qodef-quantity {
+            display: block;
+            margin-top: -6px;
+            font-weight: 400;
+            color: #929aa5;
+            font-size: 13px;
+        }
+
+        .amount {
+            display: block;
+            color: #656d78;
+            line-height: 1;
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 7px;
+        }
+    }
+
+    .qodef-cart-bottom {
+        padding: 20px 0 0;
+
+        .qodef-subtotal-holder {
+            position: relative;
+            display: table;
+            width: 100%;
+            margin: 0 0 19px;
+            border-bottom: 1px solid #cfd4db;
+            padding-bottom: 12px;
+
+            > * {
+                display: table-cell;
+                vertical-align: top;
+                color: #24262a;
+                line-height: 20px;
+	            font-weight: 400;
+                font-size: 15px;
+            }
+
+            .qodef-total-amount {
+                text-align: right;
+	            font-size: 16px;
+                color: $first-main-color;
+                font-weight: 500;
+            }
+        }
+
+        .qodef-cart-description {
+            @include qodefRelativeHolderLayout();
+            margin: 0 0 10px;
+
+            .qodef-cart-description-inner {
+                position: relative;
+                display: table;
+                width: 100%;
+                height: 100%;
+                padding: 17px 30px;
+                background-color: #f4f4f4;
+                text-align: center;
+                @include qodefBoxSizing(border-box);
+
+                span {
+                    position: relative;
+                    display: table-cell;
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: middle;
+                    color: $default-heading-color;
+                    font-size: 12px;
+                    line-height: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .qodef-view-cart {
+            @include qodefRelativeHolderLayout();
+            height: 54px;
+            line-height: 54px;
+            padding: 0 26px;
+            font-size: 14px;
+            font-weight: 700;
+	        letter-spacing: 0.5px;
+            color: #fff;
+            background-color: $first-main-color;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            -webkit-appearance: none;
+            @include qodefBoxSizing(border-box);
+            @include qodefBorderRadius(3px);
+            @include qodefTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+            span {
+                display: block;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: $default-heading-color;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Dropdown Cart styles - end
+   ========================================================================== */

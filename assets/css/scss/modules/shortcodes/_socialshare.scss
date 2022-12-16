@@ -1,0 +1,243 @@
+/* ==========================================================================
+# Social Share style - begin
+========================================================================== */
+
+.qodef-social-share-holder {
+	
+	ul {
+		list-style: none;
+		display: inline-block;
+		margin:0;
+	}
+	
+}
+
+/* List type - begin
+========================================================================== */
+
+
+.qodef-social-share-holder.qodef-list {
+
+	li{
+		margin-right:6px;
+		display:inline-block;
+		a span{
+			font-size:15px;
+			color: #24262a;
+			display:block;
+			width:24px;
+			height:24px;
+			border-radius:50px;
+			text-align:center;
+			line-height:24px;
+		}
+        .flip-icon-holder {
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            .icon-normal {
+                display: inline-block;
+                position: relative;
+                opacity: 1;
+                @include qodefTransform(translateY(0));
+                @include qodefTransition(all .3s ease-out);
+
+            }
+
+            .icon-flip {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                @include qodefTransform(translateY(100%));
+                @include qodefTransition(all .3s ease-out);
+            }
+
+            &:hover {
+                .icon-normal {
+                    opacity: 0;
+                    @include qodefTransform(translateY(-100%));
+                }
+                .icon-flip {
+                    opacity: 1;
+                    @include qodefTransform(translateY(0));
+                }
+            }
+        }
+	}
+
+}
+
+/* List type - end
+========================================================================== */
+
+/* Dropdown type - begin
+========================================================================== */
+
+.qodef-social-share-holder.qodef-dropdown {
+	position: relative;
+	display: block;
+
+    &:hover {
+        .qodef-social-share-dropdown ul li {
+            visibility:visible;
+            opacity:1;
+        }
+    }
+
+	.qodef-social-share-dropdown-opener {
+        display: inline;
+        background-color: #fff;
+        width: 27px;
+        height: 27px;
+        text-align: center;
+        line-height: 27px;
+        color: #24262a;
+        border-radius: 50px;
+        font-size: 10px;
+        @include qodefTransition(background-color 0.15s ease-out);
+        span {
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .socialshare-text {
+            margin-left: 5px;
+        }
+	}
+
+    .qodef-social-share-dropdown {
+        visibility: hidden;
+        z-index: 950;
+        float: left;
+        position: absolute;
+        top: 35px;
+        @include qodefTransform(translateY(-25%));
+
+        ul {
+            position: relative;
+            display: block;
+            z-index: 990;
+            padding: 0 !important;
+            min-width: 30px;
+            font-weight: 400;
+        }
+
+        ul li {
+            display:inline-block;
+            a span{
+                font-size:11px;
+                color: #fff;
+                background-color: $first-main-color;
+                display:block;
+                width:27px;
+                height:27px;
+                border-radius:50px;
+                text-align:center;
+                line-height:27px;
+            }
+
+            visibility: hidden;
+            position: absolute;
+            text-align: center;
+            min-width: 27px;
+            float:left;
+            opacity: 0.2;
+            left: 0;
+            @include qodefTransition(all 0.2s ease-out);
+            &:nth-child(2) {
+                left: 35px;
+                transition-delay: .1s;
+            }
+
+            &:nth-child(3){
+                left: 70px;
+                transition-delay: .2s;
+            }
+
+            &:nth-child(4){
+                left: 105px;
+                transition-delay: .3s;
+            }
+
+            &:nth-child(5){
+                left: 140px;
+                transition-delay: .4s;
+            }
+
+            &:nth-child(6){
+                left: 175px;
+                transition-delay: 0.5s;
+            }
+
+            &:nth-child(7){
+                left: 210px;
+                transition-delay: 0.6s;
+            }
+        }
+
+        img {
+            width: 8px;
+            margin-right: 10px;
+        }
+
+    }
+
+}
+
+.qodef-blog-share:hover {
+    .qodef-social-share-holder.qodef-dropdown {
+
+        .qodef-social-share-dropdown ul li {
+            opacity: 1;
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        .qodef-social-share-dropdown ul li {
+
+            &:nth-child(2) {
+                left: 35px;
+            }
+
+            &:nth-child(3) {
+                left: 70px;
+            }
+
+            &:nth-child(4) {
+                left: 105px;
+            }
+
+            &:nth-child(5) {
+                left: 140px;
+            }
+
+            &:nth-child(6) {
+                left: 175px;
+            }
+
+            &:nth-child(7) {
+                left: 210px;
+            }
+
+        }
+
+    }
+}
+
+/* Dropdown type - end
+========================================================================== */
+
+/* ==========================================================================
+# Social Share style - end
+========================================================================== */
+
+
+
+
+
+
+
+

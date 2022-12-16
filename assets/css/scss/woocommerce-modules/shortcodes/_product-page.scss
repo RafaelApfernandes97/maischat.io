@@ -1,0 +1,274 @@
+/* Woocommerce Product Page shortcode style - begin
+========================================================================== */
+
+div.woocommerce {
+
+    > .single-product {
+
+        .images {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+
+            a {
+                @include qodefRelativeHolderLayout();
+
+                img {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            .thumbnails {
+                margin: 0 -5px;
+
+                a {
+                    margin: 10px 0 0;
+                    padding: 0 5px;
+                    @include qodefBoxSizing(border-box);
+                }
+
+                &.columns-2 {
+                    
+                    a {
+                        float: left;
+                        width: 50%;
+                        opacity: 0.7;
+                        @include qodefTransition(opacity .2s ease-out);
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &.columns-4 {
+                    
+                    a {
+                        float: left;
+                        width: 25%;
+                        opacity: 0.7;
+                        @include qodefTransition(opacity .2s ease-out);
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .woocommerce-tabs {
+            @include qodefRelativeHolderLayout();
+            margin: 54px 0 0;
+
+            h2 {
+                font-size: 14px;
+                font-weight: 600;
+                margin: 16px 0 13px;
+            }
+
+            ul.tabs {
+                @include qodefRelativeHolderLayout();
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                clear: both;
+
+                > li {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                    float: left;
+
+                    a {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 0 9px 11px;
+                        font-weight: 400;
+                        color: $default-text-color;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: -1px;
+                            left: 0;
+                            display: block;
+                            height: 1px;
+                            width: 100%;
+                            background-color: $default-border-color;
+                            @include qodefTransition(background-color 0.2s ease-in-out);
+                        }
+                    }
+
+                    &:hover,
+                    &.active {
+
+                        a {
+                            color: $default-heading-color;
+
+                            &:after {
+                                height: 3px;
+                                bottom: -2px;
+                                background-color: $default-heading-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .entry-content {
+                padding: 18px 0;
+            }
+
+            table {
+                margin: 0 0 20px;
+
+                tr, th {
+                    border: 0;
+                }
+
+                td, th {
+                    padding: 3px 0;
+                    vertical-align: middle;
+                    text-align: left;
+                }
+
+                th {
+                    color: $default-heading-color;
+                    font-weight: 400;
+                    width: 1%;
+                    padding: 0 10px 0 0;
+                }
+
+                td {
+                    width: 99%;
+                }
+            }
+
+            #reviews {
+
+                ol.commentlist {
+                    list-style: none;
+
+                    li {
+                        padding-top: 10px;
+
+                        &:first-child {
+                            padding: 0;
+                        }
+                    }
+
+                    .comment_container {
+                        @include qodefRelativeHolderLayout();
+
+                        img {
+                            float: left;
+                            width: 60px;
+                        }
+
+                        .comment-text {
+                            padding: 0 0 0 80px;
+
+                            .star-rating {
+                                margin: 0;
+                            }
+
+                            p {
+                                display: block;
+                                margin: 5px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                .comment-respond {
+                    margin-top: 15px;
+
+                    .comment-reply-title {
+                        margin: 0 0 10px;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+
+                    .stars {
+                        overflow: hidden;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .stars a {
+                        position: relative;
+                        display: inline-block;
+                        color: transparent;
+                        font-size: 0;
+                        margin: 0;
+
+                        &:before {
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-family: "ElegantIcons";
+                            content: "\e031";
+                            font-size: 12px;
+                            line-height: 1;
+                            letter-spacing: 3px;
+                            color: $default-heading-color;
+                            overflow: hidden;
+                            z-index: -1;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                        }
+
+                        &.active:after {
+                            position: absolute;
+                            right: 0px;
+                            bottom: 6px;
+                            display: block;
+                            font-family: "ElegantIcons";
+                            font-size: 12px;
+                            line-height: 1;
+                            letter-spacing: 3px;
+                            color: $default-heading-color;
+                            content: "\e033\e033\e033\e033\e033";
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                        }
+                    }
+
+                    .comment-form-comment label {
+                        display: block;
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+        }
+
+        .related.products,
+        .upsells.products {
+
+            > h2 {
+                display: block;
+                margin: 0 0 57px;
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+
+        .related.products {
+            margin: 12px 0 10px;
+        }
+
+        .upsells.products {
+            margin: 12px 0 40px;
+            border-bottom: 1px solid $default-border-color;
+        }
+    }
+}
+
+/* Woocommerce Product Page shortcode style - end
+========================================================================== */

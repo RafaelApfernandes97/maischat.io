@@ -1,0 +1,170 @@
+/* ==========================================================================
+   WooCommerce Cart Page Responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .qodef-woocommerce-page {
+
+        table.cart {
+
+            tr.cart_item {
+
+                td {
+
+	                &.product-remove {
+		                width: 40px;
+
+		                a:before {
+			                font-size: 35px;
+		                }
+	                }
+
+                    &.product-thumbnail {
+                        max-width: 60px;
+	                    padding: 0;
+                    }
+                }
+            }
+
+            td.actions {
+
+                .coupon {
+
+                    input[type="text"] {
+                        width: 180px;
+                        margin: 0 17px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+	.qodef-woocommerce-page {
+
+		table.cart {
+
+			tr.cart_item {
+
+				td {
+
+					&.product-thumbnail {
+
+						a {
+							display: none;
+						}
+					}
+				}
+			}
+
+			td.actions {
+
+				.coupon {
+					float: none;
+					display: block;
+					margin: 0 0 20px;
+				}
+
+				> input,
+				button {
+					float: none;
+				}
+			}
+		}
+
+		.cart-collaterals {
+
+			table {
+
+				td, th {
+					padding: 15px 20px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-woocommerce-page {
+
+	    table.cart {
+
+		    thead {
+
+			    tr {
+
+				    th {
+					    padding: 15px 6px;
+				    }
+			    }
+		    }
+
+		    tr.cart_item {
+
+			    td {
+				    padding: 20px 6px;
+			    }
+		    }
+	    }
+
+	    .cart-collaterals {
+
+		    table {
+
+			    td, th {
+				    padding: 12px 18px;
+			    }
+		    }
+	    }
+    }
+}
+
+@media only screen and (max-width: $phone-portrait) {
+
+	.qodef-woocommerce-page {
+
+		table.cart {
+
+			tr.cart_item {
+
+				td {
+
+					&.product-remove {
+						width: 30px;
+						padding-right: 0;
+
+						a:before {
+							font-size: 30px;
+						}
+					}
+				}
+			}
+
+			td.actions {
+
+				.coupon {
+
+					input[type="text"] {
+						display: block;
+						margin: 0 0 20px;
+					}
+				}
+			}
+		}
+		&.woocommerce-cart {
+			.qodef-content {
+				.qodef-quantity-buttons{
+					width: 44px;
+				}
+			}
+		}
+
+	}
+}
+/* ==========================================================================
+   WooCommerce Cart Page Responsive styles - end
+   ========================================================================== */

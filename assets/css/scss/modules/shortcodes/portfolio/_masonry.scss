@@ -1,0 +1,139 @@
+/* ==========================================================================
+# Portfolio Masonry  - begin
+========================================================================== */
+
+.qodef-ptf-masonry {
+
+    .qodef-portfolio-list-holder{
+
+        opacity: 0;
+        @include qodefTransition(opacity 0.15s ease-out);
+
+        &.qodef-appeared{
+            opacity: 1;
+        }
+
+        article{
+            box-sizing:border-box;
+
+            .qodef-item-image-holder{
+                height: 100%;
+            }
+
+            .qodef-item-image-holder img{
+                width: 100%;
+            }
+
+            .qodef-item-image-holder{
+                overflow: hidden;
+            }
+
+            .qodef-portfolio-link{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+
+            .qodef-item-text-overlay{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                background-color: rgba(66, 75, 84, 0.8);
+                @include qodefTransition(opacity 0.3s ease-in-out);
+            }
+
+            .qodef-item-text-overlay-inner{
+                @include  qodefTableLayout;
+            }
+
+            .qodef-item-text-holder {
+                position: absolute;
+                bottom: 40px;
+                left: 40px;
+                text-align: left;
+
+                .qodef-item-title {
+                    color: #ffffff;
+                    position: relative;
+                    top: 100px;
+                    opacity: 0;
+                    transition-delay: 0s;
+                    transition-duration: .3s;
+                }
+
+                .qodef-ptf-category-holder {
+                    line-height:18px;
+                    color: #ffffff;
+                    font-size: 13px;
+                    font-weight: 400;
+                    position: relative;
+                    top: 100px;
+                    opacity: 0;
+                    transition-delay: 0s;
+                    transition-duration: .3s;
+                }
+            }
+
+            &:hover{
+                .qodef-item-text-overlay{
+                    opacity: 1;
+                }
+
+                .qodef-item-title {
+                    opacity: 1;
+                    top: 0;
+                    transition-delay: 0s;
+                }
+                .qodef-ptf-category-holder {
+                    opacity: 1;
+                    top: 0;
+                    transition-delay: .1s;
+                }
+
+            }
+        }
+    }
+
+    &.qodef-ptf-masonry-four-columns{
+        .qodef-portfolio-list-masonry-grid-sizer,
+        .qodef-default-masonry-item,
+        .qodef-large-height-masonry-item{
+            width: 25%;
+        }
+        .qodef-large-width-masonry-item,
+        .qodef-large-width-height-masonry-item{
+            width: 50%;
+        }
+    }
+
+    &.qodef-ptf-masonry-five-columns{
+        .qodef-portfolio-list-masonry-grid-sizer,
+        .qodef-default-masonry-item,
+        .qodef-large-height-masonry-item{
+            width: 20%;
+        }
+        .qodef-large-width-masonry-item,
+        .qodef-large-width-height-masonry-item{
+            width: 40%;
+        }
+    }
+
+}
+
+/* ==========================================================================
+# Portfolio Masonry  - end
+========================================================================== */
+
+
+    
+
+
+
+
+

@@ -1,0 +1,168 @@
+/* ==========================================================================
+# Carousels style - begin
+========================================================================== */
+
+.qodef-carousel-holder {
+
+    .qodef-carousel-item-holder {
+        position: relative;
+
+        /* Image zoom - begin
+        ========================================================================== */
+
+        .qodef-carousel-first-image-holder.qodef-image-zoom img {
+            @include qodefTransition(transform 0.15s ease-out);
+            -webkit-backface-visibility: hidden;
+        }
+
+        .qodef-carousel-first-image-holder.qodef-image-zoom:hover img {
+            @include qodefTransform(scale(0.9));
+        }
+
+        /* Image zoom - end
+        ========================================================================== */
+
+
+        /* Image change on hover - begin
+        ========================================================================== */
+
+        .qodef-carousel-first-image-holder.qodef-image-change {
+            position: relative;
+            opacity: 1;
+            z-index: 5;
+            @include qodefTransition(opacity 0.15s ease-out);
+            display: inline-block;
+        }
+
+        .qodef-carousel-second-image-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include qodefTransition(opacity 0.15s ease-out);
+            opacity: 0;
+        }
+
+        &:hover .qodef-carousel-first-image-holder.qodef-image-change {
+            opacity: 0;
+        }
+
+        &:hover .qodef-carousel-second-image-holder {
+            opacity: 1;
+        }
+
+        /* Image change on hover - end
+        ========================================================================== */
+
+		/* Image flip on hover - begin
+        ========================================================================== */
+
+		.qodef-carousel-first-image-holder.qodef-image-flip {
+			position: relative;
+			@include qodefTransition(transform .5s ease);
+			display: block;
+		}
+
+		.qodef-carousel-second-image-holder.qodef-image-flip {
+			position: absolute;
+			top: -1px;
+			left: 0;
+			display: block;
+			@include qodefTransform(translateY(-100%));
+			@include qodefTransition(transform .5s ease);
+			opacity: 1;
+
+		}
+
+		&:hover .qodef-carousel-first-image-holder.qodef-image-flip {
+			@include qodefTransform(translateY(100%));
+			@include qodefTransition(transform 0.6s cubic-bezier(0.19, 0.65, 0.02, 0.93));
+		}
+
+		&:hover .qodef-carousel-second-image-holder.qodef-image-flip {
+			@include qodefTransform(translateY(0%));
+			@include qodefTransition(transform 0.6s cubic-bezier(0.19, 0.65, 0.02, 0.93));
+		}
+
+		/* Image flip on hover - end
+        ========================================================================== */
+
+    }
+
+	/* Carousel navigation - begin
+	========================================================================== */
+
+	.qodef-carousel.owl-carousel {
+
+		.owl-nav {
+
+			width: 100%;
+
+			.owl-prev {
+				position: absolute;
+				top: 50%;
+				@include qodefTransform(translateY(-50%));
+				left: 2%;
+			}
+
+			.owl-next {
+				position: absolute;
+				top: 50%;
+				@include qodefTransform(translateY(-50%));
+				right: 2%;
+			}
+
+			.qodef-prev-icon,
+			.qodef-next-icon {
+				display: inline-block;
+				width: 42px;
+				height: 42px;
+				@include qodefBorderRadius(50%);
+				border: 2px solid #74797b;
+				text-align: center;
+
+				i {
+					font-size: 22px;
+					line-height: 40px;
+					color: #74797b;
+				}
+
+			}
+
+		}
+
+		.owl-dots {
+			text-align: center;
+
+			.owl-dot {
+				display: inline-block;
+			}
+
+			.owl-dot span {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				margin: 3px;
+				filter: Alpha(Opacity=50);
+				opacity: 0.5;
+				-webkit-border-radius: 20px;
+				-moz-border-radius: 20px;
+				border-radius: 20px;
+				background: #74797b;
+			}
+
+			.owl-dot.active span {
+				opacity: 1;
+			}
+
+		}
+
+	}
+
+	/* Carousel navigation - end
+	========================================================================== */
+
+}
+
+/* ==========================================================================
+# Carousels style - end
+========================================================================== */

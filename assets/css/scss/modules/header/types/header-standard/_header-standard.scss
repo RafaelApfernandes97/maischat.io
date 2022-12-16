@@ -1,0 +1,20 @@
+.qodef-header-standard {
+
+    .qodef-menu-area {
+        background-color: #fff;
+
+        .qodef-vertical-align-containers {
+            padding: 0 27px;
+
+            .qodef-position-right-inner{
+                height: 100%;
+            }
+        }
+        .qodef-main-menu-line {
+            &.bottom {
+                bottom: -1px;
+            }
+        }
+    }
+}
+

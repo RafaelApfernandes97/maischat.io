@@ -1,0 +1,26 @@
+/* ==========================================================================
+# Portfolio Single Small Slider - begin
+========================================================================== */
+
+.qodef-portfolio-single-holder.small-slider {
+
+  .qodef-portfolio-social-holder{
+      display:inline-block;
+      vertical-align:middle;
+      width:100%;
+      margin: 50px 0 0 0;
+
+      .qodef-portfolio-social{
+        float:left;
+        line-height:45px;
+      }
+
+      .qodef-portfolio-like{
+        float:right;
+      }
+  }
+}
+
+/* ==========================================================================
+# Portfolio Single Small Slider - end
+========================================================================== */

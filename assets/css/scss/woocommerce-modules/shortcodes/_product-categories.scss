@@ -1,0 +1,72 @@
+/* Woocommerce Product Categories shortcode style - begin
+========================================================================== */
+
+div.woocommerce {
+
+    > .products {
+
+        > .product-category {
+
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background-color: rgba($default-heading-color, 0.6);
+                    opacity: 0;
+                    @include qodefTransition(opacity .2s ease);                    
+                }
+
+                &:hover {
+
+                    &:after {
+                        opacity: 1;                        
+                    }
+
+                    h3 {
+                        top: 50%;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            img {
+                display: block;
+            }
+
+            h3 {
+                position: absolute;
+                top: 60%;
+                left: 0;
+                display: block;
+                width: 100%;
+                padding: 0 10%;
+                margin: 0;
+                color: #fff;
+                text-align: center;
+                z-index: 2;
+                opacity: 0;
+                -webkit-filter: blur(0);
+                @include qodefBoxSizing(border-box);
+                @include qodefTransform(translateY(-50%));
+                @include qodefTransition(opacity .2s ease, top .2s ease);
+
+                .count {
+                    font-size: 0.9em;
+                    color: #fff;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+/* Woocommerce Product Categories shortcode style - end
+========================================================================== */

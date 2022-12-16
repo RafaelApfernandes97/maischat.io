@@ -1,0 +1,34 @@
+@include laptop-landscape-medium {
+  .qodef-interactive-image .qodef-interactive-image-holder {
+    .qodef-interactive-image-text-holder {
+      padding: 60px 50px 60px 39px
+    }
+  }
+}
+@include vertical-menu-laptop-landscape {
+  .qodef-interactive-image .qodef-interactive-image-holder {
+    .qodef-interactive-image-text-holder {
+      padding: 60px 40px 80px 40px;
+    }
+  }
+}
+
+@include phone-landscape {
+  .qodef-interactive-image {
+    .qodef-interactive-image-holder {
+      .qodef-interactive-image-text-holder {
+        display: block;
+        padding: 60px 30px;
+        width: 100%;
+        box-sizing: border-box;
+        left:0;
+      }
+      .qodef-interactive-image-img-holder {
+        display: block;
+        height: 300px;
+        width: 100%;
+        position: relative;
+      }
+    }
+  }
+}

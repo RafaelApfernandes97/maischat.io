@@ -1,0 +1,111 @@
+.qodef-icon-shortcode {
+    $transition-duration: 0.15s;
+
+    display: inline-block;
+
+    &.circle,
+    &.square {
+        background-color: transparent;
+        width: 2em;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+        background-color: #434955;
+
+        @include qodefTransition(
+                background-color $transition-duration ease-in-out,
+                border-color $transition-duration ease-in-out
+        );
+
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .qodef-icon-element {
+            color: #ccd0d9;
+            line-height: inherit;
+        }
+    }
+
+    &.circle {
+        @include qodefBorderRadius(50%);
+    }
+
+    .qodef-icon-element {
+        color: $first-main-color;
+        @include qodefTransition(color $transition-duration ease-in-out);
+    }
+
+    &.qodef-flip {
+        overflow: hidden;
+        .flip-icon-holder {
+            display: block;
+            position: relative;
+
+            .icon-normal {
+                display: inline-block;
+                position: relative;
+                opacity: 1;
+                @include qodefTransform(translateY(0));
+                @include qodefTransition(all .3s ease-out);
+
+            }
+
+            .icon-flip {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                @include qodefTransform(translateY(100%));
+                @include qodefTransition(all .3s ease-out);
+            }
+
+            &:hover {
+                .icon-normal {
+                    opacity: 0;
+                    @include qodefTransform(translateY(-100%));
+                }
+                .icon-flip {
+                    opacity: 1;
+                    @include qodefTransform(translateY(0));
+                }
+            }
+        }
+    }
+}
+
+.qodef-icon-animation-holder {
+    @include qodefTransform(scale(0));
+    @include qodefTransition(transform 0.15s ease-in-out);
+    display: inline-block;
+
+    &.qodef-icon-animation-show {
+        @include qodefTransform(scale(1));
+    }
+}
+
+.qodef-icon-tiny {
+    font-size: 1.666666em;
+    line-height: .75em;
+    vertical-align: -15%;
+}
+
+.qodef-icon-small {
+    font-size: 2em;
+}
+
+.qodef-icon-medium {
+    font-size: 3em;
+}
+
+.qodef-icon-large {
+    font-size: 4em;
+}
+
+.qodef-icon-huge {
+    font-size: 5em;
+}

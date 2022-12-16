@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Item Showcase start styles
+	========================================================================== */
+@media only screen and (max-width: $laptop-landscape) {
+	 
+	.qodef-item-showcase {
+		.qodef-item-image {
+			margin-top: 0 !important;    //override inline margin if set by user
+		}
+
+	  	.qodef-item:not(.qodef-appeared) {
+			@include qodefTransform(translateX(-40px));
+	  	}
+
+        .qodef-item-showcase-holder.qodef-holder-left {
+            .qodef-item {
+                margin-left: 5%;
+            }
+        }
+        .qodef-item-showcase-holder.qodef-holder-right {
+            .qodef-item {
+                margin-right: 5%;
+            }
+        }
+
+	}
+
+}
+
+@media only screen and (max-width: $laptop-landscape) and (min-width: $ipad-landscape) {
+	.qodef-item-showcase {
+        .qodef-item-showcase-holder.qodef-holder-left,
+        .qodef-item-showcase-holder.qodef-holder-right {
+            width:30%;
+        }
+	}
+}
+
+@media only screen and (max-width: $ipad-landscape) {
+	.qodef-item-showcase {
+		.qodef-item-image {
+			width: 100%;
+			float: none;
+			margin-bottom: 30px;
+		}
+
+	 	.qodef-item-showcase-holder.qodef-holder-left,
+		.qodef-item-showcase-holder.qodef-holder-right {
+	 	    float: left;    
+	 	    width: 50%;
+		    @include qodefBoxSizing(border-box);
+		    padding:0 15px;
+	 	}
+        .qodef-item-showcase-holder.qodef-holder-left {
+            .qodef-item {
+                margin-left: 10%;
+            }
+        }
+        .qodef-item-showcase-holder.qodef-holder-right {
+            .qodef-item {
+                margin-right: 10%;
+            }
+        }
+	}
+ }
+
+@include ipad-portrait {
+	.qodef-item-showcase  {
+		.qodef-item-image {
+			margin-bottom: 30px;
+		}
+		.qodef-item{
+			&.qodef-item-right{
+				.qodef-item-content {
+					padding-left: 60px;
+				}
+			}
+			&.qodef-item-left {
+				.qodef-item-content {
+					padding-right: 60px;
+				}
+			}
+		}
+	}
+}
+
+ @media only screen and (max-width: $phone-landscape) {
+ 	.qodef-item-showcase {
+	 	.qodef-item-showcase-holder.qodef-holder-left,
+		.qodef-item-showcase-holder.qodef-holder-right {
+	 	    float: none;    
+	 	    width: 100%;
+		    @include qodefBoxSizing(border-box);
+		    padding:0 15px;
+
+			.qodef-item-icon {
+				padding:0;
+				text-align:center;
+			}
+            .qodef-item {
+                margin: 0;
+            }
+	 	}
+
+		.qodef-item-icon {
+			padding-left:0;
+		}
+
+		.qodef-item .qodef-item-content {
+			text-align: center;
+		}
+ 	}
+
+ }
+/* ==========================================================================
+  Item Showcase end styles
+  ========================================================================== */

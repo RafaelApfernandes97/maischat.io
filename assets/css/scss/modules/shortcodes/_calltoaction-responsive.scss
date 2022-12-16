@@ -1,0 +1,72 @@
+/* ==========================================================================
+# Call to action responsive style - begin
+========================================================================== */
+
+.qodef-call-to-action {
+
+	.qodef-call-to-action-row-75-25 .qodef-call-to-action-column1 {
+
+		@media only screen and (min-width: $phone-landscape) and (max-width: $ipad-landscape) {
+			width: 65%;
+		}
+
+	}
+
+	.qodef-call-to-action-row-75-25 .qodef-call-to-action-column2 {
+
+		@media only screen and (min-width: $phone-landscape) and (max-width: $ipad-landscape) {
+			width: 35%;
+		}
+
+	}
+
+	.qodef-call-to-action-cell {
+
+		@include phone-landscape {
+			display: block;
+			text-align: center !important;
+			width: 100% !important;
+		}
+
+	}
+
+	.qodef-text-wrapper .qodef-call-to-action-icon-holder {
+
+		@include phone-landscape {
+			position: relative;
+			width: 100%;
+			text-align: center;
+		}
+
+	}
+
+	.qodef-text-wrapper .qodef-call-to-action-icon {
+
+		@include phone-landscape {
+			display: inline-block;
+		}
+
+	}
+
+	.qodef-text-wrapper .qodef-call-to-action-text {
+
+		@include phone-landscape {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+	}
+
+}
+
+.qodef-call-to-action.with-icon {
+
+	@include phone-landscape {
+		padding: 0;
+	}
+
+}
+
+/* ==========================================================================
+# Call to action responsive style - end
+========================================================================== */

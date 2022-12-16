@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Google Map start style
+   ========================================================================== */
+
+
+.qodef-google-map-holder{
+	position: relative;
+}
+
+.qodef-google-map {
+
+	display: block;
+	width: 100%;
+	height: 300px;
+
+	iframe,
+	object,
+	embed {
+
+		width: 100%;
+		display: block;
+
+	}
+
+	img {
+		max-width: none;
+	}
+}
+
+.qodef-google-map-overlay {
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	display: none;
+	top:0;
+	left:0;
+}
+
+/* ==========================================================================
+   End of Google Map style
+   ========================================================================== */

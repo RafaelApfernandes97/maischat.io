@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Separator start style
+   ========================================================================== */
+.qodef-separator-holder {
+	position: relative;
+	height: auto;
+	font-size: 0;
+    line-height: 1em;
+
+	&.qodef-separator-center {
+		text-align: center;
+	}
+	&.qodef-separator-left {
+		text-align: left;
+	}
+	&.qodef-separator-right {
+		text-align: right;
+	}
+
+	&.qodef-separator-full-width {
+		.qodef-separator {
+			width: 100% !important;
+		}
+	}
+
+}
+.qodef-separator{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	border-bottom: 1px solid #b2b2b2;
+	margin: 10px 0;
+
+
+}
+
+/* ==========================================================================
+   End of Separator style
+   ========================================================================== */

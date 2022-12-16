@@ -1,0 +1,125 @@
+/* ==========================================================================
+   WooCommerce styles - begin
+   ========================================================================== */
+@import 'variables';
+@import 'mixins';
+
+/*------------------------------------------------------------------
+ * This is main woocommerce css file for theme. It is broken into following sections:
+ * 1.  Global
+ * 2.  Single Product
+ * 3.  WooCommerce Product Lists and Shortcodes
+ * 4.  Cart
+ * 5.  Checkout
+ * 6.  My Account
+ * 7.  Shortcodes
+ * 8.  Widgets
+-------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. Global styles - begin
+   ========================================================================== */
+
+    /********** Buttons style **********/
+    @import 'woocommerce-modules/global/buttons';
+
+    /********** Sale and out of stock mark style **********/
+    @import 'woocommerce-modules/global/mark';
+
+    /********** Message style **********/
+    @import 'woocommerce-modules/global/message';
+
+    /********** Pagination style **********/
+    @import 'woocommerce-modules/global/pagination';
+
+    /********** Quantity inputs and button style **********/
+    @import 'woocommerce-modules/global/quantity-input';
+
+    /********** Result and ordering style **********/
+    @import 'woocommerce-modules/global/result-and-ordering';
+
+    /********** sSelect dropdown style **********/
+    @import 'woocommerce-modules/global/sselect';
+
+    /********** Star rating style **********/
+    @import 'woocommerce-modules/global/star-rating';
+
+    /********** Variation dropdown box style **********/
+    @import 'woocommerce-modules/global/variation';
+
+
+/* ==========================================================================
+   2. Single Product styles - begin
+   ========================================================================== */
+
+    @import 'woocommerce-modules/single-product/single-product';
+
+
+/* ==========================================================================
+   3. WooCommerce Product Lists and Shortcodes styles - begin
+   ========================================================================== */
+
+    /********** Product list main and VC style **********/
+    @import 'woocommerce-modules/product-lists/product-list-main-and-vc';
+
+
+/* ==========================================================================
+   4. Cart page styles - begin
+   ========================================================================== */
+
+    @import 'woocommerce-modules/cart/cart';
+
+
+/* ==========================================================================
+   5. Checkout page styles - begin
+   ========================================================================== */
+
+    /********** Checkout page style **********/
+    @import 'woocommerce-modules/checkout/checkout';
+
+    /********** Order received page style **********/
+    @import 'woocommerce-modules/checkout/order-received';
+
+
+/* ==========================================================================
+   6. My Account page styles - begin
+   ========================================================================== */
+
+    /********** My Account page style **********/
+    @import 'woocommerce-modules/my-account/my-account';
+
+    /********** Track Order page style **********/
+    @import 'woocommerce-modules/my-account/track-order';
+
+
+/* ==========================================================================
+   7. Shortcodes styles - begin
+   ========================================================================== */
+
+    /********** Add To Cart shortcode style **********/
+    @import 'woocommerce-modules/shortcodes/add-to-cart';
+
+    /********** Product Categories shortcode style **********/
+    @import 'woocommerce-modules/shortcodes/product-categories';
+
+    /********** Product Page shortcode style **********/
+    @import 'woocommerce-modules/shortcodes/product-page';    
+
+
+/* ==========================================================================
+   8. Widgets styles - begin
+   ========================================================================== */
+
+    /********** Global sidebar woocommerce widgets style **********/
+    @import 'woocommerce-modules/widgets/widgets-sidebar';
+
+    /********** Global footer woocommerce widgets style **********/
+    @import 'woocommerce-modules/widgets/widgets-footer';
+
+    /********** Drop Down Cart widget style **********/
+    @import 'woocommerce-modules/widgets/dropdown-cart';
+
+
+/* ==========================================================================
+   WooCommerce styles - begin
+   ========================================================================== */

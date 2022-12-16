@@ -1,0 +1,169 @@
+/* ==========================================================================
+# Footer style - begin
+========================================================================== */
+
+footer {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 100;
+	position: relative;
+	@include qodefBoxSizing(border-box);
+
+	.qodef-footer-inner {
+		position: relative; /* for triangle back to top and ajax transitions */
+	}
+
+	.qodef-container {
+		background-color: inherit;
+	}
+
+	.qodef-container-inner {
+		position: relative;
+		.qodef-column {
+			border-left: 2px solid #2c2f33;
+			box-sizing: border-box;
+			font-size: 14px;
+			&:last-child {
+				border-right:2px solid #2c2f33;
+			}
+		}
+	}
+
+	.qodef-container-inner > .widget{
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.qodef-footer-ingrid-border-holder-outer {
+		background-color: #272727;
+	}
+
+	.qodef-footer-top-border-holder,
+	.qodef-footer-bottom-border-holder {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	.qodef-footer-top-border-holder.qodef-in-grid,
+	.qodef-footer-bottom-border-holder.qodef-in-grid {
+		width: 1100px;
+		margin: 0 auto;
+	}
+
+	.qodef-footer-top-holder {
+		display: block;
+		background-color: #24262a;
+		position:relative;
+		background-position:center center;
+		background-size: cover;
+	}
+
+	.qodef-footer-top:not(.qodef-footer-top-full) .qodef-container-inner {
+        padding: 81px 0 50px;
+	}
+
+	.qodef-footer-top.qodef-footer-top-full {
+        padding: 112px 54px 95px;
+	}
+	
+	.qodef-footer-top.qodef-footer-top-aligment-center {
+		text-align: center;
+	}
+	.qodef-footer-top.qodef-footer-top-aligment-left {
+		text-align: left;
+	}
+	.qodef-footer-top.qodef-footer-top-aligment-right {
+		text-align: right;
+	}
+	
+	.qodef-footer-bottom-holder {
+		display: table;
+		width: 100%;
+		background-color: #424b52;
+		vertical-align: middle;
+		text-align: center;
+		height: 80px;
+
+        .qodef-footer-bottom-holder-inner {
+            @include qodefTableCellLayout;
+        }
+
+		.qodef-column-inner {
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.qodef-three-columns .qodef-column:first-child .qodef-column-inner {
+			text-align: left;
+		}
+
+		.qodef-three-columns .qodef-column:last-child .qodef-column-inner {
+			text-align: right;
+		}
+
+		.qodef-two-columns-50-50 .qodef-column:first-child .qodef-column-inner {
+			text-align: left;
+		}
+
+		.qodef-two-columns-50-50 .qodef-column:last-child .qodef-column-inner {
+			text-align: right;
+		}
+
+		.qodef-footer-bottom-border-bottom-holder {
+			clear: both;
+		}
+
+	}
+
+}
+
+/* Footer uncover - begin
+========================================================================== */
+
+footer.qodef-footer-uncover {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	@include qodefTransition(left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1));
+}
+
+.qodef-right-side-menu-opened footer.qodef-footer-uncover {
+	left: -270px;
+}
+
+/* Footer uncover - end
+========================================================================== */
+
+/* Footer boxed - begin
+========================================================================== */
+
+.boxed footer {
+	width: 100% !important;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+}
+
+/* Footer boxed - end
+========================================================================== */
+
+/* Footer disabled - begin
+========================================================================== */
+
+footer.qodef-disable-footer {
+	display: none;
+}
+
+/* Footer disabled - end
+========================================================================== */
+
+
+/* ==========================================================================
+# Footer style - end
+========================================================================== */
+

@@ -1,0 +1,19 @@
+@import 'standard-responsive';
+@import 'gallery-responsive';
+@import 'gallery-space-responsive';
+@import 'masonry-responsive';
+@import 'pinterest-responsive';
+
+@media only screen and (max-width: $phone-landscape){
+
+    .qodef-portfolio-filter-holder{
+        .qodef-portfolio-filter-holder-inner ul li{
+            float:none;
+            text-align: left;
+            span{
+                padding-left: 0;
+            }
+        }
+
+    }
+}

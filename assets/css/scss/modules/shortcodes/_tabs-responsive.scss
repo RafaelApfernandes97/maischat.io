@@ -1,0 +1,54 @@
+@include ipad-landscape {
+    .qodef-tabs.qodef-horizontal-tab {
+        .qodef-tabs-nav li a {
+            padding: 14px 17px;
+            font-size: 14px;
+        }
+    }
+}
+@media only screen and (max-width: $phone-landscape){
+    .qodef-tabs .qodef-tabs-nav,
+    .qodef-tabs .qodef-tab-container, 
+    .qodef-tabs.qodef-vertical-tab .qodef-tabs-nav,
+    .qodef-tabs.qodef-vertical-tab .qodef-tab-container { 
+        width: 100%;   
+    }
+    
+    .qodef-tabs .qodef-tabs-nav li,
+    .qodef-tabs.qodef-horizontal-tab .qodef-tabs-nav li {
+        float: none;  
+        display: block;
+    }
+
+    .qodef-tabs.qodef-vertical-tab {
+
+        .qodef-tabs-nav {
+            float: none;
+            padding: 0; 
+        }
+
+        .qodef-tab-container {
+            float: none;
+            border-left: 0;
+            padding: 9px 0;
+        }
+    }
+}
+
+@include phone-portrait {
+    .qodef-tabs{
+        &.qodef-horizontal-tab {
+            .qodef-tabs-nav li {
+                &.ui-tabs-active {
+                    a {
+                        border-bottom: 0;
+                    }
+                }
+                a {
+                    border-left: 1px solid #e6e9ee;
+                }
+
+            }
+        }
+    }
+}

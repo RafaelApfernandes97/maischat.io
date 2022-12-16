@@ -1,0 +1,177 @@
+.qodef-iwt {
+    $icon-tiny-content-padding: 61px;
+    $icon-small-content-padding: 80px;
+    $icon-medium-content-padding: 110px;
+    $icon-large-content-padding: 150px;
+    $icon-huge-content-padding: 180px;
+    $title-margin-bottom: 8px;
+
+    .qodef-iwt-link {
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .qodef-iwt-title-separator-holder {
+        line-height: 0;
+        padding: 3px 0 13px;
+
+        .qodef-iwt-title-separator {
+            display: inline-block;
+            width: 12px;
+            border-bottom: 1px solid $first-main-color;
+        }
+    }
+
+    &:hover {
+
+    }
+
+    &.qodef-scale-animation {
+      &:hover {
+        .qodef-iwt-icon-holder {
+          @include qodefTransform(scale(1.1));
+        }
+      }
+      .qodef-iwt-icon-holder {
+        @include qodefTransition(transform 0.2s ease-out);
+        @include qodefTransform(scale(1));
+      }
+    }
+
+    .qodef-iwt-text-holder {
+        p {
+            margin: 0;
+        }
+    }
+
+    &.qodef-scale-icon-animation {
+        &:hover {
+
+        }
+
+    }
+
+
+
+    .qodef-custom-icon-animation-holder {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: transform 0.15s ease-in-out;
+        -moz-transition: transform 0.15s ease-in-out;
+        transition: transform 0.15s ease-in-out;
+        display: inline-block;
+        line-height: 0;
+
+        &.qodef-icon-animation-show {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    &.qodef-custom-icon-animation-disabled {
+        .qodef-custom-icon-animation-holder {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    
+    &.qodef-iwt-icon-top {
+        text-align: center;
+
+        .qodef-iwt-icon-holder {
+            margin-bottom: 17px;
+        }
+        .qodef-icon-shortcode {
+            &.circle,
+            &.square {
+                margin-bottom: 6px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &.qodef-iwt-icon-left,
+    &.qodef-iwt-icon-left-from-title {
+        text-align: left;
+    }
+
+    &:not(.qodef-iwt-left-from-title) {
+        .qodef-iwt-title-holder {
+            margin-bottom: 8px;
+            margin-top: 10px;
+        }
+    }
+
+    &.qodef-iwt-icon-left {
+        .qodef-iwt-icon-holder {
+            float: left;
+        }
+
+        &.qodef-iwt-icon-tiny .qodef-iwt-content-holder {
+            padding-left: $icon-tiny-content-padding;
+        }
+
+        &.qodef-iwt-icon-small .qodef-iwt-content-holder {
+            padding-left: $icon-small-content-padding;
+        }
+
+        &.qodef-iwt-icon-medium .qodef-iwt-content-holder {
+            padding-left: $icon-medium-content-padding;
+        }
+
+        &.qodef-iwt-icon-large .qodef-iwt-content-holder {
+            padding-left: $icon-large-content-padding;
+        }
+
+        &.qodef-iwt-icon-huge .qodef-iwt-content-holder {
+            padding-left: $icon-huge-content-padding;
+        }
+    }
+
+    &.qodef-iwt-icon-right {
+        text-align: right;
+
+        .qodef-iwt-icon-holder {
+            float: right;
+        }
+
+        &.qodef-iwt-icon-tiny .qodef-iwt-content-holder {
+            padding-right: $icon-tiny-content-padding;
+        }
+
+        &.qodef-iwt-icon-small .qodef-iwt-content-holder {
+            padding-right: $icon-small-content-padding;
+        }
+
+        &.qodef-iwt-icon-medium .qodef-iwt-content-holder {
+            padding-right: $icon-medium-content-padding;
+        }
+
+        &.qodef-iwt-icon-large .qodef-iwt-content-holder {
+            padding-right: $icon-large-content-padding;
+        }
+
+        &.qodef-iwt-icon-huge .qodef-iwt-content-holder {
+            padding-right: $icon-huge-content-padding;
+        }
+    }
+
+    &.qodef-iwt-left-from-title {
+        .qodef-iwt-icon-title-holder {
+            margin-bottom: $title-margin-bottom;
+        }
+
+        .qodef-iwt-icon-holder {
+            margin-right: 20px;
+        }
+
+        .qodef-iwt-icon-holder,
+        .qodef-iwt-title-holder {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}

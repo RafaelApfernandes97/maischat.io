@@ -1,0 +1,43 @@
+/* ==========================================================================
+# Portfolio Single Small Images - begin
+========================================================================== */
+
+.qodef-portfolio-single-holder.small-images {
+
+    .qodef-portfolio-media .qodef-portfolio-single-media {
+        margin-bottom: 33px;
+
+        a,
+        a img{
+            display:block;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .qodef-follow-portfolio-info {
+        position: relative;
+    }
+
+    .qodef-portfolio-social-holder{
+        display:inline-block;
+        vertical-align:middle;
+        width:100%;
+        margin: 50px 0 0 0;
+
+        .qodef-portfolio-social{
+            float:left;
+            line-height:45px;
+        }
+
+        .qodef-portfolio-like{
+            float:right;
+        }
+    }
+}
+
+/* ==========================================================================
+# Portfolio Single Small Images - end
+========================================================================== */

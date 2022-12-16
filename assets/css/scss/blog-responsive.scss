@@ -1,0 +1,236 @@
+@import 'variables';
+@import 'mixins';
+
+@media only screen and (max-width: $laptop-landscape-medium-plus-pixel) {
+	.qodef-blog-holder article.format-audio .mejs-container.mejs-audio .mejs-controls {
+		padding: 0;
+	}
+}
+
+@include laptop-landscape {
+	.qodef-blog-holder{
+		&.qodef-masonry-full-width{
+			article,
+			.qodef-blog-masonry-grid-sizer{
+				width: 31.333%;
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	.qodef-blog-holder{
+		&.qodef-masonry-full-width{
+			article,
+			.qodef-blog-masonry-grid-sizer{
+				width: 48.5%;
+			}
+		}
+	}
+	.qodef-comment-holder {
+		.qodef-comment-text {
+			.qodef-comment-info {
+				display: block;
+				position: relative;
+				margin-top: 20px;
+			}
+		}
+		.qodef-comment-list li {
+			.children .qodef-comment-info {
+				top: 0;
+			}
+		}
+
+	}
+}
+
+@include ipad-portrait {
+	.qodef-blog-holder{
+		&.qodef-blog-type-masonry{
+			article,
+			.qodef-blog-masonry-grid-sizer{
+				width: 48.5%;
+			}
+		}
+		&.qodef-masonry-full-width{
+			article,
+			.qodef-blog-masonry-grid-sizer{
+				width: 48.5%;
+			}
+		}
+		&.qodef-blog-single{
+			.qodef-related-posts-holder .qodef-related-post {
+				width: calc((100% - 15px)/2);
+                margin-bottom: 15px;
+				&:nth-child(2n){
+					margin-right: 0;
+				}
+				&:nth-child(2n+1){
+					clear: both;
+                    margin-bottom: 0;
+				}
+                &:last-child {
+                    margin-bottom: 0;
+                }
+			}
+		}
+	}
+
+	.qodef-column1,
+	.qodef-column2{
+		.qodef-blog-holder.qodef-blog-single{
+			.qodef-related-posts-holder .qodef-related-post {
+				width: calc((100% - 15px)/2);
+				&:nth-child(2n){
+					margin-right: 0;
+				}
+				&:nth-child(2n+1){
+					clear: both;
+				}
+			}
+		}
+	}
+
+	.qodef-blog-holder.qodef-blog-type-masonry-gallery{
+
+		article,
+		.qodef-blog-masonry-gallery-grid-sizer{
+			width: 50%;
+		}
+
+		article.qodef-post-size-large-width-height,
+		article.qodef-post-size-large-width{
+			width: 100%;
+		}
+
+		article{
+			.qodef-post-title{
+				font-size: 18px;
+			}
+
+			.qodef-post-text{
+				bottom: 15px;
+			}
+		}
+
+		article.qodef-post-size-default{
+
+			.qodef-quote-author{
+				padding-top: 5px;
+			}
+
+			.qodef-post-mark.qodef-link-mark,
+			.qodef-post-mark.qodef-quote-mark{
+				padding-bottom: 16px;
+			}
+		}
+
+	}
+
+}
+
+@include phone-landscape {
+	.qodef-blog-holder{
+		&.qodef-blog-type-masonry{
+			article,
+			.qodef-blog-masonry-grid-sizer{
+				width: 100%;
+			}
+		}
+		&.qodef-masonry-full-width{
+			article,
+			.qodef-blog-masonry-grid-sizer{
+				width: 100%;
+			}
+		}
+
+		&.qodef-blog-single{
+			.qodef-blog-single-navigation{
+				.qodef-blog-single-prev,
+				.qodef-blog-single-next{
+					display: none;
+				}
+			}
+			article{
+				.qodef-blog-tags-info-holder{
+					display: block;
+
+					.qodef-single-tags-holder,
+					.qodef-post-info{
+						display: block;
+						text-align: left;
+					}
+
+				}
+			}
+		}
+		article{
+			.qodef-post-info{
+				&.qodef-bottom-section {
+
+					display: block;
+
+					.qodef-left-section,
+					.qodef-right-section {
+						display: block;
+						text-align: left;
+					}
+					.qodef-right-section{
+						padding-left: 0;
+						margin: 10px 0 0;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+@include phone-portrait {
+
+	.qodef-related-posts-holder .qodef-related-post {
+		width: 100% !important;
+		margin-right: 0 !important;
+        margin-bottom: 15px !important;
+	}
+	.qodef-related-posts-holder .qodef-related-posts-title h3:before,
+	.qodef-related-posts-holder .qodef-related-posts-title h3:after{
+		display: none !important;
+	}
+
+    .qodef-author-description-inner,
+    .qodef-author-description-image,
+    .qodef-author-description-text-holder {
+        display: block !important;
+    }
+
+  .qodef-related-posts-holder .qodef-related-post {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+  .qodef-related-posts-holder .qodef-related-posts-title h3:before,
+  .qodef-related-posts-holder .qodef-related-posts-title h3:after{
+    display: none !important;
+  }
+
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery{
+
+    article,
+    .qodef-blog-masonry-gallery-grid-sizer{
+      width: 100%;
+    }
+  }
+	.qodef-comment-list li .children {
+		padding: 0 0 0 60px;
+	}
+	.qodef-comment-holder .qodef-comment-text {
+		padding: 0;
+	}
+
+}
+
+@include smaller-phone-portrait {
+	.qodef-comment-list li .children {
+		padding: 0 0 0 40px;
+	}
+}

@@ -1,0 +1,19 @@
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-portfolio-single-holder.masonry-gallery-left {
+      
+        .qodef-portfolio-media {
+
+                margin-bottom:30px;
+
+                .qodef-portfolio-single-media {
+                    width: 100%;
+                }
+                .qodef-single-masonry-grid-sizer {
+                     width: 100%;
+                }
+
+          }
+    }
+}

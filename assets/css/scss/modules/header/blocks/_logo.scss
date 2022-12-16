@@ -1,0 +1,37 @@
+.qodef-logo-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+
+        img {
+            height: 100%;
+            @include qodefTransition(opacity 0.2s ease);
+
+            &.qodef-normal-logo{
+                opacity: 1;
+            }
+
+            &.qodef-dark-logo{
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+            }
+
+            &.qodef-light-logo{
+                opacity: 0;
+                -webkit-transform: translateY(-200%);
+                transform: translateY(-200%);
+            }
+            &.qodef-fullscreen-logo{
+                opacity: 0;
+                -webkit-transform: translateY(-300%);
+                transform: translateY(-300%);
+            }
+        }
+    }
+}

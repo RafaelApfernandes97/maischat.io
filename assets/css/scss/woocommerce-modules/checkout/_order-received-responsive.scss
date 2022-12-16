@@ -1,0 +1,64 @@
+/* ==========================================================================
+   WooCommerce Checkout Page - Order Received Responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-woocommerce-page.woocommerce-order-received {
+
+        .woocommerce {
+
+            .col2-set.addresses {
+
+                .col-1,
+                .col-2 {
+                    width: 100%;
+                }
+
+                .col-1 {
+                    margin: 0 0 25px;
+                }
+            }
+
+            ul.order_details {
+
+                li {
+                    padding: 15px 20px;
+                }
+            }
+
+            table.shop_table {
+
+                td, th {
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-woocommerce-page.woocommerce-order-received {
+
+        .woocommerce {
+
+            ul.order_details {
+
+                li {
+                    padding: 12px 18px;
+                }
+            }
+
+            table.shop_table {
+
+                td, th {
+                    padding: 12px 18px;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Checkout Page - Order Received Responsive styles - end
+   ========================================================================== */

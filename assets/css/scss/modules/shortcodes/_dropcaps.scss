@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Dropcaps shortcodes styles
+   ========================================================================== */
+.qodef-dropcaps{
+	position: relative;
+	display: inline-block;
+	float: left;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	font-size: 40px;
+	color: $first-main-color;
+	font-weight: 700;
+	text-align: center;
+	margin: 5px 20px 0 0;
+
+	&.qodef-square{
+		font-size: 25px;
+		background-color: $first-main-color;
+		color: #fff;
+	}
+
+	&.qodef-circle{
+		@extend .qodef-square;
+		@include qodefBorderRadius(2em);
+	}
+}
+
+
+/* ==========================================================================
+   Dropcaps shortcode end styles
+   ========================================================================== */

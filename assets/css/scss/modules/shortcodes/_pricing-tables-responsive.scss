@@ -1,0 +1,55 @@
+@media only screen and (min-width: $ipad-landscape) and (max-width: $laptop-landscape){
+    .qodef-vertical-menu-area .qodef-pricing-tables.qodef-four-columns .qodef-price-table{
+		width: 48.75%;
+		margin-bottom: 45px;
+	}
+
+	.qodef-vertical-menu-area .qodef-pricing-tables.qodef-four-columns .qodef-price-table:nth-child(2n+1){
+		margin-left: 0;
+		clear: both;
+	}
+    .qodef-pricing-tables.qodef-four-columns .qodef-price-in-table .qodef-price { 
+    	font-size: 60px; 
+    }
+}
+
+@media only screen and (max-width: $ipad-landscape){
+    .qodef-pricing-tables.qodef-four-columns .qodef-price-table {
+        width: 48.75%;
+        margin-bottom: 45px;
+    }
+
+    .qodef-pricing-tables.qodef-four-columns .qodef-price-table:nth-child(2n+1) {
+        margin-left: 0;
+        clear: both;
+    }
+}
+@media only screen and (min-width: $phone-landscape) and (max-width: $ipad-portrait){
+    .qodef-pricing-tables.qodef-three-columns .qodef-price-table{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: $ipad-landscape) {
+    .qodef-pricing-tables.qodef-three-columns .qodef-price-table {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: $phone-landscape){
+    .qodef-pricing-tables .qodef-price-table {
+        width: 100% !important;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .qodef-pricing-tables .qodef-price-table.qodef-active {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

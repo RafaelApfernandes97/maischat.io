@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #Twitter feed
+   ========================================================================== */
+.qodef-twitter-widget {
+    margin: 0;
+    li {
+        position: relative;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .qodef-tweet-icon-holder {
+            position: absolute;
+            top: 2px;
+
+            .qodef-social-twitter {
+                font-size: 15px;
+                color: $first-main-color;
+                font-family: 'ElegantIcons', sans-serif;
+            }
+
+            .qodef-social-twitter:before {
+                content: "\e094";
+            }
+        }
+
+        .qodef-tweet-content-holder {
+            padding: 0 0 0 27px;
+        }
+    }
+}

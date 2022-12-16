@@ -1,0 +1,16 @@
+@include ipad-portrait {
+  .qodef-info-box {
+    &:hover {
+      .qodef-info-box-text .qodef-info-title{
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+
+@include phone-portrait {
+  .qodef-info-box .qodef-info-box-text p {
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,117 @@
+@import "blocks/mobile-navigation";
+
+/* ==========================================================================
+#Mobile header styles
+========================================================================== */
+.qodef-mobile-header {
+    display: none;
+    position: relative;
+    z-index: 101; //one more thatn the content
+
+   /* #General mobile header styles
+   ========================================================================== */
+    .qodef-mobile-header-inner {
+        height: 100px;
+        background-color: #fff;
+        position: relative;
+
+        .qodef-mobile-header-holder {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+        }
+    }
+
+    .qodef-grid {
+        height: 100%;
+    }
+
+    .qodef-vertical-align-containers {
+        padding: 0;
+    }
+
+    /* #End of general mobile header styles
+   ========================================================================== */
+
+
+
+
+    /* #Mobile logo styles
+    ========================================================================== */
+    .qodef-mobile-logo-wrapper a {
+        display: block;
+        max-height: 80px;
+    }
+
+    .qodef-mobile-logo-wrapper img {
+        height: 100%;
+        width: auto;
+    }
+    /* #End of mobile logo styles
+    ========================================================================== */
+
+
+
+    /* #Mobile menu opener styles
+    ========================================================================== */
+    .qodef-mobile-menu-opener {
+        float: left;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+
+        a {
+            display: table;
+            height: 100%;
+            padding-right: 10px;
+            color: #000;
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .qodef-mobile-opener-icon-holder {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    /* #End of mobile menu opener styles
+    ========================================================================== */
+}
+
+/* ==========================================================================
+#End of mobile header styles
+========================================================================== */
+
+
+
+/* ==========================================================================
+#Sticky mobile header styles
+========================================================================== */
+.qodef-sticky-up-mobile-header {
+    .qodef-animate-mobile-header {
+        .qodef-mobile-header-inner {
+            width: 100%;
+
+            @include qodefTransform(translateY(-100%));
+            top: 0;
+            left: 0;
+            position: fixed;
+        }
+    }
+
+    .mobile-header-appear {
+        .qodef-mobile-header-inner {
+            //Added left and right transition values because of sidearea transitions on open/close
+            -webkit-transition: -webkit-transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+            -moz-transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+            -o-transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+            transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+            @include qodefTransform(translateY(0));
+        }
+    }
+}
+/* ==========================================================================
+#End of sticky mobile header styles
+========================================================================== */

@@ -1,0 +1,46 @@
+@include laptop-landscape {
+    .qodef-pricing-info {
+        &.qodef-active {
+            @include qodefTransform(translateY(0));
+            border: 1px solid transparent;
+        }
+    }
+}
+
+@media only screen and (min-width: $ipad-portrait-plus-pixel) and (max-width: $ipad-landscape){
+    .qodef-pricing-info {
+        &.qodef-pricing-info-extended {
+            padding: 32px 20px 19px;
+            .qodef-pricing-info-pricing {
+                .qodef-price {
+                    font-size: 55px;
+                    padding-right: 0;
+                }
+                .qodef-value {
+                    font-size: 55px;
+                }
+            }
+            .qodef-pricing-info-right {
+                .qodef-pricing-info-content ul li {
+                    font-size: 12px;
+                    margin-bottom:8px;
+                }
+            }
+
+        }
+    }
+}
+
+@include phone-portrait {
+    .qodef-pricing-info{
+        &.qodef-pricing-info-extended {
+            .qodef-pricing-info-left,
+            .qodef-pricing-info-right{
+                width: 100%;
+            }
+            .qodef-pricing-info-left {
+                text-align: center;
+            }
+        }
+    }
+}

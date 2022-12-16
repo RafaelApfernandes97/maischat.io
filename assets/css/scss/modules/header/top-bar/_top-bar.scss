@@ -1,0 +1,153 @@
+$top-bar-height: 50px;
+
+.qodef-top-bar {
+    width: 100%;
+    background-color: #1b1d1f;
+    color: #fff;
+	position: relative;
+    font-weight: 300;
+    height: $top-bar-height;
+	z-index: 111;
+	font-size: 13px;
+
+	a {
+		color: #aab2bd;
+		&:hover {
+			color: $first-main-color;
+		}
+	}
+
+
+	
+
+    .qodef-grid {
+        height: 100%;
+
+        .qodef-vertical-align-containers {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .qodef-logo-wrapper a {
+        max-height: $top-bar-height;
+    }
+
+    .qodef-position-center {
+
+        p {
+            font-size: 13px;
+            color: #c99e66;
+        }
+    }
+
+	.qodef-icon-shortcode {
+		.qodef-icon-element {
+			color: #ffffff;
+		}
+	}
+
+	.widget {
+        display: none;
+        vertical-align: middle;
+
+        .widgettitle,
+        .wp-caption,
+        p,
+        form:not(#searchform){
+            display: none;
+        }
+
+        &.widget_text,
+        &.widget_nav_menu,
+        &.widget_qode_social_icon_widget,
+        &.widget_search,
+        &.widget_icl_lang_sel_widget {
+            display: inline-block;
+        }
+
+		margin-right: 18px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.widget_search {
+			position: relative;
+			margin-right: 1px;
+			input{
+				border: none;
+				border-radius: 13px;
+				padding: 0 12px 0 12px;
+				background-color: #494a4c;
+				height: 26px;
+                &:focus {
+                    outline: 0;
+                }
+			}
+			input[type="text"] {
+				width: 147px;
+			}
+			input[type="submit"] {
+				position: absolute;
+				top:0;
+				right: 0;
+				font-family: ElegantIcons;
+				color: #ffffff;
+				font-size: 12px;
+			}
+		}
+		&.widget_nav_menu {
+			ul {
+				list-style-type: none;
+				margin: 0;
+				li {
+					display: inline-block;
+					border-right: 1px solid #50545d;
+					line-height: 15px;
+					a {
+						padding: 0 13px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.qodef-light-header .qodef-top-bar {
+	color: #aab2bd !important; //Beacause of inline color styles
+
+	.widget {
+		color: #aab2bd !important; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-light-color !important; //Beacause of inline color styles
+		}
+		a:hover {
+			color: $first-main-color!important;
+		}
+		i:hover {
+			color: $first-main-color!important;
+		}
+
+	}
+}
+
+.qodef-dark-header .qodef-top-bar {
+	color: $header-dark-color !important; //Beacause of inline color styles
+
+	.widget {
+		color: $header-dark-color !important; //Beacause of inline color styles
+
+		p,
+		a,
+		span,
+		i,
+		.widgettitle {
+			color: $header-dark-color !important; //Beacause of inline color styles
+		}
+
+	}
+}

@@ -1,0 +1,71 @@
+.qodef-info-box {
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 30px;
+    .qodef-info-box-image {
+      position: relative;
+        img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+    }
+    .qodef-info-box-text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: calc(100% - 86px);
+        background: rgba(36,38,42,.9);
+        padding: 0 30px 0;
+        @include qodefTransition(all .4s cubic-bezier(.79,-.4,0,.99));
+
+        .qodef-info-title {
+          height:86px;
+          display: table;
+            .qodef-info-box-icon {
+              color: #6cbaae;
+              font-size: 32px;
+              display: table-cell;
+              vertical-align: middle;
+              padding: 0 15px 0 0;
+            }
+            .title {
+                color: #fff;
+                padding-top: 0;
+                margin: 0;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        p {
+          margin: 0 0 20px;
+          color: #fff;
+          font-size: 14px;
+          line-height: 26px;
+
+          opacity: 0;
+          @include qodefTransform(translate3d(0,-20px,0));
+          -webkit-transition: opacity .3s, -webkit-transform .0s .3s;
+          transition: opacity .3s, transform .0s .3s;
+        }
+    }
+
+    &:hover {
+      .qodef-info-box-text {
+        top: 0;
+        @include qodefTransition(all .4s cubic-bezier(.79,-.4,0,.99));
+
+        p {
+            opacity: 1;
+            @include qodefTransform(translate3d(0,0,0));
+            @include qodefTransition(all .6s cubic-bezier(.79,-.4,.01,1.29) .1s);
+        }
+        .qodef-info-title {
+          height: 60px;
+          padding-top: 15px;
+        }
+      }
+
+    }
+}

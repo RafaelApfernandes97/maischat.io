@@ -1,0 +1,153 @@
+/* ==========================================================================
+# Process Style - begin
+========================================================================== */
+
+.qodef-process-holder {
+    text-align:center;
+
+    .qodef-process-item {
+        display: inline-block;
+        vertical-align: top;
+
+        .qodef-process-item-number-holder-wrapper {
+            position: relative;
+        }
+
+        .qodef-process-item-number-holder-wrapper:after {
+            content: "";
+            width: 29%;
+            position: absolute;
+            border-bottom: 2px dashed #cbd1db;
+            top: 50%;
+            left: 100%;
+            transform: translateX(-50%);
+        }
+
+        .qodef-process-item-number-holder {
+            display: inline-block;
+            @include qodefBoxSizing(border-box);
+            width: 130px;
+            height: 130px;
+            border: 9px solid #dcdee6;
+            position: relative;
+            @include qodefBorderRadius(50%);
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            @include qodefTransition(0.4s cubic-bezier(0.07, 1.21, 0.81, 1.28));
+        }
+
+        .qodef-process-item-background-holder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include qodefTransform(translateX(-50%) translateY(-50%));
+            line-height: 1em;
+
+            .qodef-process-number {
+                font-size: 42px;
+                font-weight: 500;
+                color: $default-heading-color;
+                display: block;
+                position: relative;
+                line-height: 1em;
+                padding-top: 5px;
+            }
+
+        }
+
+        .qodef-process-item-content-holder {
+            margin-top: 28px;
+        }
+
+        .qodef-process-item-title-holder {
+            margin-bottom: 5px;
+            h5 {
+                font-size: 16px;
+            }
+        }
+
+        .qodef-process-item-text-holder {
+            padding: 0 15px;
+            p {
+                visibility: visible;
+                opacity: 0;
+                margin-bottom: 0;
+                margin-top: 0;
+                @include qodefTransition(opacity 0.4s cubic-bezier(0.46, 0.13, 0.6, 1));
+            }
+        }
+    }
+
+    .qodef-process-item:last-child {
+        .qodef-process-item-number-holder-wrapper:after {
+            border: 0;
+        }
+    }
+
+    .qodef-process-item:hover {
+
+        .qodef-process-item-number-holder {
+            border: 9px solid $first-main-color!important;
+            transform: matrix(1.35, 0, 0, 1.35, 0, 0);
+        }
+
+        .qodef-process-item-text-holder {
+            p {
+                opacity: 1;
+                padding-top: 0;
+                visibility: visible;
+            }
+        }
+
+        .qodef-process-number {
+            color: $first-main-color;
+        }
+    }
+
+    &.light-skin {
+        .qodef-process-item {
+            &:hover {
+                .qodef-process-number {
+                    color: $first-main-color;
+                }
+            }
+            .qodef-process-number {
+                color: #fff;
+            }
+            .qodef-process-item-title {
+                color: #fff;
+            }
+            .qodef-process-item-text-holder {
+                color: #ccd0db;
+            }
+        }
+    }
+}
+
+.qodef-process-holder.columns-3 {
+    .qodef-process-item {
+        width: 33.33%;
+    }
+    .qodef-process-item-number-holder-wrapper:after {
+        width: 41%;
+    }
+}
+
+.qodef-process-holder.columns-4 {
+    .qodef-process-item {
+        width: 25%;
+    }
+}
+
+.qodef-process-holder.columns-5 {
+    .qodef-process-item {
+        width: 20%;
+    }
+
+    .qodef-process-item-number-holder-wrapper:after {
+        width: 19%;
+    }
+}
+
+/* ==========================================================================
+# Process Style - end
+========================================================================== */

@@ -1,0 +1,207 @@
+/* ==========================================================================
+# Underline icon box style - begin
+========================================================================== */
+
+.qodef-icon-box-holder {
+    position: relative;
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid #d8dbe0;
+    @include qodefBorderRadius(10px);
+    @include qodefTransition(transform 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95));
+    &.border-disabled {
+        border: none;
+    }
+    &.rounded-corners-disabled {
+        .qodef-icon-box-overlay {
+            @include qodefBorderRadius(0);
+        }
+    }
+    .qodef-icon-box-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .4s;
+        @include qodefBorderRadius(10px);
+    }
+    &:hover {
+        .qodef-icon-box-overlay {
+            opacity: 1;
+        }
+    }
+    .qodef-icon-box-holder-inner {
+        position: relative;
+        z-index: 99;
+        padding: 0 30px 30px;
+        .qodef-custom-icon {
+            margin-top: 35px;
+            margin-bottom: 20px;
+            img {
+                display: block;
+                margin: 0 auto;
+                min-width: 124px;
+                @include qodefTransition(transform 0.2s ease-out);
+            }
+        }
+    }
+    .qodef-custom-icon {
+        @include qodefTransition(transform 0.2s ease-out);
+    }
+    .qodef-overlapping-icon-box-holder-inner {
+        position: relative;
+        z-index: 99;
+    }
+
+    .qodef-icon-box-icon-holder {
+        padding: 50px 0 21px;
+
+        .qodef-icon-shortcode .qodef-icon-element {
+            font-size: 64px;
+            color: $first-main-color;
+            @include qodefTransition(color 0.2s ease-out);
+        }
+
+        .qodef-icon-shortcode {
+            @include qodefTransition(transform 0.2s ease-out);
+        }
+
+    }
+
+    .qodef-icon-box-text-holder {
+
+        .qodef-icon-box-title {
+            margin-bottom: 9px;
+        }
+
+        .qodef-icon-box-text {
+            margin-bottom: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &.overlapping-icon {
+        background-color: #fff;
+        text-align: center;
+        @include qodefTransition(transform 0.3s ease-out);
+
+        .qodef-overlapping-icon-box-line {
+            display: inline-block;
+            width: 100%;
+            height: 5px;
+            line-height: 0;
+            box-sizing: border-box;
+            background-color: $first-main-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .qodef-overlapping-icon-box-icon-holder {
+            position: absolute;
+            display: block;
+            left: 50%;
+            top: 0;
+            z-index: 250;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            .qodef-overlapping-icon-box-icon-holder-inner {
+                margin: -40% 0 0 0;
+                .qodef-icon-holder-inner {
+                    width: 99px;
+                    height: 99px;
+                    line-height: 99px;
+                    background-color: $first-main-color;
+                    @include qodefBorderRadius(50%);
+                    @include qodefTransition(transform 0.3s ease-out);
+                    @include qodefTransform(scale(1));
+                    .qodef-icon-shortcode .qodef-icon-element {
+                        font-size: 42px;
+                        line-height: 97px;
+                        color: #ffffff;
+                    }
+                }
+            }
+
+        }
+
+        .qodef-overlapping-icon-box-text-holder {
+            padding: 85px 30px 37px;
+            display: block;
+            .qodef-overlapping-icon-box-title {
+                padding-bottom: 9px;
+                h4 {
+                    font-size: 20px;
+                }
+            }
+            .qodef-overlapping-button-holder {
+                margin-bottom: 6px;
+            }
+
+            .qodef-overlapping-icon-box-text {
+                line-height: 26px;
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+        }
+
+    }
+
+}
+
+.qodef-icon-box-holder:hover {
+    &.animate-icon-box.animate-entire-box {
+        @include qodefTransform(translateY(-7px));
+
+        &.overlapping-icon {
+            .qodef-overlapping-icon-box-icon-holder {
+                .qodef-overlapping-icon-box-icon-holder-inner {
+                    .qodef-icon-holder-inner,
+                    .qodef-custom-icon {
+                        @include qodefTransform(scale(1.07));
+                    }
+                }
+            }
+        }
+        &.inside-icon {
+            .qodef-custom-icon {
+                img {
+                    @include qodefTransform(scale(1.07) translateZ(0));
+                }
+            }
+        }
+    }
+    &.animate-icon-box.animate-icon-only {
+        .qodef-icon-box-icon-holder {
+            .qodef-icon-shortcode {
+                @include qodefTransform(scale(1.07) rotate(7deg));
+            }
+        }
+        .qodef-custom-icon {
+            @include qodefTransform(scale(1.07) rotate(7deg));
+        }
+        .qodef-overlapping-icon-box-icon-holder {
+            .qodef-overlapping-icon-box-icon-holder-inner {
+                .qodef-icon-holder-inner,
+                .qodef-custom-icon {
+                    @include qodefTransform(scale(1.07) rotate(7deg));
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Underline icon box style - end
+========================================================================== */
+
+
+
+
+
+
+
+

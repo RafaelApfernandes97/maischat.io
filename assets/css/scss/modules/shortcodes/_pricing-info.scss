@@ -1,0 +1,159 @@
+.qodef-pricing-info {
+    border: 1px solid #efefef;
+    text-align: center;
+    padding: 25px 30px;
+    @include qodefBorderRadius(20px);
+    @include qodefBoxSizing(border-box);
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    @include qodefTransition(transform 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95));
+    &:hover {
+        @include qodefTransform(translateY(-7px));
+    }
+
+    .qodef-pricing-info-title {
+        margin-bottom: 9px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .qodef-pricing-info-description {
+        margin-bottom: 25px;
+        line-height: 22px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .qodef-pricing-info-pricing {
+        display: inline-block;
+        line-height: 1;
+        margin-bottom: 14px;
+
+        .qodef-value {
+            font-size: 38px;
+            font-weight: 500;
+            color: $first-main-color;
+            vertical-align: bottom;
+            line-height: 46px;
+        }
+
+        .qodef-price {
+            font-size: 62px;
+            font-weight: 500;
+            color: $first-main-color;
+            vertical-align: middle;
+            padding-right: 25px;
+        }
+
+        .qodef-mark {
+            color: #797979;
+            vertical-align: middle;
+            display: block;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 400;
+        }
+    }
+
+    &.qodef-active {
+        @include qodefTransform(translateY(-7px));
+        border: none;
+        @include qodefBoxShadow(0 0 20px 5px rgba(86,86,86,0.05));
+        @include qodefTransition(all 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95));
+        &:hover {
+            @include qodefTransform(translateY(-14px));
+            @include qodefBoxShadow(0 10px 25px rgba(0, 0, 0, 0.1));
+        }
+
+        .qodef-active-text {
+            .qodef-best-choice {
+                position: absolute;
+                display: table;
+                top: 17px;
+                right: -40px;
+                width: 150px;
+                height: 38px;
+                z-index: 100;
+                backface-visibility: hidden;
+                text-align: center;
+                color: #fff;
+                background-color: #fd6d52;
+                @include qodefTransform(rotate(45deg));
+
+                .qodef-best-choice-inner{
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    font-weight: 600;
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+
+    /*EXTENDED TYPE*/
+
+    &.qodef-pricing-info-extended {
+        padding: 32px 40px 52px;
+        &:not(.qodef-active) {
+            background-color: #f6f7fb;
+        }
+        &.qodef-active {
+            @include qodefTransform(translateY(7px));
+            &:hover {
+                @include qodefTransform(translateY(-7px));
+            }
+        }
+        .qodef-pricing-info-left,
+        .qodef-pricing-info-right {
+            float: left;
+        }
+        .qodef-pricing-info-left {
+            width: 40%;
+            text-align: left;
+            .qodef-pricing-info-pricing {
+                margin-bottom: 17px;
+                .qodef-mark {
+                    margin-top: 10px;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                .qodef-value {
+                    font-size: 62px;
+                    line-height: 60px;
+                }
+            }
+        }
+        .qodef-pricing-info-right {
+            width: 60%;
+            padding-left: 13px;
+            box-sizing: border-box;
+            text-align: left;
+            .qodef-pricing-info-content {
+                ul {
+                    margin: 8px 0 0;
+                    list-style-type: none;
+                    li {
+                        margin-bottom: 13px;
+                        &:before {
+                            content: "\f373";
+                            display: inline-block;
+                            font-family: "Ionicons";
+                            margin-right: 10px;
+                            color: $first-main-color;
+
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}

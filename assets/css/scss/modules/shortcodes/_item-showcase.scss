@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Item Showcase start styles
+   ========================================================================== */
+
+.qodef-item-showcase {
+	text-align: center;
+	opacity: 0;
+
+	.qodef-item-image {
+		display: inline-block;
+	 	margin-top: -180px;
+	 	opacity:0;
+		width:40%;
+	 	@include qodefTransform(translateY(70px));
+	 	&.qodef-appeared {
+	 	    -webkit-transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+	 	    transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+	 	    opacity: 1;
+	 	    @include qodefTransform(translateY(0));
+	 	}
+	}
+
+	&.qodef-scale-animation-enabled {
+		.qodef-item {
+			&:hover {
+				.qodef-item-icon{
+					@include qodefTransform(scale(1.07));
+				}
+			}
+			.qodef-item-icon {
+				@include qodefTransition(transform 0.2s ease-out);
+			}
+		}
+	}
+
+	.qodef-item {
+		opacity: 0;
+
+		&.qodef-item-left {
+			@include qodefTransform(translateX(-70px));
+			text-align: right;
+
+
+			.qodef-item-icon{
+				position: absolute;
+				right: 0;
+				padding-left: 0;
+			}
+			.qodef-item-content {
+				padding-right: 75px;
+			}
+		}
+		&.qodef-item-right {
+			text-align: left;
+
+			@include qodefTransform(translateX(70px));
+			.qodef-item-icon{
+				position: absolute;
+				left: 0;
+				padding-left: 0;
+			}
+
+			.qodef-item-content {
+				padding-left: 75px;
+			}
+		}
+		&.qodef-appeared {
+		    -webkit-transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+		    transition: opacity .55s cubic-bezier(0.23, 1, 0.32, 1), transform .55s cubic-bezier(0.23, 1, 0.32, 1);
+		    opacity: 1;
+		    @include qodefTransform(translateX(0));
+		}
+		.qodef-item-icon{
+			display:block;
+			font-size:25px;
+			margin-bottom:15px;
+			color:$first-main-color;
+		}
+		.qodef-item-content {
+			display: inline-block;
+			vertical-align: top;
+			.qodef-showcase-title-holder {
+				.qodef-showcase-title {
+					position: relative;
+					display: inline-block;
+					margin:0;
+					text-transform:capitalize;
+				}
+			}
+
+			.qodef-showcase-text-holder {
+				.qodef-showcase-text {
+                    margin: 7px 0 46px;
+				}
+			}
+		}
+
+	}
+
+	.qodef-item-showcase-holder {
+		display: inline-block;
+		width:30%;
+        @include qodefBoxSizing(border-box);
+
+		&.qodef-holder-left {
+			float: left;
+			text-align: right;
+            padding-right: 40px;
+		}
+		&.qodef-holder-right {
+			float: right;
+			text-align: left;
+            padding-left: 40px;
+		}
+	}
+	
+}
+
+/* ==========================================================================
+   Item Showcase end styles
+  ========================================================================== */

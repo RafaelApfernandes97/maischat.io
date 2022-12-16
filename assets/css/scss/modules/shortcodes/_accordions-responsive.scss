@@ -1,0 +1,13 @@
+@media only screen and (max-width: $phone-portrait){
+ 
+	.qodef-accordion-holder:not(.qodef-boxed) div.qodef-accordion-content{
+		padding: 15px 0;
+	}
+
+	.qodef-accordion-holder:not(.qodef-boxed) span.qodef-tab-title {
+		padding: 0 0 0 58px;
+
+	}
+    
+    
+}

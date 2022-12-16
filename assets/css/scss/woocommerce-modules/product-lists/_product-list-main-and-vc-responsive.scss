@@ -1,0 +1,216 @@
+/* ==========================================================================
+# Woocommerce Product List Main and VC Shortcode responsive style - begin
+========================================================================== */
+
+@media only screen and (max-width: $laptop-landscape-large) {
+    
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+                $column_vc_width: 100%/5;
+
+                > .products { 
+
+                    > .product {
+                        width: $column_vc_width;
+
+                        @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+                            &:nth-child(5n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $laptop-landscape) {
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+                $column_vc_width: 100%/4;
+
+                > .products { 
+
+                    > .product {
+                        width: $column_vc_width;
+
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                            &:nth-child(4n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-landscape) {
+
+    .qodef-pl-main-holder,
+    .related.products,
+    .upsells.products,
+    .cross-sells {
+
+        $product_list_columns: ('columns-3', 'columns-4');
+
+        @for $i from 0 to length($product_list_columns) {            
+
+            > .products { 
+
+                > .product {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} & {
+                        $column_width: 100%/3;
+                        width: $column_width;
+
+                        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                            &:nth-child(3n+1) {
+                                clear: both;
+                            }
+                        }
+                    }          
+                }
+            }
+        }
+    }
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-4', 'columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+                $column_vc_width: 100%/3;
+
+                > .products { 
+
+                    > .product {
+                        width: $column_vc_width;
+
+                        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                            &:nth-child(3n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .qodef-pl-main-holder,
+    .related.products,
+    .upsells.products,
+    .cross-sells {
+
+        $product_list_columns: ('columns-3', 'columns-4');
+
+        @for $i from 0 to length($product_list_columns) {            
+
+            > .products { 
+
+                > .product {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} & {
+                        width: 50%;
+
+                        @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                            &:nth-child(2n+1) {
+                                clear: both;
+                            }
+                        }
+                    }          
+                }
+            }
+        }
+    }
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-3', 'columns-4', 'columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+
+                > .products { 
+
+                    > .product {
+                        width: 50%;
+
+                        @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                            &:nth-child(2n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape) {
+
+    .qodef-pl-main-holder,
+    .related.products,
+    .upsells.products,
+    .cross-sells {
+
+        $product_list_columns: ('columns-3', 'columns-4');
+
+        @for $i from 0 to length($product_list_columns) {            
+
+            > .products { 
+
+                > .product {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} & {                    
+                        width: 100%;
+                    }          
+                }
+            }
+        }
+    }
+
+    .woocommerce {
+
+        $product_list_vc_columns: ('columns-2', 'columns-3', 'columns-4', 'columns-5', 'columns-6');
+
+        @for $i from 0 to length($product_list_vc_columns) { 
+            &.#{nth($product_list_vc_columns,$i+1)} {
+
+                > .products { 
+
+                    > .product {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Woocommerce Product List Main and VC Shortcode responsive style - end
+========================================================================== */

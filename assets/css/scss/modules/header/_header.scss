@@ -1,0 +1,234 @@
+@import "blocks/logo";
+@import "blocks/main_menu";
+@import "widgets/search";
+@import "widgets/sections";
+@import "widgets/banner";
+@import "widgets/text-widget";
+@import "top-bar/top-bar";
+@import "types/header-standard/_header-standard";
+@import "types/header-vertical/_header-vertical";
+
+@import "types/mobile-header/_mobile-header";
+
+$logo-area-height: 220px;
+$menu-area-height: 100px;
+$sticky-header-height: 60px;
+
+.qodef-page-header {
+
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 110;
+
+    /* ==========================================================================
+    #General header layout - start
+    ========================================================================== */
+    a img {
+        display: block;
+    }
+
+    .qodef-grid{
+        height: 100%;
+
+        .qodef-vertical-align-containers{
+            padding: 0;
+            @include qodefTransition(background-color 0.3s ease);
+        }
+    }
+
+    /* ==========================================================================
+    #General header layout - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Logo area styles - start
+    ========================================================================== */
+    .qodef-logo-area {
+        height: $logo-area-height;
+        overflow: hidden;
+        position: relative;
+
+        .qodef-logo-wrapper a {
+            max-height: $logo-area-height*0.9;
+        }
+    }
+    /* ==========================================================================
+    #Logo area styles - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Menu area styles - start
+    ========================================================================== */
+    .qodef-menu-area {
+        height: $menu-area-height;
+        position: relative;
+        border-bottom: 1px solid transparent;
+        @include qodefTransition(background-color 0.3s ease);
+        box-sizing: border-box;
+
+        .qodef-logo-wrapper a {
+            max-height: $menu-area-height*0.9;
+        }
+    }
+
+    /* ==========================================================================
+    #Menu area styles - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Sticky header styles - start
+    ========================================================================== */
+    .qodef-sticky-header{
+        height: $sticky-header-height;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        -webkit-transition: -webkit-transform 0.33s ease;
+        transition: transform 0.3s ease;
+        -webkit-backface-visibility: hidden;
+
+        &.header-appear{
+            transform: translateY(0%);
+        }
+
+        .qodef-sticky-holder {
+            height: 100%;
+            background-color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .admin-bar &.header-appear{
+            top: 32px;
+        }
+
+        .qodef-position-left-inner {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .qodef-sticky-holder .qodef-logo-wrapper a {
+            max-height: $sticky-header-height*0.9;
+        }
+
+        .qodef-position-right{
+            display: inline-block;
+            vertical-align: middle;
+            height:100%;
+        }
+
+        .qodef-position-right-inner{
+            display: inline-block;
+            vertical-align: middle;
+            height:100%;
+        }
+    }
+
+    /* ==========================================================================
+    #Sticky header styles - start
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Fixed header styles - start
+    ========================================================================== */
+    .qodef-fixed-wrapper.fixed{
+        width: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        -webkit-backface-visibility: hidden;
+    }
+
+    /* ==========================================================================
+    #Fixed header - end
+    ========================================================================== */
+}
+
+/* ==========================================================================
+#Light header - begin
+========================================================================== */
+
+.qodef-light-header{
+
+    .qodef-logo-area,
+    .qodef-menu-area,
+    .qodef-vertical-menu-area{
+        color: $header-light-color !important; //Beacause of inline color styles
+
+        .widget {
+			color: $header-light-color !important; //Beacause of inline color styles
+
+            p,
+            a,
+            span,
+            i,
+            .widgettitle {
+                color: $header-light-color !important; //Beacause of inline color styles
+            }
+
+        }
+
+        .qodef-light-logo{
+            opacity: 1;
+        }
+
+        .qodef-dark-logo,
+        .qodef-normal-logo{
+            opacity: 0;
+        }
+
+    }
+}
+
+/* ==========================================================================
+#Light header - end
+========================================================================== */
+
+/* ==========================================================================
+#Dark header - begin
+========================================================================== */
+
+.qodef-dark-header{
+
+    .qodef-logo-area,
+    .qodef-menu-area,
+    .qodef-vertical-menu-area{
+        color: $header-dark-color !important; //Because of inline color styles
+
+        .widget {
+			color: $header-dark-color !important; //Beacause of inline color styles
+
+            p,
+            a,
+            span,
+            i,
+            .widgettitle {
+                color: $header-dark-color !important; //Beacause of inline color styles
+            }
+
+        }
+
+        .qodef-dark-logo{
+            opacity: 1;
+        }
+
+        .qodef-normal-logo,
+        .qodef-fullscreen-logo,
+        .qodef-light-logo{
+            opacity: 0;
+        }
+
+    }
+
+}
+
+/* ==========================================================================
+#Dark header - end
+========================================================================== */

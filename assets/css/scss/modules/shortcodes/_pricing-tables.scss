@@ -1,0 +1,217 @@
+/* ==========================================================================
+# Pricing table style - begin
+========================================================================== */
+
+.qodef-pricing-tables {
+
+    &.qodef-two-columns .qodef-price-table {
+        width: 48.75%;
+    }
+
+    &.qodef-three-columns .qodef-price-table {
+        width: 31.666666666666668%;
+    }
+
+    &.qodef-four-columns .qodef-price-table {
+        width: 23.125%;
+    }
+
+    .qodef-price-table {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin-left: 2.5%;
+        float: left;
+        @include qodefTransition(transform 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95));
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:hover {
+            @include qodefTransform(translateY(-7px));
+        }
+
+        .qodef-price-table-inner {
+            position: relative;
+            background-color: #f5f6f9;
+            @include qodefBorderRadius(15px);
+
+            ul {
+                list-style: none outside none;
+                margin: 0;
+            }
+
+            ul li {
+                text-align: center;
+                margin: 0;
+            }
+
+            ul li.qodef-table-title {
+                padding: 22px 20px 23px;
+                position: relative;
+                background-color: $first-main-color;
+                @include qodefBorderRadius(15px 15px 0 0);
+
+                .qodef-title-content {
+                    display: block;
+                    color: #fff;
+                    font-size: 20px;
+                    line-height: 1.4em;
+                    font-weight: 400;
+                    font-style: normal;
+                    text-transform: capitalize;
+                    letter-spacing: 0;
+                }
+            }
+
+            ul li.qodef-table-prices {
+                padding: 21px 5px;
+
+                .qodef-price-in-table {
+                    text-align: center;
+                }
+                .qodef-value {
+                    font-size: 30px;
+                    line-height: 32px;
+                    position: relative;
+                    color: #24262a;
+                    vertical-align: bottom;
+                    font-weight: 500;
+                    bottom: 7px;
+                    left: 5px;
+                }
+                .qodef-price {
+                    font-family: Poppins,sans-serif;
+                    font-size: 55px;
+                    line-height: 58px;
+                    vertical-align: middle;
+                    color: #24262a;
+                    font-weight: 500;
+                    padding-right: 14px;
+                }
+                .qodef-mark {
+                    position: relative;
+                    font-size: 12px;
+                    line-height: 14px;
+                    vertical-align: bottom;
+                    font-weight: 400;
+                    color: #797979;
+                    text-transform: lowercase;
+                    display: block;
+                }
+            }
+
+            ul li.qodef-table-content {
+
+                ul {
+                    padding: 0;
+                    li {
+                        padding: 13px 20px;
+                        font-size: 12px;
+                        font-weight: 400;
+
+                        &:nth-child(odd) {
+                            background-color: #eceef1;
+                        }
+
+                        &:before {
+                            content: "\f00c";
+                            font-family: FontAwesome, sans-serif;
+                            font-size: 12px;
+                            color: $first-main-color;
+                            margin-right: 5px;
+                        }
+
+                    }
+                }
+            }
+
+            ul li.qodef-price-button {
+                padding: 31px 0;
+                @include  qodefBorderRadius(15px 15px 0 0);
+
+                .qodef-btn.qodef-btn-small {
+                    background-color: #aab2bd;
+                    border-color: #aab2bd;
+                }
+
+                .qodef-btn.qodef-btn-solid:hover {
+                    border-color: $first-main-color !important;
+                    background-color: $first-main-color !important;
+                    &.qodef-btn-sweep {
+                        background-color: #aab2bd !important;
+                        border-color: #aab2bd !important;
+                    }
+                }
+                .qodef-hover-background {
+                    background-color: $first-main-color;
+                    border: 1px solid $first-main-color;
+                }
+            }
+        }
+
+        &.qodef-active {
+
+            @include qodefBoxShadow(0 0 20px 5px rgba(86,86,86,0.05));
+            margin-top: -38px;
+            border-radius: 18px;
+
+            .qodef-price-table-inner {
+                background-color: #fff;
+            }
+
+            .qodef-active-text {
+                position: absolute;
+                right: 26px;
+                top: 32px;
+                z-index: 20;
+                background: #e3e3e3;
+
+                span {
+                    display: block;
+                    width: 57px;
+                    height: 57px;
+                    background: #e3e3e3;
+                    @include qodefTransform(rotate(11.25deg));
+                }
+
+                .qodef-active-text-inner {
+                    padding: 16px 0 0;
+                    @include qodefBoxSizing(border-box);
+                    font-size: 20px;
+                    font-weight: 800;
+                    color: #444;
+                    text-align: center;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    width: 57px;
+                    height: 57px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &.qodef-pricing-table-rounded {
+
+        .qodef-price-table-inner {
+
+            @include qodefBorderRadius(18px);
+
+            ul li.qodef-table-title {
+
+                @include qodefBorderRadius(18px 18px 0 0);
+
+            }
+
+        }
+
+    }
+
+}
+/* ==========================================================================
+# Pricing table style - end
+========================================================================== */

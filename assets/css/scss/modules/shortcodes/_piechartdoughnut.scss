@@ -1,0 +1,49 @@
+/* ==========================================================================
+# Pie Chart Doughnut - begin
+========================================================================== */
+
+.qodef-pie-chart-doughnut-holder {
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	.qodef-pie-chart-doughnut {
+		margin: 0 22px 0 0;
+		float: left;
+	}
+
+	.qodef-pie-legend {
+		position: relative;
+		float: left;
+		width: 40%;
+	}
+
+	.qodef-pie-legend ul {
+		list-style: none;
+		padding:0;
+
+		li {
+			display: block;
+			margin: 0 0 10px 0;
+		}
+
+		li .qodef-pie-color-holder {
+			width: 25px;
+			height: 25px;
+			background-color: $first-main-color;
+			float: left;
+		}
+
+		li p {
+			line-height: 25px;
+			margin: 0;
+			padding: 0 0 0 50px;
+		}
+
+	}
+
+}
+
+/* ==========================================================================
+# Pie Chart Doughnut - end
+========================================================================== */

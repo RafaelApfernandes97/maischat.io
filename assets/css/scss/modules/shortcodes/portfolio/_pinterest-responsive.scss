@@ -1,0 +1,30 @@
+@media only screen and (max-width: $ipad-landscape){
+    .qodef-ptf-pinterest{
+        &.qodef-ptf-pinterest-five-columns,
+        &.qodef-ptf-pinterest-four-columns{
+            article,
+            .qodef-portfolio-list-masonry-grid-sizer{
+                width: 33.33%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape){
+    .qodef-ptf-pinterest{
+        .qodef-portfolio-list-holder {
+            margin: 0;
+            width: 100%;
+            article{
+                margin-bottom:20px;
+                padding:0;
+            }
+            article,
+            .qodef-portfolio-list-masonry-grid-sizer {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+

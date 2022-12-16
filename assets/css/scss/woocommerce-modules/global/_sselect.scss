@@ -1,0 +1,422 @@
+/* ==========================================================================
+   WooCommerce Select 2 Script styles - begin
+   ========================================================================== */
+/*
+Version: 4.0.3 Timestamp: Monday Mart 27 2:59:00pm EDT 2017
+*/
+.select2-container--default {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    text-align: initial;
+    box-sizing: border-box;
+
+    &[dir="rtl"] {
+
+        .select2-selection--single {
+
+            .select2-selection__clear {
+                float: left;
+            }
+
+            .select2-selection__rendered {
+                padding: 0 20px 0 30px;
+            }
+
+            .select2-selection__arrow {
+                left: 20px;
+                right: auto;
+            }
+        }
+
+        .select2-selection--multiple {
+
+            .select2-selection__choice,
+            .select2-selection__placeholder,
+            .select2-search--inline {
+                float: right;
+            }
+
+            .select2-selection__rendered {
+                padding: 0 20px 0 30px;
+            }
+
+            .select2-selection__choice {
+                margin: 7px auto 0 5px;
+            }
+
+            .select2-selection__choice__remove {
+                margin: 0 auto 0 3px;
+            }
+        }
+    }
+
+    &.select2-container--disabled {
+
+        .select2-selection--single {
+            background-color: #eee;
+            cursor: default;
+
+            .select2-selection__clear {
+                display: none;
+            }
+        }
+
+        .select2-selection--multiple {
+            background-color: #eee;
+            cursor: default;
+        }
+
+        .select2-selection__choice__remove {
+            display: none;
+        }
+    }
+
+    &.select2-container--open {
+
+        .select2-selection--single {
+            color: $default-heading-color;
+        }
+
+        .select2-dropdown {
+            left: 0;
+
+            &.select2-dropdown--above {
+                border-bottom-color: transparent;
+            }
+
+            &.select2-dropdown--below {
+                border-top-color: transparent;
+            }
+        }
+    }
+
+    .qodef-woocommerce-page .cart-collaterals .woocommerce-shipping-calculator & {
+        width: 100% !important;
+        margin: 0 0 14px;
+    }
+
+    .select2-selection--single {
+        display: block;
+        height: 44px;
+        line-height: 42px;
+        padding: 0;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: transparent;
+        border: 1px solid $default-border-color;
+        border-radius: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+
+        .select2-selection__rendered {
+            display: block;
+            padding: 0 30px 0 20px;
+            color: inherit;
+            line-height: inherit;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .select2-selection__clear {
+            position: relative;
+            cursor: pointer;
+            float: right;
+            margin: 0;
+            font-weight: inherit;
+        }
+
+        .select2-selection__placeholder {
+            color: inherit;
+        }
+
+        .select2-selection__arrow {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            top: 0;
+            right: 20px;
+            color: inherit;
+            line-height: inherit;
+            text-align: center;
+
+            b {
+                display: none;
+            }
+
+            &:before {
+                font-family: 'FontAwesome';
+                content: '\f107';
+            }
+        }
+    }
+
+    .select2-selection--multiple {
+        display: block;
+        height: 44px;
+        line-height: 42px;
+        padding: 0;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: transparent;
+        border: 1px solid $default-border-color;
+        border-radius: 0;
+        outline: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+
+        .select2-selection__rendered {
+            display: block;
+            list-style: none;
+            padding: 0 30px 0 20px;
+            margin: 0;
+            color: inherit;
+            line-height: inherit;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            li {
+                list-style: none;
+            }
+
+            .select2-selection__placeholder {
+                float: left;
+                margin: 0;
+                color: inherit;
+            }
+
+            .select2-selection__clear {
+                position: relative;
+                cursor: pointer;
+                float: right;
+                margin: 0;
+                font-weight: inherit;
+            }
+
+            .select2-selection__choice {
+                float: left;
+                margin: 7px 5px 0 0;
+                padding: 0 10px;
+                line-height: 30px;
+                color: #fff;
+                background-color: $default-heading-color;
+                border: 0;
+                border-radius: 0;
+                cursor: default;
+            }
+
+            .select2-selection__choice__remove {
+                display: inline-block;
+                margin: 0 3px 0 0;
+                color: inherit;
+                font-weight: 700;
+                cursor: pointer;
+                @include qodefTransition(opacity .2s ease-out);
+
+                &:hover {
+                    color: inherit;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .select2-search--inline {
+        float: left;
+
+        .select2-search__field {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            background: transparent;
+            border: none;
+            outline: 0;
+            box-shadow: none;
+            -webkit-appearance: textfield;
+            box-sizing: border-box;
+
+            &::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+            }
+        }
+    }
+
+    .select2-dropdown {
+        position: absolute;
+        top: 0;
+        left: -100000px;
+        width: 100%;
+        display: block;
+        background-color: #fff;
+        border: 1px solid $default-border-color;
+        border-radius: 0;
+        z-index: 1051;
+        box-sizing: border-box;
+    }
+
+    .select2-search--dropdown {
+        display: block;
+        padding: 14px 15px 2px;
+
+        &.select2-search--hide {
+            display: none;
+        }
+
+        .select2-search__field {
+            padding: 4px 8px;
+            width: 100%;
+            color: inherit;
+            font-size: inherit;
+            line-height: 20px;
+            font-family: inherit;
+            font-weight: inherit;
+            border: 1px solid $default-border-color;
+            outline: none;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+
+            &:focus {
+                border-color: $default-heading-color;
+            }
+
+            &::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+            }
+        }
+    }
+
+    .select2-results {
+        display: block;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
+        > .select2-results__options {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    }
+
+    .select2-results__options {
+        position: relative;
+        padding: 2px 15px;
+        margin: 5px 0;
+        list-style: none;
+    }
+
+    .select2-results__option {
+        padding: 7px 0;
+        user-select: none;
+        -webkit-user-select: none;
+        @include qodefTransition(color .2s ease-out);
+
+        &[aria-selected] {
+            cursor: pointer;
+        }
+
+        &[role=group] {
+            padding: 0;
+        }
+
+        &[aria-disabled=true] {
+            color: $default-heading-color;
+        }
+
+        &[aria-selected=true] {
+            color: $default-heading-color;
+            background: none;
+        }
+
+        .select2-results__option {
+            padding-left: 1em;
+
+            .select2-results__group {
+                padding-left: 0;
+            }
+
+            .select2-results__option {
+                margin-left: -1em;
+                padding-left: 2em;
+
+                .select2-results__option {
+                    margin-left: -2em;
+                    padding-left: 3em;
+
+                    .select2-results__option {
+                        margin-left: -3em;
+                        padding-left: 4em;
+
+                        .select2-results__option {
+                            margin-left: -4em;
+                            padding-left: 5em;
+
+                            .select2-results__option {
+                                margin-left: -5em;
+                                padding-left: 6em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .select2-results__option--highlighted {
+
+        &[aria-selected] {
+            color: $default-heading-color;
+            background: none;
+        }
+    }
+
+    .select2-results__group {
+        display: block;
+        padding: 7px 0;
+        cursor: default;
+    }
+}
+
+.select2-close-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 99;
+    background-color: #fff;
+    filter: alpha(opacity=0);
+}
+
+.select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+/* ==========================================================================
+   WooCommerce Select 2 Script styles - end
+   ========================================================================== */

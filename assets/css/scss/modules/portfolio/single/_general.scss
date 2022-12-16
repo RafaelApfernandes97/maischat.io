@@ -1,0 +1,204 @@
+@import 'small-images';
+@import 'small-slider';
+@import 'big-images';
+@import 'big-slider';
+@import 'gallery';
+@import 'masonry-gallery-left';
+
+.qodef-portfolio-single-holder {
+
+    .qodef-portfolio-content{
+        margin: 20px 0  20px;
+        p{
+            margin:0;
+        }
+    }
+
+    .qodef-portfolio-info-item {
+        margin-bottom: 19px;
+        font-size:14px;
+        line-height:18px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        p{
+            margin:0;
+        }
+
+        h5{
+            font-size:15px;
+        }
+    }
+
+    .qodef-portfolio-video-lightbox {
+        position: relative;
+        display: block;
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    .qodef-portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+
+        .qodef-portfolio-play-icon {
+            position: absolute;
+            font-size: 20px;
+            left: 50%;
+            top: 50%;
+
+            @include qodefTransform(translate(-50%, -50%));
+        }
+    }
+
+
+    .qodef-portfolio-social-holder{
+        .qodef-portfolio-like{
+            a{
+                height:43px;
+                line-height:43px;
+                display:inline-block;
+                vertical-align:middle;
+                color: #444444;
+                font-size:13px;
+                i{
+                    margin: 0 7px 0 0;
+                    vertical-align:middle;
+                }
+                span{
+                    font-weight:700;
+                    vertical-align:middle;
+                }
+            }
+        }
+    }
+
+
+    /* Portfolio Slider custom styles - begin */
+
+    .qodef-portfolio-media.owl-carousel{
+        .owl-nav {
+            width: 100%;
+            .owl-prev {
+                left: 3%;
+                position: absolute;
+                top: 50%;
+                @include qodefTransform(translateY(-50%));
+            }
+            .owl-next {
+                right: 3%;
+                position: absolute;
+                top: 50%;
+                @include qodefTransform(translateY(-50%));
+            }
+            .qodef-prev-icon,
+            .qodef-next-icon {
+                display: inline-block;
+                text-align: center;
+                i {
+                    font-size: 30px;
+                    line-height: 30px;
+                    color: #c8c7c7;
+                }
+            }
+        }
+    }
+
+
+}
+.qodef-portfolio-single-nav {
+    $nav-height: 48px;
+    height: $nav-height;
+    line-height: $nav-height;
+    text-align: center;
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top:5px;
+    background-color: #f6f7fb;
+
+    .qodef-portfolio-single-nav-inner {
+        width: $grid-width;
+        margin: 0 auto;
+        position: relative;
+    }
+    span {
+        color: #abb1bd;
+        line-height: $nav-height;
+        font-size: 22px;
+        vertical-align: middle;
+
+        @include qodefTransition(color 0.15s ease-in-out);
+    }
+
+    .qodef-portfolio-back-btn {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 26px!important;
+
+        a{
+            display: inline-block;
+            vertical-align: middle;
+            height: 26px;
+            width: 26px;
+        }
+    }
+
+    .qodef-portofolio-back-square{
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border: 1px solid #aab2bd;
+        background-color: #aab2bd;
+
+        @for $i from 1 through 9 {
+            &:nth-child(#{$i}) {
+                top: 8px*(($i - 1)%3);
+                left: floor(($i - 1)/3)*8px;
+            }
+        }
+    }
+
+    .qodef-portfolio-next,
+    .qodef-portfolio-prev,
+    .qodef-portfolio-back-btn {
+        height: $nav-height;
+
+    }
+
+    .qodef-portfolio-next,
+    .qodef-portfolio-prev {
+        position: absolute;
+        &:hover {
+            span {
+                color: #666d77;
+            }
+        }
+    }
+
+    .qodef-portfolio-prev {
+        left: 0;
+    }
+
+    .qodef-portfolio-next {
+        right: 0;
+        top:0;
+    }
+
+    .qodef-nav-label {
+        font-size: 15px;
+        color: #444444;
+        font-weight: 600;
+        vertical-align: middle;
+    }
+}

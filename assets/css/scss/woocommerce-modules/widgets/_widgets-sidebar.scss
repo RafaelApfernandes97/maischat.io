@@ -1,0 +1,596 @@
+/* ==========================================================================
+   WooCommerce Sidebar Widgets styles - begin
+   ========================================================================== */
+
+.widget.woocommerce {
+    clear: both;
+
+	&.widget_rating_filter,
+	&.widget_shopping_cart,
+	&.widget_layered_nav,
+	&.widget_price_filter,
+	&.widget_layered_nav_filters,
+	&.widget_product_categories,
+	&.widget_products,
+	&.widget_product_search,
+	&.widget_product_tag_cloud,
+	&.widget_recently_viewed_products,
+	&.widget_recent_reviews,
+	&.widget_top_rated_products {
+        box-sizing: border-box;
+	}
+
+    &.widget_rating_filter,
+    &.widget_shopping_cart,
+    &.widget_layered_nav,
+    &.widget_layered_nav_filters,
+    &.widget_product_categories,
+    &.widget_products,
+    &.widget_recently_viewed_products,
+    &.widget_recent_reviews,
+    &.widget_top_rated_products  {
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                @include qodefRelativeHolderLayout();
+                clear: both;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                ul {
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+    }
+
+    &.widget_product_search{
+        .woocommerce-product-search {
+            width: 100%;
+            @include qodefBoxSizing(border-box);
+            display: inline-block;
+            background-color: transparent;
+            vertical-align: middle;
+            position: relative;
+            overflow: visible;
+            @include qodefBorderRadius(30px);
+
+            label {
+                display: none;
+            }
+
+            input[type="search"],
+            input[type="text"] {
+                display: inline-block;
+                text-decoration: none;
+                outline: 0;
+                color: #9f9f9f;
+                background-color: transparent;
+                font-family: inherit;
+                margin: 0;
+                padding: 0 55px 0 22px;
+                width: 100%;
+                height: 48px;
+                float: left;
+                font-size: 14px;
+                font-weight:300;
+                border: 1px solid #dadada;
+                @include qodefBoxSizing(border-box);
+                @include qodefBorderRadius(30px);
+
+                &::-webkit-input-placeholder {
+                    /* WebKit, Blink, Edge */
+                    color: #9f9f9f;
+                }
+                &:-moz-placeholder {
+                    /* Mozilla Firefox 4 to 18 */
+                    color: #9f9f9f;
+                    opacity: 1;
+                }
+                &::-moz-placeholder {
+                    /* Mozilla Firefox 19+ */
+                    color: #9f9f9f;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: #9f9f9f;
+                }
+            }
+
+            input[type="submit"],
+            button[type="submit"] {
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                outline: 0;
+                border: 0;
+                box-sizing: initial;
+                text-decoration: none;
+                color: #9f9f9f;
+                font-family: 'ElegantIcons', sans-serif;
+                font-weight: normal;
+                cursor: pointer;
+                white-space: nowrap;
+                float: right;
+                @include qodefTransition(color 0.15s ease-out, background-color 0.15s ease-out);
+                font-size: 14px;
+                background-color: transparent;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                @include qodefBorderRadius(0 30px 30px 0);
+                &:hover {
+                    color: #444;
+                }
+            }
+        }
+    }
+
+    &.widget_rating_filter {
+        a{
+            &:hover {
+                border-bottom-color: transparent;
+                .star-rating {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    &.widget_shopping_cart {
+
+        .widget_shopping_cart_content {
+            @include qodefRelativeHolderLayout();
+
+            ul {
+
+                li {
+                    line-height: 0;
+                    margin-bottom: 20px;
+
+                    img {
+                        display: block;
+                        max-width: 50px;
+                    }
+
+                    a:not(.remove) {
+                        display: block;
+                        line-height: 25px;
+                        &:hover {
+                            border-bottom-color: transparent;
+                        }
+                    }
+
+                    .quantity {
+                        display: inline-block;
+                        line-height: 20px;
+                    }
+
+                    .remove {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 0;
+                        line-height: 1;
+
+                        &:after {
+                            position: relative;
+                            display: block;
+                            padding: 0 3px;
+                            font-family: 'Ionicons';
+                            content: "\f404";
+                            font-size: 30px;
+                            line-height: 20px;
+                        }
+
+                        &:hover {
+                            border-bottom-color: transparent;
+                        }
+                    }
+                }
+            }
+
+            .variation {
+                @include qodefRelativeHolderLayout();
+                line-height: 25px;
+
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+
+                dt {
+                    color: #444;
+                    font-size: inherit;
+                }
+            }
+
+            .total {
+                margin: 17px 0 13px;
+
+                strong {
+                    color: $default-heading-color;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .buttons {
+                margin: 10px 0 0;
+
+                a {
+                    &:first-child {
+                        margin: 0 5px 0 0;
+                    }
+
+                    @media only screen and (min-width: $ipad-landscape-plus-pixel) and (max-width: $laptop-landscape) {
+                        padding: 0 15px;
+                        letter-spacing: 1.5px;
+                    }
+                }   
+            }
+        }
+    }
+
+    &.widget_layered_nav {
+
+    }
+
+    &.widget_layered_nav_filters {
+
+
+    }
+
+    &.widget_price_filter {
+
+        > h4 {
+            margin-bottom: 22px;
+        }
+
+        .price_slider_wrapper {
+
+            .ui-widget-content {
+                position: relative;
+                height: 7px;
+                background-color: #e6e9ee;
+
+                .ui-slider-handle {
+                    position: absolute;
+                    top: -3px;
+                    height: 13px;
+                    width: 13px;
+                    background-color: $first-main-color;
+                    border-radius: 4em;
+                    margin: 0 0 0 -2px;
+                    cursor: pointer;
+                    outline: medium none;
+                    z-index: 2;
+
+                    &:last-child {
+                        @include qodefTransform(translateX(-50%));
+                    }
+                }
+
+                .ui-slider-range {
+                    position: absolute;
+                    display: block;
+                    height: 100%;
+                    background-color: #aab2bd;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .price_slider_amount {
+            margin: 24px 0 0;
+            
+            .button {
+                float: right;
+                height: 39px;
+                line-height: 39px;
+                padding: 0 22px;
+                border-radius: 5px;
+                background: transparent;
+                color: #fff;
+                border: 1px solid $first-main-color;
+                background-color:$first-main-color ;
+                &:hover {
+                    color: #fff;
+                    background-color: $first-main-color;
+                }
+            }
+
+            .price_label {
+                float: left;
+                line-height: 1em;
+                font-size: 0;
+                font-weight: 400;
+                color: #8e8e8e;
+                span {
+                    font-size: 15px;
+                    line-height: 32px;
+                    display: inline-block;
+                    &:first-child:after {
+                        content: "-";
+                        padding: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.widget_product_categories {
+        padding:20px 30px;
+        border:1px solid #dddde8;
+        @include qodefBorderRadius(10px);
+        select,
+        select option{
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid #dadada;
+            background-color: transparent;
+            outline: 0;
+            color: #989898;
+            font-family: inherit;
+            padding: 9px 12px;
+            height: 43px;
+            @include qodefBoxSizing(border-box);
+        }
+
+    }
+
+    &.widget_products,
+    &.widget_recently_viewed_products,
+    &.widget_recent_reviews,
+    &.widget_top_rated_products {
+        padding:20px 30px;
+        border:1px solid #dddde8;
+        @include qodefBorderRadius(10px);
+        ul {
+            margin-top: 7px;
+            margin-bottom: 17px;
+            li {
+                min-height: 65px;
+                margin-bottom: 10px;
+                line-height: 0;
+                
+                a {
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        max-width: 50px;
+                    }
+
+                    span {
+                        color: #101010;
+                        font-size: 15px;
+                        font-weight: 400;
+                        position: relative;
+                        display: block;
+                        padding: 0 0 0 70px;
+                        line-height: 20px;
+                        @include qodefBoxSizing(border-box);
+                    }
+                }
+
+                > *:not(a):first-of-type {
+                    margin: 0 0 0 70px;
+                    line-height: 20px;
+                }
+
+                .star-rating {
+                    position: relative;
+
+                    span {
+                        max-width: 100px;
+                    }
+                }
+
+                del{
+                    margin: 0 0 0 70px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    span {
+                        color: inherit;
+                    }
+                }
+
+                ins {
+                    text-decoration: none;
+                    line-height: 20px;
+                    margin: 0!important;
+                }
+            }
+        }
+    }
+
+    &.widget_products,
+    &.widget_recently_viewed_products,
+    &.widget_top_rated_products {
+
+        ul {
+
+            li {
+
+                .amount {
+                    color: #848892;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &.widget_recently_viewed_products {
+
+    }
+
+    &.widget_recent_reviews {
+
+        ul {
+
+            li {
+
+                .star-rating {
+                    margin-top: 4px;
+                    margin-bottom: 6px;
+                }
+            }
+        }
+
+        a {
+            padding: 0 0 0 70px;
+            display: block;
+            line-height: 20px;
+
+            &:hover {
+                color: $first-main-color;
+                border-bottom-color: transparent;
+            }
+        }
+
+        .reviewer {
+            display: block;
+            vertical-align: middle;
+            width: auto;
+            clear: both;
+        }
+    }
+
+    &.widget_top_rated_products {
+
+        ul {
+
+            li {
+
+                .star-rating {
+                    margin-top: 10px;
+                    margin-bottom: 12px;
+                }
+
+                .amount {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &.widget_product_tag_cloud {
+        .tagcloud {
+            font-size: 0;
+            margin-top: 17px;
+        }
+        a {
+            display: inline-block;
+            margin: 0 6px 6px 0;
+            line-height: 20px;
+            padding: 7px 12px;
+            border: 1px solid #dadada;
+            color: #444444;
+            font-size: 11px !important;
+            font-weight: 400;
+            text-transform: uppercase;
+            &:hover{
+                color: $first-main-color;
+                border-color: $first-main-color;
+            }
+        }
+    }
+
+    &.widget_product_search {
+
+        .woocommerce-product-search {
+            @include qodefRelativeHolderLayout();
+            clear: both;
+
+            > div {
+                @include qodefRelativeHolderLayout();
+                @include qodefBoxSizing(border-box);
+            }
+
+            input,
+            button {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                float: left;
+                margin: 0;
+                height: 44px;
+                line-height: 42px;
+                color: $default-text-color;
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+                outline: 0;
+                -webkit-appearance: none;
+                @include qodefBoxSizing(border-box);
+                @include qodefTransition(color .2s ease-out);
+            }
+
+            input {
+                width: calc(100% - 40px);
+                padding: 0 10px 0 21px;
+                font-family: inherit;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 1px;
+
+                &::-webkit-input-placeholder {
+                    color: $default-text-color;
+                }
+                &:-moz-placeholder {
+                    color: $default-text-color;
+                }
+                &::-moz-placeholder {
+                    color: $default-text-color;
+                }
+                &:-ms-input-placeholder {
+                    color: $default-text-color;
+                }
+            }
+
+            button {
+                width: 40px;
+                padding: 0 18px 0 4px;
+                font-size: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $default-heading-color;
+                }
+
+                span {
+                    display: block;
+                    line-height: inherit;
+
+                    &:before {
+                        display: block;
+                        line-height: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Sidebar Widgets styles - end
+   ========================================================================== */

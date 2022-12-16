@@ -1,0 +1,132 @@
+.qodef-blog-holder{
+
+	&.qodef-blog-type-masonry {
+
+		opacity: 0;
+		@include qodefTransition(opacity 0.15s ease-out);
+
+		&.qodef-appeared{
+			opacity: 1;
+		}
+
+		article {
+			width: 48.5%;
+            padding: 0;
+			margin: 0;
+
+            .qodef-post-title {
+                margin-bottom: 4px;
+            }
+
+            .qodef-post-info {
+                &.qodef-section-top {
+                    margin-bottom: 15px;
+                }
+                &.qodef-section-bottom {
+                    padding-top: 17px;
+                }
+            }
+
+            .qodef-post-excerpt {
+                margin: 0 0 6px;
+            }
+
+            .qodef-blog-share {
+                float: left;
+                position: relative;
+                z-index: 10;
+
+                &:hover {
+                    display: block;
+                    width: 100%;
+                }
+
+                &:hover ~ .qodef-post-info-author {
+                    opacity: 0;
+                    transition-delay: 0.1s;
+                }
+            }
+
+            .qodef-post-info-author {
+                display: inline-block;
+                top: 0;
+                line-height: 27px;
+                opacity: 1;
+                @include qodefTransition(opacity 0.15s ease-out);
+                transition-delay: 0.4s;
+                color: #444;
+                a {
+                    text-transform: capitalize;
+                    color: #444;
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .qodef-post-image img {
+                @include qodefBorderRadius(10px 10px 0 0);
+            }
+
+            &.format-standard,
+            &.format-video,
+            &.format-gallery{
+                @include qodefBorderRadius(10px);
+            }
+
+            &.format-quote,
+            &.format-link {
+                .qodef-post-mark {
+                    padding-right: 10px;
+                }
+            }
+            &.format-link {
+              .qodef-post-text{
+                padding: 37px 39px 31px;
+              }
+            }
+
+            &.format-quote {
+              .qodef-post-text{
+                padding: 30px 39px 31px;
+              }
+                .qodef-post-title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.format-audio {
+                .qodef-post-image {
+                    margin-bottom: 0;
+                }
+                .qodef-blog-audio-holder {
+                    margin-bottom: 0;
+                }
+                .mejs-container.mejs-audio {
+                    @include qodefBorderRadius(0);
+                }
+            }
+
+		}
+		.qodef-blog-masonry-grid-sizer {
+			width: 48.5%;
+		}
+		.qodef-blog-masonry-grid-gutter {
+			width: 3%;
+		}
+
+	}
+	&.qodef-masonry-full-width {
+
+		margin: 3%;
+
+		article,
+		.qodef-blog-masonry-grid-sizer{
+			width: 22.75%;
+		}
+
+		.qodef-blog-masonry-grid-gutter {
+			width: 3%;
+		}
+	}
+}

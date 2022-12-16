@@ -1,0 +1,130 @@
+/* ==========================================================================
+   WooCommerce Variation Shortcode styles - begin
+   ========================================================================== */
+.qodef-woocommerce-page .qodef-content {
+
+    .variations {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 28px;
+        border: none;
+        padding: 0;
+
+        tr {
+            display: block;
+            padding: 0 0 10px;
+            border: 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        td {
+            padding: 0;
+            text-align: left;
+            &.label {
+                min-width: 80px;
+            }
+        }
+
+        .value select {
+            position: relative;
+            width: 200px;
+            margin: 0 16px;
+            outline: none;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid $default-border-color;
+            border-radius: 0;
+            color: $default-text-color;
+            font-size: 14px;
+            height: 44px;
+            line-height: 44px;
+            padding: 0 20px;
+            @include qodefBoxSizing(border-box);
+            -webkit-appearance: none;
+            -moz-appearance:    none;
+            appearance:         none;
+        }
+
+        .reset_variations {
+            color: $default-heading-color;
+        }
+    }
+
+    .single_variation_wrap {
+        .single_variation {
+            margin: 0 0 25px;
+        }
+
+        .price {
+            margin: 0;
+        }
+    }
+
+    table.group_table {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        border: none;
+        padding: 0;
+
+        tbody {
+           display: block; 
+        }
+
+        tr {
+            display: block;
+            padding: 0 0 10px;
+            border: 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        td {
+            padding: 0 17px 10px 0;
+            text-align: left;
+            width: 35%;
+
+            &.label {
+                width: 60%;
+            }
+
+            &.price {
+                display: table-cell;
+                vertical-align: middle;
+                width: 30%;
+                text-align: right;
+                border-top: 0;
+            }
+
+            &:last-child {
+                padding: 0 0 10px;
+            }
+        }
+
+        .qodef-quantity-buttons {
+            margin: 0;
+        }
+
+        a {
+            color: $default-text-color;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+
+        ~ .single_add_to_cart_button {
+           margin-top: 18px;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Variation Shortcode styles - end
+   ========================================================================== */

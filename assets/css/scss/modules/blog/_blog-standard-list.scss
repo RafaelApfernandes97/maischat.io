@@ -1,0 +1,14 @@
+.qodef-blog-holder.qodef-blog-type-standard{
+	article{
+        &.format-link {
+            .qodef-post-text-main {
+                .qodef-post-title a {
+                    font-size: 24px;
+                }
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 24px;
+        }
+	}
+}

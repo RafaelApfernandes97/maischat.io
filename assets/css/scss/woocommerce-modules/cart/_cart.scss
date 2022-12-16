@@ -1,0 +1,241 @@
+/* ==========================================================================
+   WooCommerce Cart Page styles - begin
+   ========================================================================== */
+.qodef-woocommerce-page {
+
+    table.cart {
+        margin-bottom: 0;
+        thead {
+
+            tr {
+
+                th {
+                    color: $default-heading-color;
+                    font-weight: 500;
+                    padding: 15px 10px;
+                    text-align: left;
+                }
+            }
+        }
+
+        tbody {
+
+            tr:not(.cart_item) {
+                border: 0;
+            }
+        }
+
+        tr.cart_item {
+            border-top: 0;
+
+            td {
+                padding: 25px 10px;
+                vertical-align: middle;
+                text-align: inherit;
+
+                &.product-remove {
+	                width: 60px;
+	                text-align: center;
+
+                    a {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-family: 'linea-arrows-10';
+                        speak: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        font-size: 0;
+                        line-height: 1;
+
+                        &:before {
+                            display: block;
+                            font-size: 45px;
+                            content: "\e04a";
+                        }
+                    }
+                }
+
+	            &.product-thumbnail {
+		            max-width: 30px;
+
+		            a {
+			            position: relative;
+			            display: inline-block;
+			            vertical-align: middle;
+
+			            img {
+				            display: block;
+			            }
+		            }
+	            }
+
+                &.product-name {
+
+                    a {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-weight: 500;
+                    }
+                }
+
+                .variation {
+
+                    > * {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        td.actions {
+            padding: 30px 0 34px;
+            text-align: inherit;
+
+            .coupon {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                float: left;
+
+                label {
+                    display: none;
+                }
+
+	            input {
+		            display: inline-block;
+		            vertical-align: top;
+	            }
+
+                input[type="text"] {
+                    margin: 0 22px 0 0;
+                }
+            }
+
+            > input,
+            > button {
+                float: right;
+            }
+        }
+    }
+
+    .cart-collaterals {
+        @include qodefRelativeHolderLayout;
+	    margin: 0 0 60px;
+
+	    .cross-sells,
+	    .cart_totals {
+		    margin: 16px 0 10px;
+		    border-top: 1px solid $default-border-color;
+
+		    > h2 {
+			    display: block;
+			    margin: 52px 0 57px;
+			    font-size: 25px;
+			    text-align: center;
+		    }
+	    }
+
+        table {            
+            margin: 0 0 30px;
+
+            tr {
+
+                &:not(:first-child) {
+                    border-top: 0;
+                }
+
+                &.order-total {
+
+                    .amount {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+
+            td, th {
+                padding: 15px 25px;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            th {
+                width: 20%;
+                border: 0;
+                color: $default-heading-color;
+            }
+        }
+
+	    tr.shipping {
+
+		    #shipping_method {
+			    list-style: none;
+			    margin: 0 0 7px;
+
+			    li {
+				    margin: 3px 0;
+				    padding: 0;
+
+				    > * {
+					    display: inline-block;
+					    vertical-align: middle;
+					    margin: 0;
+				    }
+			    }
+		    }
+	    }
+
+        .woocommerce-shipping-calculator {
+
+	        p {
+		        margin: 0;
+	        }
+
+            .shipping-calculator-button {
+                display: block;
+                margin: 0 0 10px;
+                font-weight: 600;
+            }
+
+	        .shipping-calculator-form {
+				margin: 10px 0;
+	        }
+        }
+    }
+}
+
+.qodef-woocommerce-page {
+
+    .cart-empty {
+        position: relative;
+        display: block;
+        font-family: inherit;
+        font-size: 25px;
+        line-height: 1.32em;
+        font-weight: 500;
+        text-align: center;
+        color: $default-heading-color;
+        margin: 40px 0 33px;
+    }
+
+    .return-to-shop {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 0 0 70px;
+    }
+}
+/* ==========================================================================
+   WooCommerce Cart Page styles - end
+   ========================================================================== */

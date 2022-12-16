@@ -1,0 +1,515 @@
+/* ==========================================================================
+# Side area style - start
+========================================================================== */
+
+//TODO Delete commented code
+
+/* Side area general style - start
+========================================================================== */
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header) .qodef-side-menu-button-opener,
+.qodef-light-header.qodef-header-style-on-scroll .qodef-page-header .qodef-side-menu-button-opener,
+.qodef-light-header .qodef-top-bar .qodef-side-menu-button-opener {
+	color: $header-light-color !important; //Color can be set inline from widget opener;
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header) .qodef-side-menu-button-opener,
+.qodef-dark-header.qodef-header-style-on-scroll .qodef-page-header .qodef-side-menu-button-opener,
+.qodef-dark-header .qodef-top-bar .qodef-side-menu-button-opener {
+	color: $header-dark-color !important; //Color can be set inline from widget opener
+}
+
+.qodef-side-menu-button-opener {
+	font-size: 46px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	@include qodefTransition(initial);
+	color: #231f20;
+	margin: 0 0 0 9px;
+}
+
+.qodef-side-menu-button-opener.medium {
+	display: inline-block;
+	font-size: 21px;
+	line-height: 30px;
+	height: 30px;
+	width: 19px;
+}
+
+.qodef-side-menu-button-opener.large {
+	display: inline-block;
+	font-size: 28px;
+	line-height: 34px;
+	height: 34px;
+	width: 24px;
+}
+
+.qodef-side-menu-button-opener > i {
+	display: inline-block;
+	height: inherit;
+	line-height: inherit;
+	vertical-align: bottom;
+	width: inherit;
+	text-align: center;
+	-webkit-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	-moz-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	-ms-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	-o-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	transition: opacity 0.15s ease-out, color 0.15s ease-out;
+}
+
+.qodef-side-menu-button-opener:hover {
+	color: $first-main-color;
+}
+
+.qodef-side-menu-button-opener span.social_icon {
+	font-family: 'ElegantIcons' !important;
+}
+
+.qodef-side-menu-button-opener i.social_icon {
+	font-family: 'FontAwesome',serif !important;
+
+}
+
+.qodef-side-menu {
+	background-color: #24262a;
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	padding: 40px 60px;
+	position: fixed;
+	top: 0;
+	right: -270px;
+	width: 210px;
+	z-index: 9999;
+	-webkit-backface-visibility: hidden;
+
+	h4{
+		margin: 0 0 15px 0;
+		color: #fff;
+	}
+
+	h5,
+	h6 {
+		margin: 0 0 12px 0;
+		color: #fff;
+	}
+
+	.widget {
+		margin: 30px 0 30px;
+
+		li {
+			position:relative;
+			list-style-type: none;
+		}
+
+		ul li.page_item_has_children,
+		ul li.menu-item-has-children{
+			padding-right: 0;
+			border-bottom:none;
+		}
+
+		ul ul {
+			padding: 6px 0 0 10px;
+		}
+
+	}
+
+	a:not(.qbutton),
+	li,
+	span,
+	p,
+	.widget_rss li a.rsswidget {
+		color: #9d9d9d;
+		line-height: 31px;
+		@include qodefTransition(color 0.15s ease-out);
+	}
+
+	.widget_calendar {
+		font-size: 14px;
+
+		a{
+			color:#fff;
+		}
+
+		caption,
+		th,
+		td {
+			color: #9d9d9d;
+			line-height: 31px;
+			@include qodefTransition(color 0.15s ease-out);
+		}
+
+		thead tr,
+		tbody tr,
+		tbody td {
+			border-color: #9d9d9d;
+		}
+
+	}
+
+	.qodef-side-menu-title {
+		display: block;
+		margin: 0 0 12px;
+	}
+
+	.widget_nav_menu {
+
+		li:last-child,
+		li a {
+			margin: 0;
+		}
+
+	}
+
+	.qodef-close-side-menu-holder {
+		display: table;
+		height: 90px;
+		position: absolute;
+		top: 0px;
+		right: 19px;
+		z-index: 1000;
+	}
+
+	.qodef-close-side-menu-holder-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	a.qodef-close-side-menu {
+		display: inline-block;
+		height: 45px;
+		width: 45px;
+		padding: 0 2px 4px 0; /* in order to align icon in horizontal and vertical center */
+		z-index: 1000;
+		@include qodefTransition(transform .5s ease);
+
+		span{
+			color: #ffffff;
+			display: inline-block;
+			font-size: 45px;
+			height: 45px;
+			line-height: 45px;
+			position: relative;
+			text-align: center;
+			width: 45px;
+		}
+
+	}
+
+	a.qodef-close-side-menu:hover {
+		@include qodefTransform(rotate(180deg));
+	}
+
+}
+
+.admin-bar .qodef-side-menu .qodef-close-side-menu-holder {
+	top: 10px;
+}
+
+/* Side area general style - end
+========================================================================== */
+
+/* Side area slides over content style - start
+========================================================================== */
+
+.qodef-right-side-menu-opened {
+
+	.qodef-wrapper,
+	footer.uncover,
+	.qodef-fixed-wrapper.fixed,
+	.qodef-sticky-header,
+	.mobile-header-appear .qodef-mobile-header-inner {
+		left:-270px;
+	}
+
+}
+
+.qodef-side-menu-slide-from-right {
+
+	.qodef-wrapper {
+		background-color: #fff;
+		position: relative;
+		z-index: 1000;
+		@include qodefTransition(left 0.2s cubic-bezier(.645,.045,.355,1.000));
+
+		.qodef-cover {
+			z-index: 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			background:#000;
+			-webkit-transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+			-moz-transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+			-o-transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+			transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+		}
+
+	}
+
+	.carousel-inner {
+		@include qodefTransition(left 0.2s cubic-bezier(.645,.045,.355,1.000));
+	}
+
+	.qodef-side-menu {
+		padding: 5% 80px 30px 80px;
+		top: 0;
+		right: -45%;
+		width: 45%;
+		z-index: 9999;
+		text-align: left;
+		visibility: hidden;
+		-webkit-box-sizing:border-box;
+		box-sizing: border-box;
+		@include qodefTransition(0.2s ease-in-out);
+	}
+
+//	header.sticky,
+//	header.fixed_top_header .top_header
+	.qodef-sticky-header,
+	.qodef-fixed-wrapper.fixed {
+		-webkit-transition: left 0.2s cubic-bezier(.645,.045,.355,1.000), -webkit-transform 0.33s ease;
+		transition: left 0.2s cubic-bezier(.645,.045,.355,1.000), transform 0.33s ease;
+	}
+
+	footer.uncover {
+		@include qodefTransition(left 0.2s cubic-bezier(.645,.045,.355,1.000));
+	}
+
+}
+
+.qodef-side-menu-slide-from-right.qodef-right-side-menu-opened {
+
+	.qodef-cover {
+		cursor: url('img/close.png'), pointer;
+		z-index: 1002;
+		opacity: 0.6;
+		filter: alpha(opacity=60);
+	}
+
+	.qodef-side-menu {
+		right: 0px;
+		visibility: visible;
+	}
+
+}
+
+/* Side area slides over content style - end
+========================================================================== */
+
+/* Side area slides with content style - start
+========================================================================== */
+
+.qodef-side-menu-slide-with-content {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+	-webkit-overflow-scrolling: auto !important;
+	-webkit-transition: left 0.2s ease, right 0.2s ease;
+	-moz-transition: left 0.2s ease, right 0.2s ease;
+	-o-transition: left 0.2s ease, right 0.2s ease;
+	transition: left 0.2s ease, right 0.2s ease;
+
+	.qodef-side-menu {
+		position: fixed;
+		visibility: visible;
+		-webkit-box-sizing:border-box;
+		box-sizing: border-box;
+		width: 470px;
+		right: -470px;
+		height: 100%;
+		top: 0;
+		z-index: 9999;
+		-webkit-transition: left 0.2s ease, right 0.2s ease;
+		-moz-transition: left 0.2s ease, right 0.2s ease;
+		-o-transition: left 0.2s ease, right 0.2s ease;
+		transition: left 0.2s ease, right 0.2s ease;
+
+	}
+
+
+
+//	header.fixed,
+//	header.fixed_top_header .top_header,
+//	header.fixed_hiding,
+	footer.uncover,
+	.qodef-wrapper{
+		-webkit-transition: left 0.2s ease, right 0.2s ease;
+		-moz-transition: left 0.2s ease, right 0.2s ease;
+		-o-transition: left 0.2s ease, right 0.2s ease;
+		transition: left 0.2s ease, right 0.2s ease;
+	}
+
+	.qodef-sticky-header,
+	.qodef-fixed-wrapper.fixed,
+	.qodef-mobile-header-inner {
+		-webkit-transition: left 0.2s ease, right 0.2s ease, -webkit-transform 0.33s ease;
+		transition: left 0.2s ease, right 0.2s ease, transform 0.33s ease;
+	}
+
+	.carousel-inner {
+		left:0 !important;
+		@include qodefTransition(left 0.2s ease);
+	}
+
+}
+
+.qodef-side-menu-slide-with-content.qodef-side-menu-open {
+
+	.qodef-wrapper,
+	footer.uncover,
+	.qodef-sticky-header,
+	.qodef-fixed-wrapper,
+	.qodef-mobile-header-inner {
+		left: -470px;
+	}
+
+	.qodef-side-menu {
+		right: 0;
+	}
+
+	.carousel-inner:not(.relative_position){
+		left:-470px !important;
+	}
+
+
+//	header.fixed,
+//	header.fixed_top_header .top_header,
+//	header.fixed_hiding,
+//	header.sticky {
+//		left: -470px;
+//	}
+
+}
+
+/* width 270px start */
+.qodef-side-menu-slide-with-content.qodef-width-270.qodef-side-menu-open {
+
+	.qodef-wrapper,
+	footer.uncover,
+	.qodef-sticky-header,
+	.qodef-fixed-wrapper,
+	.qodef-mobile-header-inner {
+		left: -270px;
+	}
+
+	.qodef-side-menu {
+		right: 0;
+	}
+
+	.carousel-inner:not(.relative_position) {
+		left:-270px !important;
+	}
+
+//	header.fixed,
+//	header.fixed_hiding,
+//	header.sticky,
+//	header.fixed_top_header .top_header{
+//		left: -270px;
+//	}
+
+}
+
+
+.qodef-side-menu-slide-with-content.qodef-width-270 {
+
+	.qodef-side-menu {
+		width: 270px;
+		right: -270px;
+	}
+
+}
+/* width 270px end */
+
+/* width 370px start */
+.qodef-side-menu-slide-with-content.qodef-width-370.qodef-side-menu-open {
+
+	.qodef-wrapper,
+	footer.uncover,
+	.qodef-sticky-header,
+	.qodef-fixed-wrapper,
+	.qodef-mobile-header-inner {
+		left: -370px;
+	}
+
+	.qodef-side-menu {
+		right: 0;
+	}
+
+	.carousel-inner:not(.relative_position){
+		left:-370px !important;
+	}
+
+//	header.fixed,
+//	header.fixed_hiding,
+//	header.sticky,
+//	header.fixed_top_header .top_header{
+//		left: -370px;
+//	}
+
+}
+
+.qodef-side-menu-slide-with-content.qodef-width-370 {
+
+	.qodef-side-menu {
+		width: 370px;
+		right: -370px;
+	}
+}
+/* width 370px end */
+
+
+/* Side area slides with content style - end
+========================================================================== */
+
+/* Side area uncovering - start
+========================================================================== */
+
+.qodef-side-area-uncovered-from-content {
+
+	.qodef-side-menu {
+		background-color: #1b1b1b;
+		height: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		padding: 30px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 210px;
+		z-index: 90;
+		visibility: hidden;
+	}
+
+	.qodef-sticky-header,
+	.qodef-fixed-wrapper.fixed {
+		-webkit-transition: left 0.3s ease, right 0.2s ease;
+		-moz-transition: left 0.3s ease, right 0.2s ease;
+		-o-transition: left 0.3s ease, right 0.2s ease;
+		transition: left 0.3s ease, right 0.2s ease;
+	}
+
+}
+
+.qodef-side-area-uncovered-from-content.qodef-right-side-menu-opened {
+
+	.qodef-sticky-header,
+	.qodef-fixed-wrapper.fixed,
+	.qodef-mobile-header-inner {
+		left: -270px;
+	}
+
+}
+
+/* Side area uncovering - end
+========================================================================== */
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */

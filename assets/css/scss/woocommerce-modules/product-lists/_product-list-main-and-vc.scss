@@ -1,0 +1,365 @@
+/* Woocommerce Product List Main and VC Shortcode - begin
+========================================================================== */
+
+.qodef-pl-main-holder,
+.related.products,
+.upsells.products,
+.cross-sells,
+.qodef-content .woocommerce {
+    @include qodefRelativeHolderLayout();
+}
+
+ul.products {
+    list-style: none;
+    margin: 0 -16px;
+    clear: both;
+
+    > .product {
+        position: relative;
+        float: left;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 16px;
+        margin: 0 0 50px;
+        @include qodefBoxSizing(border-box);
+        text-align: left;
+
+        .touch & {
+            cursor: pointer;
+        }
+
+        transform: translateZ(0);
+
+        .qodef-pl-image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 16px;
+            overflow: hidden;
+            display: block;
+            @include qodefBorderRadius(10px);
+            z-index: 9999;
+
+            > a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                span {
+                    display: block;
+                    line-height: 0;
+                    @include qodefTransition(.5s);
+                    @include qodefTransform(translateY(0));
+                }
+            }
+
+            .qodef-hover-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                @include qodefTransform(translateY(100%));
+            }
+        }
+        .qodef-pl-button-holder {
+            line-height: 0;
+            display: inline-block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include qodefTransition(height 0.2s ease-out)
+        }
+        .qodef-btn,
+        .added_to_cart {
+            width: 100%;
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            @include qodefTransition(all 0.2s ease-out);
+            text-align: left;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 0 0 25px;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #464a56;
+            border: 0;
+            @include qodefBorderRadius(0 0 10px 10px);
+            &:hover {
+                color: #fff;
+                background-color: #464a56 !important;
+            }
+        }
+        .button,
+        .added_to_cart {
+            &:after {
+                content: "\e87f";
+                font-family: Linearicons-Free;
+                border-left: 1px solid rgba(255, 255, 255, .23);
+                padding: 0 16px;
+                font-size: 22px;
+                vertical-align: middle;
+                line-height: inherit;
+                margin-left: 25px;
+                display: inline-block;
+                float: right;
+                font-weight: 400;
+                -webkit-transition: background-color .2s ease-out;
+                -moz-transition: background-color .2s ease-out;
+                transition: background-color .2s ease-out;
+
+            }
+            &.add_to_cart_button,
+            &.product_type_external {
+                &:before {
+                    content: "\f3f8";
+                    top: -2px;
+                }
+            }
+            &.product_type_variable,
+            &.product_type_grouped {
+                &:before {
+                    content: "\f20e";
+                    top: -1px;
+                }
+            }
+            &:hover {
+                &:before {
+                    background-color: $first-main-color;
+                }
+            }
+        }
+        &:hover {
+            .qodef-btn,
+            .added_to_cart {
+                bottom: 0;
+            }
+
+            .qodef-pl-image > a span {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+                -webkit-transition: -webkit-transform 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+                transition: transform 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+                &.qodef-hover-image {
+                    @include qodefTransform(translateY(0))
+                }
+            }
+        }
+
+        .qodef-pl-text-wrapper {
+            @include qodefRelativeHolderLayout();
+            padding-left: 5px;
+
+            .qodef-product-list-title {
+                margin: 0;
+                line-height: 26px;
+                margin-bottom: 3px;
+            }
+
+            .qodef-pl-categories-holder {
+                display: inline-block;
+                width: 100%;
+                color: #444;
+                line-height: 0;
+                a {
+                    font-size: 13px;
+                    color: #444;
+                    line-height: 20px;
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .qodef-pl-rating-holder {
+                @include qodefRelativeHolderLayout();
+                line-height: 22px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                text-align: right;
+            }
+
+            .price {
+                position: relative;
+                display: block;
+                color: #aab2bd;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 22px;
+
+                * {
+                    font-size: inherit;
+                    line-height: inherit;
+                }
+
+                del {
+                    font-weight: 400;
+                    font-size: 13px;
+                }
+
+                ins {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.qodef-pl-main-holder,
+.related.products,
+.upsells.products,
+.cross-sells {
+
+    $product_list_columns: ('columns-3', 'columns-4');
+
+    @for $i from 0 to length($product_list_columns) {
+        $column_width: 100%/($i+3);
+
+        > .products {
+
+            > .product {
+
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} & {
+                        width: $column_width;
+
+                        &:nth-child(#{$i+3}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+
+                @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                    .qodef-woocommerce-#{nth($product_list_columns,$i+1)} .qodef-woocommerce-with-sidebar & {
+                        $column_width: 100%/($i+3-1);
+                        width: $column_width;
+
+                        &:nth-child(#{$i+3}n+1) {
+                            clear: none;
+                        }
+
+                        &:nth-child(#{$i+3-1}n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woocommerce {
+
+    &.columns-1 {
+
+        > .products {
+
+            > .product {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+
+    $product_list_vc_columns: ('columns-2', 'columns-3', 'columns-4', 'columns-5', 'columns-6');
+
+    @for $i from 0 to length($product_list_vc_columns) {
+        &.#{nth($product_list_vc_columns,$i+1)} {
+            $column_vc_width: 100%/($i+2);
+
+            > .products {
+
+                > .product {
+                    width: $column_vc_width;
+                    $product_list_vc_columns_label: #{nth($product_list_vc_columns,$i+1)};
+
+                    @if $product_list_vc_columns_label == 'columns-5' {
+                        @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-6' {
+                        @media only screen and (min-width: $laptop-landscape-large-plus-pixel) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-3' {
+                        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else if $product_list_vc_columns_label == 'columns-2' {
+                        @media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    } @else {
+                        @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .qodef-btn {
+        &.qodef-btn-icon {
+            i,
+            span:not(.qodef-btn-text) {
+                padding: 0 16px;
+                font-size: 22px;
+                vertical-align: middle;
+                float: right;
+                border-left: 1px solid rgba(255, 255, 255, .23);
+                line-height: inherit;
+                -webkit-transition: background-color .2s ease-out, color .2s ease-out;
+                -moz-transition: background-color .2s ease-out, color .2s ease-out;
+                transition: background-color .2s ease-out, color .2s ease-out;
+            }
+            .qodef-btn-text {
+                padding: 0;
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+                float: left;
+            }
+        }
+        &:hover {
+            i,
+            span:not(.qodef-btn-text) {
+                background-color: $first-main-color;
+            }
+        }
+    }
+    .added_to_cart {
+        &:hover {
+            &:after {
+                background-color: $first-main-color;
+            }
+        }
+    }
+}
+
+/* Woocommerce Product List VC Shortcode - end
+========================================================================== */

@@ -1,0 +1,1096 @@
+/* #Reset default styles - start
+   ========================================================================== */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, nav, section {
+    display: block;
+}
+
+blockquote {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after {
+    content: '';
+    content: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: medium none;
+    vertical-align: middle;
+}
+
+table th {
+    border: 0;
+    padding: 5px 7px;
+    text-align: center;
+}
+
+table td {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+a img {
+    border: none;
+}
+
+img, .wp-caption {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+/* #Reset default styles - end
+   ========================================================================== */
+
+/* #General styles that are used in our theme - start
+ * Here are defined global styles on body element, on container elements that hold every page,
+ * headings and links, inputs, core wp styles and default pagination styles
+   ========================================================================== */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clear:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+html {
+    height: 100%;
+    margin: 0 !important;
+    @include qodefTransition(all 0.33s ease-out);
+    overflow-y: scroll !important; /* to prevent page jumping on ajax and when there is not enough content */
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    color: $default-text-color;
+    font-weight: 300;
+    background-color: $default-background-color;
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 52px;
+    line-height: 1.1em; /* 57px/52px */
+    font-weight: 400;
+    color: $default-heading-color;
+    letter-spacing: -1.2px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 1.3em; /* 52px/40px */
+    font-weight: 300;
+    color: $default-heading-color;
+    letter-spacing: -0.8px;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 1.3em; /* 41px/32px */
+    font-weight: 300;
+    color: $default-heading-color;
+    letter-spacing: -0.7px;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 1.8em; /* 32px/18px */
+    font-weight: 400;
+    color: $default-heading-color;
+}
+
+h5 {
+    font-size: 17px;
+    color: #5d5e69;
+    line-height: 1.5em; /* 27px/18px */
+    font-weight: 300;
+}
+
+h6 {
+    font-size: 15px;
+    line-height: 1.8em; /* 27px/15px */
+    font-weight: 400;
+    color: $default-heading-color;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    @include qodefTypographyLayout();
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+    color: $first-main-color;
+}
+
+a,
+p a {
+    color: $first-main-color;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: color 0.15s ease-out;
+    -moz-transition: color 0.15s ease-out;
+    -o-transition: color 0.15s ease-out;
+    -ms-transition: color 0.15s ease-out;
+    transition: color 0.15s ease-out;
+}
+
+p {
+    margin: 10px 0;
+}
+
+input[type='submit'],
+.woocommerce input[type='button'],
+.woocommerce-page input[type='button'] {
+    -webkit-appearance: none;
+}
+
+ul, ol {
+    list-style-position: inside;
+    margin: 15px 0;
+}
+
+ul ul,
+ol ol,
+ol ul,
+ul ol {
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+
+pre {
+    background-color: $default-background-color;
+    padding: 15px;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 15px 0;
+}
+
+dt {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+dd {
+    margin-bottom: 15px;
+}
+
+sub, sup {
+    font-size: 75%;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    top: 0.5ex;
+}
+
+sup {
+    bottom: 0.5ex;
+}
+
+.wp-caption-text {
+    margin: 0;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table thead tr, table tbody tr {
+    border: 1px solid #dadada;
+}
+
+table tbody th {
+    border-right: 1px solid #dadada;
+}
+
+blockquote:not(.qodef-blockquote-shortcode) {
+    padding: 0;
+    border: none;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.6em;
+    margin: 20px 0;
+}
+
+blockquote cite {
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Webkit */
+::selection {
+    background: $first-main-color;
+    color: $default-background-color;
+}
+
+/* Gecko/Mozilla */
+::-moz-selection {
+    background: $first-main-color;
+    color: $default-background-color;
+}
+
+.wp-caption,
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor {
+    opacity: 1;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 10px auto;
+}
+
+.alignwide {
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+@include ipad-landscape() {
+    .alignwide {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.alignfull {
+    position: relative;
+    left: -1rem;
+    width: calc(100% + (2 * 1rem));
+    max-width: calc(100% + (2 * 1rem));
+    clear: both;
+}
+
+@include ipad-landscape() {
+    .alignfull {
+        left: calc(-12.5% - 75px);
+        width: calc(125% + 150px);
+        max-width: calc(125% + 150px);
+        margin-top: calc(2 * 1rem);
+        margin-bottom: calc(2 * 1rem);
+    }
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.meta {
+    display: none;
+}
+
+.qodef-wrapper {
+    background-color: $default-background-color;
+    position: relative;
+    z-index: 1000;
+    @include qodefTransition(left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1));
+    left: 0px;
+
+    .qodef-wrapper-inner {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.qodef-section .qodef-section-arrow-icon {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    @include qodefTransform(translateX(-50%));
+    font-size: 68px;
+}
+
+.qodef-meta {
+    display: none;
+}
+
+.qodef-content {
+    margin-top: 0;
+    position: relative;
+    z-index: 100;
+    background-color: $default-background-color; /*this is needed because of the uncovering footer*/
+}
+
+/*visual composer override styles*/
+.wpb_row, .wpb_content_element,
+ul.wpb_thumbnails-fluid > li,
+.last_toggle_el_margin, .wpb_button {
+    margin-bottom: 0 !important; // important is in order to prevent visual composer styles in all cases
+}
+
+.qodef-content {
+    .qodef-content-inner > .qodef-container > .qodef-container-inner {
+        padding: 80px 0;
+    }
+}
+
+.qodef-boxed {
+
+    overflow: hidden !important; /* this is because content jumping while using accordion and display:inline-block on 'body.qodef-boxed .qodef-wrapper'   */
+
+    .qodef-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+
+        .qodef-wrapper-inner {
+            width: $grid-width-boxed;
+            overflow: visible;
+            margin: auto;
+        }
+    }
+
+    .qodef-content {
+        overflow: hidden;
+    }
+
+    .qodef-footer-inner {
+        width: $grid-width-boxed;
+        margin: auto;
+    }
+
+    .qodef-page-header .qodef-sticky-header,
+    .qodef-page-header .qodef-fixed-wrapper.fixed {
+        width: $grid-width-boxed;
+        left: auto;
+    }
+}
+
+.qodef-smooth-transition-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+
+    &.qodef-hide-spinner {
+
+        .qodef-st-loader {
+            display: none;
+        }
+
+    }
+
+}
+
+.qodef-container {
+    background-color: #fff; //beacuse of the Qode Slider, since content have to go over it
+    position: relative;
+    padding: 0;
+    width: 100%;
+    z-index: 100;
+
+    &:before {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+.qodef-container-inner {
+    //not in parent selector since this class is used for positioning other elements in grid
+    width: $grid-width;
+    margin: 0px auto;
+}
+
+.qodef-full-width {
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+}
+
+@media only screen and (min-width: 1400px) {
+    .qodef-grid-1300 {
+
+        .qodef-grid,
+        .qodef-container-inner,
+        .qodef-grid-section .qodef-section-inner,
+        .qodef-footer-top-border-holder.qodef-in-grid,
+        .qodef-footer-bottom-border-holder.qodef-in-grid {
+            width: $grid-width-1300;
+        }
+
+    }
+
+    .qodef-grid-1300.qodef-boxed {
+
+        .qodef-footer-inner,
+        .qodef-wrapper-inner {
+            width: $grid-width-1300 + 50px;
+        }
+
+        .qodef-page-header .qodef-sticky-header,
+        .qodef-page-header .qodef-fixed-wrapper.fixed {
+            width: $grid-width-1300 + 50px;
+            left: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .qodef-grid-1200 {
+
+        .qodef-grid,
+        .qodef-container-inner,
+        .qodef-grid-section .qodef-section-inner,
+        .qodef-footer-top-border-holder.qodef-in-grid,
+        .qodef-footer-bottom-border-holder.qodef-in-grid {
+            width: $grid-width-1200;
+        }
+    }
+
+    .qodef-grid-1200.qodef-boxed {
+
+        .qodef-footer-inner,
+        .qodef-wrapper-inner {
+            width: $grid-width-1200 + 50px;
+        }
+
+        .qodef-page-header .qodef-sticky-header,
+        .qodef-page-header .qodef-fixed-wrapper.fixed {
+            width: $grid-width-1200 + 50px;
+            left: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .qodef-grid-1000 {
+
+        .qodef-grid,
+        .qodef-container-inner,
+        .qodef-grid-section .qodef-section-inner,
+        .qodef-footer-top-border-holder.qodef-in-grid,
+        .qodef-footer-bottom-border-holder.qodef-in-grid {
+            width: $grid-width-1000;
+        }
+    }
+
+    .qodef-grid-1000.qodef-boxed {
+
+        .qodef-footer-inner,
+        .qodef-wrapper-inner {
+            width: $grid-width-1000 + 50px;
+        }
+
+        .qodef-page-header .qodef-sticky-header,
+        .qodef-page-header .qodef-fixed-wrapper.fixed {
+            width: $grid-width-1000 + 50px;
+            left: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .qodef-grid-800 {
+
+        .qodef-grid,
+        .qodef-container-inner,
+        .qodef-grid-section .qodef-section-inner,
+        .qodef-footer-top-border-holder.qodef-in-grid,
+        .qodef-footer-bottom-border-holder.qodef-in-grid {
+            width: $grid-width-800;
+        }
+    }
+
+    .qodef-grid-800.qodef-boxed {
+
+        .qodef-footer-inner,
+        .qodef-wrapper-inner {
+            width: $grid-width-800 + 50px;
+        }
+
+        .qodef-page-header .qodef-sticky-header,
+        .qodef-page-header .qodef-fixed-wrapper.fixed {
+            width: $grid-width-800 + 50px;
+            left: auto;
+        }
+    }
+}
+
+/* #General styles that are used in our theme - end
+   ========================================================================== */
+
+/* #Grid system styles - start
+ * Here are defined styles for grid system that is used outside Visual Composer
+   ========================================================================== */
+
+.qodef-two-columns-66-33 {
+    width: 100%;
+
+    .qodef-column1 {
+        width: 66.66%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 20px 0 0;
+        }
+    }
+
+    .qodef-column2 {
+        width: 33.33%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 0 0 20px;
+
+        }
+    }
+}
+
+.qodef-two-columns-33-66 {
+    width: 100%;
+
+    .qodef-column1 {
+        width: 33.33%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 20px 0 0;
+        }
+    }
+
+    .qodef-column2 {
+        width: 66.66%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 0 0 20px;
+        }
+    }
+}
+
+.qodef-two-columns-75-25 {
+    width: 100%;
+
+    .qodef-column1 {
+        width: 75%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 10px 0 0;
+        }
+    }
+
+    .qodef-column2 {
+        width: 25%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 0 0 10px;
+        }
+    }
+}
+
+.qodef-two-columns-25-75 {
+    width: 100%;
+
+    .qodef-column1 {
+        width: 25%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 10px 0 0;
+        }
+    }
+
+    .qodef-column2 {
+        width: 75%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 0 0 10px;
+        }
+    }
+}
+
+.qodef-two-columns-50-50 {
+    width: 100%;
+
+    > .qodef-two-columns-50-50-inner {
+        margin: 0 -15px;
+    }
+
+    .qodef-column {
+        width: 50%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 15px;
+        }
+    }
+}
+
+.qodef-three-columns {
+    width: 100%;
+
+    > .qodef-three-columns-inner {
+        margin: 0 -15px;
+    }
+
+    .qodef-column {
+        width: 33.33%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 15px;
+        }
+    }
+}
+
+.qodef-four-columns {
+    width: 100%;
+
+    > .qodef-four-columns-inner {
+        margin: 0 -15px;
+    }
+
+    .qodef-column {
+        width: 25%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 15px;
+        }
+    }
+}
+
+.qodef-five-columns {
+    width: 100%;
+
+    > .qodef-five-columns-inner {
+        margin: 0 -15px;
+    }
+
+    .qodef-column {
+        width: 20%;
+        float: left;
+
+        .qodef-column-inner {
+            padding: 0 15px;
+        }
+    }
+}
+
+body.woocommerce.woocommerce-page {
+    .qodef-two-columns-66-33.woocommerce_with_sidebar .qodef-column1 .qodef-column-inner,
+    .qodef-two-columns-75-25.woocommerce_with_sidebar .qodef-column1 .qodef-column-inner {
+        padding-left: 40px;
+    }
+
+    .qodef-two-columns-33-66.woocommerce_with_sidebar .qodef-column2 .qodef-column-inner,
+    .qodef-two-columns-25-75.woocommerce_with_sidebar .qodef-column2 .qodef-column-inner {
+        padding-right: 40px;
+    }
+
+    .full_width {
+        .qodef-two-columns-66-33.woocommerce_with_sidebar .qodef-column1 .qodef-column-inner,
+        .qodef-two-columns-75-25.woocommerce_with_sidebar .qodef-column1 .qodef-column-inner {
+            padding-left: 0;
+        }
+
+        .qodef-two-columns-33-66.woocommerce_with_sidebar .qodef-column2 .qodef-column-inner,
+        .qodef-two-columns-25-75.woocommerce_with_sidebar .qodef-column2 .qodef-column-inner {
+            padding-right: 0;
+        }
+    }
+}
+
+/* #Grid system styles - end
+   ========================================================================== */
+
+@include keyframes(preload-background) {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.qodef-preload-background {
+    background-repeat: repeat !important;
+    background-color: transparent !important;
+    background-attachment: scroll !important;
+    background-size: inherit !important;
+    @include animation(preload-background, 40s, infinite, linear, 0s);
+}
+
+.qodef-grid {
+    width: $grid-width;
+    margin: 0 auto;
+}
+
+.qodef-vertical-align-containers {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    &.qodef-25-50-25 {
+
+        .qodef-position-left,
+        .qodef-position-right {
+            width: 25%;
+        }
+
+        .qodef-position-center {
+            width: 50%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        .qodef-position-left-inner,
+        .qodef-position-center-inner,
+        .qodef-position-right-inner {
+            width: 98%;
+        }
+
+    }
+
+    &.qodef-33-33-33 {
+
+        .qodef-position-left,
+        .qodef-position-center,
+        .qodef-position-right {
+            width: 33.33%;
+        }
+
+        .qodef-position-center {
+            width: 50%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        .qodef-position-left-inner,
+        .qodef-position-center-inner,
+        .qodef-position-right-inner {
+            width: 98%;
+        }
+
+    }
+
+    &.qodef-50-50 {
+
+        .qodef-position-left,
+        .qodef-position-right {
+            width: 50%;
+        }
+
+        .qodef-position-left-inner,
+        .qodef-position-center-inner,
+        .qodef-position-right-inner {
+            width: 98%;
+        }
+
+    }
+
+    .qodef-position-left {
+        position: relative;
+        float: left;
+        z-index: 2;
+        height: 100%;
+    }
+
+    .qodef-position-center {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .qodef-position-right {
+        position: relative;
+        float: right;
+        z-index: 2;
+        height: 100%;
+        text-align: right;
+    }
+
+    .qodef-position-left-inner,
+    .qodef-position-center-inner,
+    .qodef-position-right-inner {
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .qodef-position-right.qodef-has-widget .qodef-position-right-inner {
+        height: 100%;
+    }
+
+    .qodef-position-left:before,
+    .qodef-position-center:before,
+    .qodef-position-right:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        margin-right: 0; /* adjusts for spacing */
+    }
+
+}
+
+/* ==========================================================================
+   #Row styles - start
+   ========================================================================== */
+
+.qodef-section {
+    position: relative;
+
+}
+
+.qodef-grid-section .qodef-section-inner {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+}
+
+.qodef-section-inner-margin {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.qodef-content-aligment-left {
+    text-align: left;
+}
+
+.qodef-content-aligment-center {
+    text-align: center;
+}
+
+.qodef-content-aligment-right {
+    text-align: right;
+}
+
+/* #Parallax section styles - start
+   ========================================================================== */
+
+.qodef-parallax-section-holder {
+    position: static;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center 0px;
+    background-attachment: fixed;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+
+    .qodef-full-screen-height-outer {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .touch &.qodef-parallax-section-holder-touch-disabled {
+        height: auto !important;
+        min-height: 300px;
+        background-position: center top !important;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+}
+
+.qodef-parallax-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    & > .qodef-parallax-image-frame {
+        position: absolute;
+        overflow: hidden;
+
+        & > .qodef-parallax-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 2000px;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+}
+
+/* #Video section styles - start
+   ========================================================================== */
+
+.qodef-section {
+
+    &.qodef-vertical-middle-align {
+        display: table;
+        width: 100%;
+        margin: 0;
+
+        .qodef-full-screen-height-outer {
+            display: table-cell;
+            height: 100%;
+            vertical-align: middle;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .qodef-mobile-video-image {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .qodef-video-overlay {
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 11;
+
+        &.qodef-video-overlay-active {
+            background-image: url("img/pixel-video.png");
+            background-position: 0px 0px;
+            background-repeat: repeat;
+            opacity: 1;
+        }
+    }
+
+    .qodef-video-wrap {
+
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+
+        .mejs-offscreen {
+            display: none;
+        }
+
+        .mejs-container .mejs-controls {
+            display: none !important;
+        }
+
+        .mejs-poster {
+            background-size: cover !important;
+            -moz-background-size: cover !important;
+            -webkit-background-size: cover !important;
+            -o-background-size: cover !important;
+        }
+
+        .mejs-container {
+            background-color: transparent !important;
+            background-image: none !important;
+            height: auto !important;
+            width: 100% !important;
+        }
+
+        .mejs-mediaelement {
+            background: none !important;
+            border: 0px !important;
+        }
+
+        .mejs-container .mejs-poster img {
+            max-width: none !important;
+            width: 100% !important;
+        }
+
+    }
+}
+
+/* ==========================================================================
+   #Row styles - end
+   ========================================================================== */
+

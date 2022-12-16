@@ -1,0 +1,24 @@
+.qodef-testimonials {
+
+    &.list {
+        @include ipad-landscape {
+            .qodef-testimonial-content {
+                width: 50%;
+                &:nth-child(3n+1) {
+                    clear: none;
+                }
+                &:nth-child(2n+1) {
+                    clear: both;
+                }
+                &:nth-child(6n+1) {
+                    clear: both;
+                }
+            }
+        }
+        @include phone-landscape {
+            .qodef-testimonial-content {
+                width: 100%;
+            }
+        }
+    }
+}

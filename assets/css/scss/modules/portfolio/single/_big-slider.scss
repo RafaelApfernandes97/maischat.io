@@ -1,0 +1,41 @@
+/* ==========================================================================
+# Portfolio Single Big Slider - begin
+========================================================================== */
+
+.qodef-portfolio-single-holder.big-slider {
+
+	.qodef-portfolio-info-holder{
+		display: block;
+		padding-top: 10px;
+	}
+
+	.qodef-portfolio-social-holder{
+		display: block;
+		margin-top: 18px;
+		.qodef-portfolio-like {
+			width:20%;
+			float: left;
+			line-height: 42px;
+		}
+		.qodef-portfolio-social {
+			width: 80%;
+			float: right;
+			line-height: 43px;
+            .qodef-social-share-holder {
+                &.qodef-list li {
+                    vertical-align: middle;
+                }
+            }
+		}
+	}
+
+
+	.qodef-big-image-holder {
+		margin-bottom: 39px;
+	}
+
+}
+
+/* ==========================================================================
+# Portfolio Single Big Slider - end
+========================================================================== */

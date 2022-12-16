@@ -1,0 +1,123 @@
+/* ==========================================================================
+# Image Gallery - begin
+========================================================================== */
+
+/* Image Gallery Grid - begin
+========================================================================== */
+
+.qodef-image-gallery {
+
+	.qodef-image-gallery-grid.qodef-gallery-columns-2 {
+
+		.qodef-gallery-image {
+
+			@include phone-portrait {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+	.qodef-image-gallery-grid.qodef-gallery-columns-3 {
+
+		.qodef-gallery-image {
+
+			@include ipad-portrait {
+				width: 50%;
+			}
+
+			@include phone-portrait {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+	.qodef-image-gallery-grid.qodef-gallery-columns-4 {
+
+		.qodef-gallery-image {
+
+			@include ipad-landscape {
+				width: 33.3333%;
+			}
+
+			@include ipad-portrait {
+				width: 50%;
+			}
+
+			@include phone-portrait {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+	.qodef-image-gallery-grid.qodef-gallery-columns-5 {
+
+		.qodef-gallery-image {
+
+			@include laptop-landscape {
+				width: 25%;
+			}
+
+			@include ipad-landscape {
+				width: 33.3333%;
+			}
+
+			@include ipad-portrait {
+				width: 50%;
+			}
+
+			@include phone-portrait {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+}
+
+.qodef-image-gallery-carousel-wrapper {
+	@media only screen and (max-width: $laptop-landscape-large-plus-pixel) {
+		.owl-nav .owl-next {
+			right: 9%;
+		}
+		.owl-nav .owl-prev {
+			left: 9%;
+		}
+	}
+
+	@include ipad-landscape {
+		.owl-nav .owl-next {
+			right: 3%;
+		}
+		.owl-nav .owl-prev {
+			left: 3%;
+		}
+	}
+	@include ipad-portrait {
+		.owl-nav .owl-next {
+			right: 10px;
+		}
+		.owl-nav .owl-prev {
+			left: 10px;
+		}
+	}
+}
+
+/* Image Gallery Grid - end
+========================================================================== */
+
+/* Image Gallery Slider - begin
+========================================================================== */
+
+/* Image Gallery Slider - end
+========================================================================== */
+
+/* ==========================================================================
+# Image Gallery - end
+========================================================================== */

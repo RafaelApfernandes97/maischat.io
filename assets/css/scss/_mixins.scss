@@ -1,0 +1,181 @@
+//layout mixins - start
+
+@mixin qodefTableLayout(){
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin qodefTableCellLayout(){
+    position: relative;
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+@mixin qodefRelativeHolderLayout() {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+
+@mixin qodefAbsoluteHolderLayout() {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@mixin qodefTypographyLayout() {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+}
+
+//layout mixins - end
+
+//transition mixins - start
+
+@mixin qodefTransition($transition-param...) {
+    -webkit-transition: $transition-param;
+    -moz-transition: $transition-param;
+    transition: $transition-param;
+}
+
+@mixin qodefTransform($transform-param...) {
+    -webkit-transform: $transform-param;
+    -moz-transform: $transform-param;
+    transform: $transform-param;
+}
+
+@mixin qodefAnimation($animation-param...) {
+	-webkit-animation: $animation-param;
+    -moz-animation: $animation-param;
+	animation: $animation-param;
+}
+
+@mixin qodefTransformOrigin($animation-param...) {
+	-webkit-transform-origin: $animation-param;
+    -moz-transform-origin: $animation-param;
+    transform-origin: $animation-param;
+}
+
+@mixin qodefBoxShadow($shadow-property...) {
+    -webkit-box-shadow: $shadow-property;
+    -moz-box-shadow: $shadow-property;
+    box-shadow: $shadow-property;
+}
+
+@mixin qodefBorderRadius($border-radius...) {
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin qodefBoxSizing($box-sizing) {
+    -webkit-box-sizing: $box-sizing;
+    -moz-box-sizing: $box-sizing;
+    box-sizing: $box-sizing;
+}
+//transition mixins - end
+
+//media query mixins - start
+
+@mixin laptop-landscape {
+    @media only screen and (max-width: $laptop-landscape) {
+        @content;
+    }
+}
+
+@mixin laptop-landscape-medium {
+    @media only screen and (max-width: $laptop-landscape-medium) {
+        @content;
+    }
+}
+
+@mixin ipad-landscape {
+    @media only screen and (max-width: $ipad-landscape) {
+        @content;
+    }
+}
+
+@mixin ipad-landscape-min {
+    @media only screen and (min-width: $ipad-landscape) {
+        @content;
+    }
+}
+
+@mixin ipad-portrait {
+    @media only screen and (max-width: $ipad-portrait) {
+        @content;
+    }
+}
+
+@mixin phone-landscape {
+    @media only screen and (max-width: $phone-landscape) {
+        @content;
+    }
+}
+
+@mixin phone-portrait {
+    @media only screen and (max-width: $phone-portrait) {
+        @content;
+    }
+}
+
+@mixin smaller-phone-portrait {
+    @media only screen and (max-width: $smaller-phone-portrait) {
+        @content;
+    }
+}
+
+//media query mixins - end
+
+@mixin vertical-menu-laptop-landscape {
+    @media only screen and (min-width: $vertical-menu-ipad-landscape) and (max-width: $vertical-menu-laptop-landscape) {
+        @content;
+    }
+}
+
+@mixin vertical-menu-ipad-landscape {
+    @media only screen and (min-width: $ipad-landscape) and (max-width: $vertical-menu-ipad-landscape) {
+        @content;
+    }
+}
+
+//animation mixin - start
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} { @content };
+    @keyframes #{$name} { @content };
+}
+
+@mixin animation ($name, $duration, $repeat, $timing, $delay) {
+    -webkit-animation-name: $name;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-iteration-count: $repeat;
+    -webkit-animation-timing-function: $timing;
+    -webkit-animation-delay: $delay;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: $repeat;
+    animation-timing-function: $timing;
+    animation-delay: $delay;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+//animation mixin - end

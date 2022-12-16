@@ -1,0 +1,213 @@
+.qodef-btn {
+    display: inline-block;
+    position: relative;
+    outline: none;
+    font-style: normal;
+    font-weight: 700;
+    font-family: Rubik, sans-serif;
+    padding: 0 24px;
+    font-size: 13px;
+    line-height: 45px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #3a3c41;
+
+    @include qodefTransition(color 0.15s ease-out, background-color 0.15s ease-out, border-color 0.15s ease-out, padding 0.15s ease-out);
+    @include qodefBoxSizing(border-box);
+
+    &.qodef-btn-animate-width:hover {
+        padding: 0 34px;
+    }
+
+    &.qodef-btn-solid {
+        background-color: #aab2bd;
+        border: 1px solid #aab2bd;
+        @include qodefBorderRadius(3px);
+        color: #fff;
+
+        &:not(.qodef-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.qodef-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: #3a3c41 !important;
+        }
+
+        &:not(.qodef-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: #3a3c41 !important;
+        }
+
+        // if sweep animation enabled
+        &:not(.qodef-btn-custom-hover-bg).qodef-btn-sweep:hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: #aab2bd !important;
+        }
+
+        &:not(.qodef-btn-custom-border-hover).qodef-btn-sweep:hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: #aab2bd !important;
+        }
+    }
+
+    &.qodef-btn-outline {
+        border: 1px solid $first-main-color;
+        color: $first-main-color;
+        background-color: transparent;
+        @include qodefBorderRadius(3px);
+
+        &:not(.qodef-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: #fff !important;
+        }
+
+        &:not(.qodef-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.qodef-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+        // if sweep animation enabled
+        &:not(.qodef-btn-custom-hover-bg).qodef-btn-sweep:hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.qodef-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+    }
+
+    &.qodef-btn-transparent{
+        border: none;
+        background-color: transparent;
+        padding:0 !important;
+
+        &:not(.qodef-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $first-main-color !important;
+        }
+
+    }
+
+    &.qodef-btn-small {
+        padding: 0 20px;
+        font-size: 12px;
+        line-height: 40px;
+        &.qodef-btn-animate-width:hover {
+            padding: 0 30px;
+        }
+    }
+
+    &.qodef-btn-medium {
+        //same as default
+    }
+
+    &.qodef-btn-large {
+        padding: 0 31px;
+        font-size: 14px;
+        line-height: 52px;
+        &.qodef-btn-animate-width:hover {
+            padding: 0 41px;
+        }
+    }
+
+    &.qodef-btn-huge,
+    &.qodef-btn-huge-full-width {
+        padding: 0 35px;
+        font-size: 15px;
+        line-height: 57px;
+        &.qodef-btn-animate-width:hover {
+            padding: 0 45px;
+        }
+    }
+
+    &.qodef-btn-huge-full-width {
+        display: block;
+        text-align: center;
+    }
+
+    &.qodef-btn-icon .qodef-btn-text {
+        margin-right: 10px;
+    }
+
+    //Hover animations
+    &.qodef-btn-sweep {
+        .qodef-btn-text,
+        .qodef-button-icon {
+            position: relative;
+            z-index: 10; //over background
+        }
+
+        .qodef-hover-background {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &.qodef-btn-solid {
+            .qodef-hover-background {
+                background-color: #3a3c41;
+                border: 1px solid #3a3c41;
+                @include qodefBorderRadius(3px);
+            }
+        }
+
+        &.qodef-btn-outline {
+            .qodef-hover-background {
+                border: 1px solid $first-main-color;
+                background-color: $first-main-color;
+                @include qodefBorderRadius(3px);
+            }
+        }
+
+
+        .qodef-hover-background-holder {
+            position: absolute;
+            overflow: hidden;
+            z-index: 1;
+            opacity: 0;
+            @include qodefTransition(opacity .25s);
+        }
+
+        .qodef-hover-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            @include qodefTransform(translateX(-100%));
+            @include qodefTransition(all .0s .25s);
+            border-radius: inherit;
+            border-style: solid;
+        }
+
+        &:hover {
+            .qodef-btn-text {
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .qodef-hover-background-holder {
+                @include qodefTransition(none);
+                opacity: 1;
+            }
+            .qodef-hover-background {
+                opacity: 1;
+                @include qodefTransform(translateX(0));
+                @include qodefTransition(all .25s);
+            }
+        }
+    }
+}
+
+input[type=submit].qodef-btn,
+button.qodef-btn {
+    cursor: pointer;
+}

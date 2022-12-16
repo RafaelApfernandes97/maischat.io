@@ -1,0 +1,152 @@
+.qodef-boxed .carousel .carousel-inner{
+    @include laptop-landscape {
+        width: $grid-width-laptop-landscape-boxed;
+    }
+
+    @include ipad-landscape {
+        width: $grid-width-ipad-landscape-boxed;
+    }
+
+    @include ipad-portrait {
+        width: $grid-width-ipad-portrait-boxed;
+    }
+
+    @include phone-landscape {
+        width: $grid-width-phone-landscape-boxed;
+    }
+
+    @include phone-portrait {
+        width: $grid-width-phone-portrait-boxed;
+    }
+
+    @include smaller-phone-portrait {
+        width: $grid-width-smaller-phone-portrait-boxed;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .carousel .carousel-inner {
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .qodef-slider-thumbs .carousel-control.left:hover .qodef-thumb-holder{
+        left: 0;
+    }
+
+    .carousel:not(.in_progress).qodef-slider-thumbs .carousel-control.left:hover .qodef-prev-nav{
+        left: -200px;
+    }
+
+    .qodef-slider-thumbs .carousel-control.right:hover .qodef-thumb-holder{
+        right: 0;
+    }
+
+    .carousel:not(.in_progress).qodef-slider-thumbs .carousel-control.right:hover .qodef-next-nav{
+        right: -200px;
+    }
+}
+
+@include laptop-landscape {
+    .carousel {
+        .carousel-indicators.thumbnails{
+            bottom: 40px;
+        }
+
+        .carousel-indicators.thumbnails li{
+            width:120px!important;
+            height:75px!important;
+        }
+    }
+}
+
+@include ipad-landscape {
+    .carousel-inner{
+        position: relative;
+    }
+
+    .carousel-inner > .item,
+    .qodef-slider .carousel-control,
+    .qodef-slider-elements-container{
+        padding-top: 0px !important;
+    }
+
+    .carousel-inner .item.qodef-animate-image.zoom_center .qodef-image,
+    .carousel-inner .item.qodef-animate-image.zoom_top_left .qodef-image,
+    .carousel-inner .item.qodef-animate-image.zoom_top_right .qodef-image,
+    .carousel-inner .item.qodef-animate-image.zoom_bottom_left .qodef-image,
+    .carousel-inner .item.qodef-animate-image.zoom_bottom_right .qodef-image{
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
+
+    .carousel {
+        .carousel-indicators.thumbnails{
+            bottom: 40px;
+        }
+
+        .carousel-indicators.thumbnails li{
+            width:100px!important;
+            height:63px!important;
+        }
+    }
+}
+
+@include ipad-portrait {
+    .carousel-control .icon-prev,
+    .carousel-control .icon-next {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-left: -15px;
+        font-size: 30px;
+    }
+
+    .carousel-caption {
+        right: 20%;
+        left: 20%;
+        padding-bottom: 30px;
+    }
+
+    .carousel {
+        .carousel-indicators.thumbnails li {
+            display: inline-block;
+            width: 6px!important;
+            height: 6px!important; /* must not be overwritten by options*/
+            margin: 1px;
+            text-indent: -999px;
+            cursor:pointer;
+            background-color: transparent;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 10px;
+            margin: 0px 3px;
+        }
+
+        .carousel-indicators.dark.thumbnails li{
+            border: 2px solid rgba(0,0,0,0.4);
+        }
+
+        .carousel-indicators.thumbnails .active{
+            background-color: #fff;
+            border-color: #fff;
+            margin: 0px 3px;
+        }
+
+        .carousel-indicators.dark.thumbnails .active{
+            background-color: #000;
+            border-color: #000;
+        }
+
+        .carousel-indicators.thumbnails li .thumb-frame,
+        .carousel-indicators.thumbnails li img{
+            display: none;
+        }
+    }
+}
+
+@include phone-landscape {
+    .carousel-control {
+        display: none;
+    }
+}

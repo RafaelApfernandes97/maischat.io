@@ -1,0 +1,115 @@
+/* ==========================================================================
+# Portfolio Pinterest  - begin
+========================================================================== */
+
+.qodef-ptf-pinterest {
+
+    .qodef-portfolio-list-holder{
+
+        margin: -1.25%;
+        width: calc(100% + 2.5%);
+        opacity: 0;
+        @include qodefTransition(opacity 0.15s ease-out);
+
+        &.qodef-appeared{
+            opacity: 1;
+        }
+
+        article{
+            box-sizing:border-box;
+            padding:1.25%;
+
+            .qodef-item-image-holder{
+                overflow: hidden;
+            }
+
+            .qodef-portfolio-link{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+            }
+
+            .qodef-item-text-overlay{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                background-color: rgba(255,255,255,0.8);
+                @include qodefTransition(opacity 0.3s ease-in-out);
+            }
+
+            .qodef-item-text-overlay-inner{
+                @include  qodefTableLayout;
+            }
+
+            .qodef-item-text-holder {
+                @include qodefTableCellLayout;
+
+                .qodef-ptf-category-holder {
+                    line-height:18px;
+                    color: #444444;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+
+            &:hover{
+                .qodef-item-text-overlay{
+                    opacity: 1;
+                }
+
+            }
+        }
+
+    }
+
+    &.qodef-ptf-pinterest-three-columns{
+        .qodef-portfolio-list-masonry-grid-sizer{
+            width: 33.33%;
+        }
+        .qodef-portfolio-list-masonry-grid-gutter{
+            width: 0;
+        }
+        article{
+            width: 33.33%;
+        }
+    }
+
+    &.qodef-ptf-pinterest-four-columns{
+
+        .qodef-portfolio-list-masonry-grid-sizer,
+        article{
+            width: 25%;
+        }
+        .qodef-portfolio-list-masonry-grid-gutter{
+            width: 0;
+        }
+    }
+
+    &.qodef-ptf-pinterest-five-columns{
+
+        .qodef-portfolio-list-masonry-grid-sizer,
+        article{
+            width: 20%;
+        }
+        .qodef-portfolio-list-masonry-grid-gutter{
+            width: 0;
+        }
+
+    }
+
+}
+
+
+/* ==========================================================================
+# Portfolio Pinterest  - end
+========================================================================== */
+
+
+
+

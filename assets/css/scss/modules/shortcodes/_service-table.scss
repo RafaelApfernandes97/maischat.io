@@ -1,0 +1,129 @@
+.qodef-service-table {
+
+    table {
+        table-layout: fixed;
+        width: 100%; /* must have this set */
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-bottom: 0;
+        thead {
+            th {
+                font-size: 20px;
+                font-weight: 400;
+                color: #24262a;
+                border-bottom: 1px #e1e2e7;
+                border-style: solid solid solid none;
+                padding: 23px 29px;
+                &:first-child {
+                    text-align: left;
+                    width: 40%;
+                    background-color: #ffffff;
+                }
+                &:nth-child(2) {
+                    background-color: #f6f7fb;
+                }
+                &:nth-child(2n + 3) {
+                    background-color: #f0f1f6;
+                }
+                &:last-child {
+                    background-color:#e5e8ed;
+                }
+            }
+        }
+        tbody {
+
+
+            td {
+                vertical-align: middle;
+                border-bottom: 1px #e1e2e7;
+                border-style: none solid solid none;
+                padding: 23px 29px 17px;
+                font-weight: 300;
+                &:first-child {
+                    background-color: #ffffff;
+                    text-align: left;
+                    width: 40%;
+                    border-left: 1px solid #e7e8eb;
+                }
+                &:nth-child(2) {
+                    background-color: #f6f7fb;
+                }
+                &:nth-child(2n + 3) {
+                    background-color: #f0f1f6;
+                }
+                &:last-child {
+                    background-color:#e5e8ed;
+                    border-right: 1px solid #e7e8eb;
+                }
+
+                .qodef-mark {
+                    font-size: 26px;
+                    color: #abb1bd;
+                    font-family: FontAwesome, sans-serif;
+                    opacity:0;
+                    @include qodefTransform(scale(1.75));
+                    @include qodefTransition(all 0.3s cubic-bezier(0.35, 0.7, 0.32, 0.9));
+                    &.qodef-checked {
+                        color: $first-main-color;
+                    }
+                    &.qodef-service-table-icon-appeared {
+                        @include qodefTransform(scale(1));
+                        opacity:1;
+                    }
+                }
+            }
+        }
+    }
+
+    &.qodef-cols-1 {
+        table {
+            thead {
+                th {
+                    &:first-child {
+                        width: 66.66%;
+                    }
+                }
+            }
+            tbody {
+                td {
+                    &:first-child {
+                        width: 66.66%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.rounded {
+        @include qodefBorderRadius(20px);
+        @include qodefBoxShadow(0 0 20px 5px rgba(86,86,86,0.05));
+
+        table {
+            thead {
+
+                tr:first-child th:first-child {
+                    @include qodefBorderRadius(20px 0 0 0);
+                }
+                tr:first-child th:last-child {
+                    @include qodefBorderRadius(0 20px 0 0);
+                }
+
+                th:first-child {
+                    background-color: #fff;
+                }
+            }
+
+            tbody {
+
+                tr:last-child td:first-child { @include qodefBorderRadius(0 0 0 20px); }
+                tr:last-child td:last-child { @include qodefBorderRadius(0 0 20px 0); }
+
+                td:first-child {
+                    background-color: #fff;
+                }
+            }
+        }
+
+    }
+
+}

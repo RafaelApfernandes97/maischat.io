@@ -1,0 +1,45 @@
+//global partials
+@import 'variables';
+@import 'mixins';
+@import 'global-responsive';
+
+@import 'modules/header/header-responsive';
+@import 'modules/footer/footer-responsive';
+@import 'modules/title/title-responsive';
+@import 'modules/sidearea/sidearea-responsive';
+@import 'modules/fullscreenmenu/fullscreenmenu-responsive';
+@import 'modules/search/search-responsive';
+
+@import 'modules/portfolio/portfolio-responsive';
+
+
+//Shortcode sass files
+@import 'modules/shortcodes/elements-holder-responsive';
+@import 'modules/shortcodes/_google-map-responsive';
+@import 'modules/shortcodes/team-responsive';
+@import 'modules/shortcodes/calltoaction-responsive';
+@import 'modules/shortcodes/counter-responsive';
+@import 'modules/shortcodes/countdown-responsive';
+@import 'modules/shortcodes/clients-responsive';
+@import 'modules/shortcodes/icon-list-item-responsive';
+@import 'modules/shortcodes/message-responsive';
+@import 'modules/shortcodes/pricing-tables-responsive';
+@import 'modules/shortcodes/tabs-responsive';
+@import 'modules/shortcodes/accordions-responsive';
+@import 'modules/shortcodes/blog-list-responsive';
+@import 'modules/shortcodes/imagegallery-responsive';
+@import 'modules/shortcodes/interactive-image-responsive';
+@import 'modules/shortcodes/info-box-responsive';
+@import 'modules/shortcodes/portfolio-responsive';
+@import 'modules/shortcodes/process-responsive';
+@import 'modules/shortcodes/pricing-info-responsive';
+@import 'modules/shortcodes/slider-responsive';
+@import 'modules/shortcodes/service-table-responsive';
+@import 'modules/shortcodes/testimonials-responsive';
+@import "modules/shortcodes/item-showcase-responsive";
+@import "modules/shortcodes/icon-box-responsive";
+@import "modules/shortcodes/blog-slider-responsive";
+
+
+//Widgets sass files
+@import 'modules/widgets/instagram-responsive';

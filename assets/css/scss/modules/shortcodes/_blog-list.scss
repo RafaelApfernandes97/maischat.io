@@ -1,0 +1,325 @@
+/* #Latest posts
+   ========================================================================== */
+.qodef-blog-list-holder{
+	display: inline-block;
+	width: 100%;
+    
+    &>ul{
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+        padding:0;	
+        vertical-align: top;
+        
+        &>li{
+            display: block;
+            position: relative; 
+        }
+    }
+    .qodef-item-image {
+        margin-bottom: 23px;
+    }
+    .qodef-item-text-holder {
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+    } 
+    .qodef-excerpt{
+        margin: 11px 0 9px;
+    }
+    .qodef-item-info-section {
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 500;
+
+        &.qodef-section-top {
+
+            margin-bottom: 1px;
+
+            > div {
+                display: inline;
+                padding: 0 5px;
+
+                &:first-child {
+                    padding: 0 5px 0 0;
+                }
+            }
+
+            > div a{
+                color: $first-main-color;
+            }
+
+            > div:before,
+            span{
+                color: #444;
+            }
+
+            > div:not(:first-child):before{
+                content: '/';
+                left: -5px;
+                position: relative;
+            }
+        }
+
+        &.qodef-section-bottom {
+
+            border-top: 1px solid #dadada;
+            padding-top: 17px;
+
+            .qodef-section-bottom-left,
+            .qodef-section-bottom-right {
+                display: inline-block;
+                float: left;
+                width: 50%;
+                position: relative;
+                line-height: 27px;
+            }
+
+            .qodef-blog-share {
+                float: left;
+                position: relative;
+                z-index: 10;
+
+                &:hover {
+                    display: block;
+                    width: 100%;
+                }
+
+                &:hover ~ .qodef-post-info-author {
+                    opacity: 0;
+                    transition-delay: 0.1s;
+                }
+            }
+
+            .qodef-post-info-author {
+                display: inline-block;
+                position: absolute;
+                left: 27px;
+                top: 0;
+                margin-left: 10px;
+                line-height: 27px;
+                opacity: 1;
+                @include qodefTransition(opacity 0.15s ease-out);
+                transition-delay: 0.4s;
+                color: #444;
+                a {
+                    text-transform: capitalize;
+                    color: #444;
+                    &:hover {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .qodef-section-bottom-right {
+                text-align: right;
+            }
+
+            .qodef-post-info-comments-holder,
+            .qodef-blog-like {
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+
+                    span,
+                    i {
+                        vertical-align: middle;
+                        color: #444;
+                    }
+                }
+            }
+
+            .qodef-blog-like {
+                margin-left: 17px;
+
+                i:first-child,
+                span:first-child {
+                    @include qodefTransition(color 0.15s ease-out);
+                    margin-right: 7px;
+                    color: #c4c3c3;
+                }
+
+                &:hover {
+                    i:first-child,
+                    span:first-child {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            .qodef-post-info-comments-holder {
+                span:first-child {
+                    @include qodefTransition(color 0.15s ease-out);
+                    margin-right: 7px;
+                    color: #c4c3c3;
+                }
+                &:hover {
+                    span:first-child {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            &.qodef-no-info-share {
+                .qodef-post-info-author {
+                    position: initial;
+                    margin-left: 0;
+                }
+            }
+
+            &.qodef-no-info-left {
+                .qodef-section-bottom-right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .qodef-section-button-holder {
+        padding-top: 15px;
+    }
+
+    .qodef-item-image img{
+        width:100%;
+        float: left;
+    }
+}
+.qodef-blog-list-holder.qodef-boxes{
+	> ul{
+        clear: both;
+        
+        >li{
+            padding: 0;
+            float: left;
+            border: 0;
+            box-sizing: border-box;
+            margin: 0 2% 45px 0;
+            .qodef-item-info-section{
+                font-weight: 400;
+                &.qodef-section-top span {
+                    color: #848f9c;
+                }
+            }
+        }
+    }
+}    
+.qodef-blog-list-holder.qodef-boxes.qodef-one-column > ul > li{
+    float: none;
+    margin: 0; 
+}
+.qodef-blog-list-holder.qodef-boxes.qodef-two-columns > ul > li{
+    width: 49%;
+}
+.qodef-blog-list-holder.qodef-boxes.qodef-three-columns > ul > li{
+    width: 32%;
+}
+.qodef-blog-list-holder.qodef-boxes.qodef-four-columns > ul > li{
+    width: 23.5%;
+}
+.qodef-blog-list-holder.qodef-boxes.qodef-two-columns ul.qodef-blog-list li:nth-child(2n),
+.qodef-blog-list-holder.qodef-boxes.qodef-three-columns ul.qodef-blog-list li:nth-child(3n),
+.qodef-blog-list-holder.qodef-boxes.qodef-four-columns ul.qodef-blog-list li:nth-child(4n){
+    margin: 0;
+}
+
+.qodef-blog-list-holder.qodef-boxes.qodef-two-columns ul.qodef-blog-list li:nth-child(2n+1),
+.qodef-blog-list-holder.qodef-boxes.qodef-three-columns ul.qodef-blog-list li:nth-child(3n+1),
+.qodef-blog-list-holder.qodef-boxes.qodef-four-columns ul.qodef-blog-list li:nth-child(4n+1){
+    clear: both;
+}
+/*------------------Masonry shortcode -----------------------------*/
+.qodef-blog-list-holder.qodef-masonry{
+    .qodef-blog-list{
+        opacity: 0;
+        @include qodefTransition(opacity 0.15s ease-out);
+
+        &.qodef-appeared{
+            opacity: 1;
+        }
+
+    }
+    
+    .qodef-blog-list-masonry-grid-sizer {
+        width: 32%;
+    }
+
+    .qodef-blog-list-masonry-grid-gutter {
+        width: 2%;
+    }
+
+    .qodef-blog-list-masonry-item {
+        width: 32%;
+    }
+}
+
+/*------------------image in left box -----------------------------*/
+.qodef-blog-list-holder.qodef-image-in-box{
+    ul > li.qodef-blog-list-item{
+        margin: 0 0 40px;
+    }
+    .qodef-blog-list-item-inner{
+        @include qodefTableLayout;
+    }
+    .qodef-item-image{
+        @include qodefTableCellLayout;
+        width: 150px;
+        vertical-align: top;
+    }
+    .qodef-item-text-holder{
+        @include qodefTableCellLayout;
+        padding: 0 0 0 20px;
+        text-align: left;
+    }
+}
+/*------------------Minimal type styles -----------------------------*/
+.qodef-blog-list-holder.qodef-minimal{
+    ul > li.qodef-blog-list-item{
+        margin: 0 0 10px;
+    }
+    .qodef-blog-list-item-inner{
+        @include qodefTableLayout;
+    }
+    .qodef-item-image{
+        @include qodefTableCellLayout;
+        width: 50px;
+        img {
+            @include qodefBorderRadius(50%);
+        }
+    }
+    .qodef-item-title {
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 0;
+        &:before {
+            content: "\f111";
+            font-family: FontAwesome;
+            font-size: 6px;
+            line-height: 7px;
+            top: -3px;
+            padding-right: 2px;
+            position: relative;
+            color: $first-main-color;
+        }
+    }
+    .qodef-item-text-holder{
+        position: relative;
+        display: table-cell;
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+        text-align: left;
+    }
+
+    .qodef-item-info-section.qodef-section-top {
+        .qodef-date-value {
+            color: #848f9c;
+            font-weight: 400;
+            font-size: 12px;
+        }
+    }
+}
+

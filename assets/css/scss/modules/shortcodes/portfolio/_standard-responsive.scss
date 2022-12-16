@@ -1,0 +1,41 @@
+@media only screen and (max-width: $ipad-landscape){
+    .qodef-ptf-standard{
+        &.qodef-ptf-three-columns,
+        &.qodef-ptf-four-columns,
+        &.qodef-ptf-five-columns,
+        &.qodef-ptf-six-columns {
+            article,
+            .qodef-filler{
+                width: 31.6%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait){
+    .qodef-ptf-standard{
+        &.qodef-ptf-three-columns,
+        &.qodef-ptf-four-columns,
+        &.qodef-ptf-five-columns,
+        &.qodef-ptf-six-columns {
+            article,
+            .qodef-filler{
+                width: 48.75%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape){
+    .qodef-ptf-standard {
+        .qodef-portfolio-list-holder{
+            article {
+                margin-bottom: 20px;
+            }
+            article,
+            .qodef-filler {
+                width: 100% !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+footer {
+  @include ipad-landscape {
+    .qodef-four-columns {
+      .qodef-column {
+        width: 49.5%;
+        float: none;
+        vertical-align: top;
+        display: inline-block;
+        padding: 0 30px;
+      }
+    }
+    .qodef-footer-top {
+      .qodef-column{
+        min-height: initial!important;
+        border-left:0;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  @include ipad-portrait {
+    .qodef-four-columns {
+      .qodef-column {
+        width: 100%;
+        text-align: center;
+        border-left:0;
+      }
+    }
+    .widget_qodef_latest_posts_widget {
+      .qodef-blog-list-holder.qodef-minimal {
+        .qodef-item-text-holder {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+}

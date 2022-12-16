@@ -1,0 +1,629 @@
+/* ==========================================================================
+   WooCommerce Responsive styles - begin
+   ========================================================================== */
+/*------------------------------------------------------------------
+ * This is main woocommerce responsive css file for theme. It is broken into following sections:
+ * 1.  Global Responsive
+ * 2.  Single Product Responsive
+ * 3.  WooCommerce Product Lists and Shortcodes Responsive
+ * 4.  Cart Responsive
+ * 5.  Checkout Responsive
+ * 6.  My Account Responsive
+ * 7.  Shortcodes Responsive
+ * 8.  Widgets Responsive
+-------------------------------------------------------------------*/
+/* ==========================================================================
+   1. Global responsive styles - begin
+   ========================================================================== */
+/********** Message responsive style **********/
+/* ==========================================================================
+   WooCommerce Message Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page .woocommerce-message,
+  .qodef-woocommerce-page .woocommerce-info,
+  .qodef-woocommerce-page .woocommerce-error {
+    padding: 17px 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-woocommerce-page .woocommerce-message,
+  .qodef-woocommerce-page .woocommerce-info,
+  .qodef-woocommerce-page .woocommerce-error {
+    padding: 14px 20px;
+    line-height: 2em;
+  }
+  .qodef-woocommerce-page .woocommerce-message a,
+  .qodef-woocommerce-page .woocommerce-info a,
+  .qodef-woocommerce-page .woocommerce-error a {
+    float: none;
+    margin: 0 70% 15px 0;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Message Responsive styles - end
+   ========================================================================== */
+/********** Result and ordering responsive style **********/
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 480px) {
+  .qodef-woocommerce-page .woocommerce-result-count,
+  .qodef-woocommerce-page .woocommerce-ordering {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .qodef-woocommerce-page .woocommerce-ordering .orderby {
+    display: block;
+    float: none;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - end
+   ========================================================================== */
+/********** Quantity inputs and button responsive style **********/
+/* ==========================================================================
+   WooCommerce Quantity Inputs responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .woocommerce-page .qodef-quantity-buttons .qodef-quantity-input,
+  .woocommerce-page .qodef-quantity-buttons .qodef-quantity-minus,
+  .woocommerce-page .qodef-quantity-buttons .qodef-quantity-plus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-input,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-minus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-plus {
+    font-size: 13px;
+  }
+  .woocommerce-page .qodef-quantity-buttons .qodef-quantity-input,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-input {
+    height: 38px;
+    width: 38px;
+    margin: 0 19px 0 0;
+    line-height: 36px;
+  }
+  .woocommerce-page .qodef-quantity-buttons .qodef-quantity-minus,
+  .woocommerce-page .qodef-quantity-buttons .qodef-quantity-plus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-minus,
+  div.woocommerce .qodef-quantity-buttons .qodef-quantity-plus {
+    width: 19px;
+    height: 19px;
+    line-height: 17px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Quantity Inputs responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   2. Single Product responsive styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-woo-single-page .product .images,
+  .qodef-woo-single-page .product .qodef-single-product-summary {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-woo-single-page .product .qodef-single-product-summary {
+    margin: 35px 0 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-woo-single-page .product .images .thumbnails.columns-2 a {
+    float: none;
+    width: 100%;
+  }
+  .qodef-woo-single-page .product .images .thumbnails.columns-4 a {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-woo-single-page .woocommerce-tabs {
+    margin: 34px 0 0;
+  }
+  .qodef-woo-single-page .woocommerce-tabs ul.tabs > li {
+    float: none;
+    width: 100%;
+    padding: 11px 0 0;
+  }
+  .qodef-woo-single-page .woocommerce-tabs ul.tabs > li a {
+    display: block;
+  }
+  .qodef-woo-single-page .button.single_add_to_cart_button {
+    margin-top: 20px;
+  }
+  .qodef-woo-single-page .qodef-content table.group_table td {
+    width: 20%;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Single Product Page Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   3. WooCommerce Product Lists and Shortcodes responsive styles - begin
+   ========================================================================== */
+/********** Product list main and VC responsive style **********/
+/* ==========================================================================
+# Woocommerce Product List Main and VC Shortcode responsive style - begin
+========================================================================== */
+@media only screen and (max-width: 1440px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1201px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(5n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .woocommerce.columns-5 > .products > .product {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .woocommerce.columns-5 > .products > .product:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-3
+  .related.products > .products > .product, .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-3
+  .related.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-4
+  .related.products > .products > .product, .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-4
+  .related.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product:nth-child(3n+1), .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .woocommerce.columns-4 > .products > .product {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .woocommerce.columns-4 > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .woocommerce.columns-5 > .products > .product {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .woocommerce.columns-5 > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 33.3333333333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-3
+  .related.products > .products > .product, .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-3
+  .related.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-4
+  .related.products > .products > .product, .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-4
+  .related.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product:nth-child(2n+1), .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-3 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .woocommerce.columns-3 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-4 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .woocommerce.columns-4 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-5 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .woocommerce.columns-5 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .woocommerce.columns-6 > .products > .product {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+  .woocommerce.columns-6 > .products > .product:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-woocommerce-columns-3 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-3
+  .related.products > .products > .product, .qodef-woocommerce-columns-3
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-3
+  .cross-sells > .products > .product {
+    width: 100%;
+  }
+  .qodef-woocommerce-columns-4 .qodef-pl-main-holder > .products > .product, .qodef-woocommerce-columns-4
+  .related.products > .products > .product, .qodef-woocommerce-columns-4
+  .upsells.products > .products > .product, .qodef-woocommerce-columns-4
+  .cross-sells > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-2 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-3 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-4 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-5 > .products > .product {
+    width: 100%;
+  }
+  .woocommerce.columns-6 > .products > .product {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+# Woocommerce Product List Main and VC Shortcode responsive style - end
+========================================================================== */
+/* ==========================================================================
+   4. Cart responsive styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Cart Page Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-page table.cart tr.cart_item td.product-remove {
+    width: 40px;
+  }
+  .qodef-woocommerce-page table.cart tr.cart_item td.product-remove a:before {
+    font-size: 35px;
+  }
+  .qodef-woocommerce-page table.cart tr.cart_item td.product-thumbnail {
+    max-width: 60px;
+    padding: 0;
+  }
+  .qodef-woocommerce-page table.cart td.actions .coupon input[type="text"] {
+    width: 180px;
+    margin: 0 17px 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page table.cart tr.cart_item td.product-thumbnail a {
+    display: none;
+  }
+  .qodef-woocommerce-page table.cart td.actions .coupon {
+    float: none;
+    display: block;
+    margin: 0 0 20px;
+  }
+  .qodef-woocommerce-page table.cart td.actions > input,
+  .qodef-woocommerce-page table.cart td.actions button {
+    float: none;
+  }
+  .qodef-woocommerce-page .cart-collaterals table td, .qodef-woocommerce-page .cart-collaterals table th {
+    padding: 15px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-woocommerce-page table.cart thead tr th {
+    padding: 15px 6px;
+  }
+  .qodef-woocommerce-page table.cart tr.cart_item td {
+    padding: 20px 6px;
+  }
+  .qodef-woocommerce-page .cart-collaterals table td, .qodef-woocommerce-page .cart-collaterals table th {
+    padding: 12px 18px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-woocommerce-page table.cart tr.cart_item td.product-remove {
+    width: 30px;
+    padding-right: 0;
+  }
+  .qodef-woocommerce-page table.cart tr.cart_item td.product-remove a:before {
+    font-size: 30px;
+  }
+  .qodef-woocommerce-page table.cart td.actions .coupon input[type="text"] {
+    display: block;
+    margin: 0 0 20px;
+  }
+  .qodef-woocommerce-page.woocommerce-cart .qodef-content .qodef-quantity-buttons {
+    width: 44px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Cart Page Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   5. Checkout responsive styles - begin
+   ========================================================================== */
+/********** Checkout page responsive style **********/
+/* ==========================================================================
+   WooCommerce Checkout Page Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page .woocommerce-checkout .col-1,
+  .qodef-woocommerce-page .woocommerce-checkout .col-2 {
+    width: 100%;
+  }
+  .qodef-woocommerce-page .woocommerce-checkout .col-1 {
+    margin: 0 0 25px;
+  }
+  .qodef-woocommerce-page .woocommerce-checkout table td, .qodef-woocommerce-page .woocommerce-checkout table th {
+    padding: 15px 20px;
+  }
+  .qodef-woocommerce-page .woocommerce-checkout .woocommerce-checkout-payment ul li {
+    padding: 15px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-woocommerce-page .woocommerce-checkout .col-1 .form-row,
+  .qodef-woocommerce-page .woocommerce-checkout .col-2 .form-row {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+  .qodef-woocommerce-page .woocommerce-checkout table td, .qodef-woocommerce-page .woocommerce-checkout table th {
+    padding: 12px 18px;
+  }
+  .qodef-woocommerce-page .woocommerce-checkout .woocommerce-checkout-payment ul li {
+    padding: 12px 18px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-woocommerce-page .woocommerce-checkout .woocommerce-checkout-payment ul li.payment_method_paypal label img {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Checkout Page Responsive styles - end
+   ========================================================================== */
+/********** Order Received page responsive style **********/
+/* ==========================================================================
+   WooCommerce Checkout Page - Order Received Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce .col2-set.addresses .col-1,
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce .col2-set.addresses .col-2 {
+    width: 100%;
+  }
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce .col2-set.addresses .col-1 {
+    margin: 0 0 25px;
+  }
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce ul.order_details li {
+    padding: 15px 20px;
+  }
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce table.shop_table td, .qodef-woocommerce-page.woocommerce-order-received .woocommerce table.shop_table th {
+    padding: 15px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce ul.order_details li {
+    padding: 12px 18px;
+  }
+  .qodef-woocommerce-page.woocommerce-order-received .woocommerce table.shop_table td, .qodef-woocommerce-page.woocommerce-order-received .woocommerce table.shop_table th {
+    padding: 12px 18px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Checkout Page - Order Received Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   6. MyAccount responsive styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce MyAccount Page Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 28%;
+    padding: 0 15px 0 0;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-content {
+    width: 72%;
+    padding: 0 0 0 15px;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce table.shop_table td, .qodef-woocommerce-page.woocommerce-account .woocommerce table.shop_table th {
+    padding: 15px 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-navigation,
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-content {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce-MyAccount-content {
+    margin: 50px 0 0;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce .col2-set.addresses .col-1,
+  .qodef-woocommerce-page.woocommerce-account .woocommerce .col2-set.addresses .col-2 {
+    width: 100%;
+  }
+  .qodef-woocommerce-page.woocommerce-account .woocommerce .col2-set.addresses .col-1 {
+    margin: 0 0 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-woocommerce-page.woocommerce-account .woocommerce table.shop_table td, .qodef-woocommerce-page.woocommerce-account .woocommerce table.shop_table th {
+    padding: 12px 18px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce MyAccount Page Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   7. Shortcodes responsive styles - begin
+   ========================================================================== */
+/* Woocommerce Product Page shortcode responsive style - begin
+========================================================================== */
+@media only screen and (max-width: 600px) {
+  div.woocommerce > .single-product .images .thumbnails.columns-4 a {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div.woocommerce > .single-product .woocommerce-tabs {
+    margin: 34px 0 0;
+  }
+  div.woocommerce > .single-product .woocommerce-tabs ul.tabs > li {
+    float: none;
+    width: 100%;
+    padding: 11px 0 0;
+  }
+  div.woocommerce > .single-product .woocommerce-tabs ul.tabs > li a {
+    display: block;
+  }
+}
+
+/* Woocommerce Product Page shortcode responsive style - end
+========================================================================== */
+/* ==========================================================================
+   8. Widgets responsive styles - begin
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - begin
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  .qodef-shopping-cart-dropdown ul {
+    margin: 20px;
+  }
+}
+
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - end
+   ========================================================================== */
+/* ==========================================================================
+   WooCommerce Responsive styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=woocommerce-responsive.css.map */

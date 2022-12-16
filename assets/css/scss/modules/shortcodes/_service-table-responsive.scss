@@ -1,0 +1,68 @@
+.qodef-service-table {
+    table {
+        @include ipad-portrait {
+            thead {
+                th {
+                    padding: 11px 17px;
+                    font-size: 14px;
+                }
+            }
+            tbody {
+                td {
+                    padding: 14px 17px 11px;
+                    font-size: 13px;
+
+                    .qodef-mark {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        @include phone-landscape {
+            thead {
+                th {
+                    padding: 5px;
+                    font-size: 9px;
+                    &:first-child {
+                        width: 40%;
+                    }
+                }
+            }
+            tbody {
+                td {
+                    padding: 12px 5px 9px;
+                    font-size: 10px;
+                    line-height: 17px;
+
+                    &:first-child {
+                        width: 40%;
+                    }
+
+                    .qodef-mark {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.rounded {
+        table {
+            @include phone-landscape {
+                thead {
+                    th {
+                        padding: 10px;
+                    }
+                }
+                tbody {
+                    td {
+                        padding: 10px;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+}

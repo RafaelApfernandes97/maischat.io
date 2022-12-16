@@ -1,0 +1,117 @@
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - begin
+   ========================================================================== */
+
+.woocommerce-page .qodef-content,
+div.woocommerce {
+
+    .qodef-quantity-buttons {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid #aab2bd;
+        @include qodefBorderRadius(3px);
+
+        .qodef-quantity-input,
+        .qodef-quantity-minus,
+        .qodef-quantity-plus {
+            display: inline-block;
+            vertical-align: middle;
+            color: #444;
+            background-color: transparent;
+            text-align: center;
+            font-weight: 700;
+            @include qodefBoxSizing(border-box);
+        }
+
+        .qodef-quantity-input {
+            position: relative;
+            height: 44px;
+            width: 44px;
+            padding: 0;
+            margin: 0;
+            font-weight: 400;
+            font-family: inherit;
+            line-height: 42px;
+            font-size: 20px;
+            outline: 0;
+            border: none;
+        }
+
+        .qodef-quantity-minus,
+        .qodef-quantity-plus {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 14px;
+            border-left: 0;
+            color: #ffffff;
+            cursor: pointer;
+            background-color: #aab2bd;
+            @include qodefTransition(color .2s ease-in-out, background-color 0.2s ease-out);
+            &:hover {
+                background-color: #3a3c41;
+            }
+        }
+
+        .qodef-quantity-minus {
+            top: 0;
+            border-bottom: 0;
+            @include qodefBorderRadius(3px 0 0 3px);
+        }
+
+        .qodef-quantity-plus {
+            bottom: 0;
+            @include qodefBorderRadius(0 3px 3px 0);
+        }
+    }
+}
+
+.woocommerce-page .qodef-content,
+div.woocommerce {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea {
+        position: relative;
+        width: 100%;
+        margin: 0 0 14px;
+        padding: 12px 20px;
+        font-family: inherit;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        color: $default-text-color;
+        background-color: transparent;
+        outline: 0;
+        -webkit-appearance: none;
+        border: 1px solid #e6e9ee;
+        @include qodefBoxSizing(border-box);
+
+        &::-webkit-input-placeholder {
+            color: $default-text-color;
+        }
+        &:-moz-placeholder {
+            color: $default-text-color;
+        }
+        &::-moz-placeholder {
+            color: $default-text-color;
+        }
+        &:-ms-input-placeholder {
+            color: $default-text-color;
+        }
+    }
+
+    .coupon {
+
+        input[type="text"] {
+            width: 200px;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Quantity Inputs styles - end
+   ========================================================================== */

@@ -1,0 +1,81 @@
+
+@include ipad-landscape {
+
+    .qodef-title {
+
+        &.qodef-has-background {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+            height: auto !important;
+            padding: 0 !important;
+        }
+
+        &.qodef-title-image-not-responsive {
+            .qodef-title-image {
+                display: block;
+            }
+        }
+
+        .qodef-title-holder {
+            height: 100% !important;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 !important;
+        }
+
+        .qodef-title-holder .qodef-container {
+            display: block;
+            height: 100%;
+        }
+
+        .qodef-title-holder .qodef-container-inner {
+            display: table;
+            height: 100%;
+        }
+
+        .qodef-title-holder .qodef-title-subtitle-holder {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .qodef-title-subtitle-holder {
+            padding: 0px !important;
+        }
+
+        &.qodef-standard-type .qodef-breadcrumbs-holder {
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+        }
+
+    }
+
+}
+
+@include ipad-portrait {
+    .qodef-title.qodef-breadcrumb-type {
+        .qodef-title-holder {
+            h1,
+            .qodef-breadcrumbs-holder {
+                display: block;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+    .qodef-title.qodef-breadcrumb-type {
+        .qodef-title-holder {
+            h1,
+            .qodef-breadcrumbs-holder {
+                text-align: center;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,324 @@
+.qodef-blog-holder.qodef-blog-single {
+
+    article {
+        margin-bottom: 40px;
+        border: 0;
+
+        &.format-audio {
+            .qodef-blog-audio-holder {
+                margin-bottom: 30px;
+            }
+        }
+
+        &.format-quote{
+            .qodef-post-title {
+                .qodef-post-quote-value {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &.format-quote,
+        &.format-link {
+            .qodef-post-text {
+                padding: 30px 40px;
+                border: 1px solid #dddde8;
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+        }
+
+        &.format-link {
+            .qodef-post-text-main {
+                .qodef-post-title a {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .qodef-post-image {
+            margin-bottom: 30px;
+        }
+
+        .qodef-post-text {
+            padding: 0;
+        }
+
+        .qodef-post-info {
+            &.qodef-section-top {
+                margin-bottom: 11px;
+            }
+            &.qodef-section-bottom {
+                margin-top: 30px;
+                padding-top: 17px;
+                .qodef-section-bottom-right {
+                    .qodef-blog-like,
+                    .qodef-blog-share {
+                        display: inline-block;
+                    }
+                    .qodef-blog-like {
+                        a span {
+                            vertical-align: bottom;
+                        }
+                        i {
+                            line-height: 28px;
+                        }
+                    }
+                    .qodef-social-share-holder.qodef-list li {
+                        vertical-align: middle;
+                    }
+                }
+                .qodef-section-bottom-left {
+                    .qodef-single-tags-title,
+                    .qodef-tags {
+                        display: inline-block;
+                    }
+                    .qodef-tags a {
+                        color: #848892;
+                        text-decoration: underline;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Related Posts - begin
+	========================================================================== */
+
+    .qodef-related-posts-holder {
+        padding: 15px 0 58px;
+        border-bottom: 1px solid #dadada;
+
+        .qodef-related-posts-title {
+            margin-bottom: 5px;
+        }
+
+        .qodef-related-post {
+            width: calc((100% - 45px) / 4);
+            margin-right: 15px;
+            display: inline-block;
+            float: left;
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            img {
+                display: block;
+            }
+
+            .qodef-related-post-image {
+                margin-bottom: 28px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                min-height: 135px;
+            }
+
+            .qodef-related-post-title {
+                margin: 0 0 2px;
+            }
+
+        }
+
+        .qodef-post-info {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 500;
+
+            &.qodef-section-top {
+                > div {
+                    display: inline-block;
+                    position: relative;
+                    padding-right: 25px;
+                    margin-left: 7px;
+                }
+
+                > div:after {
+                    content: "/";
+                    position: absolute;
+                    right: 5px;
+                    top: 0;
+
+                }
+
+                > div:first-child {
+                    margin-left: 0;
+                }
+
+                > div:last-child:after {
+                    content: "";
+                }
+
+                div span {
+                    color: #444;
+                }
+            }
+        }
+
+    }
+
+    //Related posts with sidebar
+    .qodef-column1 & .qodef-related-posts-holder,
+    .qodef-column2 & .qodef-related-posts-holder {
+
+        .qodef-related-post {
+            width: calc((100% - 30px) / 3);
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+
+        }
+
+    }
+
+    /* Related Posts - end
+    ========================================================================== */
+
+    /* Blog Single navigation - start
+   ========================================================================== */
+
+    .qodef-blog-single-navigation {
+        position: relative;
+        padding: 40px 0;
+        border-bottom: 1px solid #dadada;
+
+        .qodef-blog-single-navigation-inner {
+            position: relative;
+            display: block;
+        }
+
+        .qodef-blog-single-prev-holder,
+        .qodef-blog-single-next-holder {
+            @include qodefTableLayout;
+            width: 50%;
+        }
+        .qodef-blog-single-prev-holder {
+            float: left;
+        }
+        .qodef-blog-single-next-holder {
+            float: right;
+        }
+        .qodef-blog-single-prev,
+        .qodef-blog-single-next {
+            @include qodefTableCellLayout;
+            height: 80px;
+            width: 129px;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            a {
+                display: block;
+                vertical-align: middle;
+                height: 100%;
+                text-indent: -9999px;
+            }
+        }
+        .qodef-blog-single-prev-info,
+        .qodef-blog-single-next-info {
+            @include qodefTableCellLayout;
+            box-sizing: border-box;
+        }
+        .qodef-blog-single-prev-info {
+            padding-left: 29px;
+            text-align: left;
+        }
+        .qodef-blog-single-next-info {
+            padding-right: 29px;
+            text-align: right;
+        }
+
+        .qodef-blog-single-nav-title {
+            margin: 0;
+            font-size: 13px;
+            a {
+                display: inline-block;
+                color: #444444;
+                font-weight: 400;
+            }
+            .qodef-blog-navigation-info {
+                display: block;
+                font-weight: 700;
+                @include qodefTransition(color 0.15s ease-out);
+                text-transform: uppercase;
+                &:hover {
+                    color: $first-main-color;
+                }
+
+            }
+        }
+
+    }
+
+    /* Blog Single navigation - end
+   ========================================================================== */
+
+    /* Author - begin
+	========================================================================== */
+
+    .qodef-author-description {
+        padding: 38px 0 53px 0;
+        border-bottom: 1px solid #e6e9ee;
+        border-top: 1px solid #e6e9ee;
+
+        .qodef-author-description-inner {
+            @include qodefTableLayout;
+        }
+
+        .qodef-author-description-image {
+            display: inline-block;
+            width: 20%;
+            @include qodefBoxSizing(border-box);
+            vertical-align: top;
+            img {
+                @include qodefBorderRadius(50%);
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        .qodef-author-description-text-holder {
+            display: inline-block;
+            width: 80%;
+            text-align: left;
+            padding-left: 27px;
+            @include qodefBoxSizing(border-box);
+
+            .qodef-author-name {
+                margin: 0;
+            }
+            .qodef-author-email {
+                margin: 0;
+            }
+            .qodef-author-text {
+                p {
+                    margin: 7px 0 19px;
+                }
+            }
+        }
+        .qodef-author-social-holder {
+            margin-top: 11px;
+            a {
+                display: inline-block;
+                margin-right: 5px;
+
+                span {
+                    font-size: 15px;
+                    color: #24262a;
+                    display: block;
+                    text-align: center;
+                    line-height: 24px;
+                }
+            }
+        }
+
+    }
+
+    /* Author - end
+    ========================================================================== */
+
+}

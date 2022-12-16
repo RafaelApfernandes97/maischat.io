@@ -1,0 +1,27 @@
+.qodef-numbered-steps-holder{
+  display:inline-block;
+  width:100%;
+  vertical-align:middle;
+      .qodef-number{
+        float:left;
+        font-size:62px;
+        line-height:1em;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        color: #abb1bd;
+        margin: 0 14px 0 0;
+        letter-spacing:0;
+      }
+      .qodef-text{
+        float:left;
+        margin: 3px 0 0 0;
+          .qodef-subtitle-holder h6 {
+            color: $first-main-color;
+          }
+          .qodef-title-holder h5 {
+            line-height: 20px;
+          }
+      }
+}
+
+

@@ -1,0 +1,73 @@
+.qodef-interactive-image{
+  overflow: hidden;
+  position: relative;
+  .qodef-interactive-image-holder  {
+    display: table;
+    background-color: #f6f7fb;
+    &:hover {
+      .qodef-interactive-image-text-holder {
+        @include qodefTransform(translate3d(50px,0,0));
+        @include qodefTransition(all .55s cubic-bezier(.19,.2,.01,1));
+      }
+      .qodef-interactive-image-img-holder {
+        @include qodefTransform(scale(1));
+        @include qodefTransition(all .55s cubic-bezier(.19,.4,.01,1));
+      }
+    }
+    .qodef-interactive-image-text-holder,
+    .qodef-interactive-image-img-holder{
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .qodef-interactive-image-text-holder {
+      padding: 60px 85px 150px 45px;
+      background-color: #f6f7fb;
+      left:0;
+      @include qodefTransform(translate3d(0,0,0));
+      @include qodefTransition(all .35s cubic-bezier(.19,.2,.01,1));
+
+      z-index:2;
+      .subtitle {
+        color:#808792;
+      }
+      .title {
+        color: #24262a;
+      }
+      .qodef-button-holder {
+        margin-top: 27px;
+      }
+    }
+    .qodef-interactive-image-img-holder {
+      height: 100%;
+      width: 50%;
+      top: 0;
+      position: absolute;
+      background-size: cover;
+      background-position: center center;
+      transform: scale(1.1);
+      z-index: 1;
+      transition: transform .5s;
+      @include qodefTransition(all .35s cubic-bezier(.19,.4,.01,1))
+    }
+    .qodef-arrow {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid;
+      position: absolute;
+      top: calc(50% - 15px);
+      z-index: 2;
+      margin-left: 0;
+      border-left-color: #f6f7fb;
+      left: 100%;
+    }
+
+  }
+}

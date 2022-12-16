@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Social Icon widget start styles
+   ========================================================================== */
+
+.widget_qode_social_icon_widget {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+
+    .qodef-top-bar & ,
+    footer & {
+        color: #fff;
+    }
+}
+/* ==========================================================================
+   Social Icon widget end styles
+   ========================================================================== */

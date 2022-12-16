@@ -1,0 +1,36 @@
+/* ==========================================================================
+# Icon List Item style - begin
+========================================================================== */
+.qodef-icon-list-item{
+    display: table;
+    table-layout: fixed;
+    height: 37px;
+    width: 100%;
+	position: relative;
+	margin-bottom: 1px;
+    
+    .qodef-icon-list-icon-holder{
+        display: table-cell;
+        vertical-align: middle;
+        width: 22px;
+    }
+    .qodef-icon-list-icon-holder-inner {
+        line-height: 0;
+    }
+    .qodef-icon-list-icon-holder-inner i,
+    .qodef-icon-list-icon-holder-inner .font_elegant{
+        display: block;
+        color: $first-main-color;
+        font-size: 19px;
+        text-align: left;
+    }
+    .qodef-icon-list-text{
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+    }
+}
+/* ==========================================================================
+# Icon List Item style - end
+========================================================================== */
+

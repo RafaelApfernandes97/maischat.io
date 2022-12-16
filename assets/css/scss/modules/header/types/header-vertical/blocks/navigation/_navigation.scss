@@ -1,0 +1,122 @@
+@import "types/float";
+
+
+.qodef-header-vertical {
+    .qodef-vertical-menu {
+        position: relative;
+        z-index: 101;
+        margin: 40px 0 0;
+        text-align: left;
+
+        ul {
+            position: relative;
+            list-style-type: none;
+            > li{
+                &.qodef-narrow-menu-line {
+                    position: absolute;
+                    left: -48px;
+                    height: 0;
+                    width: 0!important;
+                    top: 0;
+                    border-left: 5px solid $first-main-color;
+                    float: none;
+                    z-index: 100;
+                    @include qodefTransition(top .3s);
+                }
+                ul {
+                    li.qodef-narrow-menu-line {
+                        left: 0;
+                    }
+                }
+            }
+
+        }
+
+        ul li {
+            position: relative;
+            &:hover {
+                @include qodefTransition(top .6s cubic-bezier(.19,.65,.02,.93))
+            }
+        }
+
+        ul li a:hover {
+            color: $first-main-color;
+        }
+
+        & > ul > li > a {
+            position: relative;
+            display: block;
+            padding: 9px 0;
+            margin: 0;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #727b83;
+            cursor: pointer;
+
+            @include qodefTransition(
+                    color 0.15s ease-out,
+                    text-decoration 0.15s ease-out,
+                    background-color 0.15s ease-out
+            );
+        }
+
+        & > ul > li > a:before {
+            content: '';
+            display: block;
+            opacity: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            background-color: $first-main-color;
+            -webkit-transition: background-color 0.2s ease-out, opacity 0.2s ease-out;
+            -moz-transition: background-color 0.2s ease-out, opacity 0.2s ease-out;
+            -o-transition: background-color 0.2s ease-out, opacity 0.2s ease-out;
+            -ms-transition: background-color 0.2s ease-out, opacity 0.2s ease-out;
+            transition: background-color 0.2s ease-out, opacity 0.2s ease-out;
+
+            @include qodefTransition(background-color 0.2s ease-out, opacity 0.2s ease-out);
+        }
+
+        & > ul > li > a:after {
+            display: none;
+            height: 1px;
+            width: 44px;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: $first-main-color;
+        }
+
+        & > ul > li > a > span.item_inner {
+            @include qodefTransition(text-decoration 0.2s ease-out);
+        }
+        
+        & > ul > li:last-child > a:after {
+            content: none;
+        }
+
+        ul > li.menu-item-has-children > a .plus {
+            display: none;
+        }
+
+
+        ul > li.menu-item-has-children a .plus {
+            display: none;
+        }
+
+        .second .inner {
+            position: relative;
+            display: block;
+            padding: 0;
+            z-index: 997;
+        }
+
+        .menu_icon:not(.blank):not(.null) {
+            padding-right: 5px;
+        }
+    }
+}

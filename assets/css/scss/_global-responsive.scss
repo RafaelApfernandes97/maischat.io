@@ -1,0 +1,132 @@
+.qodef-grid,
+.qodef-container-inner,
+.qodef-grid-section .qodef-section-inner,
+.qodef-slider .carousel-inner .qodef-slider-content-outer{
+
+	@include laptop-landscape {
+		width: $grid-width-laptop-landscape;
+	}
+
+	@include ipad-landscape {
+		width: $grid-width-ipad-landscape;
+	}
+
+	@include ipad-portrait {
+		width: $grid-width-ipad-portrait;
+	}
+
+	@include phone-landscape {
+		width: $grid-width-phone-landscape;
+	}
+
+	@include phone-portrait {
+		width: $grid-width-phone-portrait;
+	}
+
+	@include smaller-phone-portrait {
+		width: $grid-width-smaller-phone-portrait;
+	}
+}
+
+.qodef-boxed .qodef-wrapper  .qodef-wrapper-inner,
+.qodef-boxed .qodef-wrapper  .qodef-footer-inner{
+
+  @include laptop-landscape {
+    width: $grid-width-laptop-landscape-boxed;
+  }
+
+  @include ipad-landscape {
+    width: $grid-width-ipad-landscape-boxed;
+  }
+
+  @include ipad-portrait {
+    width: $grid-width-ipad-portrait-boxed;
+  }
+
+  @include phone-landscape {
+    width: $grid-width-phone-landscape-boxed;
+  }
+
+  @include phone-portrait {
+    width: $grid-width-phone-portrait-boxed;
+  }
+
+  @include smaller-phone-portrait {
+    width: $grid-width-smaller-phone-portrait-boxed;
+  }
+}
+
+//vertical menu responsive
+
+.qodef-header-vertical .qodef-grid,
+.qodef-header-vertical .qodef-container-inner,
+.qodef-header-vertical .qodef-grid-section .qodef-section-inner,
+.qodef-header-vertical .qodef-slider .carousel-inner .qodef-slider-content-outer{
+
+	@include vertical-menu-laptop-landscape {
+		width: $grid-width-laptop-landscape;
+	}
+
+	@include vertical-menu-ipad-landscape {
+		width: $grid-width-ipad-landscape;
+	}
+
+}
+
+
+@include ipad-landscape {
+  .qodef-content{
+    margin-top: 0px !important;
+  }
+}
+
+@include ipad-portrait {
+	.qodef-section .qodef-section-arrow-icon {
+		left: 47%;
+	}
+	.qodef-contact-form .qodef-two-columns-50-50 .qodef-column:first-child,
+	.qodef-sidearea-contact-form .qodef-two-columns-50-50 .qodef-column:first-child,
+	.qodef-contact-form .qodef-two-columns-50-50 .qodef-column:last-child,
+	.qodef-sidearea-contact-form .qodef-two-columns-50-50 .qodef-column:last-child,
+	.qodef-contact-form .qodef-message-holder,
+	.qodef-sidearea-contact-form .qodef-message-holder{
+		padding: 0;
+	}
+}
+
+
+@include ipad-portrait {
+	.qodef-two-columns-50-50 .qodef-column,
+	.qodef-two-columns-66-33 .qodef-column1,
+	.qodef-two-columns-66-33 .qodef-column2,
+	.qodef-two-columns-33-66 .qodef-column1,
+	.qodef-two-columns-33-66 .qodef-column2,
+	.qodef-two-columns-25-75 .qodef-column1,
+	.qodef-two-columns-25-75 .qodef-column2,
+	.qodef-two-columns-75-25 .qodef-column1,
+	.qodef-two-columns-75-25 .qodef-column2,
+	.qodef-three-columns .qodef-column,
+	.qodef-four-columns .qodef-column{
+		width: 100%;
+	}
+
+	.qodef-two-columns-66-33 .qodef-column1 .qodef-column-inner,
+	.qodef-two-columns-66-33 .qodef-column2 .qodef-column-inner,
+	.qodef-two-columns-33-66 .qodef-column1 .qodef-column-inner,
+	.qodef-two-columns-33-66 .qodef-column2 .qodef-column-inner,
+	.qodef-two-columns-75-25 .qodef-column1 .qodef-column-inner,
+	.qodef-two-columns-75-25 .qodef-column2 .qodef-column-inner,
+	.qodef-two-columns-25-75 .qodef-column1 .qodef-column-inner,
+	.qodef-two-columns-25-75 .qodef-column2 .qodef-column-inner
+	{
+		padding: 0 0 0 0;
+	}
+
+}
+
+@include smaller-phone-portrait {
+  .qodef-section-inner-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

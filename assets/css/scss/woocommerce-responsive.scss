@@ -1,0 +1,89 @@
+/* ==========================================================================
+   WooCommerce Responsive styles - begin
+   ========================================================================== */
+@import 'variables';
+@import 'mixins';
+
+/*------------------------------------------------------------------
+ * This is main woocommerce responsive css file for theme. It is broken into following sections:
+ * 1.  Global Responsive
+ * 2.  Single Product Responsive
+ * 3.  WooCommerce Product Lists and Shortcodes Responsive
+ * 4.  Cart Responsive
+ * 5.  Checkout Responsive
+ * 6.  My Account Responsive
+ * 7.  Shortcodes Responsive
+ * 8.  Widgets Responsive
+-------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. Global responsive styles - begin
+   ========================================================================== */
+
+    /********** Message responsive style **********/
+    @import 'woocommerce-modules/global/message-responsive';
+
+    /********** Result and ordering responsive style **********/
+    @import 'woocommerce-modules/global/result-and-ordering-responsive';
+
+    /********** Quantity inputs and button responsive style **********/
+    @import 'woocommerce-modules/global/quantity-input-responsive';
+
+
+/* ==========================================================================
+   2. Single Product responsive styles - begin
+   ========================================================================== */
+
+    @import 'woocommerce-modules/single-product/single-product-responsive';
+
+
+/* ==========================================================================
+   3. WooCommerce Product Lists and Shortcodes responsive styles - begin
+   ========================================================================== */
+
+    /********** Product list main and VC responsive style **********/
+    @import 'woocommerce-modules/product-lists/product-list-main-and-vc-responsive';
+
+
+/* ==========================================================================
+   4. Cart responsive styles - begin
+   ========================================================================== */
+
+    @import 'woocommerce-modules/cart/cart-responsive';
+
+
+/* ==========================================================================
+   5. Checkout responsive styles - begin
+   ========================================================================== */
+
+    /********** Checkout page responsive style **********/
+    @import 'woocommerce-modules/checkout/checkout-responsive';
+
+    /********** Order Received page responsive style **********/
+    @import 'woocommerce-modules/checkout/order-received-responsive';
+
+
+/* ==========================================================================
+   6. MyAccount responsive styles - begin
+   ========================================================================== */
+
+    @import 'woocommerce-modules/my-account/my-account-responsive';
+
+
+/* ==========================================================================
+   7. Shortcodes responsive styles - begin
+   ========================================================================== */
+
+    @import 'woocommerce-modules/shortcodes/product-page-responsive';   
+
+
+/* ==========================================================================
+   8. Widgets responsive styles - begin
+   ========================================================================== */
+
+    @import 'woocommerce-modules/widgets/dropdown-cart-responsive';
+
+
+/* ==========================================================================
+   WooCommerce Responsive styles - end
+   ========================================================================== */

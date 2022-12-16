@@ -1,0 +1,108 @@
+.qodef-header-vertical {
+    .qodef-vertical-dropdown-float {
+        .menu-item .second {
+            position: absolute;
+            top: -15px; /*because of the padding*/
+            left: calc(100% + 40px); /*because of the padding*/
+            width: 100%;
+            margin-left: 50px;
+            opacity: 0;
+            background-color: #fff;
+            visibility: hidden;
+
+            @include qodefTransition(all 0.3s ease-in-out);
+
+            * {
+                visibility: hidden;
+
+                @include qodefTransition(visibility 0.3s ease-in-out, top 0.3s, height 0.3s)
+            }
+
+            .widget {
+                width: 80%;
+            }
+        }
+
+        .menu-item .second.qodef-float-open {
+            margin-left: 0px;
+            opacity: 1;
+            visibility: visible;
+
+            * {
+                visibility: visible;
+            }
+        }
+
+        .menu-item .second.vertical_menu_start ul li ul,
+        .menu-item .second.vertical_menu_start ul li ul * {
+            visibility: hidden;
+        }
+
+        .menu-item .second.vertical_menu_start ul li ul.qodef-float-open,
+        .menu-item .second.vertical_menu_start ul li ul.qodef-float-open * {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .second .inner ul {
+            width: 100%;
+            @include qodefBoxSizing(border-box);
+            padding:15px 0;
+        }
+
+        li.narrow .second .inner ul {
+            /*because of the .narrow styling*/
+            border: none;
+        }
+
+        .second .inner ul ul {
+            position: absolute;
+            border: none;
+            top: -15px; /*because of the padding*/
+            left: 100%;
+            margin-left: 50px;
+            height: auto;
+            visibility: hidden;
+            width: 100%;
+            opacity: 0;
+            overflow: hidden;
+            z-index: 10;
+            background-color: #fff;
+            transition: all 0.3s ease-in-out;
+
+            @include qodefTransition(all 0.3s ease-in-out);
+        }
+
+        .second .inner ul ul.qodef-float-open {
+            opacity: 1;
+            margin-left: 0;
+            visibility: visible;
+            z-index: 11;
+        }
+
+        .second .inner ul li a {
+            display: block;
+            height: auto;
+            line-height: 18px;
+            font-size:13px;
+            color: $default-text-color;
+            text-decoration: none;
+            position: relative;
+            padding: 8px 20px;
+
+            @include qodefTransition(color 0.15s ease-out);
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        ul li a .qodef-menu-arrow {
+            display: none;
+        }
+
+        .second .inner > ul > li > a .menu_icon {
+            @include qodefTransition(color 0.15s ease-out);
+        }
+    }
+}

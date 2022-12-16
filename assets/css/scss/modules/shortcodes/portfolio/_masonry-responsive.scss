@@ -1,0 +1,58 @@
+
+@media only screen and (max-width: $ipad-landscape){
+    .qodef-ptf-masonry{
+        &.qodef-ptf-masonry-four-columns{
+            .qodef-portfolio-list-masonry-grid-sizer,
+            .qodef-default-masonry-item,
+            .qodef-large-height-masonry-item{
+                width: 50%;
+            }
+            .qodef-large-width-masonry-item,
+            .qodef-large-width-height-masonry-item{
+                width: 100%;
+            }
+        }
+
+        &.qodef-ptf-masonry-five-columns{
+            .qodef-portfolio-list-masonry-grid-sizer,
+            .qodef-default-masonry-item,
+            .qodef-large-height-masonry-item{
+                width: 50%;
+            }
+            .qodef-large-width-masonry-item,
+            .qodef-large-width-height-masonry-item{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape){
+    .qodef-ptf-masonry{
+        &.qodef-ptf-masonry-five-columns{
+            .qodef-portfolio-list-masonry-grid-sizer,
+            .qodef-default-masonry-item,
+            .qodef-large-height-masonry-item{
+                width: 100%;
+            }
+            .qodef-large-width-masonry-item,
+            .qodef-large-width-height-masonry-item{
+                width: 100%;
+            }
+        }
+
+        &.qodef-ptf-masonry-four-columns{
+            .qodef-portfolio-list-masonry-grid-sizer,
+            .qodef-default-masonry-item,
+            .qodef-large-height-masonry-item{
+                width: 100%;
+            }
+            .qodef-large-width-masonry-item,
+            .qodef-large-width-height-masonry-item{
+                width: 100%;
+            }
+        }
+    }
+}
+
+

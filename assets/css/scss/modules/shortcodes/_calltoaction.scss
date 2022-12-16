@@ -1,0 +1,86 @@
+/* ==========================================================================
+# Call to action style - begin
+========================================================================== */
+
+.qodef-call-to-action {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+
+
+	.qodef-call-to-action-row-75-25,
+	.qodef-call-to-action-row-50-50,
+	.qodef-call-to-action-row-66-33 {
+		display: table;
+		box-sizing: border-box;
+
+		width: 100%;
+	}
+
+	.qodef-call-to-action-row-75-25 .qodef-call-to-action-column1 {
+		width: 75%;
+	}
+
+	.qodef-call-to-action-row-75-25 .qodef-call-to-action-column2 {
+		width: 25%;
+	}
+
+	.qodef-call-to-action-row-50-50 .qodef-call-to-action-column1,
+	.qodef-call-to-action-row-50-50 .qodef-call-to-action-column2  {
+		width: 50%;
+	}
+
+	.qodef-call-to-action-row-66-33 .qodef-call-to-action-column1 {
+		width: 66%;
+	}
+
+	.qodef-call-to-action-row-66-33 .qodef-call-to-action-column2 {
+		width: 34%;
+	}
+
+	.qodef-call-to-action-column2 {
+		text-align: right;
+	}
+
+	.qodef-call-to-action-cell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.qodef-text-wrapper .qodef-call-to-action-icon-holder {
+		position: absolute;
+		height: 100%;
+		top:0;
+	}
+
+	.qodef-text-wrapper .qodef-call-to-action-icon {
+		display:table;
+		height:100%;
+
+		.qodef-call-to-action-icon-inner {
+			display:table-cell;
+			height:100%;
+			vertical-align:middle;
+
+			.qodef-call-to-action-icon {
+				color: #8b8b8b;
+				font-size: 40px;
+				display: inline;
+			}
+
+		}
+	}
+
+}
+
+.qodef-call-to-action.with-icon {
+
+	.qodef-text-wrapper .qodef-call-to-action-text {
+		padding: 0 20px 0 70px;
+	}
+
+}
+
+/* ==========================================================================
+# Call to action style - end
+========================================================================== */

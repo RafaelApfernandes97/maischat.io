@@ -1,0 +1,195 @@
+/* ==========================================================================
+   WooCommerce Footer Widgets styles - begin
+   ========================================================================== */
+
+footer,
+.qodef-side-menu {
+
+    .widget.woocommerce {
+
+        &.widget_rating_filter {
+
+            ul {
+
+                li {
+
+                    a {
+                        color: #999;
+
+                        .star-rating {
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.widget_shopping_cart {
+
+            .widget_shopping_cart_content {
+
+                ul {
+
+                    li {
+
+                        a:not(.remove) {
+                            color: #999;
+
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+
+                        .remove {
+                            color: #999;
+
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                .variation {
+
+                    dt {
+                        color: #999;
+                    }
+                }
+
+                .total {
+
+                    strong {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &.widget_layered_nav {
+
+            a {
+                color: #999;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &.widget_layered_nav_filters {
+
+
+        }
+
+        &.widget_price_filter {
+
+            .price_slider_wrapper {
+
+                .ui-widget-content {
+
+                    .ui-slider-range {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        &.widget_product_categories {
+
+            a {
+                color: #999;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &.widget_products,
+        &.widget_recently_viewed_products,
+        &.widget_top_rated_products {
+
+            ul {
+
+                li {
+
+                    .product-title {
+                        color: #999;
+
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+
+                    .amount {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        &.widget_recent_reviews {
+
+            a {
+                color: #999;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &.widget_product_tag_cloud {
+
+            .tagcloud {
+
+                a {
+                    color: #999;
+
+                    &:hover {
+                        color: #fff;
+                    }
+
+                    &:after {
+                        color: #999;
+                    }
+                }
+            }
+        }
+
+        &.widget_product_search {
+
+            .woocommerce-product-search {
+
+                .search-field {
+                    color: #fff;
+
+                    &:focus {
+                        border-color: #fff;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: #fff;
+                    }
+                    &:-moz-placeholder {
+                        color: #fff;
+                    }
+                    &::-moz-placeholder {
+                        color: #fff;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #fff;
+                    }
+                }
+
+                input[type="submit"] {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Footer Widgets styles - end
+   ========================================================================== */

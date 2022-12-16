@@ -1,0 +1,17 @@
+@include ipad-portrait {
+
+  .qodef-side-menu-slide-with-content {
+    .qodef-side-menu {
+      width: 100%;
+      right: -100%;
+    }
+  }
+
+  .qodef-side-menu-slide-from-right {
+    .qodef-side-menu {
+      width: 100%;
+      right: -100%;
+    }
+  }
+
+}

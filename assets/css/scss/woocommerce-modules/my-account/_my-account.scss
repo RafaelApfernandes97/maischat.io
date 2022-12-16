@@ -1,0 +1,305 @@
+/* ==========================================================================
+   WooCommerce MyAccount Page styles - begin
+   ========================================================================== */
+
+.qodef-woocommerce-page.woocommerce-account {
+
+	.woocommerce-MyAccount-navigation,
+	.woocommerce-MyAccount-content {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		float: left;
+		@include qodefBoxSizing(border-box);
+	}
+
+	.woocommerce-MyAccount-navigation {
+		width: 30%;
+		padding: 0 30px 0 0;
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			border-top: 1px solid $default-border-color;
+
+			li {
+				margin: 0;
+				padding: 10px 0;
+				border-bottom: 1px solid $default-border-color;
+
+				&.is-active {
+
+					a {
+						color: $first-main-color;
+					}
+				}
+
+				a {
+					font-weight: 600;
+                    color: #444;
+                    &:hover {
+                        color: $first-main-color;
+                    }
+				}
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-content {
+		width: 70%;
+		padding: 0 0 0 30px;
+
+        mark {
+            color: $first-main-color;
+            background-color: transparent;
+            padding: 0;
+            font-weight: 600;
+        }
+
+        .woocommerce-password-strength {
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 5px;
+            padding: 5px 40px;
+            color: #fff;
+
+            &.short {
+                background-color: #ff5353;
+                max-width: 360px;
+            }
+            &.bad {
+                background-color: #fad054;
+                max-width: 360px;
+            }
+            &.good {
+                background-color: #93c9f4;
+                max-width: 160px;
+            }
+            &.strong {
+                background-color: #0EBD0E;
+                max-width: 160px;
+            }
+        }
+        .woocommerce-password-hint {
+            display: block;
+            margin: 5px 0;
+            line-height: 1.5em;
+        }
+	}
+
+    .woocommerce {
+        margin: 0 0 55px;
+
+        form.login {
+            margin: 0 0 34px;
+
+            > *:first-child {
+                margin: 0 0 15px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            input[type='checkbox'] {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                top: -1px;
+                margin: 0 3px 0 5px;
+            }
+
+            .lost_password {
+                display: block;
+                margin: 15px 0 0;
+
+                a {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        form.edit-account {
+            margin: 0 0 15px;
+
+            p {
+                margin: 0;
+            }
+
+            label {
+                display: block;
+                margin: 0 0 5px;
+            }
+
+            fieldset {
+
+                > legend {
+                    display: block;
+                    color: $default-heading-color;
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+
+        .myaccount_user {
+
+            strong {
+                color: $default-heading-color;
+            }
+
+            a {
+                font-weight: 600;
+            }
+        }
+
+        > p {
+            display: block;
+            margin: 0 0 30px;
+        }
+
+        > h2,
+        > header h2 {
+            display: block;
+            margin: 16px 0 25px;
+            font-size: 25px;
+        }
+
+        table.shop_table {
+            border: 1px solid $default-border-color;
+            padding: 0;
+            margin: 0 0 30px;
+
+            tr {
+                border: 0;
+                border-bottom: 1px solid $default-border-color;
+
+                &.order-total {
+
+                    .amount {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+
+            td, th {
+                padding: 15px 25px;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            th {
+                border: 0;
+                color: $default-heading-color;
+            }
+
+            td {
+
+                &.order-number {
+
+                    a {
+                        color: $default-heading-color;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+                }
+
+                &.order-actions {
+                    text-align: right;
+                }
+            }
+
+            a:not(.button) {
+                color: $default-text-color;
+
+                &:hover {
+                    color: $default-heading-color;
+                }
+            }
+
+            .variation {
+
+                > * {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .col2-set.addresses {
+            @include qodefRelativeHolderLayout();
+            clear: both;
+            margin: 0 0 15px;
+
+            .col-1,
+            .col-2 {
+                position: relative;
+                display: inline-block;
+                width: 49%;
+                margin-right: 1%;
+                float: left;
+                vertical-align: middle;
+            }
+
+            .col-2 {
+                margin-left: 1%;
+                margin-right: 0;
+            }
+
+            .title {
+                margin: 4px 0 25px;
+            }
+
+            h3 {
+                margin: 0;
+            }
+
+            .title {
+
+                .edit {
+                    font-weight: 600;
+                }
+            }
+
+            address {
+                font-style: normal;
+            }
+        }
+    }
+}
+
+.qodef-woocommerce-page.woocommerce-account.woocommerce-edit-address {
+
+    .woocommerce {
+
+        > form {
+            margin: 0 0 15px;
+
+            > *:first-child {
+                margin: 0 0 25px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            label {
+                display: block;
+                margin: 0 0 5px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce MyAccount Page styles - end
+   ========================================================================== */

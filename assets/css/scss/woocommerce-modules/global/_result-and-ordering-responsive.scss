@@ -1,0 +1,21 @@
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - begin
+   ========================================================================== */
+.qodef-woocommerce-page {
+
+    @include phone-portrait {
+        .woocommerce-result-count,
+        .woocommerce-ordering {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    
+        .woocommerce-ordering .orderby {
+            display: block;
+            float: none;
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Result and Ordering Responsive styles - end
+   ========================================================================== */

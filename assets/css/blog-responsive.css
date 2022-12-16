@@ -1,0 +1,163 @@
+@media only screen and (max-width: 1281px) {
+  .qodef-blog-holder article.format-audio .mejs-container.mejs-audio .mejs-controls {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .qodef-blog-holder.qodef-masonry-full-width article,
+  .qodef-blog-holder.qodef-masonry-full-width .qodef-blog-masonry-grid-sizer {
+    width: 31.333%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .qodef-blog-holder.qodef-masonry-full-width article,
+  .qodef-blog-holder.qodef-masonry-full-width .qodef-blog-masonry-grid-sizer {
+    width: 48.5%;
+  }
+  .qodef-comment-holder .qodef-comment-text .qodef-comment-info {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+  }
+  .qodef-comment-holder .qodef-comment-list li .children .qodef-comment-info {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .qodef-blog-holder.qodef-blog-type-masonry article,
+  .qodef-blog-holder.qodef-blog-type-masonry .qodef-blog-masonry-grid-sizer {
+    width: 48.5%;
+  }
+  .qodef-blog-holder.qodef-masonry-full-width article,
+  .qodef-blog-holder.qodef-masonry-full-width .qodef-blog-masonry-grid-sizer {
+    width: 48.5%;
+  }
+  .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post {
+    width: calc((100% - 15px)/2);
+    margin-bottom: 15px;
+  }
+  .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post:nth-child(2n) {
+    margin-right: 0;
+  }
+  .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post:nth-child(2n+1) {
+    clear: both;
+    margin-bottom: 0;
+  }
+  .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post:last-child {
+    margin-bottom: 0;
+  }
+  .qodef-column1 .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post,
+  .qodef-column2 .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post {
+    width: calc((100% - 15px)/2);
+  }
+  .qodef-column1 .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post:nth-child(2n),
+  .qodef-column2 .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post:nth-child(2n) {
+    margin-right: 0;
+  }
+  .qodef-column1 .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post:nth-child(2n+1),
+  .qodef-column2 .qodef-blog-holder.qodef-blog-single .qodef-related-posts-holder .qodef-related-post:nth-child(2n+1) {
+    clear: both;
+  }
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article,
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery .qodef-blog-masonry-gallery-grid-sizer {
+    width: 50%;
+  }
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article.qodef-post-size-large-width-height,
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article.qodef-post-size-large-width {
+    width: 100%;
+  }
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article .qodef-post-title {
+    font-size: 18px;
+  }
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article .qodef-post-text {
+    bottom: 15px;
+  }
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article.qodef-post-size-default .qodef-quote-author {
+    padding-top: 5px;
+  }
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article.qodef-post-size-default .qodef-post-mark.qodef-link-mark,
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article.qodef-post-size-default .qodef-post-mark.qodef-quote-mark {
+    padding-bottom: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qodef-blog-holder.qodef-blog-type-masonry article,
+  .qodef-blog-holder.qodef-blog-type-masonry .qodef-blog-masonry-grid-sizer {
+    width: 100%;
+  }
+  .qodef-blog-holder.qodef-masonry-full-width article,
+  .qodef-blog-holder.qodef-masonry-full-width .qodef-blog-masonry-grid-sizer {
+    width: 100%;
+  }
+  .qodef-blog-holder.qodef-blog-single .qodef-blog-single-navigation .qodef-blog-single-prev,
+  .qodef-blog-holder.qodef-blog-single .qodef-blog-single-navigation .qodef-blog-single-next {
+    display: none;
+  }
+  .qodef-blog-holder.qodef-blog-single article .qodef-blog-tags-info-holder {
+    display: block;
+  }
+  .qodef-blog-holder.qodef-blog-single article .qodef-blog-tags-info-holder .qodef-single-tags-holder,
+  .qodef-blog-holder.qodef-blog-single article .qodef-blog-tags-info-holder .qodef-post-info {
+    display: block;
+    text-align: left;
+  }
+  .qodef-blog-holder article .qodef-post-info.qodef-bottom-section {
+    display: block;
+  }
+  .qodef-blog-holder article .qodef-post-info.qodef-bottom-section .qodef-left-section,
+  .qodef-blog-holder article .qodef-post-info.qodef-bottom-section .qodef-right-section {
+    display: block;
+    text-align: left;
+  }
+  .qodef-blog-holder article .qodef-post-info.qodef-bottom-section .qodef-right-section {
+    padding-left: 0;
+    margin: 10px 0 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .qodef-related-posts-holder .qodef-related-post {
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-bottom: 15px !important;
+  }
+  .qodef-related-posts-holder .qodef-related-posts-title h3:before,
+  .qodef-related-posts-holder .qodef-related-posts-title h3:after {
+    display: none !important;
+  }
+  .qodef-author-description-inner,
+  .qodef-author-description-image,
+  .qodef-author-description-text-holder {
+    display: block !important;
+  }
+  .qodef-related-posts-holder .qodef-related-post {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+  .qodef-related-posts-holder .qodef-related-posts-title h3:before,
+  .qodef-related-posts-holder .qodef-related-posts-title h3:after {
+    display: none !important;
+  }
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery article,
+  .qodef-blog-holder.qodef-blog-type-masonry-gallery .qodef-blog-masonry-gallery-grid-sizer {
+    width: 100%;
+  }
+  .qodef-comment-list li .children {
+    padding: 0 0 0 60px;
+  }
+  .qodef-comment-holder .qodef-comment-text {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .qodef-comment-list li .children {
+    padding: 0 0 0 40px;
+  }
+}
+
+/*# sourceMappingURL=blog-responsive.css.map */

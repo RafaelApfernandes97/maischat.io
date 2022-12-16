@@ -1,0 +1,68 @@
+
+/* ==========================================================================
+   Progress bar shortcode start styles
+   ========================================================================== */
+.qodef-progress-bar{
+    position: relative;
+    margin: 0 0 15px;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    padding-right: 24px;
+    
+    .qodef-progress-title-holder{
+        position: relative;
+        margin: 0;
+        
+        .qodef-progress-title{
+            display: inline-block;
+            z-index: 100;
+            font-size: 15px;
+        }
+    }    
+    .qodef-progress-number-wrapper  {
+        text-align: right;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        opacity: 0;
+        bottom: 0;
+        width: 100%;
+        margin-left: 0;
+        
+        .qodef-progress-number {
+            font-size: 15px;
+            font-weight: 500;
+            color: #444;
+            display: inline-block;
+            text-align: center;
+            float: right;
+        }
+        .qodef-progress-number .qodef-percent:after{
+            content: '%';
+            margin-left: 0.1em;
+            font-size: 1em;
+        }
+        
+    }
+    
+    .qodef-progress-content-outer{
+        background-color: #f1f2f6;
+        position: relative;
+        overflow: hidden;
+        height: 16px;
+        @include qodefBorderRadius(3px);
+        
+        .qodef-progress-content{
+            max-width: 100%;
+	        width: 0;
+            overflow: hidden;
+            background-color: $first-main-color;
+            height: 16px;
+            @include qodefBoxSizing(border-box);
+        }
+    }
+}
+/* ==========================================================================
+   Progress bar shortcode end styles
+   ========================================================================== */

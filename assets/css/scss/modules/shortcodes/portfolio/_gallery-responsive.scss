@@ -1,0 +1,21 @@
+@media only screen and (max-width: $ipad-landscape){
+    .qodef-ptf-gallery{
+        &.qodef-ptf-four-columns,
+        &.qodef-ptf-five-columns,
+        &.qodef-ptf-six-columns {
+            article{
+                width: 33.33%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $phone-landscape){
+    .qodef-ptf-gallery{
+        .qodef-portfolio-list-holder{
+            article {
+                width: 100% !important;
+            }
+        }
+    }
+}

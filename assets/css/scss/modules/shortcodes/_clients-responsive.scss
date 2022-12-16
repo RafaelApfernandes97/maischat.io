@@ -1,0 +1,80 @@
+/* ==========================================================================
+# Clients responsive style - begin
+========================================================================== */
+@media only screen and (min-width: $ipad-landscape) and (max-width: $laptop-landscape) {
+	.qodef-clients .qodef-client-holder .qodef-client-holder-inner{
+		padding: 0 10px;
+	}
+}
+
+@include ipad-landscape {
+	.qodef-clients{
+		&.qodef-clients-six-columns,
+		&.qodef-clients-five-columns{
+			.qodef-client-holder {
+				width: 33.33333333333333%;
+				
+				&:nth-child(3n + 1){
+					clear: both;
+				}
+			}
+		}
+
+		&.qodef-clients-five-columns {
+			.qodef-client-holder:nth-of-type(5n+0) {
+				box-shadow: 1px 1px 0 0 #dadada;
+			}
+		}
+
+		&.qodef-clients-four-columns {
+			.qodef-client-holder {
+				width: 50%;
+
+				&:nth-child(2n + 1){
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+@include phone-landscape { 
+	.qodef-clients {
+		&.qodef-clients-six-columns,
+		&.qodef-clients-five-columns{
+			.qodef-client-holder {
+				width: 50%;
+
+				&:nth-child(3n + 1){
+					clear: none;
+				}
+
+				&:nth-child(2n + 1){
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+@include phone-portrait {
+
+	.qodef-clients {
+		&.qodef-clients-six-columns,
+		&.qodef-clients-five-columns,
+		&.qodef-clients-four-columns,
+		&.qodef-clients-three-columns,
+		&.qodef-clients-two-columns {
+			.qodef-client-holder {
+				width: 100%;
+				float: none;
+                box-shadow: 0 1px 0 0 #dadada;
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+# Clients responsive style - end
+========================================================================== */

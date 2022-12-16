@@ -1,0 +1,272 @@
+
+/* ==========================================================================
+   #Animation styles - start
+   ========================================================================== */
+
+@include keyframes(element-from-left) {
+	0% {
+		opacity: 0;
+		transform: translate(-20%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+
+@include keyframes(element-from-right) {
+	0% {
+		opacity: 0;
+		transform: translate(20%, 0);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@include keyframes(element-from-top) {
+	0% {
+		opacity: 0;
+		transform: translate(0, -30%);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@include keyframes(element-from-bottom) {
+	0% {
+		opacity: 0;
+		transform: translate(0, 30%);
+
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+
+.qodef-element-from-left,
+.qodef-element-from-right,
+.qodef-element-from-top,
+.qodef-element-from-bottom,
+.qodef-element-from-fade {
+	display: inline-block;
+	width: 100%;
+}
+
+.touch .qodef-no-animations-on-touch .qodef-element-from-left,
+.touch .qodef-no-animations-on-touch .qodef-element-from-right,
+.touch .qodef-no-animations-on-touch .qodef-element-from-top,
+.touch .qodef-no-animations-on-touch .qodef-element-from-bottom,
+.touch .qodef-no-animations-on-touch .qodef-element-from-fade {
+
+	> div {
+		opacity: 1;
+		@include qodefAnimation(none);
+		@include qodefTransform(scale(1));
+	}
+}
+
+.qodef-element-from-left,
+.qodef-element-from-right,
+.qodef-element-from-top,
+.qodef-element-from-bottom,
+.qodef-element-from-fade {
+	
+	> div {
+		opacity: 0;
+		display: inline-block;
+		width: 100%;
+		vertical-align: middle;
+	}
+}
+
+.qodef-element-from-fade {
+
+	&.qodef-element-from-fade-on {
+
+		> div {
+			opacity: 1;
+			@include qodefTransition(opacity .8s ease 0s);
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.qodef-element-from-left {
+
+	&.qodef-element-from-left-on {
+
+		> div {
+
+			@include qodefAnimation(element-from-left 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.qodef-element-from-right {
+
+	&.qodef-element-from-right-on {
+
+		> div {
+			@include qodefAnimation(element-from-right 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.qodef-element-from-top {
+
+	&.qodef-element-from-top-on {
+
+		> div {
+			@include qodefAnimation(element-from-top 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.qodef-element-from-bottom {
+
+	&.qodef-element-from-bottom-on {
+
+		> div {
+			@include qodefAnimation(element-from-bottom 0.7s 1 ease-in-out);
+			opacity: 1;
+			-webkit-backface-visibility: hidden;
+		}
+	}
+}
+
+.touch .qodef-no-animations-on-touch .qodef-flip-in,
+.touch .qodef-no-animations-on-touch .qodef-grow-in,
+.touch .qodef-no-animations-on-touch .qodef-z-rotate,
+.touch .qodef-no-animations-on-touch .qodef-x-rotate,
+.touch .qodef-no-animations-on-touch .qodef-y-translate,
+.touch .qodef-no-animations-on-touch .qodef-fade-in-down,
+.touch .qodef-no-animations-on-touch .qodef-fade-in-left-x-rotate,
+.touch .qodef-no-animations-on-touch .qodef-fade-in{
+
+	@include qodefTransition(none !important);
+	@include qodefTransform(none !important);
+	opacity: 1 !important;
+
+}
+
+.qodef-flip-in {
+
+	opacity: 0;
+	@include qodefTransform(perspective(1000px) rotateY(25deg));
+	@include qodefTransition(all 1.1s ease-in-out);
+
+	&.qodef-flip-in-on {
+		opacity: 1;
+		@include qodefTransform(rotateY(0deg));
+	}
+}
+
+.qodef-grow-in {
+
+	opacity: 0;
+	@include qodefTransform(scale(0.8));
+	@include qodefTransition(all 1s cubic-bezier(0,1,.5,1));
+	-webkit-backface-visibility: hidden;
+
+	&.qodef-grow-in-on {
+		opacity: 1;
+		@include qodefTransform(scale(1));
+	}
+}
+
+.qodef-z-rotate {
+
+	opacity: 0;
+	@include qodefTransform(rotateZ(7deg));
+	@include qodefTransition(all 300ms cubic-bezier(0.165, 0.84, 0.44, 1));
+	@include qodefTransformOrigin(top right);
+	-webkit-backface-visibility: hidden;
+
+	&.qodef-z-rotate-on {
+		opacity: 1;
+		@include qodefTransform(rotateZ(0deg));
+	}
+}
+
+
+.qodef-x-rotate {
+
+	opacity: 0;
+	@include qodefTransform(perspective(900px) rotateX(-45deg));
+	@include qodefTransition(all .6s cubic-bezier(.785,.135,.15,.86));
+	-webkit-backface-visibility: hidden;
+
+	&.qodef-x-rotate-on {
+		opacity: 1;
+		@include qodefTransform(rotateX(0deg));
+	}
+}
+
+.qodef-y-translate {
+
+	opacity: 0;
+	@include qodefTransform(translate(0,30px));
+	@include qodefTransition(all 700ms cubic-bezier(0.680, -0.650, 0.265, 1.650));
+
+	&.qodef-y-translate-on {
+		opacity: 1;
+		@include qodefTransform(translate(0,0));
+	}
+
+}
+
+.qodef-fade-in-down {
+
+	opacity: 0;
+	@include qodefTransform(translate(0,-25px));
+	@include qodefTransition(all .9s cubic-bezier(0,1,.5,1));
+
+	&.qodef-fade-in-down-on {
+		opacity: 1;
+		@include qodefTransform(translate(0,0));
+	}
+}
+
+.qodef-fade-in-left-x-rotate {
+
+	opacity: 0;
+	@include qodefTransform(rotateZ(-5deg) translate(-30px,0));
+	@include qodefTransition(all .4s ease);
+
+	&qodef-fade-in-left-x-rotate-on {
+		opacity: 1;
+		@include qodefTransform(rotateZ(0deg) translate(0,0));
+	}
+}
+
+
+.qodef-fade-in {
+
+	opacity: 0;
+	@include qodefTransition(all 1s ease);
+
+	&.qodef-fade-in-on {
+		opacity: 1;
+	}
+}
+
+
+
+/* ==========================================================================
+   #Animation styles - end
+   ========================================================================== */

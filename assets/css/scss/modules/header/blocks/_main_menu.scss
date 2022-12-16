@@ -1,0 +1,725 @@
+.qodef-main-menu {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+	margin-right: 15px;
+	&:after {
+		content: " ";
+		display:block;
+		position:absolute;
+		right: -10px;
+		top: 50%;
+		height: 26px;
+		width: 2px;
+        background-color: #e2e2e2;
+		@include qodefTransform(translateY(-50%));
+	}
+
+	.qodef-main-menu-line{
+		position: absolute;
+		left:0;
+		width: 0;
+		height: 0;
+		z-index: 100;
+		border-top: 4px solid $first-main-color;
+		@include qodefTransition(width .4s, left .6s cubic-bezier(0.19, 0.65, 0.02, 0.93));
+		&.top {
+			top: 0;
+		}
+		&.bottom {
+			bottom: 0;
+		}
+	}
+
+	.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header) & > ul > li.qodef-main-menu-line,
+	.qodef-light-header.qodef-header-style-on-scroll .qodef-page-header & > ul > li.qodef-main-menu-line{
+		border-top: 4px solid $first-main-color;
+	}
+
+
+
+    ul {
+        list-style: none outside none;
+        margin: 0px;
+        padding: 0px;
+        text-align: left;
+
+        li {
+
+            position: relative;
+            display: inline-block;
+            float: left;
+            padding: 0px;
+            margin: 0px;
+            background-repeat: no-repeat;
+            background-position: right;
+
+            a {
+                font-size: 15px;
+                line-height: 17px;
+                font-weight: 400;
+                color: #434a54;
+
+                body:not(.qodef-menu-with-large-icons) & span.item_inner i:before{
+                    margin: 0 7px 0 0;
+                }
+            }
+
+            &:hover a, &.qodef-active-item a {
+                color: $first-main-color;
+            }
+        }
+    }
+
+    > ul {
+
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        height: 100%;
+
+        > li {
+
+            height: 100%;
+            z-index: 101; /* this is because of follow line that breaks hover and hides drop down menu visibility */
+
+            &:last-child > a span.plus{
+                display: none;
+
+            }
+
+            body:not(.qodef-menu-item-first-level-bg-color) &:hover > a,
+            &.qodef-active-item > a {
+                color: $first-main-color;
+            }
+
+            &.has_sub {
+                > a i.qodef-menu-arrow {
+                    display: inline-block;
+                    margin-left: 6px;
+                }
+
+                > a .item_inner > i.qodef-menu-arrow{
+                    position: relative;
+                    left:4px;
+                }
+				&.wide {
+					.second .inner>ul>li>a {
+						padding-left: 0!important;
+					}
+				}
+            }
+
+            > a {
+
+                height: 100%;
+                position: relative;
+                padding: 0;
+                display: inline-block;
+                vertical-align: middle;
+                border-style: solid;
+                border-width: 0px;
+                border-color: transparent;
+                background-color: transparent;
+                @include qodefTransition(color 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out);
+
+                &:before {
+                    height: 2px;
+                    bottom: 0px;
+                }
+
+                &:after {
+                    height: 1px;
+                    bottom: 4px;
+                }
+
+                body.qodef-menu-with-large-icons &{
+                    text-align: center;
+                    vertical-align:middle;
+                }
+
+                > span.item_outer{
+                    display: block;
+                    position: relative;
+                    top: 50%;
+                    @include qodefTransform(translateY(-50%));
+                }
+
+                span.item_inner {
+                    display: inline-block;
+                    padding: 0 14px;
+                    border-width: 0px;
+                    position: relative;
+                    border-color: transparent;
+                    background-color: transparent;
+                    @include qodefTransition(text-decoration 0.2s ease-out, border-color 0.2s ease-out, background-color 0.2s ease-out);
+
+                    body.qodef-menu-with-large-icons &{
+                        text-align: center;
+                        vertical-align:middle;
+                    }
+                }
+
+                span.item_inner:before,
+                span.item_inner:after,
+                &:before,
+                &:after {
+                    content: "";
+                    display: none;
+                    position: absolute;
+                    left: 0px;
+                    background-color: transparent;
+                    @include qodefTransition(background-color 0.15s ease-out);
+                    width: 100%;
+
+                }
+
+                span.item_inner:before {
+                    bottom: 0px;
+                    height: 2px;
+                }
+
+                span.item_inner:after {
+                    height: 1px;
+                    bottom: 4px;
+                }
+
+                body.qodef-menu-with-large-icons & span.item_inner i{
+                    display: inline-block;
+                    width:100%;
+                    vertical-align:middle;
+                }
+
+                span.plus{
+                    width: 4px;
+                    height:4px;
+                    display: none;
+                    position:absolute;
+                    top:50%;
+                    right:-2px;
+                    margin-top: -2px;
+                    z-index:1;
+                    @include qodefTransform(rotate(45deg));
+                }
+
+                > i.blank{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    body:not(.qodef-menu-with-large-icons) & .qodef-drop-down .wide.icons .second i:before {
+        margin: 0;
+    }
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header),
+.qodef-light-header.qodef-header-style-on-scroll .qodef-page-header{
+	.qodef-main-menu > ul > li{
+		> a {
+			color: $header-light-color;
+		}
+	}
+}
+
+.qodef-light-header .qodef-page-header > div:not(.qodef-sticky-header),
+.qodef-light-header.qodef-header-style-on-scroll .qodef-page-header {
+	.qodef-main-menu > ul > li:hover,
+	.qodef-main-menu > ul > li.qodef-active-item{
+		> a {
+			color: $first-main-color;
+		}
+	}
+}
+
+.qodef-dark-header .qodef-page-header > div:not(.qodef-sticky-header),
+.qodef-dark-header.qodef-header-style-on-scroll .qodef-page-header{
+	.qodef-main-menu > ul > li{
+		> a {
+			color: $header-dark-color;
+		}
+	}
+}
+
+
+/* Narrow drop down styles
+   ========================================================================== */
+.qodef-drop-down{
+	ul{
+		list-style: none;
+
+		li{
+			position: relative;
+		}
+	}
+
+	%second-ul{
+		display:inline-block;
+		position: relative;
+		background-color: #fff;
+		@include qodefBorderRadius(0 0 10px 10px);
+	}
+
+	.second{
+		left: 0;
+		top: 100%;
+		position: absolute;
+		display: block;
+		visibility: hidden;
+		overflow: hidden;
+		opacity: 0;
+		z-index: 10;
+		border-top: 5px solid $first-main-color;
+		@include qodefTransition(top 0.15s ease-out);
+		@include qodefBorderRadius(0 0 10px 10px);
+
+		&.qodef-drop-down-start{
+			visibility: visible;
+			overflow: visible;
+			opacity: 1;
+			@include qodefTransition(opacity 0.2s ease-out);
+		}
+
+		header.transparent.fixed.scrolled &,
+		header.transparent.fixed_hiding.scrolled &,
+		header.transparent.with_border:not(.sticky) &,
+		header.transparent.qodef-menu-item-first-level-bg-color:not(.sticky) &{
+			top: 100%;
+		}
+
+		header.transparent:not(.sticky) &{
+			top: 75%;
+		}
+
+		&.right {
+			right: 0px;
+			left: auto;
+		}
+	}
+
+	.second .inner{
+		position: relative;
+		padding: 0px;
+		display: block;
+		z-index: 997;
+
+		> ul{
+			@extend %second-ul;
+
+			> li:last-child > a,
+			> li > ul > li:last-child > a,
+			> li > ul > li > ul > li:last-child > a{
+				border-bottom: 0;
+			}
+		}
+
+		ul li{
+			display: block;
+			position: relative;
+			float: none;
+			height: auto;
+			background: 0;
+			@include qodefTransition(background-color .15s ease-out);
+		}
+
+		ul li a,
+		ul li h4{
+			display: block;
+            color: #909090;
+            height: auto;
+            font-size: 13px;
+            line-height: 30px;
+            font-weight: 400;
+            margin: 0 30px;
+            padding: 0;
+			border-bottom: 1px solid transparent;
+			float:none;
+			@include qodefTransition(color .15s ease-out, padding-left .2s ease-out);
+		}
+
+		> ul > li:hover > a,
+		ul li.sub ul li:hover > a{
+			color: $first-main-color;
+			padding-left: 5px;
+		}
+
+
+		ul.right li ul{
+			margin-left: -2px;
+		}
+
+		ul.right li{
+			a,
+			h4{
+				text-align: right;
+			}
+
+			ul{
+				left: -100%;
+			}
+
+			&.sub a i.qodef-menu-arrow{
+				right: auto;
+				left: 20px;
+				@include qodefTransform(rotate(180deg));
+			}
+		}
+
+		ul li.sub a i.qodef-menu-arrow{
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			color: inherit;
+			font-size: inherit;
+			margin: -6px 0 0;
+		}
+	}
+
+	li.left_position .second{
+		left: 0;
+	}
+
+	li.right_position .second{
+		left: auto;
+		right: 0;
+	}
+
+    li.left_position .second .inner,
+    li.right_position .second .inner{
+        > ul{
+            width: auto;
+            white-space: nowrap;
+
+            > li{
+                float: none;
+                display: inline-block;
+                width: 180px;
+                vertical-align: top;
+            }
+        }
+    }
+
+    > ul > li{
+		&:hover > .second{
+			z-index: 20;
+		}
+	}
+
+	.narrow .second .inner ul{
+		@extend %second-ul;
+		padding: 20px 0;
+
+		li:last-child{
+			border-bottom: none;
+		}
+
+		li{
+			padding: 0;
+			width: 229px;
+			@include qodefTransition(background-color .15s ease-out);
+		}
+
+		li ul{
+			position: absolute;
+			left: 100%;
+			top: -16px; /* same as padding in father ul */
+			height: auto;
+			opacity:0;
+			overflow: hidden;
+			z-index: 10;
+			-webkit-transform: translateZ(0);
+			@include qodefTransition(opacity .4s ease-out);
+		}
+
+
+		li:hover ul{
+			z-index: 20;
+			opacity:1;
+		}
+
+		&.right li ul{
+			left: -100%;
+		}
+	}
+}
+
+/*
+header.transparent .qodef-drop-down li:not(.right_position):not(.left_position) .second:not(.right) {
+    left: 16px;
+}
+*/
+header.transparent.qodef-menu-item-first-level-bg-color .qodef-drop-down .second:not(.right) {
+    left: 0;
+}
+
+
+/* slide_from_bottom start */
+
+body.qodef-dropdown-slide-from-bottom .qodef-drop-down{
+	.second {
+		overflow: visible;
+		@include qodefTransition(top 0.15s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.5s);
+	}
+
+	.wide,
+	.narrow{
+		.second .inner > ul{
+			top:30px;
+			@include qodefTransition(all 0.3s cubic-bezier(.39,.575,.565,1));
+		}
+
+		.second.qodef-drop-down-start .inner > ul{
+			top: 0;
+		}
+	}
+
+	.narrow .second .inner ul li{
+		ul{
+			top: 22px;
+			@include qodefTransition(all 0.3s cubic-bezier(.39,.575,.565,1));
+		}
+
+		&:hover ul{
+			top: -1px; /* same as padding in father ul */
+		}
+	}
+}
+
+/* slide_from_bottom end */
+
+
+/* slide_from_top start */
+
+body.qodef-dropdown-slide-from-top .qodef-drop-down{
+	.second {
+		overflow: visible;
+		@include qodefTransition(top 0.15s ease-out, opacity 0.2s ease-out, height 0s ease-out 0.5s);
+	}
+
+	.wide,
+	.narrow{
+		.second .inner > ul{
+			top:-30px;
+			@include qodefTransition(all 0.3s cubic-bezier(.39,.575,.565,1));
+		}
+
+		.second.qodef-drop-down-start .inner > ul{
+			top: 0;
+		}
+	}
+
+	.narrow .second .inner ul li{
+		ul{
+			top: -22px;
+			@include qodefTransition(all 0.3s cubic-bezier(.39,.575,.565,1));
+		}
+
+		&:hover ul{
+			top: -1px; /* same as padding in father ul */
+		}
+	}
+}
+
+/* slide_from_top end */
+
+/* slide_from_left start */
+
+body.qodef-dropdown-slide-from-left .qodef-drop-down{
+	.second {
+		overflow: visible;
+		@include qodefTransition(top 0.15s ease-out, opacity 0.15s ease-out, height 0s ease-out 0.4s);
+	}
+
+	.wide,
+	.narrow{
+		.second .inner > ul{
+			left:-30px;
+			@include qodefTransition(all 0.2s ease-out);
+		}
+
+		.second.qodef-drop-down-start .inner > ul{
+			left: 0;
+		}
+	}
+
+	.narrow .second .inner ul li{
+		ul{
+			left: calc(100% - 30px);
+			@include qodefTransition(all 0.2s ease-out);
+		}
+
+		&:hover ul{
+			left: 100%;
+		}
+	}
+}
+
+/* slide_from_left end */
+
+/* Wide drop down styles
+   ========================================================================== */
+.qodef-drop-down .wide{
+	.second ul{
+		padding: 32px 0 37px;
+	}
+
+	.second ul li{
+		float: left;
+		width: 274px;
+		padding: 0px;
+		border-bottom: 0;
+		border-left: 1px solid #ededed;
+		width: 100%;
+		@include qodefBoxSizing(border-box);
+
+		a,
+		h4,
+		&.sub a{
+			background: 0;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&:nth-child(4n+1){
+			clear: both;
+		}
+
+		&:hover{
+			background-color: transparent;
+		}
+
+		ul{
+			display: block;
+			left: 0;
+			padding: 4px 0 0;
+			position: relative;
+			top: 0;
+			visibility: visible;
+			background-color: transparent !important;
+		}
+
+		ul .widget{
+			padding: 0px 18px;
+		}
+
+		ul li{
+			border: 0;
+		}
+
+		ul li.menu-item-has-children > a,
+		ul li.menu-item-has-children > a:hover{
+			border-bottom: 0 none;
+			color: #393939;
+		}
+	}
+
+	.second > .inner > ul{
+		width: 1100px;
+
+		> li{
+			width: 25%;
+		}
+
+		.qodef-grid-1300 &{
+			width: $grid-width-1300;
+		}
+
+		.qodef-grid-1200 &{
+			width: $grid-width-1200;
+		}
+
+		.qodef-grid-1000 &{
+			width: $grid-width-1000;
+		}
+
+		.qodef-grid-800 &{
+			width: $grid-width-800;
+		}
+	}
+
+	.second i,
+	.second .inner ul li.sub a i.qodef-menu-arrow{
+		display: none;
+	}
+
+	.second .inner > ul > li > a{
+		line-height: 18px;
+		color: #000;
+		font-size: 16px;
+        margin-bottom: 5px;
+
+		&:hover{
+			color: $first-main-color;
+		}
+	}
+
+	.second .inner ul li{
+		&.sub h4 a,
+		h4 a{
+			padding: 0px !important;
+		}
+	}
+
+	&:not(.right_position) .second ul li{
+		&:first-child,
+		&:nth-child(4n+1){
+			border-left-color: transparent;
+		}
+	}
+
+	&.right_position .second ul li{
+		float: right;
+
+		&:last-child,
+		&:nth-child(4n){
+			border-left-color: transparent;
+		}
+	}
+}
+
+/* Wide drop down with full width background styles
+   ========================================================================== */
+.qodef-drop-down .wide.wide_background{
+	.second{
+		background-color: #fff;
+
+		.inner{
+			text-align: center;
+		}
+
+		.inner ul{
+			text-align: left;
+		}
+	}
+}
+
+/* Wide with icons drop down styles
+   ========================================================================== */
+.qodef-drop-down .wide.icons .second{
+	ul li a span{
+		position: relative;
+		display: block;
+	}
+
+	i{
+		width: 24px;
+		height: auto;
+		float: left;
+		display: inline-block;
+		vertical-align: middle;
+		color: inherit;
+		line-height: inherit;
+
+		&.blank{
+			background: none;
+			border: 0px;
+			display:none;
+		}
+	}
+}
