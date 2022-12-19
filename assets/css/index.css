@@ -90,6 +90,17 @@
 }
 
 
-.item_text {
-    
+.categorias-lateral {
+    font-size: 18;
+}
+
+.categoria-link:hover {
+    cursor: pointer;
+    color: #0AC775;
+}
+
+.coop-header {
+    position: absolute;
+    top: 50%;
+
 }
