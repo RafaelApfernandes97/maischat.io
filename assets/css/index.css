@@ -114,6 +114,5 @@
 }
 
 .form_contratar {
-    position: absolute;
-    top: 50%;
+    position: relative;
 }
