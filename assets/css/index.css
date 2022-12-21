@@ -118,3 +118,7 @@
     border-radius: 5px;
     padding: 1rem;
 }
+
+.form-contratar input::placeholder {
+    color: rgba(133, 133, 133, 0.486);
+  }
