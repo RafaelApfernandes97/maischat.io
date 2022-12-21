@@ -113,6 +113,8 @@
     left: 23%;
 }
 
-.form_contratar {
-    position: relative;
+.form-contratar {
+    border: rgba(128, 128, 128, 0.26) solid 1px;
+    border-radius: 5px;
+    padding: 1rem;
 }
