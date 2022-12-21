@@ -2889,8 +2889,8 @@
                                                                 method="post" id="sheetdb-form">
                                                                 <div class="form_contratar">
                                                                     <div class="text-align-center mb-3">
-                                                                    <h3 class="">Cadastrar</h3>
-                                                                </div>
+                                                                        <h3 class="">Cadastrar</h3>
+                                                                    </div>
 
                                                                     <div class="mb-3">
 
@@ -2900,21 +2900,21 @@
                                                                     </div>
 
                                                                     <div class="mb-3">
-                                                                        
+
                                                                         <input name="data[E-mail]" type="email"
                                                                             class="form-control" id="email"
                                                                             placeholder="name@example.com">
                                                                     </div>
 
                                                                     <div class="mb-3">
-                                                                        
+
                                                                         <input type="tel" name="data[Celular]"
                                                                             class="form-control" id="tel"
                                                                             placeholder="Telefone/Whatsapp">
                                                                     </div>
                                                                     <div class="row g-3">
                                                                         <div class="col-md-4">
-                                                                            
+
                                                                             <select name="data[UF]" id="inputState"
                                                                                 class="form-select">
                                                                                 <option selected>SP</option>
@@ -2944,9 +2944,10 @@
                                                                             </select>
                                                                         </div>
                                                                         <div class="col-md-8">
-                                                                            
+
                                                                             <input name="data[Cidade]" type="text"
-                                                                                class="form-control" id="cidade" placeholder="Cidade">
+                                                                                class="form-control" id="cidade"
+                                                                                placeholder="Cidade">
                                                                         </div>
 
                                                                         <div>
@@ -3028,9 +3029,17 @@
                                             response => response.json()
                                         ).then((html) => {
                                             // you can put any JS code here
-                                            
-                                             alert("Obrigado entraremos em contato.");
-                                            window.location.href = "https://maischat.com/blog_pg1.html"
+
+                                            Swal.fire({
+                                                title: 'Obrigado',
+                                                text: "Entraremos em contato em breve.",
+                                                icon: 'success',
+                                                confirmButtonColor: '#656d78',
+                                                confirmButtonText: 'OK'
+                                            })
+                                            setTimeout(function () {
+                                                window.location.href = "https://maischat.com/blog_pg1.html"
+                                            }, 5000)
                                         });
                                     });
                                 </script>
@@ -3653,6 +3662,7 @@
     <script>
         if (typeof revslider_showDoubleJqueryError === "undefined") { function revslider_showDoubleJqueryError(sliderID) { console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion."); console.log("To fix this, you can:"); console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on"); console.log("2. Find the double jQuery.js inclusion and remove it"); return "Double Included jQuery Library"; } }
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel='stylesheet' id='vc_animate-css-css'
         href='https://geko.qodeinteractive.com/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=6.10.0'
         type='text/css' media='all' />
@@ -3905,6 +3915,7 @@
             var qodefLike = {"ajaxurl": "https:\/\/geko.qodeinteractive.com\/wp-admin\/admin-ajax.php" };
 /* ]]> */
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/like.js?ver=1.0'
         id='geko-qodef-like-js'></script>
