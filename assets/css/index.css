@@ -39,7 +39,7 @@
     color: white;
     font-size: 70px;
     position: absolute;   
-    top: 500%;
+    top: 400%;
     left: 38%;
 }
 
@@ -48,6 +48,14 @@
     font-size: 70px;
     position: absolute;   
     top: 460%;
+    left: 38%;
+}
+
+.seta-conteudo-varejo {
+    color: white;
+    font-size: 70px;
+    position: absolute;   
+    top: 360%;
     left: 38%;
 }
 
@@ -101,7 +109,8 @@
 
 .coop-header {
     position: absolute;
-    top: 50%;
+    top: 30%;
+    left: 50%;
 
 }
 
@@ -122,3 +131,5 @@
 .form-contratar input::placeholder {
     color: rgba(133, 133, 133, 0.486);
   }
+
+  
