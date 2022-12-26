@@ -132,4 +132,13 @@
     color: rgba(133, 133, 133, 0.486);
   }
 
-  
+
+.form_contato {
+    
+    height: 80%;
+}
+
+.form-contato {
+    position: absolute;
+    top: 13%;
+}
