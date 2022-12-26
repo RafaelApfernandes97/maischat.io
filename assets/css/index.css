@@ -128,7 +128,7 @@
     padding: 1rem;
 }
 
-.form-contratar input::placeholder {
+.item_form input::placeholder {
     color: rgba(133, 133, 133, 0.486);
   }
 
