@@ -151,3 +151,22 @@
 .canais {
     height: 550px;
 }
+
+.botao_enviar {
+    background-color: #0AC775;
+    border: #0AC775;
+}
+
+.check_form:checked {
+    background-color: #0AC775;
+    border: #0AC775;
+}
+
+
+.botao_enviar:hover {
+    background-color: #108653;
+}
+
+.politica_contato:hover{
+    color: #108653 ;
+}
