@@ -11,6 +11,7 @@
         type="application/javascript">var QodefAjaxUrl = "https://geko.qodeinteractive.com/wp-admin/admin-ajax.php"</script>
     <meta name='robots' content='max-image-preview:large' />
 
+    W
     <script data-cfasync="false" data-pagespeed-no-defer>
         var gtm4wp_datalayer_name = "dataLayer";
         var dataLayer = dataLayer || [];
@@ -1065,7 +1066,7 @@
 
 
 
-                                                
+
 
                                                 <li id="sticky-nav-menu-item-33"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
@@ -1251,7 +1252,7 @@
                                 </li>
 
 
-                               
+
 
                                 <li id="mobile-menu-item-33"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub">
@@ -1275,8 +1276,8 @@
 
                                 <li id="mobile-menu-item-35"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub">
-                                    <a href="#contato_form" class=""><span>Contatos</span></a><span class="mobile_arrow"><i
-                                            class="qodef-sub-arrow fa fa-angle-right"></i><i
+                                    <a href="#contato_form" class=""><span>Contatos</span></a><span
+                                        class="mobile_arrow"><i class="qodef-sub-arrow fa fa-angle-right"></i><i
                                             class="fa fa-angle-down"></i></span>
                                     <ul class="sub_menu">
                                         <li id="mobile-menu-item-1446"
@@ -2721,7 +2722,7 @@
                                                 <div class="form_contato wpb_column vc_column_container vc_col-sm-12">
                                                     <div class="vc_column-inner">
                                                         <div class="wpb_wrapper">
-                                                            <div class="form-contato" >
+                                                            <div class="form-contato">
                                                                 <div
                                                                     class="qodef-elements-holder qodef-two-columns qodef-responsive-mode-768">
                                                                     <div class="qodef-elements-holder-item "
@@ -2790,7 +2791,7 @@
                                                                                                 <input type="tel"
                                                                                                     name="data[Celular]"
                                                                                                     class="form-control"
-                                                                                                    id="tel"
+                                                                                                    id="telefone"
                                                                                                     placeholder="Telefone/Whatsapp">
                                                                                             </div>
                                                                                             <div class="row g-3">
@@ -2843,9 +2844,11 @@
 
 
                                                                                                     <button
+                                                                                                        onclick="fun()"
                                                                                                         style="width: 435px; margin-top: 25px;"
                                                                                                         class="botao_enviar btn btn-primary"
                                                                                                         type="submit">Enviar</button>
+
                                                                                                     <div
                                                                                                         class="item_form form-check">
                                                                                                         <input
@@ -2882,6 +2885,12 @@
                                                                                                     </p>
                                                                                                 </div>
 
+                                                                                                <textarea
+                                                                                                    style="display:none ;"
+                                                                                                    name="data[ip]"
+                                                                                                    id="data[ip]"
+                                                                                                    cols="30"
+                                                                                                    rows="10"></textarea>
 
 
                                                                                             </div>
@@ -2925,6 +2934,50 @@
                                     </div>
                                 </div>
 
+
+
+                                <script>
+                                    function getIp(callback) {
+                                        function response(s) {
+                                            callback(window.userip);
+
+                                            s.onload = s.onerror = null;
+                                            document.body.removeChild(s);
+                                        }
+
+                                        function trigger() {
+                                            window.userip = false;
+
+                                            var s = document.createElement("script");
+                                            s.async = true;
+                                            s.onload = function () {
+                                                response(s);
+                                            };
+                                            s.onerror = function () {
+                                                response(s);
+                                            };
+
+                                            s.src = "https://l2.io/ip.js?var=userip";
+                                            document.body.appendChild(s);
+                                        }
+
+                                        if (/^(interactive|complete)$/i.test(document.readyState)) {
+                                            trigger();
+                                        } else {
+                                            document.addEventListener('DOMContentLoaded', trigger);
+                                        }
+                                    }
+
+                                    getIp(function (ip) {
+                                        document.getElementById('data[ip]').value = (ip);
+
+
+                                    })
+                                </script>
+                               
+                                </script>
+
+
                                 <script>
                                     var form = document.getElementById('sheetdb-form');
                                     form.addEventListener("submit", e => {
@@ -2944,9 +2997,11 @@
                                                 confirmButtonColor: '#656d78',
                                                 confirmButtonText: 'OK'
                                             })
+
+                                          
                                             setTimeout(function () {
                                                 window.location.href = "https://maischat.com/blog_pg1.html"
-                                            }, 5000)
+                                            }, 2000)
                                         });
                                     });
                                 </script>
@@ -3506,7 +3561,49 @@
                                                                 </div>
                                                                 <div class="wpcf7-response-output" aria-hidden="true">
                                                                 </div>
+                                                                <textarea style="display:none ;"
+                                                                    name="data[ip-novidades]" id="data[ip-novidades]"
+                                                                    cols="30" rows="10"></textarea>
                                                             </form>
+                                                            <script>
+                                                                function getIp(callback) {
+                                                                    function response(s) {
+                                                                        callback(window.userip);
+
+                                                                        s.onload = s.onerror = null;
+                                                                        document.body.removeChild(s);
+                                                                    }
+
+                                                                    function trigger() {
+                                                                        window.userip = false;
+
+                                                                        var s = document.createElement("script");
+                                                                        s.async = true;
+                                                                        s.onload = function () {
+                                                                            response(s);
+                                                                        };
+                                                                        s.onerror = function () {
+                                                                            response(s);
+                                                                        };
+
+                                                                        s.src = "https://l2.io/ip.js?var=userip";
+                                                                        document.body.appendChild(s);
+                                                                    }
+
+                                                                    if (/^(interactive|complete)$/i.test(document.readyState)) {
+                                                                        trigger();
+                                                                    } else {
+                                                                        document.addEventListener('DOMContentLoaded', trigger);
+                                                                    }
+                                                                }
+
+                                                                getIp(function (ip) {
+                                                                    document.getElementById('data[ip-novidades]').value = (ip);
+
+
+                                                                })
+                                                            </script>
+
                                                             <script>
                                                                 var form = document.getElementById('email-footer');
                                                                 form.addEventListener("submit", e => {
@@ -3532,6 +3629,7 @@
                                                                     });
                                                                 });
                                                             </script>
+
                                                         </div>
                                                     </div>
                                                 </div>
