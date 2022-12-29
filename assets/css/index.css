@@ -176,3 +176,51 @@
     
 
 }
+
+.botao_contato {
+    position: fixed;
+    bottom: 20%;
+    right: 1px;
+    z-index: 9999;
+}
+
+.botao-whatsapp {
+    background-color: #0AC775;
+    border: #0AC775;
+    border-radius: 3%;
+}
+
+.botao-whatsapp {
+    background-color: #0AC775;
+    border: #0AC775;
+    border-radius: 3%;
+    width: 100px;
+}
+
+.botao-whatsapp:hover {
+    background-color: #108653;
+    border: #108653;
+    border-radius: 3%;
+}
+
+
+.botao_contato2 {
+    position: fixed;
+    bottom: 16%;
+    right: 1px;
+    z-index: 9999;
+    
+}
+
+.botao-whatsapp2 {
+    background-color: #a5ec5e;
+    border: #a5ec5e;
+    border-radius: 3%;
+    width: 100px;
+}
+
+.botao-whatsapp2:hover {
+    background-color: #7db348;
+    border: #7db348;
+    border-radius: 3%;
+}
