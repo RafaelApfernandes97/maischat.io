@@ -184,23 +184,19 @@
     z-index: 9999;
 }
 
-.botao-whatsapp {
-    background-color: #0AC775;
-    border: #0AC775;
-    border-radius: 3%;
-}
 
 .botao-whatsapp {
     background-color: #0AC775;
     border: #0AC775;
-    border-radius: 3%;
-    width: 100px;
+    border-radius: 10%;
+    height: 40px;
+    width: 50px;
 }
 
 .botao-whatsapp:hover {
     background-color: #108653;
     border: #108653;
-    border-radius: 3%;
+    border-radius: 10%;
 }
 
 
@@ -215,12 +211,25 @@
 .botao-whatsapp2 {
     background-color: #a5ec5e;
     border: #a5ec5e;
-    border-radius: 3%;
-    width: 100px;
+    border-radius: 10%;
+    height: 40px;
+    width: 50px;
 }
 
 .botao-whatsapp2:hover {
     background-color: #7db348;
     border: #7db348;
-    border-radius: 3%;
+    border-radius: 10%;
+}
+
+.icone_botao {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.icone_botao2 {
+    position: absolute;
+    top: 50%;
+    left: 25%;
 }
