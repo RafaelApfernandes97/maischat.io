@@ -233,3 +233,30 @@
     top: 50%;
     left: 25%;
 }
+
+.formulario_contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img_form {
+    background-image: url(/assets/img/person-working-with-a-laptop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+@media screen and (max-width: 980px ) {
+    .img_form {
+        display: none;
+    }
+
+    .form_contato {
+        width: 100%;
+    }
+
+    .formulario_contato {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

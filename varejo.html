@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,u
-    -scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <title>MaisChat</title>
     <script
         type="application/javascript">var qodeCoreAjaxUrl = "https://geko.qodeinteractive.com/wp-admin/admin-ajax.php"</script>
@@ -20,7 +19,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel='dns-prefetch' href='//export.qodethemes.com' />
-
+    
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel="alternate" type="application/rss+xml" title="Geko &raquo; Feed"
         href="https://geko.qodeinteractive.com/feed/" />
@@ -45,7 +44,7 @@
             padding: 0 !important;
         }
     </style>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
     <script src="https://kit.fontawesome.com/6e295dba96.js" crossorigin="anonymous"></script>
@@ -396,7 +395,7 @@
     <link rel='stylesheet' id='contact-form-7-css'
         href='https://geko.qodeinteractive.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.6.4'
         type='text/css' media='all' />
-
+   
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
             visibility: visible;
@@ -545,13 +544,14 @@
     <link rel='stylesheet' id='geko-qodef-woo-responsive-css'
         href='/assets/css/woocommerce-responsive.min.css?ver=6.1.1' type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_front-css'
-        href='https://geko.qodeinteractive.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.10.0'
+        href='/assets/css/js_composer.min.css?ver=6.10.0'
         type='text/css' media='all' />
     <link rel='stylesheet' id='geko-qodef-google-fonts-css'
         href='https://fonts.googleapis.com/css?family=Rubik%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CRubik%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CLekton%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CMontserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CAbril+Fatface%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CKnewave%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CRoboto%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;subset=latin-ext&#038;ver=1.0.0'
         type='text/css' media='all' />
     <script type='text/javascript' src='https://geko.qodeinteractive.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.1'
         id='jquery-core-js'></script>
+    
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
         id='jquery-migrate-js'></script>
@@ -564,7 +564,10 @@
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.7.1.0'
         id='jquery-blockui-js'></script>
-
+    <script type='text/javascript' id='wc-add-to-cart-js-extra'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/geko.qodeinteractive.com\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+/* ]]> */
     </script>
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.1.0'
@@ -784,6 +787,14 @@
             }
         </style>
     </noscript>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script>
+         $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#form_contato").load("formulario_contato.html");
+         });
+      </script>
 </head>
 
 <body
@@ -1003,154 +1014,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="qodef-sticky-holder">
-                        <div class="qodef-grid">
-                            <div class=" qodef-vertical-align-containers">
-                                <div class="qodef-position-left">
-                                    <div class="qodef-position-left-inner">
-                                        <div class="qodef-logo-wrapper">
-                                            <a itemprop="url" href="/index.html" style="height: 30px;">
-                                                <img itemprop="image" class="qodef-normal-logo"
-                                                    src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
-                                                    alt="logo" />
-                                                <img itemprop="image" class="qodef-dark-logo"
-                                                    src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
-                                                    alt="dark logoo" /> <img itemprop="image" class="qodef-light-logo"
-                                                    src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
-                                                    alt="light logo" /> <img itemprop="image"
-                                                    class="qodef-fullscreen-logo"
-                                                    src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
-                                                    alt="fullscreen logo" /> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="qodef-position-right">
-                                    <div class="qodef-position-right-inner">
-                                        <nav class="qodef-main-menu qodef-drop-down qodef-sticky-nav">
-                                            <ul id="menu-main-menu-1" class="clearfix">
-                                                <li id="nav-menu-item-33"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                    <a href="index.html" class=""><span class="item_outer"><span
-                                                                class="item_inner"><span class="menu_icon_wrapper"><i
-                                                                        class="menu_icon null fa"></i></span><span
-                                                                    class="item_text">Inicio</span></span><span
-                                                                class="plus"></span></span></a>
-                                                    <div class="second">
-
-                                                    </div>
-                                                </li>
-
-
-
-
-                                                <li id="sticky-nav-menu-item-33"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                    <a href="#" class=""><span class="item_outer"><span
-                                                                class="item_inner"><span class="menu_icon_wrapper"><i
-                                                                        class="menu_icon null fa"></i></span><span
-                                                                    class="item_text">Categorias</span></span><span
-                                                                class="plus"></span></span></a>
-                                                    <div class="second">
-                                                        <div class="inner">
-                                                            <ul>
-                                                                <li id="sticky-nav-menu-item-6364"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                    <a href="coop.html" class=""><span
-                                                                            class="item_outer"><span
-                                                                                class="item_inner"><span
-                                                                                    class="menu_icon_wrapper"><i
-                                                                                        class="menu_icon null fa"></i></span><span
-                                                                                    class="item_text">Cooperativa</span></span><span
-                                                                                class="plus"></span></span></a>
-                                                                </li>
-                                                                <li id="sticky-nav-menu-item-6365"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                    <a href="varejo.html" class=""><span
-                                                                            class="item_outer"><span
-                                                                                class="item_inner"><span
-                                                                                    class="menu_icon_wrapper"><i
-                                                                                        class="menu_icon null fa"></i></span><span
-                                                                                    class="item_text">Varejo</span></span><span
-                                                                                class="plus"></span></span></a>
-                                                                </li>
-                                                                <li id="sticky-nav-menu-item-6366"
-                                                                    class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                    <a href="saude.html" class=""><span
-                                                                            class="item_outer"><span
-                                                                                class="item_inner"><span
-                                                                                    class="menu_icon_wrapper"><i
-                                                                                        class="menu_icon null fa"></i></span><span
-                                                                                    class="item_text">Saúde</span></span><span
-                                                                                class="plus"></span></span></a>
-                                                                </li>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-
-
-
-                                                <li id="sticky-nav-menu-item-35"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                    <a href="#" class=""><span class="item_outer"><span
-                                                                class="item_inner"><span class="menu_icon_wrapper"><i
-                                                                        class="menu_icon null fa"></i></span><span
-                                                                    class="item_text">Contatos</span></span><span
-                                                                class="plus"></span></span></a>
-                                                    <div class="second">
-
-                                                    </div>
-                                                </li>
-
-                                                <li id="sticky-nav-menu-item-35"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                    <a href="blog_pg1.html" class=""><span class="item_outer"><span
-                                                                class="item_inner"><span class="menu_icon_wrapper"><i
-                                                                        class="menu_icon null fa"></i></span><span
-                                                                    class="item_text">Blog</span></span><span
-                                                                class="plus"></span></span></a>
-
-                                                </li>
-
-
-
-                                            </ul>
-                                        </nav>
-
-                                        <div id="text-16" class="widget widget_text qodef-header-widget">
-                                            <div class="textwidget">
-                                                <div id="icl_lang_sel_widget-1"
-                                                    class="widget widget_icl_lang_sel_widget qodef-header-widget">
-                                                    <div id="lang_sel">
-                                                        <ul>
-                                                            <li><a href="#" class="lang_sel_sel icl-en"><img
-                                                                        style="width: 18px ;" class="iclflag"
-                                                                        src="/assets/img/brasil.png" alt="pt"
-                                                                        title="Portugues">
-                                                                    &nbsp;</a>
-                                                                <ul>
-                                                                    <li class="icl-fr"><a
-                                                                            href="http://mint.dev?lang=fr"><img
-                                                                                class="iclflag"
-                                                                                src="https://geko.qodeinteractive.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png"
-                                                                                alt="en" title="English">&nbsp;</a></li>
-                                                                    <li class="icl-de"><a href="#"><img
-                                                                                style="width: 18px ;" class="iclflag"
-                                                                                src="/assets/img/espanha.jpg" alt="es"
-                                                                                title="Espanhol">
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="header" ></div>
                 </div>
             </header>
             <header class="qodef-mobile-header">
@@ -1525,7 +1389,7 @@
                                                             data-480="60px 60px 60px 60px">
                                                             <div class="qodef-elements-holder-item-inner">
                                                                 <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-839341"
-                                                                    style="padding: 63px 5px 190px 64px">
+                                                                    style="padding: 63px 5px 93px 64px">
                                                                     <div class="wpb_text_column wpb_content_element ">
                                                                         <div class="wpb_wrapper">
                                                                             <h3><span style="color: #ffffff;">Disponível
@@ -1679,181 +1543,151 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="vc_row wpb_row vc_row-fluid qodef-section qodef-content-aligment-left"
-                                    style="">
-                                    <div class="clearfix qodef-full-section-inner">
-                                        <div
-                                            class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-12">
-                                            <div class="vc_column-inner vc_custom_1479135448282">
-                                                <div class="wpb_wrapper">
-                                                    <div
-                                                        class="qodef-elements-holder qodef-two-columns qodef-responsive-mode-768">
-                                                        <div class="qodef-elements-holder-item qodef-horizontal-alignment-center"
-                                                            data-item-class="qodef-elements-holder-custom-996438"
-                                                            data-1280-1600="14px 35px 30px 35px"
-                                                            data-480-600="80px 160px 80px 160px"
-                                                            data-480="60px 60px 60px 60px">
-                                                            <div class="qodef-elements-holder-item-inner">
-                                                                <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-996438"
-                                                                    style="padding: 115px 100px 145px 100px">
-                                                                    <div class="qodef-iwt clearfix qodef-iwt-icon-top qodef-iwt-icon-tiny qodef-scale-animation"
-                                                                        style="text-align: center">
+                                <section id="formulario_contato"
+                                    style="background-color: rgba(128, 128, 128, 0.144); padding: 5%;">
+                                    <div class="container  ">
+                                        <div class="row col text-align-center formulario_contato"
+                                            style="background-color: white; margin-left: 10%; margin-right: 10%;">
 
-                                                                        <div class="qodef-iwt-content-holder">
-                                                                            <div class="qodef-iwt-title-holder">
-                                                                                <h4>Divulgue, venda e atenda em uma
-                                                                                    única plataforma.</h4>
-                                                                                <h4>Inicie agora, sem burocracia.</h4>
-                                                                                <h4>Solicite uma apresentação.</h4>
-                                                                            </div>
 
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                            <div class="form_contato  text-align-left" style="padding: 3% 5% 3% 5%;">
+                                                <form action="https://sheetdb.io/api/v1/e4wz9jzw2xyyc" method="post"
+                                                    id="sheetdb-form">
+                                                    <div class="form_contratar">
+
+
+                                                        <div class="item_form mb-3">
+                                                            <h3 class="mb-2">Contato</h3>
+
+                                                            <input name="data[Nome do contato]" type="text"
+                                                                class="form-control" id="nome"
+                                                                placeholder="Nome Completo">
                                                         </div>
-                                                        <div class="qodef-elements-holder-item "
-                                                            style="background-image: url(https://geko.qodeinteractive.com/wp-content/uploads/2016/11/h3-img-5.jpg)"
-                                                            data-item-class="qodef-elements-holder-custom-968760"
-                                                            data-1280-1600="78px 0px">
-                                                            <div class="qodef-elements-holder-item-inner">
-                                                                <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-968760"
-                                                                    style="padding: 151px 0px">
-                                                                    <div class="vc_empty_space" style="height: 200px">
-                                                                        <span class="vc_empty_space_inner"></span>
-                                                                    </div>
+
+                                                        <div class="item_form mb-3">
+
+                                                            <input name="data[E-mail]" type="email" class="form-control"
+                                                                id="email" placeholder="name@example.com">
+                                                        </div>
+
+                                                        <div class=" item_form mb-3">
+
+                                                            <input type="tel" name="data[Celular]" class="form-control"
+                                                                id="telefone" placeholder="Telefone/Whatsapp">
+                                                        </div>
+                                                        <div class="row g-3">
+
+
+                                                            <div>
+                                                                <p>Quero receber
+                                                                    contato por:</p>
+                                                                <div class="item_form form-check form-check-inline">
+
+                                                                    <input name="data[Contato via E-mail]" checked
+                                                                        class="check_form form-check-input"
+                                                                        type="checkbox" id="inlineCheckbox1"
+                                                                        value="E-mail">
+                                                                    <label class="form-check-label"
+                                                                        for="inlineCheckbox1">E-mail</label>
                                                                 </div>
+
+                                                                <div class="item_form form-check form-check-inline">
+                                                                    <input checked name="data[Contato via Whatsapp]"
+                                                                        class="check_form form-check-input"
+                                                                        type="checkbox" id="inlineCheckbox2"
+                                                                        value="Whatsapp">
+                                                                    <label class="form-check-label"
+                                                                        for="inlineCheckbox2">Whatsapp</label>
+                                                                </div>
+
+                                                                <div class="item_form form-check form-check-inline">
+                                                                    <input checked name="data[Contato via Telefone]"
+                                                                        class="check_form form-check-input"
+                                                                        type="checkbox" id="inlineCheckbox3"
+                                                                        value="Telefone">
+                                                                    <label class="form-check-label"
+                                                                        for="inlineCheckbox3">Telefone
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="item_form form-check form-check-inline" style="display: none;">
+                                                                    <input checked name="data[pagina]"
+                                                                        class="check_form form-check-input"
+                                                                        type="checkbox" id="inlineCheckbox3"
+                                                                        value="saude">
+                                                                    <label class="form-check-label"
+                                                                        for="inlineCheckbox3">saude
+                                                                    </label>
+                                                                </div>
+
+
+                                                                <button onclick="fun()"
+                                                                    style="width: 100%; margin-top: 25px;"
+                                                                    class="botao_enviar btn btn-primary"
+                                                                    type="submit">Enviar</button>
+
+                                                                <div class="item_form form-check">
+                                                                    <input name="data[Aceito os Termos]"
+                                                                        class="check_form form-check-input"
+                                                                        type="checkbox" id="inlineCheckbox3"
+                                                                        value="Aceito">
+                                                                    <label style="font-size: 12px;"
+                                                                        class="form-check-label"
+                                                                        for="inlineCheckbox3">Li
+                                                                        e concordo
+                                                                        com a
+                                                                        política de
+                                                                        privacidade,
+                                                                        e
+                                                                        aceito
+                                                                        compartilhar
+                                                                        meus dados
+                                                                        com a
+                                                                        Mais Chat.
+                                                                    </label>
+                                                                </div>
+                                                                <p style="font-size: 12px;">
+                                                                    Ao informar meus
+                                                                    dados, eu
+                                                                    concordo com a
+                                                                    <a class="politica_contato"
+                                                                        href="/privacidade.html">Politica
+                                                                        de
+                                                                        privacidade.</a>
+                                                                </p>
                                                             </div>
+
+                                                            <textarea style="display:none ;" name="data[ip]"
+                                                                id="data[ip]" cols="30" rows="10"></textarea>
+
+
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </form>
                                             </div>
-                                        </div>
-                                        <div
-                                            class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-6 vc_col-md-12">
-                                            <div class="vc_column-inner vc_custom_1479135442461">
-                                                <div class="wpb_wrapper">
-                                                    <h4>Contato</h4>
-                                                    <div class="mt-3" style="width: 46.5%;">
-                                                        <form action="https://sheetdb.io/api/v1/e4wz9jzw2xyyc"
-                                                            method="post" id="sheetdb-form">
-                                                            <div class="form_contratar">
 
-
-                                                                <div class="item_form mb-3">
-
-                                                                    <input name="data[Nome do contato]" type="text"
-                                                                        class="form-control" id="nome"
-                                                                        placeholder="Nome Completo">
-                                                                </div>
-
-                                                                <div class="item_form mb-3">
-
-                                                                    <input name="data[E-mail]" type="email"
-                                                                        class="form-control" id="email"
-                                                                        placeholder="name@example.com">
-                                                                </div>
-
-                                                                <div class=" item_form mb-3">
-
-                                                                    <input type="tel" name="data[Celular]"
-                                                                        class="form-control" id="telefone"
-                                                                        placeholder="Telefone/Whatsapp">
-                                                                </div>
-                                                                <div class="row g-3">
-
-
-                                                                    <div>
-                                                                        <p>Quero receber
-                                                                            contato por:</p>
-                                                                        <div
-                                                                            class="item_form form-check form-check-inline">
-
-                                                                            <input name="data[Contato via E-mail]"
-                                                                                checked
-                                                                                class="check_form form-check-input"
-                                                                                type="checkbox" id="inlineCheckbox1"
-                                                                                value="E-mail">
-                                                                            <label class="form-check-label"
-                                                                                for="inlineCheckbox1">E-mail</label>
-                                                                        </div>
-
-                                                                        <div
-                                                                            class="item_form form-check form-check-inline">
-                                                                            <input checked
-                                                                                name="data[Contato via Whatsapp]"
-                                                                                class="check_form form-check-input"
-                                                                                type="checkbox" id="inlineCheckbox2"
-                                                                                value="Whatsapp">
-                                                                            <label class="form-check-label"
-                                                                                for="inlineCheckbox2">Whatsapp</label>
-                                                                        </div>
-
-                                                                        <div
-                                                                            class="item_form form-check form-check-inline">
-                                                                            <input checked
-                                                                                name="data[Contato via Telefone]"
-                                                                                class="check_form form-check-input"
-                                                                                type="checkbox" id="inlineCheckbox3"
-                                                                                value="Telefone">
-                                                                            <label class="form-check-label"
-                                                                                for="inlineCheckbox3">Telefone
-                                                                            </label>
-                                                                        </div>
-
-
-                                                                        <button onclick="fun()"
-                                                                            style="width: 435px; margin-top: 25px;"
-                                                                            class="botao_enviar btn btn-primary"
-                                                                            type="submit">Enviar</button>
-
-                                                                        <div class="item_form form-check">
-                                                                            <input name="data[Aceito os Termos]"
-                                                                                class="check_form form-check-input"
-                                                                                type="checkbox" id="inlineCheckbox3"
-                                                                                value="Aceito">
-                                                                            <label style="font-size: 12px;"
-                                                                                class="form-check-label"
-                                                                                for="inlineCheckbox3">Li
-                                                                                e concordo
-                                                                                com a
-                                                                                política de
-                                                                                privacidade,
-                                                                                e
-                                                                                aceito
-                                                                                compartilhar
-                                                                                meus dados
-                                                                                com a
-                                                                                Mais Chat.
-                                                                            </label>
-                                                                        </div>
-                                                                        <p style="font-size: 12px;">
-                                                                            Ao informar meus
-                                                                            dados, eu
-                                                                            concordo com a
-                                                                            <a class="politica_contato"
-                                                                                href="/privacidade.html">Politica
-                                                                                de
-                                                                                privacidade.</a>
-                                                                        </p>
-                                                                    </div>
-
-                                                                    <textarea style="display:none ;" name="data[ip]"
-                                                                        id="data[ip]" cols="30" rows="10"></textarea>
-
-
-                                                                </div>
-                                                            </div>
-                                                        </form>
+                                            <div class=" img_form">
+                                                
+                                                    <div class="qodef-elements-holder-item-inner">
+                                                        <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-199779"
+                                                            style="padding: 40% 40% 20% 40%">
+                                                            <span class="qodef-icon-shortcode normal"
+                                                                data-hover-color="#dedede" data-color="#ffffff">
+                                                                <a itemprop="url" class="" href="#" target="_blank">
+                                                                    <span class="icon-normal"><i
+                                                                            class="qodef-icon-simple-line-icon icon-envelope-letter qodef-icon-element"
+                                                                            style="color: #ffffff;font-size:114px"></i></span>
+                                                                </a>
+                                                            </span>
+                                                        </div>
                                                     </div>
-
-                                                </div>
+                                                
                                             </div>
                                         </div>
+
                                     </div>
-                                </div>
 
-                                <script>
+                                    <script>
                                     function getIp(callback) {
                                         function response(s) {
                                             callback(window.userip);
@@ -1922,6 +1756,8 @@
                                         });
                                     });
                                 </script>
+
+                                </section>
                                 
             <div class="mt-2 vc_row wpb_row vc_row-fluid qodef-section qodef-content-aligment-center m-lg-3">
                 <div class="clearfix qodef-full-section-inner m-lg-3">
@@ -1998,195 +1834,7 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="qodef-footer-inner clearfix">
-                <div class="qodef-footer-top-holder">
-                    <div class="qodef-footer-top qodef-footer-top-aligment-left">
-                        <div class="qodef-container">
-                            <div class="qodef-container-inner">
-                                <div class="qodef-four-columns ">
-                                    <div class="qodef-four-columns-inner clearfix">
-
-                                        <div class="qodef-column">
-                                            <div class="qodef-column-inner">
-                                                <div id="text-12" class="widget qodef-footer-column-1 widget_text">
-                                                    <div class="textwidget">
-                                                        <div class="vc_empty_space" style="height: 2px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <a href="https://geko.qodeinteractive.com/">
-                                                            <img style="width: 150px;"
-                                                                src="/assets/img/logo/_mais_chat_verde_cabecalho.png"
-                                                                alt="m">
-                                                        </a>
-                                                        <div class="vc_empty_space" style="height: 12px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        Av. Paulista, 1536- Bela Vista
-                                                        <div class="vc_empty_space" style="height: 1px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        01310-200 São Paulo - BR
-                                                        <div class="vc_empty_space" style="height: 1px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <a href="mailto:mais@mais.chat">Email: mais@mais.chat</a>
-                                                        <div class="vc_empty_space" style="height: 1px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <a
-                                                            href="https://wa.me/558000708000">Tel:
-                                                            0800 070 8000</a>
-
-
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="qodef-column ">
-                                            <div class="qodef-column-inner ">
-                                                <div id="qodef_latest_posts_widget-3"
-                                                    class="widget qodef-footer-column-2 widget_qodef_latest_posts_widget">
-                                                    <h4 class="qodef-footer-widget-title">Links Úteis</h4>
-                                                    <div class="widget qodef-latest-posts-widget ">
-                                                        <div class="qodef-blog-list-holder qodef-minimal ">
-                                                            <div class="row">
-                                                                <a href="https://maischat.com/">Inicio</a>
-                                                                <a href="/blog_pg1.html">Blog</a>
-                                                                <a href="/privacidade.html">Politica de
-                                                                    Privacidade</a>
-                                                                <a href="/termos.html">Termos</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="qodef-column">
-                                            <div class="qodef-column-inner">
-                                                <div id="text-13" class="widget qodef-footer-column-3 widget_text">
-                                                    <h4 class="qodef-footer-widget-title">Nossas redes</h4>
-
-                                                    <div class="textwidget">
-                                                        <div class="vc_empty_space" style="height: "><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <div class="rede_sociais">
-                                                            <a href="https://www.facebook.com/maischatbr"
-                                                                target="_blank"><i
-                                                                    class="ico fa-brands fa-facebook"></i></a>
-                                                            <a href="https://www.instagram.com/maischatbr/"
-                                                                target="_blank"><i
-                                                                    class="ico fa-brands fa-instagram"></i></a>
-                                                            <a href="https://wa.me/558000708000"
-                                                                target="_blank"><i
-                                                                    class="ico fa-brands fa-whatsapp"></i></a>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="qodef-column">
-                                            <div class="qodef-column-inner">
-                                                <div id="text-14" class="widget qodef-footer-column-4 widget_text">
-                                                    <h4 class="qodef-footer-widget-title">Novidades</h4>
-                                                    <div class="textwidget">Cadastre-se e receba <br />
-                                                        nossas novidades.
-                                                        <div class="vc_empty_space" style="height: 20px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <div role="form" class="wpcf7" id="wpcf7-f5551-o1" lang="en-US"
-                                                            dir="ltr">
-                                                            <div class="screen-reader-response">
-                                                                <p role="status" aria-live="polite" aria-atomic="true">
-                                                                </p>
-                                                                <ul></ul>
-                                                            </div>
-
-                                                            <form action="https://sheetdb.io/api/v1/e4wz9jzw2xyyc"
-                                                                method="post" id="email-footer" class="wpcf7-form init"
-                                                                novalidate="novalidate" data-status="init">
-                                                                <div style="display: none;">
-                                                                    <input type="hidden" name="_wpcf7" value="5551" />
-                                                                    <input type="hidden" name="_wpcf7_version"
-                                                                        value="5.6.4" />
-                                                                    <input type="hidden" name="_wpcf7_locale"
-                                                                        value="en_US" />
-                                                                    <input type="hidden" name="_wpcf7_unit_tag"
-                                                                        value="wpcf7-f5551-o1" />
-                                                                    <input type="hidden" name="_wpcf7_container_post"
-                                                                        value="0" />
-                                                                    <input type="hidden" name="_wpcf7_posted_data_hash"
-                                                                        value="" />
-                                                                </div>
-                                                                <div class="qodef-subscription-form">
-                                                                    <span class="wpcf7-form-control-wrap"
-                                                                        data-name="data[E-mail]"><input type="email"
-                                                                            name="data[E-mail]" value="" size="40"
-                                                                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                                                            aria-required="true" aria-invalid="false"
-                                                                            placeholder="E-mail" /></span><br />
-                                                                    <input type="submit" value="&#x35;"
-                                                                        class="wpcf7-form-control has-spinner wpcf7-submit" />
-                                                                </div>
-                                                                <div class="wpcf7-response-output" aria-hidden="true">
-                                                                </div>
-                                                            </form>
-                                                            <script>
-                                                                var form = document.getElementById('email-footer');
-                                                                form.addEventListener("submit", e => {
-                                                                    e.preventDefault();
-                                                                    fetch(form.action, {
-                                                                        method: "POST",
-                                                                        body: new FormData(document.getElementById("email-footer")),
-                                                                    }).then(
-                                                                        response => response.json()
-                                                                    ).then((html) => {
-                                                                        // you can put any JS code here
-
-                                                                        Swal.fire({
-                                                                            title: 'Obrigado',
-                                                                            text: "Entraremos em contato em breve.",
-                                                                            icon: 'success',
-                                                                            confirmButtonColor: '#656d78',
-                                                                            confirmButtonText: 'OK'
-                                                                        })
-                                                                        setTimeout(function () {
-                                                                            window.location.href = "https://maischat.com/blog_pg1.html"
-                                                                        }, 5000)
-                                                                    });
-                                                                });
-                                                            </script>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="qodef-footer-bottom-holder">
-                    <div class="qodef-footer-bottom-holder-inner">
-                        <div class="qodef-container">
-                            <div class="qodef-container-inner">
-                                <div class="qodef-column-inner">
-                                    <div id="text-15" class="widget qodef-footer-text widget_text">
-                                        <div class="textwidget"><a href="https://qodeinteractive.com"
-                                                rel="nofollow noopener" target="_blank"><span style="color: #aab2bd; ">©
-                                                    2022. Mais Chat Tecnologia Ltda</span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <div id="footer"></div>
     </div>
     </div>
 
