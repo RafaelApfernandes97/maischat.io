@@ -9545,6 +9545,7 @@ nav.qodef-fullscreen-menu ul.sub_menu {
 }
 
 .qodef-testimonials.background-image:before {
+    display: none;
     content: "\f10d";
     font-family: FontAwesome;
     speak: none;
