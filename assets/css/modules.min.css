@@ -9544,25 +9544,7 @@ nav.qodef-fullscreen-menu ul.sub_menu {
     animation: qodefFadeOutSlide .1s 1 ease forwards
 }
 
-.qodef-testimonials.background-image:before {
-    display: none;
-    content: "\f10d";
-    font-family: FontAwesome;
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: absolute;
-    top: 32px;
-    left: -25px;
-    color: #0ac775;
-    font-size: 80px;
-    z-index: 99
-}
+
 
 .qodef-testimonials.background-image .qodef-testimonial-content {
     text-align: left;
