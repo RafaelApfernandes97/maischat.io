@@ -6003,10 +6003,13 @@ body.qodef-dropdown-slide-from-left .qodef-drop-down .narrow .second .inner ul l
 }
 
 .qodef-mobile-header .qodef-mobile-menu-opener a {
+    position: fixed;
     display: table;
     height: 100%;
     padding-right: 10px;
-    color: #000
+    color: rgb(0, 0, 0);
+    top: 3.8%;
+    
 }
 
 .qodef-mobile-header .qodef-mobile-menu-opener a:hover {
@@ -6015,7 +6018,7 @@ body.qodef-dropdown-slide-from-left .qodef-drop-down .narrow .second .inner ul l
 
 .qodef-mobile-header .qodef-mobile-menu-opener .qodef-mobile-opener-icon-holder {
     display: table-cell;
-    vertical-align: middle
+    vertical-align:top;
 }
 
 .qodef-sticky-up-mobile-header .qodef-animate-mobile-header .qodef-mobile-header-inner {
