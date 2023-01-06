@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/assets/css/blog.min.css">
     <link rel="stylesheet" href="/assets/css/index.css">
     <link rel='dns-prefetch' href='//export.qodethemes.com' />
-    <link rel='dns-prefetch' href='//maps.googleapis.com' />
+
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel="alternate" type="application/rss+xml" title="Geko &raquo; Feed"
         href="https://geko.qodeinteractive.com/feed/" />
@@ -391,15 +391,15 @@
             line-height: 1.6;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel='stylesheet' id='titan-adminbar-styles-css'
         href='https://geko.qodeinteractive.com/wp-content/plugins/anti-spam/assets/css/admin-bar.css?ver=7.3.4'
         type='text/css' media='all' />
     <link rel='stylesheet' id='contact-form-7-css'
         href='https://geko.qodeinteractive.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.6.4'
         type='text/css' media='all' />
-    <link rel='stylesheet' id='rabbit_css-css'
-        href='https://export.qodethemes.com/_toolbar/assets/css/rbt-modules.css?ver=6.1.1' type='text/css'
-        media='all' />
+
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
             visibility: visible;
@@ -715,6 +715,15 @@
             }
         </style>
     </noscript>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#form_contato").load("form_contato.html");
+        });
+    </script>
+    <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 
 <body
@@ -769,14 +778,16 @@
                             <div class="qodef-position-left">
                                 <div class="qodef-position-left-inner">
                                     <div class="qodef-logo-wrapper">
-                                        <a itemprop="url" href="/index.html"
-                                            style="height: 30px;">
+                                        <a itemprop="url" href="/index.html" style="height: 30px;">
                                             <img itemprop="image" class="qodef-normal-logo"
-                                                src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png" alt="logo" />
+                                                src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
+                                                alt="logo" />
                                             <img itemprop="image" class="qodef-dark-logo"
-                                                src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png" alt="dark logoo" />
+                                                src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
+                                                alt="dark logoo" />
                                             <img itemprop="image" class="qodef-light-logo"
-                                                src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png" alt="light logo" />
+                                                src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
+                                                alt="light logo" />
                                             <img itemprop="image" class="qodef-fullscreen-logo"
                                                 src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
                                                 alt="fullscreen logo" />
@@ -802,9 +813,9 @@
                                                 </div>
                                             </li>
 
-                                           
 
-                                           
+
+
 
                                             <li id="nav-menu-item-33"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
@@ -854,7 +865,7 @@
 
 
 
-                                            
+
 
                                             <li id="nav-menu-item-35"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children qodef-active-item has_sub narrow">
@@ -931,8 +942,7 @@
                                 <div class="qodef-position-left">
                                     <div class="qodef-position-left-inner">
                                         <div class="qodef-logo-wrapper">
-                                            <a itemprop="url" href="/index.html"
-                                                style="height: 30px;">
+                                            <a itemprop="url" href="/index.html" style="height: 30px;">
                                                 <img itemprop="image" class="qodef-normal-logo"
                                                     src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
                                                     alt="logo" />
@@ -952,19 +962,20 @@
                                         <nav class="qodef-main-menu qodef-drop-down qodef-sticky-nav">
                                             <ul id="menu-main-menu-1" class="clearfix">
                                                 <li id="nav-menu-item-33"
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                <a href="index.html" class=""><span class="item_outer"><span
-                                                            class="item_inner"><span class="menu_icon_wrapper"><i
-                                                                    class="menu_icon null fa"></i></span><span
-                                                                class="item_text">Inicio</span></span><span
-                                                            class="plus"></span></span></a>
-                                                <div class="second">
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
+                                                    <a href="index.html" class=""><span class="item_outer"><span
+                                                                class="item_inner"><span class="menu_icon_wrapper"><i
+                                                                        class="menu_icon null fa"></i></span><span
+                                                                    class="item_text">Inicio</span></span><span
+                                                                class="plus"></span></span></a>
+                                                    <div class="second">
 
-                                                </div>
-                                            </li>
-                                                
-                                                
-                                               
+                                                    </div>
+                                                </li>
+
+
+
+
 
 
                                                 <li id="sticky-nav-menu-item-33"
@@ -1015,7 +1026,7 @@
 
 
 
-                                               
+
 
                                                 <li id="sticky-nav-menu-item-35"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children qodef-active-item has_sub narrow">
@@ -1074,7 +1085,7 @@
                             <div class="qodef-vertical-align-containers">
                                 <div class="qodef-mobile-menu-opener">
                                     <a href="javascript:void(0)">
-                                        <span class="qodef-mobile-opener-icon-holder">
+                                        <span class="menu_mobile">
                                             <i class="qodef-icon-font-awesome fa fa-bars "></i> </span>
                                     </a>
                                 </div>
@@ -1082,8 +1093,7 @@
                                 <div class="qodef-position-center">
                                     <div class="qodef-position-center-inner">
                                         <div class="qodef-mobile-logo-wrapper">
-                                            <a itemprop="url" href="/index.html"
-                                                style="height: 18px">
+                                            <a itemprop="url" href="/index.html" style="height: 18px">
                                                 <img itemprop="image"
                                                     src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
                                                     alt="mobile logo" />
@@ -1103,20 +1113,21 @@
                             <ul id="menu-main-menu-2" class="">
 
                                 <li id="nav-menu-item-33"
-                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                <a href="index.html" class=""><span class="item_outer"><span
-                                                            class="item_inner"><span class="menu_icon_wrapper"><i
-                                                                    class="menu_icon null fa"></i></span><span
-                                                                class="item_text">Inicio</span></span><span
-                                                            class="plus"></span></span></a>
-                                                <div class="second">
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
+                                    <a href="index.html" class=""><span class="item_outer"><span
+                                                class="item_inner"><span class="menu_icon_wrapper"><i
+                                                        class="menu_icon null fa"></i></span><span
+                                                    class="item_text">Inicio</span></span><span
+                                                class="plus"></span></span></a>
+                                    <div class="second">
 
-                                                </div>
-                                            </li>
+                                    </div>
+                                </li>
 
-                                
 
-                             
+
+
+
                                 <li id="mobile-menu-item-33"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub">
                                     <a href="#" class=""><span>Categorias</span></a><span class="mobile_arrow"><i
@@ -1137,7 +1148,8 @@
                                 </li>
 
 
-                                
+
+
                                 <li id="mobile-menu-item-36"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub">
                                     <a href="blog_pg1.html" class=""><span>Blog</span></a><span class="mobile_arrow"><i
@@ -1177,9 +1189,8 @@
                                                             06 Dezembro 2022 </span>
                                                         <meta itemprop="interactionCount" content="UserComments: 0" />
                                                     </div>
-                                                    <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
+                                                    <div class="qodef-post-info-category">In <a href="#"
+                                                            rel="category tag">Marketing</a></div>
                                                 </div>
                                                 <h2 itemprop="name" class="qodef-item-title entry-title">
                                                     <a itemprop="url" href="/5tendencias.html">
@@ -1212,9 +1223,8 @@
                                                             24 Novembro 2022 </span>
                                                         <meta itemprop="interactionCount" content="UserComments: 0" />
                                                     </div>
-                                                    <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
+                                                    <div class="qodef-post-info-category">In <a href="#"
+                                                            rel="category tag">Marketing</a></div>
                                                 </div>
                                                 <h2 itemprop="name" class="qodef-item-title entry-title">
                                                     <a itemprop="url" href="/integracao_canais.html">
@@ -1247,9 +1257,8 @@
                                                             22 Novembro 2022 </span>
                                                         <meta itemprop="interactionCount" content="UserComments: 0" />
                                                     </div>
-                                                    <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
+                                                    <div class="qodef-post-info-category">In <a href="#"
+                                                            rel="category tag">Marketing</a></div>
                                                 </div>
                                                 <h2 itemprop="name" class="qodef-item-title entry-title">
                                                     <a itemprop="url" href="/custumer_experience.html">
@@ -1300,45 +1309,44 @@
                                             <div class="qodef-blog-masonry-grid-sizer"></div>
                                             <div class="qodef-blog-masonry-grid-gutter"></div>
 
-
-
                                             <article id="post-1361"
                                                 class="post-1361 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-fashion tag-inspiration tag-tech">
                                                 <div class="qodef-post-content">
                                                     <div class="qodef-post-image">
-                                                        <a itemprop="url" href="/6_vantagens.html" title="5
+                                                        <a itemprop="url" href="maischatouwhatsapp.html" title="5
                                                                     Tendências de Negócios para 2023">
-                                                            <img width="1100" height="659" src="/assets/img/blog/9.jpg"
+                                                            <img width="1100" height="659"
+                                                                src="/assets/img/blog/18.jpg"
                                                                 class="attachment-full size-full wp-post-image" alt="a"
                                                                 decoding="async" loading="lazy"
-                                                                srcset="/assets/img/blog/9.jpg 1100w, /assets/img/blog/9.jpg, /assets/img/blog/9.jpg 768w, /assets/img/blog/9.jpg"
+                                                                srcset="/assets/img/blog/18.jpg 1100w, /assets/img/blog/18.jpg, /assets/img/blog/18.jpg 768w, /assets/img/blog/18.jpg"
                                                                 sizes="(max-width: 1100px) 100vw, 1100px" /> </a>
                                                     </div>
                                                     <div class="qodef-post-text">
                                                         <div class="qodef-post-text-inner">
                                                             <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="/6_vantagens.html" title="5
-                                                                    Tendências de Negócios para 2023">6 Vantagens para
-                                                                    o atendimento ao cliente</a>
+                                                                <a itemprop="url" href="maischatouwhatsapp.html" title="5
+                                                                    Tendências de Negócios para 2023">Mais Chat ou
+                                                                    WhatsApp Business?</a>
                                                             </h4>
                                                             <div class="qodef-post-info qodef-section-top">
                                                                 <div itemprop="dateCreated"
                                                                     class="qodef-post-info-date entry-date updated">
                                                                     <span class="qodef-date-value">
-                                                                        17 Outubro 2022 </span>
+                                                                        05 Janeiro 2023 </span>
                                                                     <meta itemprop="interactionCount"
                                                                         content="UserComments: 0" />
                                                                 </div>
                                                                 <div class="qodef-post-info-category">por: <a
                                                                         href="#"
                                                                         rel="category tag">Marketing</a></div>
-
                                                             </div>
-                                                            <p itemprop="description" class="qodef-post-excerpt">O Setor
-                                                                de Atendimento ao Cliente é a alma e o coração das
-                                                                empresas. Se em algum momento do passado o SAC apenas
-                                                                tirava dúvidas ou resolvia problemas, hoje o setor tem a
-                                                                função de atração e fidelização de clientes...</p>
+                                                            <p itemprop="description" class="qodef-post-excerpt">O
+                                                                WhatsApp Business é um aplicativo gratuito desenvolvido
+                                                                pela META para atender pequenas empresas ou lojistas com
+                                                                apenas uma loja, Entretanto, com o crescimento no número
+                                                                das vendas através do chat, o uso do WhatsApp tem se
+                                                                popularizado cada vez mais entre marcas e clientes.</p>
                                                             <div class="qodef-post-info qodef-section-bottom clearfix">
 
                                                             </div>
@@ -1347,110 +1355,31 @@
                                                 </div>
                                             </article>
 
-                                            <article id="post-1327"
-                                                class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
+                                            <article id="post-1361"
+                                                class="post-1361 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-fashion tag-inspiration tag-tech">
                                                 <div class="qodef-post-content">
                                                     <div class="qodef-post-image">
-                                                        <a itemprop="url" href="/email_marketing.html"
-                                                            title="10 Tips For Traveling With Friends">
-                                                            <img src="/assets/img/blog/10.jpg" alt=""> </a>
+                                                        <a itemprop="url" href="5tendencias.html" title="5
+                                                                    Tendências de Negócios para 2023">
+                                                            <img width="1100" height="659"
+                                                                src="/assets/img/blog/post-1-1.jpeg"
+                                                                class="attachment-full size-full wp-post-image" alt="a"
+                                                                decoding="async" loading="lazy"
+                                                                srcset="/assets/img/blog/post-1-1.jpeg 1100w, /assets/img/blog/post-1-1.jpeg, /assets/img/blog/post-1-1.jpeg 768w, /assets/img/blog/post-1-1.jpeg"
+                                                                sizes="(max-width: 1100px) 100vw, 1100px" /> </a>
                                                     </div>
                                                     <div class="qodef-post-text">
                                                         <div class="qodef-post-text-inner">
                                                             <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="/email_marketing.html"
-                                                                    title="10 Tips For Traveling With Friends">E-mail
-                                                                    marketing: Construa a sua própria campanha</a>
+                                                                <a itemprop="url" href="5tendencias.html" title="5
+                                                                    Tendências de Negócios para 2023">5
+                                                                    Tendências de Negócios para 2023</a>
                                                             </h4>
                                                             <div class="qodef-post-info qodef-section-top">
                                                                 <div itemprop="dateCreated"
                                                                     class="qodef-post-info-date entry-date updated">
                                                                     <span class="qodef-date-value">
-                                                                        23 Setembro 2022 </span>
-                                                                    <meta itemprop="interactionCount"
-                                                                        content="UserComments: 0" />
-                                                                </div>
-                                                                <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
-                                                            </div>
-                                                            <p itemprop="description" class="qodef-post-excerpt">Hoje em
-                                                                dia é fundamental o investimento de empresas de todas as
-                                                                áreas e tamanhos em recursos de tecnologia, para uma
-                                                                melhor gestão e aumentar os lucros ...
-                                                            </p>
-                                                            <div class="qodef-post-info qodef-section-bottom clearfix">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-
-                                            <article id="post-1327"
-                                                class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
-                                                <div class="qodef-post-content">
-                                                    <div class="qodef-post-image">
-                                                        <a itemprop="url" href="/como_chatbot.html"
-                                                            title="10 Tips For Traveling With Friends">
-                                                            <img src="/assets/img/blog/11.jpg" alt=""> </a>
-                                                    </div>
-                                                    <div class="qodef-post-text">
-                                                        <div class="qodef-post-text-inner">
-                                                            <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="/como_chatbot.html"
-                                                                    title="10 Tips For Traveling With Friends">Como o
-                                                                    chatbot pode ajudar sua empresa a vender?</a>
-                                                            </h4>
-                                                            <div class="qodef-post-info qodef-section-top">
-                                                                <div itemprop="dateCreated"
-                                                                    class="qodef-post-info-date entry-date updated">
-                                                                    <span class="qodef-date-value">
-                                                                        16 Setembro 2022 </span>
-                                                                    <meta itemprop="interactionCount"
-                                                                        content="UserComments: 0" />
-                                                                </div>
-                                                                <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
-                                                            </div>
-                                                            <p itemprop="description" class="qodef-post-excerpt">
-                                                                Atualmente, é muito comum empresas pequenas, médias e
-                                                                grandes utilizarem soluções tecnológicas em seus
-                                                                processos, como plataformas de automação no atendimento
-                                                                ao cliente, capazes de reduzir custos e tornar até os
-                                                                menores negócios escaláveis...
-                                                            </p>
-                                                            <div class="qodef-post-info qodef-section-bottom clearfix">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-
-
-                                            <article id="post-1327"
-                                                class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
-                                                <div class="qodef-post-content">
-                                                    <div class="qodef-post-image">
-                                                        <a itemprop="url" href="/chatbot_tecnologia.html"
-                                                            title="10 Tips For Traveling With Friends">
-                                                            <img src="/assets/img/blog/12.jpg" alt=""> </a>
-                                                    </div>
-                                                    <div class="qodef-post-text">
-                                                        <div class="qodef-post-text-inner">
-                                                            <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="/chatbot_tecnologia.html"
-                                                                    title="10 Tips For Traveling With Friends">ChatBot:
-                                                                    A tecnologia transformando o atendimento</a>
-                                                            </h4>
-                                                            <div class="qodef-post-info qodef-section-top">
-                                                                <div itemprop="dateCreated"
-                                                                    class="qodef-post-info-date entry-date updated">
-                                                                    <span class="qodef-date-value">
-                                                                        27 Agosto 2022 </span>
+                                                                        06 Dezembro 2022 </span>
                                                                     <meta itemprop="interactionCount"
                                                                         content="UserComments: 0" />
                                                                 </div>
@@ -1459,16 +1388,131 @@
                                                                         rel="category tag">Marketing</a></div>
                                                             </div>
                                                             <p itemprop="description" class="qodef-post-excerpt">A
-                                                                utilização de chatbots como ferramenta para automação no
-                                                                atendimento ao cliente se tornou uma tendência na
-                                                                transformação digital que acontece em todo o mundo.
+                                                                mudança no comportamento de consumo do brasileiro
+                                                                ocorrida nos últimos anos, foi o fator que impulsionou
+                                                                fortemente cada uma das tendências de negócios para
+                                                                2023.</p>
+                                                            <div class="qodef-post-info qodef-section-bottom clearfix">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+                                            <article id="post-1327"
+                                                class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
+                                                <div class="qodef-post-content">
+                                                    <div class="qodef-post-image">
+                                                        <a itemprop="url" href="consumidor_futuro.html"
+                                                            title="10 Tips For Traveling With Friends">
+                                                            <img src="/assets/img/blog/post-2-2.jpg" alt=""> </a>
+                                                    </div>
+                                                    <div class="qodef-post-text">
+                                                        <div class="qodef-post-text-inner">
+                                                            <h4 itemprop="name" class="entry-title qodef-post-title">
+                                                                <a itemprop="url" href="consumidor_futuro.html"
+                                                                    title="10 Tips For Traveling With Friends">Consumidor
+                                                                    do Futuro: Prepare sua Empresa</a>
+                                                            </h4>
+                                                            <div class="qodef-post-info qodef-section-top">
+                                                                <div itemprop="dateCreated"
+                                                                    class="qodef-post-info-date entry-date updated">
+                                                                    <span class="qodef-date-value">
+                                                                        06 Dezembro 2022 </span>
+                                                                    <meta itemprop="interactionCount"
+                                                                        content="UserComments: 0" />
+                                                                </div>
+                                                                <div class="qodef-post-info-category">por: <a
+                                                                        href="#"
+                                                                        rel="category tag">Marketing</a></div>
+                                                            </div>
+                                                            <p itemprop="description" class="qodef-post-excerpt">O
+                                                                comportamento de consumo das pessoas mudou e você
+                                                                percebeu isso. Com a internet nas mãos das pessoas, o
+                                                                e-commerce mundial acelerado e uma imensa quantidade ...
+                                                            </p>
+                                                            <div class="qodef-post-info qodef-section-bottom clearfix">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
 
 
+                                            <article id="post-1327"
+                                                class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
+                                                <div class="qodef-post-content">
+                                                    <div class="qodef-post-image">
+                                                        <a itemprop="url" href="/dados_estrategico.html"
+                                                            title="10 Tips For Traveling With Friends">
+                                                            <img src="/assets/img/blog/post-3-3.jpg" alt=""> </a>
+                                                    </div>
+                                                    <div class="qodef-post-text">
+                                                        <div class="qodef-post-text-inner">
+                                                            <h4 itemprop="name" class="entry-title qodef-post-title">
+                                                                <a itemprop="url" href="/dados_estrategico.html"
+                                                                    title="10 Tips For Traveling With Friends">Dados
+                                                                    Estratégicos: Tudo que Você Precisa Saber</a>
+                                                            </h4>
+                                                            <div class="qodef-post-info qodef-section-top">
+                                                                <div itemprop="dateCreated"
+                                                                    class="qodef-post-info-date entry-date updated">
+                                                                    <span class="qodef-date-value">
+                                                                        29 Novembro 2022 </span>
+                                                                    <meta itemprop="interactionCount"
+                                                                        content="UserComments: 0" />
+                                                                </div>
+                                                                <div class="qodef-post-info-category">por: <a
+                                                                        href="#"
+                                                                        rel="category tag">Marketing</a></div>
+                                                            </div>
+                                                            <p itemprop="description" class="qodef-post-excerpt">Para
+                                                                desenvolver um conceito de melhoria contínua na
+                                                                experiência do consumidor e assegurar que a sua empresa
+                                                                se mantenha competitiva e inserida na era digital...
+                                                            </p>
+                                                            <div class="qodef-post-info qodef-section-bottom clearfix">
 
-                                                                Pesquisas apontam um grande crescimento no número de
-                                                                interações entre clientes e robôs de atendimento. A
-                                                                quantidade mensal de mensagens trocadas entre bots e
-                                                                pessoas chegou a 2,8 bilhões ...
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+
+
+                                            <article id="post-1327"
+                                                class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
+                                                <div class="qodef-post-content">
+                                                    <div class="qodef-post-image">
+                                                        <a itemprop="url" href="integracao_canais.html"
+                                                            title="10 Tips For Traveling With Friends">
+                                                            <img src="/assets/img/blog/post-4.jpg" alt=""> </a>
+                                                    </div>
+                                                    <div class="qodef-post-text">
+                                                        <div class="qodef-post-text-inner">
+                                                            <h4 itemprop="name" class="entry-title qodef-post-title">
+                                                                <a itemprop="url" href="integracao_canais.html"
+                                                                    title="10 Tips For Traveling With Friends">Integração
+                                                                    de Canais e Redução de Custos</a>
+                                                            </h4>
+                                                            <div class="qodef-post-info qodef-section-top">
+                                                                <div itemprop="dateCreated"
+                                                                    class="qodef-post-info-date entry-date updated">
+                                                                    <span class="qodef-date-value">
+                                                                        24 Novembro 2022 </span>
+                                                                    <meta itemprop="interactionCount"
+                                                                        content="UserComments: 0" />
+                                                                </div>
+                                                                <div class="qodef-post-info-category">por: <a
+                                                                        href="#"
+                                                                        rel="category tag">Marketing</a></div>
+                                                            </div>
+                                                            <p itemprop="description" class="qodef-post-excerpt">Para
+                                                                desenvolver um conceito de melhoria contínua na
+                                                                experiência do consumidor e assegurar que a sua empresa
+                                                                se mantenha competitiva e inserida na era digital ...
                                                             </p>
                                                             <div class="qodef-post-info qodef-section-bottom clearfix">
 
@@ -1482,22 +1526,22 @@
                                                 class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
                                                 <div class="qodef-post-content">
                                                     <div class="qodef-post-image">
-                                                        <a itemprop="url" href="/97_clientes.html"
+                                                        <a itemprop="url" href="custumer_experience.html"
                                                             title="10 Tips For Traveling With Friends">
-                                                            <img src="/assets/img/blog/13.jpg" alt=""> </a>
+                                                            <img src="/assets/img/blog/post-8.jpg" alt=""> </a>
                                                     </div>
                                                     <div class="qodef-post-text">
                                                         <div class="qodef-post-text-inner">
                                                             <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="/97_clientes.html"
-                                                                    title="10 Tips For Traveling With Friends">97% dos
-                                                                    clientes escolhem atendimento personalizado</a>
+                                                                <a itemprop="url" href="custumer_experience.html"
+                                                                    title="10 Tips For Traveling With Friends">Customer
+                                                                    Experience: Conhecendo o Cliente</a>
                                                             </h4>
                                                             <div class="qodef-post-info qodef-section-top">
                                                                 <div itemprop="dateCreated"
                                                                     class="qodef-post-info-date entry-date updated">
                                                                     <span class="qodef-date-value">
-                                                                        26 Agosto 2022 </span>
+                                                                        22 Novembro 2022 </span>
                                                                     <meta itemprop="interactionCount"
                                                                         content="UserComments: 0" />
                                                                 </div>
@@ -1505,11 +1549,10 @@
                                                                         href="#"
                                                                         rel="category tag">Marketing</a></div>
                                                             </div>
-                                                            <p itemprop="description" class="qodef-post-excerpt">Na
-                                                                América Latina, a boa qualidade no atendimento é fator
-                                                                decisivo para mais de 70% dos entrevistados. Assim, a
-                                                                pesquisa deixa visual o quanto investir em melhorias dos
-                                                                canais de comunicação e na capacitação do time ...
+                                                            <p itemprop="description" class="qodef-post-excerpt">Para
+                                                                desenvolver um conceito de melhoria contínua na
+                                                                experiência do consumidor e assegurar que a sua empresa
+                                                                se mantenha competitiva e inserida na era digital ...
                                                             </p>
                                                             <div class="qodef-post-info qodef-section-bottom clearfix">
 
@@ -1523,34 +1566,33 @@
                                                 class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejocategory-trending tag-design tag-digital tag-inspiration tag-tech">
                                                 <div class="qodef-post-content">
                                                     <div class="qodef-post-image">
-                                                        <a itemprop="url" href="6_dicas.html"
+                                                        <a itemprop="url" href="como_melhorar_satisfacao.html"
                                                             title="10 Tips For Traveling With Friends">
-                                                            <img src="/assets/img/blog/14.jpg" alt=""> </a>
+                                                            <img src="/assets/img/blog/post-5.jpg" alt=""> </a>
                                                     </div>
                                                     <div class="qodef-post-text">
                                                         <div class="qodef-post-text-inner">
                                                             <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="6_dicas.html"
-                                                                    title="10 Tips For Traveling With Friends">6 dicas
-                                                                    sobre atendimento ao cliente</a>
+                                                                <a itemprop="url" href="como_melhorar_satisfacao.html"
+                                                                    title="10 Tips For Traveling With Friends">Como
+                                                                    melhorar a satisfação do paciente</a>
                                                             </h4>
                                                             <div class="qodef-post-info qodef-section-top">
                                                                 <div itemprop="dateCreated"
                                                                     class="qodef-post-info-date entry-date updated">
                                                                     <span class="qodef-date-value">
-                                                                        20 Agosto 2022 </span>
+                                                                        03 Novembro 2022 </span>
                                                                     <meta itemprop="interactionCount"
                                                                         content="UserComments: 0" />
                                                                 </div>
-                                                                <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
+                                                                <div class="qodef-post-info-category">por: <a href="#"
                                                                         rel="category tag">Marketing</a></div>
                                                             </div>
                                                             <p itemprop="description" class="qodef-post-excerpt">
-                                                                Se você veio até aqui, significa que busca melhorar o
-                                                                atendimento ao cliente do seu negócio. Claro! Esse é um
-                                                                momento muito importante, já que um atendimento de
-                                                                qualidade tem o poder de fidelização ...
+                                                                Empresas de diferentes áreas precisarão mudar a maneira
+                                                                como fazem o atendimento dos seus clientes. Entrou em
+                                                                vigor a partir do mês de outubro de 2022 o Decreto
+                                                                Nº:11.034/22 ...
                                                             </p>
                                                             <div class="qodef-post-info qodef-section-bottom clearfix">
 
@@ -1566,38 +1608,32 @@
                                                 class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-clinica category-trending tag-design tag-digital tag-inspiration tag-tech">
                                                 <div class="qodef-post-content">
                                                     <div class="qodef-post-image">
-                                                        <a itemprop="url" href="oque_voce_precisa.html"
+                                                        <a itemprop="url" href="como_conectar_clinica.html"
                                                             title="10 Tips For Traveling With Friends">
-                                                            <img src="/assets/img/blog/15.jpg" alt=""> </a>
+                                                            <img src="/assets/img/blog/post-6.jpg" alt=""> </a>
                                                     </div>
                                                     <div class="qodef-post-text">
                                                         <div class="qodef-post-text-inner">
                                                             <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="oque_voce_precisa.html"
-                                                                    title="10 Tips For Traveling With Friends">O que
-                                                                    você precisa saber sobre automação no atendimento ao
-                                                                    cliente</a>
+                                                                <a itemprop="url" href="consumidor_futuro.html"
+                                                                    title="10 Tips For Traveling With Friends">Como
+                                                                    Conectar a Clínica Na Era Digital?</a>
                                                             </h4>
                                                             <div class="qodef-post-info qodef-section-top">
                                                                 <div itemprop="dateCreated"
                                                                     class="qodef-post-info-date entry-date updated">
                                                                     <span class="qodef-date-value">
-                                                                        09 Agosto 2022</span>
+                                                                        1 Novembro 2022 </span>
                                                                     <meta itemprop="interactionCount"
                                                                         content="UserComments: 0" />
                                                                 </div>
-                                                                <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
+                                                                <div class="qodef-post-info-category">por: <a href="#"
                                                                         rel="category tag">Marketing</a></div>
                                                             </div>
-                                                            <p itemprop="description" class="qodef-post-excerpt">O
-                                                                WhatsApp é a ferramenta de comunicação mais prática,
-                                                                segura e barata para a comunicação direta entre as
-                                                                marcas e seus consumidores.
-
-                                                                Muitas pesquisas de mercado apontam o WhatsApp como
-                                                                aplicativo de mensagens mais popular do Brasil, assim,
-                                                                rapidamente o app ...
+                                                            <p itemprop="description" class="qodef-post-excerpt">Fazer a
+                                                                administração de uma clínica certamente não é uma tarefa
+                                                                fácil. São diversos processos envolvendo planilhas,
+                                                                relatórios de atendimento e satisfação ...
                                                             </p>
                                                             <div class="qodef-post-info qodef-section-bottom clearfix">
 
@@ -1613,38 +1649,32 @@
                                                 class="post-1327 post type-post status-publish format-standard has-post-thumbnail hentry category-atendimento category-coop category-clinica category-varejo category-trending tag-design tag-digital tag-inspiration tag-tech">
                                                 <div class="qodef-post-content">
                                                     <div class="qodef-post-image">
-                                                        <a itemprop="url" href="/10_passos.html"
+                                                        <a itemprop="url" href="nova_lei_sac.html"
                                                             title="10 Tips For Traveling With Friends">
-                                                            <img src="/assets/img/blog/16.jpg" alt=""> </a>
+                                                            <img src="/assets/img/blog/post-7.jpg" alt=""> </a>
                                                     </div>
                                                     <div class="qodef-post-text">
                                                         <div class="qodef-post-text-inner">
                                                             <h4 itemprop="name" class="entry-title qodef-post-title">
-                                                                <a itemprop="url" href="/10_passos.html"
-                                                                    title="10 Tips For Traveling With Friends">10 Passos
-                                                                    para evitar o bloqueio do número da sua empresa</a>
+                                                                <a itemprop="url" href="nova_lei_sac.html"
+                                                                    title="10 Tips For Traveling With Friends">Nova lei
+                                                                    do SAC: O que muda ?</a>
                                                             </h4>
                                                             <div class="qodef-post-info qodef-section-top">
                                                                 <div itemprop="dateCreated"
                                                                     class="qodef-post-info-date entry-date updated">
                                                                     <span class="qodef-date-value">
-                                                                        15 Agosto 2022 </span>
+                                                                        25 outubro 2022 </span>
                                                                     <meta itemprop="interactionCount"
                                                                         content="UserComments: 0" />
                                                                 </div>
-                                                                <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
+                                                                <div class="qodef-post-info-category">por: <a href="#"
                                                                         rel="category tag">Marketing</a></div>
                                                             </div>
                                                             <p itemprop="description" class="qodef-post-excerpt">O
-                                                                WhatsApp é a ferramenta de comunicação mais prática,
-                                                                segura e barata para a comunicação direta entre as
-                                                                marcas e seus consumidores.
-
-                                                                Muitas pesquisas de mercado apontam o WhatsApp como
-                                                                aplicativo de mensagens mais popular do Brasil, assim,
-                                                                rapidamente o app se tornou muito importante para o
-                                                                marketing e as vendas para muitas empresas. ...
+                                                                comportamento de consumo das pessoas mudou e você
+                                                                percebeu isso. Com a internet nas mãos das pessoas, o
+                                                                e-commerce mundial acelerado e uma imensa quantidade ...
                                                             </p>
                                                             <div class="qodef-post-info qodef-section-bottom clearfix">
 
@@ -1666,17 +1696,16 @@
                                         </div>
                                         <div class="qodef-pagination">
                                             <ul>
-                                                <li class='qodef-pagination-number'><a itemprop='url'
-                                                        href='/blog_pg1.html' class='inactive'><i
-                                                            class="fa-solid fa-chevron-left"></i></a>
-                                                </li>
-                                                </li>
-                                                <li class='qodef-pagination-number '><a itemprop='url'
-                                                        href='/blog_pg1.html' class='inactive'>1</a></li>
-                                                <li class='qodef-pagination-number active'><a itemprop='url'
-                                                        href='/blog_pg2.html' class='inactive'>2</a></li>
                                                 <li class='qodef-pagination-number'><a itemprop='url' href='#'
-                                                        class='inactive'><i class="fa-solid fa-chevron-right"></i></a>
+                                                        class='inactive'><i class="fa-solid fa-chevron-left"></i></a>
+                                                </li>
+                                                </li>
+                                                <li class='qodef-pagination-number active'><span>1</span></li>
+                                                <li class='qodef-pagination-number'><a itemprop='url'
+                                                        href='/blog_pg2.html' class='inactive'>2</a></li>
+                                                <li class='qodef-pagination-number'><a itemprop='url'
+                                                        href='/blog_pg2.html' class='inactive'><i
+                                                            class="fa-solid fa-chevron-right"></i></a>
                                                 </li>
 
                                             </ul>
@@ -1792,9 +1821,6 @@
                                                                                 <meta itemprop="interactionCount"
                                                                                     content="UserComments: 0" />
                                                                             </div>
-                                                                            <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1818,9 +1844,6 @@
                                                                                 <meta itemprop="interactionCount"
                                                                                     content="UserComments: 0" />
                                                                             </div>
-                                                                            <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1844,9 +1867,6 @@
                                                                                 <meta itemprop="interactionCount"
                                                                                     content="UserComments: 0" />
                                                                             </div>
-                                                                            <div class="qodef-post-info-category">por: <a
-                                                                        href="#"
-                                                                        rel="category tag">Marketing</a></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1864,176 +1884,10 @@
                     </div>
                 </div>
             </div>
-            <footer>
-                <div class="qodef-footer-inner clearfix">
-                    <div class="qodef-footer-top-holder">
-                        <div class="qodef-footer-top qodef-footer-top-aligment-left">
-                            <div class="qodef-container">
-                                <div class="qodef-container-inner">
-                                    <div class="qodef-four-columns ">
-                                        <div class="qodef-four-columns-inner clearfix">
-
-                                            <div class="qodef-column">
-                                                <div class="qodef-column-inner">
-                                                    <div id="text-12" class="widget qodef-footer-column-1 widget_text">
-                                                        <div class="textwidget">
-                                                            <div class="vc_empty_space" style="height: 2px"><span
-                                                                    class="vc_empty_space_inner"></span></div>
-                                                            <a href="https://geko.qodeinteractive.com/">
-                                                                <img style="width: 150px;"
-                                                                    src="/assets/img/logo/_mais_chat_verde_cabecalho.png"
-                                                                    alt="m">
-                                                            </a>
-                                                            <div class="vc_empty_space" style="height: 12px"><span
-                                                                    class="vc_empty_space_inner"></span></div>
-                                                            Av. Paulista, 1536- Bela Vista
-                                                            <div class="vc_empty_space" style="height: 1px"><span
-                                                                    class="vc_empty_space_inner"></span></div>
-                                                            01310-200 São Paulo - BR
-                                                            <div class="vc_empty_space" style="height: 1px"><span
-                                                                    class="vc_empty_space_inner"></span></div>
-                                                            <a href="mailto:mais@mais.chat">Email: mais@mais.chat</a>
-                                                            <div class="vc_empty_space" style="height: 1px"><span
-                                                                    class="vc_empty_space_inner"></span></div>
-                                                            <a
-                                                                href="https://api.whatsapp.com/send/?phone=558000708000&text&type=phone_number&app_absent=0">Tel:
-                                                                0800 070 8000</a>
-
-
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="qodef-column">
-                                                <div class="qodef-column-inner">
-                                                    <div id="qodef_latest_posts_widget-3"
-                                                        class="widget qodef-footer-column-2 widget_qodef_latest_posts_widget">
-                                                        <h4 class="qodef-footer-widget-title">Links Úteis</h4>
-                                                        <div class="widget qodef-latest-posts-widget">
-                                                            <div class="qodef-blog-list-holder qodef-minimal ">
-                                                                <div class="row">
-                                                                    <a href="https://maischat.com/">Inicio</a>
-                                                                    <a href="#">Blog</a>
-                                                                    <a href="#">Politica de Privacidade</a>
-                                                                    <a href="#">Termos</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="qodef-column">
-                                                <div class="qodef-column-inner">
-                                                    <div id="text-13" class="widget qodef-footer-column-3 widget_text">
-                                                        <h4 class="qodef-footer-widget-title">Nossas redes</h4>
-
-                                                        <div class="textwidget">
-                                                            <div class="vc_empty_space" style="height: "><span
-                                                                    class="vc_empty_space_inner"></span></div>
-                                                            <div class="rede_sociais">
-                                                                <a href="https://www.facebook.com/maischatbr"
-                                                                    target="_blank"><i
-                                                                        class="ico fa-brands fa-facebook"></i></a>
-                                                                <a href="https://www.instagram.com/maischatbr/"
-                                                                    target="_blank"><i
-                                                                        class="ico fa-brands fa-instagram"></i></a>
-                                                                <a href="https://api.whatsapp.com/send/?phone=558000708000&text&type=phone_number&app_absent=0"
-                                                                    target="_blank"><i
-                                                                        class="ico fa-brands fa-whatsapp"></i></a>
-                                                            </div>
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="qodef-column">
-                                                <div class="qodef-column-inner">
-                                                    <div id="text-14" class="widget qodef-footer-column-4 widget_text">
-                                                        <h4 class="qodef-footer-widget-title">Novidades</h4>
-                                                        <div class="textwidget">Cadastre-se e receba <br />
-                                                            nossas novidades.
-                                                            <div class="vc_empty_space" style="height: 20px"><span
-                                                                    class="vc_empty_space_inner"></span></div>
-                                                            <div role="form" class="wpcf7" id="wpcf7-f5551-o1"
-                                                                lang="en-US" dir="ltr">
-                                                                <div class="screen-reader-response">
-                                                                    <p role="status" aria-live="polite"
-                                                                        aria-atomic="true">
-                                                                    </p>
-                                                                    <ul></ul>
-                                                                </div>
-                                                                <form action="/#wpcf7-f5551-o1" method="post"
-                                                                    class="wpcf7-form init" novalidate="novalidate"
-                                                                    data-status="init">
-                                                                    <div style="display: none;">
-                                                                        <input type="hidden" name="_wpcf7"
-                                                                            value="5551" />
-                                                                        <input type="hidden" name="_wpcf7_version"
-                                                                            value="5.6.4" />
-                                                                        <input type="hidden" name="_wpcf7_locale"
-                                                                            value="en_US" />
-                                                                        <input type="hidden" name="_wpcf7_unit_tag"
-                                                                            value="wpcf7-f5551-o1" />
-                                                                        <input type="hidden"
-                                                                            name="_wpcf7_container_post" value="0" />
-                                                                        <input type="hidden"
-                                                                            name="_wpcf7_posted_data_hash" value="" />
-                                                                    </div>
-                                                                    <div class="qodef-subscription-form">
-                                                                        <span class="wpcf7-form-control-wrap"
-                                                                            data-name="your-email"><input type="email"
-                                                                                name="your-email" value="" size="40"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                                                                aria-required="true"
-                                                                                aria-invalid="false"
-                                                                                placeholder="Your email" /></span><br />
-                                                                        <input type="submit" value="&#x35;"
-                                                                            class="wpcf7-form-control has-spinner wpcf7-submit" />
-                                                                    </div>
-                                                                    <div class="wpcf7-response-output"
-                                                                        aria-hidden="true">
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="qodef-footer-bottom-holder">
-                        <div class="qodef-footer-bottom-holder-inner">
-                            <div class="qodef-container">
-                                <div class="qodef-container-inner">
-                                    <div class="qodef-column-inner">
-                                        <div id="text-15" class="widget qodef-footer-text widget_text">
-                                            <div class="textwidget"><a href="https://qodeinteractive.com"
-                                                    rel="nofollow noopener" target="_blank"><span
-                                                        style="color: #aab2bd; ">©
-                                                        2022. Mais Chat Tecnologia Ltda</span></a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <div id="footer"></div>
         </div>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
     <script>
         window.RS_MODULES = window.RS_MODULES || {};
         window.RS_MODULES.modules = window.RS_MODULES.modules || {};
@@ -2072,8 +1926,7 @@
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.6.4'
         id='contact-form-7-js'></script>
-    <script type='text/javascript' src='https://export.qodethemes.com/_toolbar/assets/js/rbt-modules.js?ver=6.1.1'
-        id='rabbit_js-js'></script>
+
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.1.0'
         id='js-cookie-js'></script>
@@ -2085,10 +1938,7 @@
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.1.0'
         id='woocommerce-js'></script>
-    <script type='text/javascript' id='wc-cart-fragments-js-extra'>
-        /* <![CDATA[ */
-        var wc_cart_fragments_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "cart_hash_key": "wc_cart_hash_bd0329018a380dac00af83cce9c13676", "fragment_name": "wc_fragments_bd0329018a380dac00af83cce9c13676", "request_timeout": "5000" };
-/* ]]> */
+
     </script>
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=7.1.0'
@@ -2195,9 +2045,7 @@
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/modules/plugins/absoluteCounter.min.js?ver=6.1.1'
         id='absoluteCounter-js'></script>
-    <script type='text/javascript'
-        src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/modules/plugins/jquery.fullPage.min.js?ver=6.1.1'
-        id='fullPage-js'></script>
+
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/modules/plugins/velocity.min.js?ver=6.1.1'
         id='velocity-js'></script>
@@ -2207,9 +2055,7 @@
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/packery-mode.pkgd.min.js?ver=6.1.1'
         id='packery-js'></script>
-    <script type='text/javascript'
-        src='//maps.googleapis.com/maps/api/js?key=AIzaSyBazttkIXb__Rbsi3ckJ2XNM5PNaCYkcPo&#038;ver=6.1.1'
-        id='geko-qodef-script-google-map-api-js'></script>
+
     <script type='text/javascript' id='geko-qodef-modules-js-extra'>
         /* <![CDATA[ */
         var qodefGlobalVars = { "vars": { "qodefAddForAdminBar": 0, "qodefElementAppearAmount": -150, "qodefFinishedMessage": "No more posts", "qodefMessage": "Loading new posts...", "qodefTopBarHeight": 0, "qodefStickyHeaderHeight": 60, "qodefStickyHeaderTransparencyHeight": 60, "qodefStickyScrollAmount": 0, "qodefLogoAreaHeight": 0, "qodefMenuAreaHeight": 100, "qodefMobileHeaderHeight": 100 } };
