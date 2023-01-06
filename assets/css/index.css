@@ -260,8 +260,26 @@
     }
 }
 
-.menu_mobile {
-    position: fixed;
-    z-index: 999;
-    top: 40px;
+@media screen and (max-width: 375px ) {
+    .img_form {
+        display: none;
+    }
+
+    .form_mobile {
+        width: 330px;
+    }
+
+    .form_contato {
+        width: 100%;
+    }
+
+    .formulario_contato {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .botao_contato {
+        margin-bottom: 10px;
+    }
 }
+
