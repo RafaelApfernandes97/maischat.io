@@ -1,4 +1,6 @@
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
+
 
 <head>
     <meta charset="UTF-8" />
@@ -786,13 +788,23 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script>
         $(function () {
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
-            $("#form_contato").load("formulario_contato.html");
+            $("#header").load("header");
+            $("#footer").load("footer");
+            $("#form_contato").load("formulario_contato");
         });
     </script>
     <link rel="stylesheet" href="/assets/css/media-screen.css">
-    
+    <!-- Google tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-253335564-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-253335564-1');
+    </script>
+
 </head>
 
 <body
@@ -849,7 +861,7 @@
                             <div class="qodef-position-left">
                                 <div class="qodef-position-left-inner">
                                     <div class="qodef-logo-wrapper">
-                                        <a itemprop="url" href="index.html" style="height: 30px;">
+                                        <a itemprop="url" href="index" style="height: 30px;">
                                             <img itemprop="image" class="qodef-normal-logo"
                                                 src="assets/img/logo/_mais_chat_verde_cabecalho.png" alt="logo" />
                                             <img itemprop="image" class="qodef-dark-logo"
@@ -870,7 +882,7 @@
                                         <ul id="menu-main-menu" class="clearfix">
                                             <li id="nav-menu-item-33"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                <a href="index.html" class=""><span class="item_outer"><span
+                                                <a href="index" class=""><span class="item_outer"><span
                                                             class="item_inner"><span class="menu_icon_wrapper"><i
                                                                     class="menu_icon null fa"></i></span><span
                                                                 class="item_text">Inicio</span></span><span
@@ -896,7 +908,7 @@
                                                         <ul>
                                                             <li id="nav-menu-item-6364"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="coop.html" class=""><span
+                                                                <a href="coop" class=""><span
                                                                         class="item_outer"><span
                                                                             class="item_inner"><span
                                                                                 class="menu_icon_wrapper"><i
@@ -906,7 +918,7 @@
                                                             </li>
                                                             <li id="nav-menu-item-6365"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="varejo.html" class=""><span
+                                                                <a href="varejo" class=""><span
                                                                         class="item_outer"><span
                                                                             class="item_inner"><span
                                                                                 class="menu_icon_wrapper"><i
@@ -916,7 +928,7 @@
                                                             </li>
                                                             <li id="nav-menu-item-6366"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="saude.html" class=""><span
+                                                                <a href="saude" class=""><span
                                                                         class="item_outer"><span
                                                                             class="item_inner"><span
                                                                                 class="menu_icon_wrapper"><i
@@ -935,7 +947,7 @@
 
                                             <li id="nav-menu-item-35"
                                                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                <a href="blog_pg1.html" class=""><span class="item_outer"><span
+                                                <a href="blog" class=""><span class="item_outer"><span
                                                             class="item_inner"><span class="menu_icon_wrapper"><i
                                                                     class="menu_icon null fa"></i></span><span
                                                                 class="item_text">Blog</span></span><span
@@ -1008,7 +1020,7 @@
                                 <div class="qodef-position-left">
                                     <div class="qodef-position-left-inner">
                                         <div class="qodef-logo-wrapper">
-                                            <a itemprop="url" href="index.html" style="height: 30px;">
+                                            <a itemprop="url" href="index" style="height: 30px;">
                                                 <img itemprop="image" class="qodef-normal-logo"
                                                     src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
                                                     alt="logo" />
@@ -1029,7 +1041,7 @@
                                             <ul id="menu-main-menu-1" class="clearfix">
                                                 <li id="sticky-nav-menu-item-32"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children qodef-active-item has_sub narrow">
-                                                    <a href="index.html" class=""><span class="item_outer"><span
+                                                    <a href="index" class=""><span class="item_outer"><span
                                                                 class="item_inner"><span class="menu_icon_wrapper"><i
                                                                         class="menu_icon null fa"></i></span><span
                                                                     class="item_text">Inicio</span></span><span
@@ -1055,7 +1067,7 @@
                                                             <ul>
                                                                 <li id="sticky-nav-menu-item-6364"
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                    <a href="coop.html" class=""><span
+                                                                    <a href="coop" class=""><span
                                                                             class="item_outer"><span
                                                                                 class="item_inner"><span
                                                                                     class="menu_icon_wrapper"><i
@@ -1065,7 +1077,7 @@
                                                                 </li>
                                                                 <li id="sticky-nav-menu-item-6365"
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                    <a href="varejo.html" class=""><span
+                                                                    <a href="varejo" class=""><span
                                                                             class="item_outer"><span
                                                                                 class="item_inner"><span
                                                                                     class="menu_icon_wrapper"><i
@@ -1075,7 +1087,7 @@
                                                                 </li>
                                                                 <li id="sticky-nav-menu-item-6366"
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                    <a href="saude.html" class=""><span
+                                                                    <a href="saude" class=""><span
                                                                             class="item_outer"><span
                                                                                 class="item_inner"><span
                                                                                     class="menu_icon_wrapper"><i
@@ -1091,11 +1103,11 @@
 
 
 
-                                              
+
 
                                                 <li id="sticky-nav-menu-item-35"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                                    <a href="blog_pg1.html" class=""><span class="item_outer"><span
+                                                    <a href="blog" class=""><span class="item_outer"><span
                                                                 class="item_inner"><span class="menu_icon_wrapper"><i
                                                                         class="menu_icon null fa"></i></span><span
                                                                     class="item_text">Blog</span></span><span
@@ -1162,7 +1174,7 @@
                                 <div class="qodef-position-center">
                                     <div class="qodef-position-center-inner">
                                         <div class="qodef-mobile-logo-wrapper">
-                                            <a itemprop="url" href="index.html" style="height: 18px">
+                                            <a itemprop="url" href="index" style="height: 18px">
                                                 <img itemprop="image"
                                                     src="assets/img/logo/_mais_chat_verde_cabecalho_cinza_verde.png"
                                                     alt="mobile logo" />
@@ -1182,7 +1194,7 @@
                             <ul id="menu-main-menu-2" class="menu-mobile">
                                 <li id="nav-menu-item-33"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children qodef-active-item has_sub narrow">
-                                    <a href="index.html" class=""><span class="item_outer"><span
+                                    <a href="index" class=""><span class="item_outer"><span
                                                 class="item_inner"><span class="menu_icon_wrapper"><i
                                                         class="menu_icon null fa"></i></span><span
                                                     class="item_text">Inicio</span></span><span
@@ -1203,23 +1215,23 @@
                                     <ul class="sub_menu">
                                         <li id="mobile-menu-item-6364"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                href="coop.html" class=""><span>Cooperativa</span></a></li>
+                                                href="coop" class=""><span>Cooperativa</span></a></li>
                                         <li id="mobile-menu-item-6365"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                href="varejo.html" class=""><span>Varejo</span></a></li>
+                                                href="varejo" class=""><span>Varejo</span></a></li>
                                         <li id="mobile-menu-item-6366"
                                             class="menu-item menu-item-type-post_type menu-item-object-page "><a
-                                                href="saude.html" class=""><span>Saúde</span></a></li>
+                                                href="saude" class=""><span>Saúde</span></a></li>
 
                                     </ul>
                                 </li>
 
 
-                                
+
 
                                 <li id="mobile-menu-item-36"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub">
-                                    <a href="blog_pg1.html" class=""><span>Blog</span></a><span class="mobile_arrow"><i
+                                    <a href="blog" class=""><span>Blog</span></a><span class="mobile_arrow"><i
                                             class="qodef-sub-arrow fa fa-angle-right"></i><i
                                             class="fa fa-angle-down"></i></span>
 
@@ -1278,7 +1290,7 @@
                                         data-vbility="t,t,t,f" data-rsp_bd="off" data-frame_0="y:50px;tp:600;"
                                         data-frame_1="tp:600;st:1110;sp:700;sR:1110;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2190;"
-                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop.html"
+                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop"
                                             target="_self"
                                             style="color: #ffffff;background-color: #0ac775;border-color: #0ac775;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
@@ -1300,8 +1312,7 @@
                                         data-frame_1="tp:600;st:1100;sp:700;sR:1100;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2200;"
                                         style="z-index:8;font-family:'Open Sans';"><a itemprop="url"
-                                            href="https://wa.me/558000708000"
-                                            target="_blank"
+                                            href="https://wa.me/558000708000" target="_blank"
                                             style="color: #ffffff;background-color: #a5ec5e;border-color: #a5ec5e;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
                                             data-hover-bg-color="#ffffff" data-hover-color="#3a3c41"
@@ -1356,7 +1367,7 @@
                                         data-vbility="t,t,t,f" data-rsp_bd="off" data-frame_0="y:50px;tp:600;"
                                         data-frame_1="tp:600;st:1110;sp:700;sR:1110;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2190;"
-                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop.html"
+                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop"
                                             target="_self"
                                             style="color: #ffffff;background-color: #0ac775;border-color: #0ac775;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
@@ -1378,8 +1389,7 @@
                                         data-frame_1="tp:600;st:1100;sp:700;sR:1100;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2200;"
                                         style="z-index:8;font-family:'Open Sans';"><a itemprop="url"
-                                            href="https://wa.me/558000708000"
-                                            target="_blank"
+                                            href="https://wa.me/558000708000" target="_blank"
                                             style="color: #ffffff;background-color: #a5ec5e;border-color: #a5ec5e;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
                                             data-hover-bg-color="#ffffff" data-hover-color="#3a3c41"
@@ -1436,7 +1446,7 @@
                                         data-vbility="t,t,t,f" data-rsp_bd="off" data-frame_0="y:50px;tp:600;"
                                         data-frame_1="tp:600;st:1110;sp:700;sR:1110;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2190;"
-                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop.html"
+                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop"
                                             target="_self"
                                             style="color: #ffffff;background-color: #0ac775;border-color: #0ac775;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
@@ -1458,8 +1468,7 @@
                                         data-frame_1="tp:600;st:1100;sp:700;sR:1100;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2200;"
                                         style="z-index:8;font-family:'Open Sans';"><a itemprop="url"
-                                            href="https://wa.me/558000708000"
-                                            target="_blank"
+                                            href="https://wa.me/558000708000" target="_blank"
                                             style="color: #ffffff;background-color: #a5ec5e;border-color: #a5ec5e;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
                                             data-hover-bg-color="#ffffff" data-hover-color="#3a3c41"
@@ -1514,7 +1523,7 @@
                                         data-vbility="t,t,t,f" data-rsp_bd="off" data-frame_0="y:50px;tp:600;"
                                         data-frame_1="tp:600;st:1110;sp:700;sR:1110;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2190;"
-                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop.html"
+                                        style="z-index:7;font-family:'Open Sans';"><a itemprop="url" href="coop"
                                             target="_self"
                                             style="color: #ffffff;background-color: #0ac775;border-color: #0ac775;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
@@ -1536,8 +1545,7 @@
                                         data-frame_1="tp:600;st:1100;sp:700;sR:1100;"
                                         data-frame_999="o:0;tp:600;st:w;sR:2200;"
                                         style="z-index:8;font-family:'Open Sans';"><a itemprop="url"
-                                            href="https://wa.me/558000708000"
-                                            target="_blank"
+                                            href="https://wa.me/558000708000" target="_blank"
                                             style="color: #ffffff;background-color: #a5ec5e;border-color: #a5ec5e;margin: 10px"
                                             class="qodef-btn qodef-btn-large qodef-btn-solid qodef-btn-custom-hover-bg qodef-btn-custom-border-hover qodef-btn-custom-hover-color qodef-btn-sweep"
                                             data-hover-bg-color="#ffffff" data-hover-color="#3a3c41"
@@ -2286,7 +2294,8 @@
                                                                         TAREFAS </h4>
                                                                 </div>
                                                                 <div class="qodef-iwt-text-holder">
-                                                                    <p>Crie tarefas para si ou para a equipe sem sair da tela de atendimento.</p>
+                                                                    <p>Crie tarefas para si ou para a equipe sem sair da
+                                                                        tela de atendimento.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2479,7 +2488,7 @@
                                                                                                     <div
                                                                                                         class="qodef-overlapping-button-holder">
                                                                                                         <a itemprop="url"
-                                                                                                            href="coop.html"
+                                                                                                            href="coop"
                                                                                                             target="_self"
                                                                                                             class="qodef-btn qodef-btn-medium qodef-btn-solid qodef-btn-sweep">
                                                                                                             <span
@@ -2543,7 +2552,7 @@
                                                                                                     <div
                                                                                                         class="qodef-overlapping-button-holder">
                                                                                                         <a itemprop="url"
-                                                                                                            href="varejo.html"
+                                                                                                            href="varejo"
                                                                                                             target="_self"
                                                                                                             class="qodef-btn qodef-btn-medium qodef-btn-solid qodef-btn-sweep">
                                                                                                             <span
@@ -2598,12 +2607,14 @@
                                                                                                         <br />
                                                                                                         Integração com o
                                                                                                         seu CRM. <br />
-                                                                                                        Envio dos resultados de exames.
+                                                                                                        Envio dos
+                                                                                                        resultados de
+                                                                                                        exames.
                                                                                                     </div>
                                                                                                     <div
                                                                                                         class="qodef-overlapping-button-holder">
                                                                                                         <a itemprop="url"
-                                                                                                            href="saude.html"
+                                                                                                            href="saude"
                                                                                                             target="_self"
                                                                                                             class="qodef-btn qodef-btn-medium qodef-btn-solid qodef-btn-sweep">
                                                                                                             <span
@@ -2743,7 +2754,7 @@
                                                                                     de negócios para 2023.</p>
                                                                                 <div class="qodef-button-holder">
                                                                                     <a itemprop="url"
-                                                                                        href="/5tendencias.html"
+                                                                                        href="/5tendencias"
                                                                                         target="_self"
                                                                                         class="qodef-btn qodef-btn-medium qodef-btn-solid qodef-btn-sweep">
                                                                                         <span
@@ -2790,7 +2801,7 @@
                                                                                     imensa quantidade ...</p>
                                                                                 <div class="qodef-button-holder">
                                                                                     <a itemprop="url"
-                                                                                        href="/consumidor_futuro.html"
+                                                                                        href="/consumidor_futuro"
                                                                                         target="_self"
                                                                                         class="qodef-btn qodef-btn-medium qodef-btn-solid qodef-btn-sweep">
                                                                                         <span
@@ -2837,7 +2848,7 @@
                                                                                     inserida na era digital ...</p>
                                                                                 <div class="qodef-button-holder">
                                                                                     <a itemprop="url"
-                                                                                        href="/custumer_experience.html"
+                                                                                        href="/custumer_experience"
                                                                                         target="_self"
                                                                                         class="qodef-btn qodef-btn-medium qodef-btn-solid qodef-btn-sweep">
                                                                                         <span
@@ -3095,9 +3106,9 @@
 
 
 
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4XZBMN" height="0" width="0"
+    <noscript><iframe src="https://www.googletagmanager.com/ns?id=GTM-M4XZBMN" height="0" width="0"
             style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
-    <script type="text/html" id="wpb-modifications"></script>
+    <script type="text" id="wpb-modifications"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik:400%2C300%7COpen+Sans:400&display=swap" rel="stylesheet"
         property="stylesheet" media="all" type="text/css">
     <script type="text/javascript">
@@ -3435,7 +3446,7 @@
                         visible_area: "20%"
                     },
                     fallbacks: {
-                        allowHTML5AutoPlayOnAndroid: true
+                        allo5AutoPlayOnAndroid: true
                     },
                 });
 
@@ -3446,4 +3457,4 @@
     </script>
 </body>
 
-</html>
+<html>
