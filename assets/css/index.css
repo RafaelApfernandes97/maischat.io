@@ -302,4 +302,8 @@
         left: 40px;
         right: 0;
     }
+
+    .logo_mobile {
+        width: 100px;
+    }
 }
