@@ -1,5 +1,5 @@
 deployment:
       tasks:
-        - export DEPLOYPATH=/home/maischat/maischathtml/maischat.com/  
+        - export DEPLOYPATH=/home/rfsolu88/public_html  
         - /bin cp * $DEPLOYPATH                           
         - /bin/cp -r * $DEPLOYPATH                        
