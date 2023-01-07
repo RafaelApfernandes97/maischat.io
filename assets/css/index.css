@@ -1,6 +1,6 @@
 .rede_sociais a {
     padding: 10px;
-    font-size: 25px; 
+    font-size: 25px;
 }
 
 .text-nav {
@@ -9,14 +9,15 @@
 
 .icon-coop {
     position: absolute;
-    left: 33%; 
+    left: 33%;
 }
 
 .icon-coop1 {
     position: absolute;
-    top: 30% ;
-    left: 38%; 
+    top: 30%;
+    left: 38%;
 }
+
 .seta-conteudo-link {
     color: white;
 }
@@ -37,7 +38,7 @@
 .seta-conteudo-coop {
     color: white;
     font-size: 70px;
-    position: absolute;   
+    position: absolute;
     top: 400%;
     left: 38%;
 }
@@ -45,7 +46,7 @@
 .seta-conteudo {
     color: white;
     font-size: 70px;
-    position: absolute;   
+    position: absolute;
     top: 460%;
     left: 38%;
 }
@@ -53,7 +54,7 @@
 .seta-conteudo-varejo {
     color: white;
     font-size: 70px;
-    position: absolute;   
+    position: absolute;
     top: 360%;
     left: 38%;
 }
@@ -62,8 +63,8 @@
     background-image: url(/assets/img/eXECUTIVO_1.png);
     width: 100%;
     height: 100%;
-    
-    
+
+
 }
 
 .titulo-coop {
@@ -71,7 +72,7 @@
 }
 
 .text-titulo {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 200;
     color: white;
     text-align: center;
@@ -81,7 +82,7 @@
 }
 
 .text-paragrafo {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: 200;
     color: white;
@@ -129,11 +130,11 @@
 
 .item_form input::placeholder {
     color: rgba(133, 133, 133, 0.486);
-  }
+}
 
 
 .form_contato {
-    
+
     height: 80%;
 }
 
@@ -166,13 +167,13 @@
     background-color: #108653;
 }
 
-.politica_contato:hover{
-    color: #108653 ;
+.politica_contato:hover {
+    color: #108653;
 }
 
 .logo_clientes {
     width: 170px;
-    
+
 
 }
 
@@ -204,7 +205,7 @@
     bottom: 15%;
     right: 1px;
     z-index: 9999;
-    
+
 }
 
 .botao-whatsapp2 {
@@ -242,10 +243,10 @@
     background-image: url(/assets/img/person-working-with-a-laptop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
-@media screen and (max-width: 980px ) {
+@media screen and (max-width: 980px) {
     .img_form {
         display: none;
     }
@@ -260,7 +261,7 @@
     }
 }
 
-@media screen and (max-width: 375px ) {
+@media screen and (max-width: 375px) {
     .img_form {
         display: none;
     }
@@ -281,5 +282,24 @@
     .botao_contato {
         margin-bottom: 10px;
     }
-}
 
+    .ocultar {
+        display: none;
+    }
+
+    .img_cliente {
+        width: 200px;
+        margin-left: 22%;
+    }
+
+    .h2_mobile {
+        font-size: 18px;
+    }
+
+    .menu_mobile {
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        right: 0;
+    }
+}
