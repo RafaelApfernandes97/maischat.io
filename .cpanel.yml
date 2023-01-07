@@ -1,0 +1,5 @@
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home/maischat/maischathtml/maischat.com  
+        - /bin cp * $DEPLOYPATH                           
+        - /bin/cp -r * $DEPLOYPATH                        
