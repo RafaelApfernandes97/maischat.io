@@ -820,6 +820,12 @@
             $("#form_contato").load("formulario_contato.html");
         });
     </script>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+		<script type="text/javascript">
+			jQuery(window).load(function($){
+				atualizaRelogio();
+			});
+		</script>
 </head>
 
 <body
@@ -1532,9 +1538,9 @@
                                 </div>
                                 <section id="formulario_contato"
                                     style="background-color: rgba(128, 128, 128, 0.144); padding: 5%;">
-                                    <div class="container  ">
+                                    <div class="container form_mobile  ">
                                         <div class="row col text-align-center formulario_contato"
-                                            style="background-color: white; margin-left: 10%; margin-right: 10%;">
+                                            style="background-color: white;">
 
 
                                             <div class="form_contato  text-align-left" style="padding: 3% 5% 3% 5%;">
@@ -1546,20 +1552,20 @@
                                                         <div class="item_form mb-3">
                                                             <h3 class="mb-2">Contato</h3>
 
-                                                            <input name="data[Nome do contato]" type="text"
+                                                            <input required name="data[Nome do contato]" type="text"
                                                                 class="form-control" id="nome"
                                                                 placeholder="Nome Completo">
                                                         </div>
 
                                                         <div class="item_form mb-3">
 
-                                                            <input name="data[E-mail]" type="email" class="form-control"
+                                                            <input required name="data[E-mail]" type="email" class="form-control"
                                                                 id="email" placeholder="name@example.com">
                                                         </div>
 
                                                         <div class=" item_form mb-3">
 
-                                                            <input type="tel" name="data[Celular]" class="form-control"
+                                                            <input required type="tel" name="data[Celular]" class="form-control"
                                                                 id="telefone" placeholder="Telefone/Whatsapp">
                                                         </div>
                                                         <div class="row g-3">
@@ -1597,14 +1603,13 @@
                                                                     </label>
                                                                 </div>
 
-                                                                <div class="item_form form-check form-check-inline"
-                                                                    style="display: none;">
+                                                                <div class="item_form form-check form-check-inline" style="display: none;">
                                                                     <input checked name="data[pagina]"
                                                                         class="check_form form-check-input"
                                                                         type="checkbox" id="inlineCheckbox3"
-                                                                        value="saude">
+                                                                        value="Varejo">
                                                                     <label class="form-check-label"
-                                                                        for="inlineCheckbox3">saude
+                                                                        for="inlineCheckbox3">Varejo
                                                                     </label>
                                                                 </div>
 
@@ -1647,6 +1652,10 @@
 
                                                             <textarea style="display:none ;" name="data[ip]"
                                                                 id="data[ip]" cols="30" rows="10"></textarea>
+                                                                <textarea style="display:none ;" name="data[data]"
+                                                                id="data[data]" cols="30" rows="10"></textarea>
+                                                                <textarea style="display:none ;" name="data[hora]"
+                                                                id="data[hora]" cols="30" rows="10"></textarea>
 
 
                                                         </div>
@@ -1655,95 +1664,125 @@
                                             </div>
 
                                             <div class=" img_form">
-
-                                                <div class="qodef-elements-holder-item-inner">
-                                                    <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-199779"
-                                                        style="padding: 40% 40% 20% 40%">
-                                                        <span class="qodef-icon-shortcode normal"
-                                                            data-hover-color="#dedede" data-color="#ffffff">
-                                                            <a itemprop="url" class="" href="#" target="_blank">
-                                                                <span class="icon-normal"><i
-                                                                        class="qodef-icon-simple-line-icon icon-envelope-letter qodef-icon-element"
-                                                                        style="color: #ffffff;font-size:114px"></i></span>
-                                                            </a>
-                                                        </span>
+                                                
+                                                    <div class="qodef-elements-holder-item-inner">
+                                                        <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-199779"
+                                                            style="padding: 40% 40% 20% 40%">
+                                                            <span class="qodef-icon-shortcode normal"
+                                                                data-hover-color="#dedede" data-color="#ffffff">
+                                                                <a itemprop="url" class="" href="#" target="_blank">
+                                                                    <span class="icon-normal"><i
+                                                                            class="qodef-icon-simple-line-icon icon-envelope-letter qodef-icon-element"
+                                                                            style="color: #ffffff;font-size:114px"></i></span>
+                                                                </a>
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                </div>
-
+                                                
                                             </div>
                                         </div>
 
                                     </div>
 
+                                    
+
                                     <script>
-                                        function getIp(callback) {
-                                            function response(s) {
-                                                callback(window.userip);
+                                        function atualizaRelogio(){ 
+                                            var momentoAtual = new Date();
+                                            
+                                            var vhora = momentoAtual.getHours();
+                                            var vminuto = momentoAtual.getMinutes();
+                                            var vsegundo = momentoAtual.getSeconds();
+                                            
+                                            var vdia = momentoAtual.getDate();
+                                            var vmes = momentoAtual.getMonth() + 1;
+                                            var vano = momentoAtual.getFullYear();
+                                            
+                                            if (vdia < 10){ vdia = "0" + vdia;}
+                                            if (vmes < 10){ vmes = "0" + vmes;}
+                                            if (vhora < 10){ vhora = "0" + vhora;}
+                                            if (vminuto < 10){ vminuto = "0" + vminuto;}
+                                            if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+                                
+                                            dataFormat = vdia + " / " + vmes + " / " + vano;
+                                            horaFormat =  vhora + " : " + vminuto + " : " + vsegundo;
+                                
+                                            document.getElementById("data[data]").innerHTML = dataFormat;
+                                            document.getElementById("data[hora]").innerHTML = horaFormat;
+                                
+                                            setTimeout("atualizaRelogio()",1000);
+                                        }
+                                    </script>	
 
-                                                s.onload = s.onerror = null;
-                                                document.body.removeChild(s);
-                                            }
+                                    <script>
+                                    function getIp(callback) {
+                                        function response(s) {
+                                            callback(window.userip);
 
-                                            function trigger() {
-                                                window.userip = false;
-
-                                                var s = document.createElement("script");
-                                                s.async = true;
-                                                s.onload = function () {
-                                                    response(s);
-                                                };
-                                                s.onerror = function () {
-                                                    response(s);
-                                                };
-
-                                                s.src = "https://l2.io/ip.js?var=userip";
-                                                document.body.appendChild(s);
-                                            }
-
-                                            if (/^(interactive|complete)$/i.test(document.readyState)) {
-                                                trigger();
-                                            } else {
-                                                document.addEventListener('DOMContentLoaded', trigger);
-                                            }
+                                            s.onload = s.onerror = null;
+                                            document.body.removeChild(s);
                                         }
 
-                                        getIp(function (ip) {
-                                            document.getElementById('data[ip]').value = (ip);
+                                        function trigger() {
+                                            window.userip = false;
+
+                                            var s = document.createElement("script");
+                                            s.async = true;
+                                            s.onload = function () {
+                                                response(s);
+                                            };
+                                            s.onerror = function () {
+                                                response(s);
+                                            };
+
+                                            s.src = "https://l2.io/ip.js?var=userip";
+                                            document.body.appendChild(s);
+                                        }
+
+                                        if (/^(interactive|complete)$/i.test(document.readyState)) {
+                                            trigger();
+                                        } else {
+                                            document.addEventListener('DOMContentLoaded', trigger);
+                                        }
+                                    }
+
+                                    getIp(function (ip) {
+                                        document.getElementById('data[ip]').value = (ip);
 
 
-                                        })
-                                    </script>
+                                    })
+                                </script>
 
-                                    </script>
-
-
-                                    <script>
-                                        var form = document.getElementById('sheetdb-form');
-                                        form.addEventListener("submit", e => {
-                                            e.preventDefault();
-                                            fetch(form.action, {
-                                                method: "POST",
-                                                body: new FormData(document.getElementById("sheetdb-form")),
-                                            }).then(
-                                                response => response.json()
-                                            ).then((html) => {
-                                                // you can put any JS code here
-
-                                                Swal.fire({
-                                                    title: 'Obrigado',
-                                                    text: "Entraremos em contato em breve.",
-                                                    icon: 'success',
-                                                    confirmButtonColor: '#656d78',
-                                                    confirmButtonText: 'OK'
-                                                })
+                                </script>
 
 
-                                                setTimeout(function () {
-                                                    window.location.href = "https://maischat.com//blog/index.html"
-                                                }, 2000)
-                                            });
+                                <script>
+                                    var form = document.getElementById('sheetdb-form');
+                                    form.addEventListener("submit", e => {
+                                        e.preventDefault();
+                                        fetch(form.action, {
+                                            method: "POST",
+                                            body: new FormData(document.getElementById("sheetdb-form")),
+                                        }).then(
+                                            response => response.json()
+                                        ).then((html) => {
+                                            // you can put any JS code here
+
+                                            Swal.fire({
+                                                title: 'Obrigado',
+                                                text: "Entraremos em contato em breve.",
+                                                icon: 'success',
+                                                confirmButtonColor: '#656d78',
+                                                confirmButtonText: 'OK'
+                                            })
+
+
+                                            setTimeout(function () {
+                                                window.location.href = "https://maischat.com/blog/index.html"
+                                            }, 2000)
                                         });
-                                    </script>
+                                    });
+                                </script>
 
                                 </section>
 
