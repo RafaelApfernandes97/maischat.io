@@ -791,7 +791,7 @@
             $("#form_contato").load("formulario_contato.html");
         });
     </script>
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11061842767"></script>
     <script>
@@ -812,12 +812,12 @@
         gtag('config', 'UA-253335564-1');
     </script>
     <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
-		<script type="text/javascript">
-			jQuery(window).load(function($){
-				atualizaRelogio();
-			});
-		</script>
-    
+    <script type="text/javascript">
+        jQuery(window).load(function ($) {
+            atualizaRelogio();
+        });
+    </script>
+
 
 </head>
 
@@ -850,7 +850,7 @@
                 <div class="qodef-menu-area"
                     style="background-color:rgba(255, 255, 255, 0);border-color:rgba(255, 255, 255, 0.25)">
                     <div class="qodef-grid">
-                        
+
                         <div class="qodef-vertical-align-containers">
                             <div class="qodef-position-left">
                                 <div class="qodef-position-left-inner">
@@ -987,7 +987,7 @@
                     </div>
                 </div>
                 <div class="qodef-sticky-header">
-                    
+
                     <div class="qodef-sticky-holder">
                         <div class="qodef-grid">
                             <div class=" qodef-vertical-align-containers">
@@ -2644,14 +2644,16 @@
 
                                                         <div class="item_form mb-3">
 
-                                                            <input required name="data[E-mail]" type="email" class="form-control"
-                                                                id="email" placeholder="name@example.com">
+                                                            <input required name="data[E-mail]" type="email"
+                                                                class="form-control" id="email"
+                                                                placeholder="name@example.com">
                                                         </div>
 
                                                         <div class=" item_form mb-3">
 
-                                                            <input required type="tel" name="data[Celular]" class="form-control"
-                                                                id="telefone" placeholder="Telefone/Whatsapp">
+                                                            <input required type="tel" name="data[Celular]"
+                                                                class="form-control" id="telefone"
+                                                                placeholder="Telefone/Whatsapp" maxlength="15">
                                                         </div>
                                                         <div class="row g-3">
 
@@ -2688,7 +2690,8 @@
                                                                     </label>
                                                                 </div>
 
-                                                                <div class="item_form form-check form-check-inline" style="display: none;">
+                                                                <div class="item_form form-check form-check-inline"
+                                                                    style="display: none;">
                                                                     <input checked name="data[pagina]"
                                                                         class="check_form form-check-input"
                                                                         type="checkbox" id="inlineCheckbox3"
@@ -2737,9 +2740,9 @@
 
                                                             <textarea style="display:none ;" name="data[ip]"
                                                                 id="data[ip]" cols="30" rows="10"></textarea>
-                                                                <textarea style="display:none ;" name="data[data]"
+                                                            <textarea style="display:none ;" name="data[data]"
                                                                 id="data[data]" cols="30" rows="10"></textarea>
-                                                                <textarea style="display:none ;" name="data[hora]"
+                                                            <textarea style="display:none ;" name="data[hora]"
                                                                 id="data[hora]" cols="30" rows="10"></textarea>
 
 
@@ -2749,128 +2752,153 @@
                                             </div>
 
                                             <div class=" img_form">
-                                                
-                                                    <div class="qodef-elements-holder-item-inner">
-                                                        <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-199779"
-                                                            style="padding: 40% 40% 20% 40%">
-                                                            <span class="qodef-icon-shortcode normal"
-                                                                data-hover-color="#dedede" data-color="#ffffff">
-                                                                <a itemprop="url" class="" href="#" target="_blank">
-                                                                    <span class="icon-normal"><i
-                                                                            class="qodef-icon-simple-line-icon icon-envelope-letter qodef-icon-element"
-                                                                            style="color: #ffffff;font-size:114px"></i></span>
-                                                                </a>
-                                                            </span>
-                                                        </div>
+
+                                                <div class="qodef-elements-holder-item-inner">
+                                                    <div class="qodef-elements-holder-item-content qodef-elements-holder-custom-199779"
+                                                        style="padding: 40% 40% 20% 40%">
+                                                        <span class="qodef-icon-shortcode normal"
+                                                            data-hover-color="#dedede" data-color="#ffffff">
+                                                            <a itemprop="url" class="" href="#" target="_blank">
+                                                                <span class="icon-normal"><i
+                                                                        class="qodef-icon-simple-line-icon icon-envelope-letter qodef-icon-element"
+                                                                        style="color: #ffffff;font-size:114px"></i></span>
+                                                            </a>
+                                                        </span>
                                                     </div>
-                                                
+                                                </div>
+
                                             </div>
                                         </div>
 
                                     </div>
 
-                                    
+                                    <script>
+                                        function mascara(o, f) {
+                                            v_obj = o
+                                            v_fun = f
+                                            setTimeout("execmascara()", 1)
+                                        }
+                                        function execmascara() {
+                                            v_obj.value = v_fun(v_obj.value)
+                                        }
+                                        function mtel(v) {
+                                            v = v.replace(/\D/g, ""); //Remove tudo o que não é dígito
+                                            v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+                                            v = v.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+                                            return v;
+                                        }
+                                        function id(el) {
+                                            return document.getElementById(el);
+                                        }
+                                        window.onload = function () {
+                                            id('telefone').onkeyup = function () {
+                                                mascara(this, mtel);
+                                            }
+                                        }    
+                                    </script>
+
+
 
                                     <script>
-                                        function atualizaRelogio(){ 
+                                        function atualizaRelogio() {
                                             var momentoAtual = new Date();
-                                            
+
                                             var vhora = momentoAtual.getHours();
                                             var vminuto = momentoAtual.getMinutes();
                                             var vsegundo = momentoAtual.getSeconds();
-                                            
+
                                             var vdia = momentoAtual.getDate();
                                             var vmes = momentoAtual.getMonth() + 1;
                                             var vano = momentoAtual.getFullYear();
-                                            
-                                            if (vdia < 10){ vdia = "0" + vdia;}
-                                            if (vmes < 10){ vmes = "0" + vmes;}
-                                            if (vhora < 10){ vhora = "0" + vhora;}
-                                            if (vminuto < 10){ vminuto = "0" + vminuto;}
-                                            if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
-                                
+
+                                            if (vdia < 10) { vdia = "0" + vdia; }
+                                            if (vmes < 10) { vmes = "0" + vmes; }
+                                            if (vhora < 10) { vhora = "0" + vhora; }
+                                            if (vminuto < 10) { vminuto = "0" + vminuto; }
+                                            if (vsegundo < 10) { vsegundo = "0" + vsegundo; }
+
                                             dataFormat = vdia + " / " + vmes + " / " + vano;
-                                            horaFormat =  vhora + " : " + vminuto + " : " + vsegundo;
-                                
+                                            horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+
                                             document.getElementById("data[data]").innerHTML = dataFormat;
                                             document.getElementById("data[hora]").innerHTML = horaFormat;
-                                
-                                            setTimeout("atualizaRelogio()",1000);
+
+                                            setTimeout("atualizaRelogio()", 1000);
                                         }
-                                    </script>	
+                                    </script>
 
                                     <script>
-                                    function getIp(callback) {
-                                        function response(s) {
-                                            callback(window.userip);
+                                        function getIp(callback) {
+                                            function response(s) {
+                                                callback(window.userip);
 
-                                            s.onload = s.onerror = null;
-                                            document.body.removeChild(s);
+                                                s.onload = s.onerror = null;
+                                                document.body.removeChild(s);
+                                            }
+
+                                            function trigger() {
+                                                window.userip = false;
+
+                                                var s = document.createElement("script");
+                                                s.async = true;
+                                                s.onload = function () {
+                                                    response(s);
+                                                };
+                                                s.onerror = function () {
+                                                    response(s);
+                                                };
+
+                                                s.src = "https://l2.io/ip.js?var=userip";
+                                                document.body.appendChild(s);
+                                            }
+
+                                            if (/^(interactive|complete)$/i.test(document.readyState)) {
+                                                trigger();
+                                            } else {
+                                                document.addEventListener('DOMContentLoaded', trigger);
+                                            }
                                         }
 
-                                        function trigger() {
-                                            window.userip = false;
-
-                                            var s = document.createElement("script");
-                                            s.async = true;
-                                            s.onload = function () {
-                                                response(s);
-                                            };
-                                            s.onerror = function () {
-                                                response(s);
-                                            };
-
-                                            s.src = "https://l2.io/ip.js?var=userip";
-                                            document.body.appendChild(s);
-                                        }
-
-                                        if (/^(interactive|complete)$/i.test(document.readyState)) {
-                                            trigger();
-                                        } else {
-                                            document.addEventListener('DOMContentLoaded', trigger);
-                                        }
-                                    }
-
-                                    getIp(function (ip) {
-                                        document.getElementById('data[ip]').value = (ip);
+                                        getIp(function (ip) {
+                                            document.getElementById('data[ip]').value = (ip);
 
 
-                                    })
-                                </script>
+                                        })
+                                    </script>
 
-                                </script>
-
-
-                                <script>
-                                    var form = document.getElementById('sheetdb-form');
-                                    form.addEventListener("submit", e => {
-                                        e.preventDefault();
-                                        fetch(form.action, {
-                                            method: "POST",
-                                            body: new FormData(document.getElementById("sheetdb-form")),
-                                        }).then(
-                                            response => response.json()
-                                        ).then((html) => {
-                                            // you can put any JS code here
-
-                                            Swal.fire({
-                                                title: 'Obrigado',
-                                                text: "Entraremos em contato em breve.",
-                                                icon: 'success',
-                                                confirmButtonColor: '#656d78',
-                                                confirmButtonText: 'OK'
-                                            })
+                                    </script>
 
 
-                                            setTimeout(function () {
-                                                window.location.href = "https://maischat.com/blog/index.html"
-                                            }, 2000)
+                                    <script>
+                                        var form = document.getElementById('sheetdb-form');
+                                        form.addEventListener("submit", e => {
+                                            e.preventDefault();
+                                            fetch(form.action, {
+                                                method: "POST",
+                                                body: new FormData(document.getElementById("sheetdb-form")),
+                                            }).then(
+                                                response => response.json()
+                                            ).then((html) => {
+                                                // you can put any JS code here
+
+                                                Swal.fire({
+                                                    title: 'Obrigado',
+                                                    text: "Entraremos em contato em breve.",
+                                                    icon: 'success',
+                                                    confirmButtonColor: '#656d78',
+                                                    confirmButtonText: 'OK'
+                                                })
+
+
+                                                setTimeout(function () {
+                                                    window.location.href = "https://maischat.com/blog/index.html"
+                                                }, 2000)
+                                            });
                                         });
-                                    });
-                                </script>
+                                    </script>
 
                                 </section>
-                                
+
 
                                 <div data-qodef-parallax-speed="1"
                                     class="vc_row wpb_row vc_row-fluid qodef-section vc_custom_1478162743858 qodef-content-aligment-center  qodef-parallax-section-holder-touch-disabled qodef-grid-section"
@@ -3490,38 +3518,26 @@
         id='modernizr-js'></script>
     <script type='text/javascript' src='https://geko.qodeinteractive.com/wp-includes/js/hoverIntent.min.js?ver=1.10.2'
         id='hoverIntent-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/jquery.plugin.js?ver=6.1.1'
+    <script type='text/javascript' src='/assets/js/modules/plugins/jquery.plugin.js?ver=6.1.1'
         id='jquery-plugin-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/jquery.countdown.min.js?ver=6.1.1'
+    <script type='text/javascript' src='/assets/js/modules/plugins/jquery.countdown.min.js?ver=6.1.1'
         id='countdown-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/owl.carousel.min.js?ver=6.1.1'
+    <script type='text/javascript' src='/assets/js/modules/plugins/owl.carousel.min.js?ver=6.1.1'
         id='owl.carousel-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/parallax.min.js?ver=6.1.1'
-        id='parallax-js'></script>
+    <script type='text/javascript' src='/assets/js/modules/plugins/parallax.min.js?ver=6.1.1' id='parallax-js'></script>
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/woocommerce/assets/js/select2/select2.full.min.js?ver=4.0.3-wc.7.1.0'
         id='select2-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/easypiechart.js?ver=6.1.1'
+    <script type='text/javascript' src='/assets/js/modules/plugins/easypiechart.js?ver=6.1.1'
         id='easypiechart-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/jquery.waypoints.min.js?ver=6.1.1'
+    <script type='text/javascript' src='/assets/js/modules/plugins/jquery.waypoints.min.js?ver=6.1.1'
         id='waypoints-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/Chart.min.js?ver=6.1.1'
-        id='chart-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/counter.js?ver=6.1.1'
-        id='counter-js'></script>
+    <script type='text/javascript' src='/assets/js/modules/plugins/Chart.min.js?ver=6.1.1' id='chart-js'></script>
+    <script type='text/javascript' src='/assets/js/modules/plugins/counter.js?ver=6.1.1' id='counter-js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/fluidvids.min.js?ver=6.1.1'
+    <script type='text/javascript' src='/assets/js/modules/plugins/fluidvids.min.js?ver=6.1.1'
         id='fluidvids-js'></script>
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js?ver=3.1.6-wc.7.1.0'
@@ -3532,8 +3548,7 @@
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/modules/plugins/ScrollToPlugin.min.js?ver=6.1.1'
         id='ScrollToPlugin-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/TweenLite.min.js?ver=6.1.1'
+    <script type='text/javascript' src='/assets/js/modules/plugins/TweenLite.min.js?ver=6.1.1'
         id='TweenLite-js'></script>
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/modules/plugins/jquery.mixitup.min.js?ver=6.1.1'
@@ -3547,9 +3562,7 @@
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/modules/plugins/jquery.easing.1.3.js?ver=6.1.1'
         id='easing-js'></script>
-    <script type='text/javascript'
-        src='/assets/js/modules/plugins/skrollr.js?ver=6.1.1'
-        id='skrollr-js'></script>
+    <script type='text/javascript' src='/assets/js/modules/plugins/skrollr.js?ver=6.1.1' id='skrollr-js'></script>
     <script type='text/javascript'
         src='https://geko.qodeinteractive.com/wp-content/themes/geko/assets/js/modules/plugins/bootstrapCarousel.js?ver=6.1.1'
         id='bootstrapCarousel-js'></script>
