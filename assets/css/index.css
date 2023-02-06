@@ -246,6 +246,15 @@
 
 }
 
+
+.icone_saude {
+    font-size: 104px;
+}
+
+.vc_custom_1479140121828 {
+    padding-top: 132px !important;
+    padding-bottom: 92px !important;
+}
 @media screen and (max-width: 980px) {
     .img_form {
         display: none;
@@ -259,51 +268,106 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+
+   
 }
 
 @media screen and (max-width: 375px) {
-    .img_form {
+    .slide_desktop {
         display: none;
     }
-
-    .form_mobile {
-        width: 330px;
-    }
-
-    .form_contato {
-        width: 100%;
-    }
-
-    .formulario_contato {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .botao_contato {
-        margin-bottom: 10px;
-    }
-
     .ocultar {
         display: none;
     }
 
-    .img_cliente {
-        width: 200px;
-        margin-left: 22%;
+    .titulo_slide_mobile {
+        color: white;
     }
 
-    .h2_mobile {
-        font-size: 18px;
+    .butao_slide_mobile {
+        font-family: sans-serif;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 2px;
+        
     }
 
-    .menu_mobile {
-        position: fixed;
-        top: 40px;
-        left: 40px;
-        right: 0;
+    .titulo_mobile {
+        font-size: 25px;
+    }
+    .titulo_mobile_2 {
+        font-size: 40px;
     }
 
-    .logo_mobile {
-        width: 100px;
+    .icone_saude {
+        font-size: 70px;
     }
+
+    .vc_custom_1479140121828 {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .t_saude {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 2500px) and (min-width: 450px)  {
+    .slide_mobile {
+        display: none;
+    }
+    .ocultar {
+        display: none;
+    }
+}
+
+
+
+
+@media screen and (max-width: 450px) {
+    .slide_desktop {
+        display: none;
+    }
+    .ocultar {
+        display: none;
+    }
+
+    .titulo_slide_mobile {
+        color: white;
+    }
+
+    .butao_slide_mobile {
+        font-family: sans-serif;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 2px;
+        
+    }
+
+    .titulo_mobile {
+        font-size: 25px;
+    }
+    .titulo_mobile_2 {
+        font-size: 30px;
+    }
+
+    .icone_saude {
+        font-size: 70px;
+    }
+
+    .vc_custom_1479140121828 {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .t_saude {
+        margin-top: 30px;
+    }
+}
+
+.titulo_slide_mobile_coop {
+    color: white;
+    font-weight: 400;
+    font-size: 35px;
 }
