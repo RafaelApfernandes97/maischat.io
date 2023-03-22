@@ -255,7 +255,7 @@
     padding-top: 132px !important;
     padding-bottom: 92px !important;
 }
-@media screen and (max-width: 980px) {
+/* @media screen and (max-width: 980px) {
     .img_form {
         display: none;
     }
@@ -570,7 +570,7 @@
         -webkit-tap-highlight-color: transparent;
         -webkit-touch-callout: none
     }
-}
+} */
 
 .titulo_slide_mobile_coop {
     color: white;
