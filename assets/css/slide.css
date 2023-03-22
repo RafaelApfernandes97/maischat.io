@@ -349,7 +349,7 @@ background-position: center center;
 
 @media only screen and (max-width: 450px) and (min-width: 0px) {
     .containerproje .slide-container .slide .contentproje h3{
-        font-size: 25px;
+        font-size: 30px;
         color: #ffffff;
         font-family: 'Rubik', sans-serif;
         font-weight:lighter;
@@ -359,7 +359,7 @@ background-position: center center;
         font-size: 13px;
         color: #ffffff;
         font-family: 'Rubik', sans-serif;
-        width: 95%;
+        width: 90%;
         height: 10%;
     
     }
