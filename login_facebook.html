@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDK Facebook Meta Cloud v.1</title>
+    <title>Integração SDK do Facebook</title>
 </head>
 
 <body>
-    
-    <div id = "fb-root"></div> <script async defer crossorigin = "anonymous" src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId= 529419924881734" nonce = "TGcRB6Pj"></script> 
 
-    <div class="fb-login-button" data-width="Login Facebook" data-size="" data-button-type="" data-layout=""
-        data-auto-logout-link="true" data-use-continue-as="true"> </div>
+    <!-- Etapa 2: Div necessária para a inicialização do SDK do Facebook -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId=529419924881734" nonce="TGcRB6Pj"></script>
 
+    <!-- Etapa 3: Botão de login do Facebook -->
+    <div class="fb-login-button" data-width="Login Facebook" data-size="" data-button-type="" data-layout="" data-auto-logout-link="true" data-use-continue-as="true"></div>
+
+    <!-- Restante do conteúdo do seu site -->
 
 </body>
 
