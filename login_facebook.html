@@ -8,63 +8,25 @@
 </head>
 
 <body>
-
-    <!-- The JS SDK Login Button -->
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-<div id="status">
-</div>
-
-<script>
-    var fbReady = false;
-
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId: '{529419924881734}',
-            cookie: true,
-            xfbml: true,
-            version: 'v18.0'
-        });
-
-        fbReady = true; // SDK do Facebook inicializado
-
-        FB.getLoginStatus(function(response) {   
-            statusChangeCallback(response);        
-        });
-    };
-
-    function checkLoginState() {
-        if(fbReady) {
-            FB.getLoginStatus(function(response) {
-                statusChangeCallback(response);
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '529419924881734',
+                xfbml: true,
+                version: 'v18.0'
             });
-        } else {
-            setTimeout(checkLoginState, 50); // Espera por 50ms e tenta novamente
-        }
-    }
+        };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
-    function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-        if (response.status === 'connected') {
-            testAPI();
-        } else {
-            document.getElementById('status').innerHTML = 'Por favor, faça login nesta página.';
-        }
-    }
+    <div id="fb-root"> </div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId= 529419924881734"
+        nonce="Dx8io7eO"></script>
 
-    function testAPI() {
-        console.log('Bem-vindo! Buscando suas informações.... ');
-        FB.api('/me', function(response) {
-            console.log('Login bem-sucedido para: ' + response.name);
-            document.getElementById('status').innerHTML =
-                'Obrigado por fazer login, ' + response.name + '!';
-        });
-    }
-</script>
+    <div class="fb-login-button" data-width="Login Facebook" data-size="" data-button-type="" data-layout=""
+        data-auto-logout-link="false" dados-use-continue-as="falso"></div>
 
-<!-- Load the JS SDK asynchronously -->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
 </body>
 
