@@ -13,8 +13,7 @@
     if (response.status === 'connected') {   
       testAPI();  
     } else {                                 
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this webpage.';
+      document.getElementById('status').innerHTML = 'Realizar login no Facebook.';
     }
   }
 
@@ -42,7 +41,7 @@
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Você esta logado em, ' + response.name + '!';
     });
   }
 
