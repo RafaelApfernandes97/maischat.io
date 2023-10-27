@@ -31,6 +31,7 @@
       version    : 'v18.0'                   
     });
 
+    FB.AppEvents.logPageView();
     FB.getLoginStatus(function(response) {   
       statusChangeCallback(response);        
     });
