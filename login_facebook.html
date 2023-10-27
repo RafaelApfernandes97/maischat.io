@@ -10,66 +10,61 @@
 <body>
 
     <!-- The JS SDK Login Button -->
-    <fb:login-button scope="public_profile,email" onlogin="tryLogin();">
-    </fb:login-button>
-    <div id="status">
-    </div>
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+<div id="status">
+</div>
 
-    <script>
-        var sdkInitialized = false;
+<script>
+    var fbReady = false;
 
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '{529419924881734}',
-                cookie: true,
-                xfbml: true,
-                version: 'v18.0'
-            });
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '{529419924881734}',
+            cookie: true,
+            xfbml: true,
+            version: 'v18.0'
+        });
 
-            sdkInitialized = true;
+        fbReady = true; // SDK do Facebook inicializado
 
-            FB.getLoginStatus(function(response) {   
-                statusChangeCallback(response);        
-            });
-        };
+        FB.getLoginStatus(function(response) {   
+            statusChangeCallback(response);        
+        });
+    };
 
-        function tryLogin() {
-            if (sdkInitialized) {
-                checkLoginState();
-            } else {
-                console.error("O SDK do Facebook ainda não foi inicializado.");
-            }
-        }
-
-        function statusChangeCallback(response) {
-            console.log('statusChangeCallback');
-            console.log(response);
-            if (response.status === 'connected') {
-                testAPI();
-            } else {
-                document.getElementById('status').innerHTML = 'Please log into this webpage.';
-            }
-        }
-
-        function checkLoginState() {
+    function checkLoginState() {
+        if(fbReady) {
             FB.getLoginStatus(function(response) {
                 statusChangeCallback(response);
             });
+        } else {
+            setTimeout(checkLoginState, 50); // Espera por 50ms e tenta novamente
         }
+    }
 
-        function testAPI() {
-            console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me', function(response) {
-                console.log('Successful login for: ' + response.name);
-                document.getElementById('status').innerHTML =
-                    'Thanks for logging in, ' + response.name + '!';
-            });
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        if (response.status === 'connected') {
+            testAPI();
+        } else {
+            document.getElementById('status').innerHTML = 'Por favor, faça login nesta página.';
         }
+    }
 
-    </script>
+    function testAPI() {
+        console.log('Bem-vindo! Buscando suas informações.... ');
+        FB.api('/me', function(response) {
+            console.log('Login bem-sucedido para: ' + response.name);
+            document.getElementById('status').innerHTML =
+                'Obrigado por fazer login, ' + response.name + '!';
+        });
+    }
+</script>
 
-    <!-- Load the JS SDK asynchronously -->
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<!-- Load the JS SDK asynchronously -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
 </body>
 
