@@ -1,23 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integração SDK do Facebook</title>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
 </head>
-
 <body>
+<script>
 
-    <!-- Etapa 2: Div necessária para a inicialização do SDK do Facebook -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId=529419924881734" nonce="TGcRB6Pj"></script>
+  function statusChangeCallback(response) {  
+    console.log('statusChangeCallback');
+    console.log(response);                   
+    if (response.status === 'connected') {   
+      testAPI();  
+    } else {                                 
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this webpage.';
+    }
+  }
 
-    <!-- Etapa 3: Botão de login do Facebook -->
-    <div class="fb-login-button" data-width="Login Facebook" data-size="" data-button-type="" data-layout="" data-auto-logout-link="true" data-use-continue-as="true"></div>
+  function checkLoginState() {               
+    FB.getLoginStatus(function(response) {   
+      statusChangeCallback(response);
+    });
+  }
 
-    <!-- Restante do conteúdo do seu site -->
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '529419924881734',
+      cookie     : true,                     
+      xfbml      : true,                     
+      version    : 'v18.0'                   
+    });
 
+    FB.getLoginStatus(function(response) {   
+      statusChangeCallback(response);        
+    });
+  };
+ 
+  function testAPI() {                      
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+
+</script>
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </body>
-
 </html>
